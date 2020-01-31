@@ -1,21 +1,20 @@
-#CLOCKS
-#SYSCLK
-#create_clock -period 10.000 -name clk_p -waveform {0.000 5.000} [get_ports {clk_p}]
-#create_clock -period 10 [get_ports clk_p]
-#create_clock -period 5.000 -name tc_clk_p -waveform {0.000 2.500} [get_ports {clk_p}]
-#create_clock -period 5.000 -name tc_clk_n -waveform {2.500 5.000} [get_ports {clk_n}]
-set_property IOSTANDARD LVDS [get_ports clk_n]
-set_property PACKAGE_PIN AD12 [get_ports clk_p]
-set_property PACKAGE_PIN AD11 [get_ports clk_n]
-set_property IOSTANDARD LVDS [get_ports clk_p]
+# SYSCLK
+create_clock -period 5.0 [get_ports SYSCLK_P]
+set_property PACKAGE_PIN AD12 [get_ports SYSCLK_P]
+set_property IOSTANDARD LVDS [get_ports SYSCLK_P]
+set_property PACKAGE_PIN AD11 [get_ports SYSCLK_N]
+set_property IOSTANDARD LVDS [get_ports SYSCLK_N]
 
-#USERCLK
+# USERCLK
 #set_property PACKAGE_PIN K29 [get_ports clk_n]
 #set_property IOSTANDARD LVDS_25 [get_ports clk_n]
 #set_property PACKAGE_PIN K28 [get_ports clk_p]
 #set_property IOSTANDARD LVDS_25 [get_ports clk_p]
 
-#Global IIC BUS
+# GT LOC
+set_property LOC GTXE2_CHANNEL_X0Y8 [get_cells gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i]
+
+# Global IIC BUS
 set_property PACKAGE_PIN K21 [get_ports IIC_SCL_MAIN]
 set_property IOSTANDARD LVCMOS25 [get_ports IIC_SCL_MAIN]
 set_property PACKAGE_PIN L21 [get_ports IIC_SDA_MAIN]
@@ -23,7 +22,7 @@ set_property IOSTANDARD LVCMOS25 [get_ports IIC_SDA_MAIN]
 set_property PACKAGE_PIN P23 [get_ports IIC_MUX_RESET_B]
 set_property IOSTANDARD LVCMOS25 [get_ports IIC_MUX_RESET_B]
 
-#SI5324 Low Jitter Clock
+# SI5324 Low Jitter Clock
 set_property PACKAGE_PIN W28 [get_ports REC_CLOCK_C_N]
 set_property IOSTANDARD LVCMOS25 [get_ports REC_CLOCK_C_N]
 set_property PACKAGE_PIN W27 [get_ports REC_CLOCK_C_P]
@@ -36,7 +35,7 @@ set_property PACKAGE_PIN AE20 [get_ports SI5326_RST_LS]
 set_property IOSTANDARD LVCMOS25 [get_ports SI5326_RST_LS]
 
 
-##GPIO PUSHBUTTON SW
+# GPIO PUSHBUTTON SW
 set_property PACKAGE_PIN G12 [get_ports GPIO_SW_C]
 set_property IOSTANDARD LVCMOS15 [get_ports GPIO_SW_C]
 set_property PACKAGE_PIN AG5 [get_ports GPIO_SW_E]
@@ -50,7 +49,7 @@ set_property IOSTANDARD LVCMOS15 [get_ports GPIO_SW_N]
 #set_property PACKAGE_PIN AB7 [get_ports CPU_RESET]
 #set_property IOSTANDARD LVCMOS15 [get_ports CPU_RESET]
 
-##GPIO LEDs
+# GPIO LEDs
 set_property PACKAGE_PIN AB8 [get_ports GPIO_LED_0_LS]
 set_property IOSTANDARD LVCMOS15 [get_ports GPIO_LED_0_LS]
 set_property PACKAGE_PIN AA8 [get_ports GPIO_LED_1_LS]
