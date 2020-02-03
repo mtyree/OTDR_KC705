@@ -1,5 +1,6 @@
 # SYSCLK
 create_clock -name sysclk -period 5.0 [get_ports SYSCLK_P]
+
 set_property PACKAGE_PIN AD12 [get_ports SYSCLK_P]
 set_property IOSTANDARD LVDS [get_ports SYSCLK_P]
 set_property PACKAGE_PIN AD11 [get_ports SYSCLK_N]
@@ -23,10 +24,13 @@ set_property PACKAGE_PIN P23 [get_ports IIC_MUX_RESET_B]
 set_property IOSTANDARD LVCMOS25 [get_ports IIC_MUX_RESET_B]
 
 # SI5324 Low Jitter Clock
+create_clock -period 5.0 [get_ports REC_CLOCK_C_P]
+
 set_property PACKAGE_PIN W28 [get_ports REC_CLOCK_C_N]
 set_property IOSTANDARD LVCMOS25 [get_ports REC_CLOCK_C_N]
 set_property PACKAGE_PIN W27 [get_ports REC_CLOCK_C_P]
 set_property IOSTANDARD LVCMOS25 [get_ports REC_CLOCK_C_P]
+
 set_property PACKAGE_PIN AG24 [get_ports SI5326_INT_ALM_LS]
 set_property IOSTANDARD LVCMOS25 [get_ports SI5326_INT_ALM_LS]
 set_property PACKAGE_PIN L8 [get_ports SI5326_OUT_C_P]

@@ -2,7 +2,7 @@
 // Author: Maxwell Tyree
 // Description: Top level module for testing GTX loopback
 
-module top (
+module top_gtx_loopback_test (
     input SYSCLK_P,
     input SYSCLK_N,
     input GPIO_SW_E,
@@ -35,14 +35,18 @@ localparam	RESET	= 2'b00,
 			CHECK	= 2'b11;
 			
 reg [1:0]	state;
+reg [31:0]  count;
 reg			hard_rst;
 reg			reconfig;
 reg			config_done;
 
+reg         rst;
+reg         rst_r;
+reg         rst_r_r;
+
 wire	sysclk;
+wire    drpclk;
 wire	usrclk_out;
-wire	rst;
-wire	reconfig;
 
 wire	gt_rxdata_out;
 wire	gt_txdata_in;
@@ -50,17 +54,18 @@ wire	gt_txdata_in;
 assign	REC_CLOCK_C_P	= sysclk;
 assign	REC_CLOCK_C_N	= ~sysclk;
 
-//assign	rst				= GPIO_SW_E;
 assign	GPIO_LED_5_LS	= rst;
 assign	SI5326_RST_LS	= hard_rst;
-assign	IIC_MU_RESET_B	= hard_rst;
+assign	IIC_MUX_RESET_B	= hard_rst;
 assign	GPIO_LED_0_LS	= config_done;
 
-assign	gt_txdata_in	= 16'1234';
+assign	gt_txdata_in	= 16'h1234;
 
-// Loopback TX -> RX
-assign	RXP_IN	= TXP_OUT;
-assign	RXN_IN	= TXN_OUT;
+always @(posedge sysclk) begin
+    rst_r   <= GPIO_SW_E;
+    rst_r_r <= rst_r;
+    rst     <= rst_r_r;
+end
 
 always @(posedge sysclk) begin
     if (rst) begin
@@ -103,10 +108,10 @@ always @(posedge sysclk) begin
     end
 end
 
-IBFUGDS #(
+IBUFGDS #(
 	.DIFF_TERM		("FALSE"),
 	.IBUF_LOW_PWR	("TRUE"),
-	.IOSTANDARD		("DEFAULT"),
+	.IOSTANDARD		("DEFAULT")
 ) IBUFGDS_inst (
 	.O	(sysclk),
 	.I	(SYSCLK_P),
@@ -194,17 +199,14 @@ gtx_0 gtx_0_i (
 	.gt0_qplloutrefclk_out			(), // output wire gt0_qplloutrefclk_out
 	.sysclk_in						(sysclk) // input wire sysclk_in
 );
- 
+
 ila_0 usrclk_ila (
 	.clk	(usrclk_out),
-	.probe0	(usrclk_out),
+	.probe0	(1'b0),
 	.probe1	(gt_txdata_in),
-	.probe2	(TXP_OUT),
+	.probe2	(1'b0),
 	.probe3	(gt_rxdata_out),
-	.probe4	(RXP_IN)
+	.probe4	(1'b0)
 );
 
-vio_0 vio_resets (
-	.clk		(sysclk),
-	.probe_out0	(rst)
-);
+endmodule
