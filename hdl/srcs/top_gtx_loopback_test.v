@@ -35,9 +35,9 @@ localparam	RESET	= 2'b00,
 			CHECK	= 2'b11;
 			
 reg [1:0]	state;
-reg		hard_rst;
-reg		reconfig;
-reg		config_done;
+reg			hard_rst;
+reg			reconfig;
+reg			config_done;
 
 wire	sysclk;
 wire	usrclk_out;
@@ -57,6 +57,10 @@ assign	IIC_MU_RESET_B	= hard_rst;
 assign	GPIO_LED_0_LS	= config_done;
 
 assign	gt_txdata_in	= 16'1234';
+
+// Loopback TX -> RX
+assign	RXP_IN	= TXP_OUT;
+assign	RXN_IN	= TXN_OUT;
 
 always @(posedge sysclk) begin
     if (rst) begin
@@ -153,7 +157,7 @@ gtx_0 gtx_0_i (
     .gt0_eyescandataerror_out       (), // output wire gt0_eyescandataerror_out
     .gt0_eyescantrigger_in          (1'b0), // input wire gt0_eyescantrigger_in
 //---------------- Receive Ports - FPGA RX interface Ports -----------------
-    .gt0_rxdata_out                 (), // output wire [15:0] gt0_rxdata_out
+    .gt0_rxdata_out                 (gt_rxdata_out), // output wire [15:0] gt0_rxdata_out
 //------------------------- Receive Ports - RX AFE -------------------------
     .gt0_gtxrxp_in                  (RXP_IN), // input wire gt0_gtxrxp_in
 //---------------------- Receive Ports - RX AFE Ports ----------------------
@@ -173,7 +177,7 @@ gtx_0 gtx_0_i (
     .gt0_gttxreset_in               (1'b0), // input wire gt0_gttxreset_in
     .gt0_txuserrdy_in               (1'b1), // input wire gt0_txuserrdy_in
 //---------------- Transmit Ports - TX Data Path interface -----------------
-    .gt0_txdata_in                  (16'h00FF), // input wire [15:0] gt0_txdata_in
+    .gt0_txdata_in                  (gt_txdata_in), // input wire [15:0] gt0_txdata_in
 //-------------- Transmit Ports - TX Driver and OOB signaling --------------
     .gt0_gtxtxn_out                 (TXN_OUT), // output wire gt0_gtxtxn_out
     .gt0_gtxtxp_out                 (TXP_OUT), // output wire gt0_gtxtxp_out
@@ -202,5 +206,5 @@ ila_0 usrclk_ila (
 
 vio_0 vio_resets (
 	.clk		(sysclk),
-	.probe_out10(rst)
+	.probe_out0	(rst)
 );

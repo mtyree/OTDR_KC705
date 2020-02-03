@@ -1,5 +1,5 @@
 # SYSCLK
-create_clock -period 5.0 [get_ports SYSCLK_P]
+create_clock -name sysclk -period 5.0 [get_ports SYSCLK_P]
 set_property PACKAGE_PIN AD12 [get_ports SYSCLK_P]
 set_property IOSTANDARD LVDS [get_ports SYSCLK_P]
 set_property PACKAGE_PIN AD11 [get_ports SYSCLK_N]
@@ -33,7 +33,6 @@ set_property PACKAGE_PIN L8 [get_ports SI5326_OUT_C_P]
 set_property PACKAGE_PIN L7 [get_ports SI5326_OUT_C_N]
 set_property PACKAGE_PIN AE20 [get_ports SI5326_RST_LS]
 set_property IOSTANDARD LVCMOS25 [get_ports SI5326_RST_LS]
-
 
 # GPIO PUSHBUTTON SW
 set_property PACKAGE_PIN G12 [get_ports GPIO_SW_C]
