@@ -73,3 +73,5 @@ set_property IOSTANDARD LVCMOS25 [get_ports GPIO_LED_5_LS]
 
 set_property PULLUP true [get_ports IIC_SDA_MAIN]
 set_property PULLUP true [get_ports IIC_SCL_MAIN]
+
+set_false_path -from [get_pins config_done_reg/C] -to [get_pins gt_soft_reset_r_reg/D]

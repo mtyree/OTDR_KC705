@@ -1,9 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Feb  7 10:58:37 2020
--- Host        : NEXTlab-PC running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim D:/ugrad_research/OTDR_KC705/hdl/srcs/vio_0/vio_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+-- Date        : Fri Feb  7 11:39:25 2020
+-- Host        : nextlab running 64-bit Ubuntu 18.04.3 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/mtyree/ugrad_research/OTDR_KC705/hdl/srcs/vio_0/vio_0_sim_netlist.vhdl
 -- Design      : vio_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
