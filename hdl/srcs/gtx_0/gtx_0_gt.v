@@ -92,6 +92,8 @@ module gtx_0_GT #
     input           qpllrefclk_in,
     //------------------------- Digital Monitor Ports --------------------------
     output  [7:0]   dmonitorout_out,
+    //----------------------------- Loopback Ports -----------------------------
+    input   [2:0]   loopback_in,
     //------------------- RX Initialization and Reset Ports --------------------
     input           eyescanreset_in,
     input           rxuserrdy_in,
@@ -526,7 +528,7 @@ wire            rxstartofseq_float_i;
         //--------------- FPGA TX Interface Datapath Configuration  ----------------
         .TX8B10BEN                      (tied_to_ground_i),
         //----------------------------- Loopback Ports -----------------------------
-        .LOOPBACK                       (tied_to_ground_vec_i[2:0]),
+        .LOOPBACK                       (loopback_in),
         //--------------------------- PCI Express Ports ----------------------------
         .PHYSTATUS                      (),
         .RXRATE                         (tied_to_ground_vec_i[2:0]),

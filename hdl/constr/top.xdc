@@ -1,4 +1,4 @@
-# SYSCLK
+# 200MHz board clock
 create_clock -name sysclk -period 5.0 [get_ports SYSCLK_P]
 
 set_property PACKAGE_PIN AD12 [get_ports SYSCLK_P]
@@ -6,14 +6,15 @@ set_property IOSTANDARD LVDS [get_ports SYSCLK_P]
 set_property PACKAGE_PIN AD11 [get_ports SYSCLK_N]
 set_property IOSTANDARD LVDS [get_ports SYSCLK_N]
 
-# USERCLK
-#set_property PACKAGE_PIN K29 [get_ports clk_n]
-#set_property IOSTANDARD LVDS_25 [get_ports clk_n]
-#set_property PACKAGE_PIN K28 [get_ports clk_p]
-#set_property IOSTANDARD LVDS_25 [get_ports clk_p]
+# GT system clock
+create_clock -name gt_sysclk -period 6.4 [get_ports GT_SYSCLK_P]
+set_property PACKAGE_PIN K28 [get_ports GT_SYSCLK_P]
+set_property PACKAGE_PIN K29 [get_ports GT_SYSCLK_N]
+set_property IOSTANDARD LVDS_25 [get_ports GT_SYSCLK_P]
+set_property IOSTANDARD LVDS_25 [get_ports GT_SYSCLK_N]
 
 # GT LOC
-set_property LOC GTXE2_CHANNEL_X0Y8 [get_cells gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i]
+set_property LOC GTXE2_CHANNEL_X0Y10 [get_cells gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i]
 
 # Global IIC BUS
 set_property PACKAGE_PIN K21 [get_ports IIC_SCL_MAIN]
@@ -23,7 +24,7 @@ set_property IOSTANDARD LVCMOS25 [get_ports IIC_SDA_MAIN]
 set_property PACKAGE_PIN P23 [get_ports IIC_MUX_RESET_B]
 set_property IOSTANDARD LVCMOS25 [get_ports IIC_MUX_RESET_B]
 
-# SI5324 Low Jitter Clock
+# SI5324 Low Jitter Clock - GT Refclk
 create_clock -period 5.0 [get_ports REC_CLOCK_C_P]
 
 set_property PACKAGE_PIN W28 [get_ports REC_CLOCK_C_N]

@@ -72,7 +72,7 @@ module gtx_0_init #
 (
     parameter EXAMPLE_SIM_GTRESET_SPEEDUP            = "TRUE",     // Simulation setting for GT SecureIP model
     parameter EXAMPLE_SIMULATION                     =  0,         // Set to 1 for simulation
-    parameter STABLE_CLOCK_PERIOD                    = 10,         //Period of the stable clock driving this state-machine, unit is [ns]
+    parameter STABLE_CLOCK_PERIOD                    = 6,         //Period of the stable clock driving this state-machine, unit is [ns]
     parameter EXAMPLE_USE_CHIPSCOPE                  =  0          // Set to 1 to use Chipscope to drive resets
 
 )
@@ -86,7 +86,7 @@ output          gt0_rx_fsm_reset_done_out,
 input           gt0_data_valid_in,
 
     //_________________________________________________________________________
-    //GT0  (X1Y8)
+    //GT0  (X1Y10)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
     input   [8:0]   gt0_drpaddr_in,
@@ -98,6 +98,8 @@ input           gt0_data_valid_in,
     input           gt0_drpwe_in,
     //------------------------- Digital Monitor Ports --------------------------
     output  [7:0]   gt0_dmonitorout_out,
+    //----------------------------- Loopback Ports -----------------------------
+    input   [2:0]   gt0_loopback_in,
     //------------------- RX Initialization and Reset Ports --------------------
     input           gt0_eyescanreset_in,
     input           gt0_rxuserrdy_in,
@@ -238,7 +240,7 @@ assign  tied_to_vcc_i                        =  1'b1;
  
         //_____________________________________________________________________
         //_____________________________________________________________________
-        //GT0  (X1Y8)
+        //GT0  (X1Y10)
 
         //-------------------------- Channel - DRP Ports  --------------------------
         .gt0_drpaddr_in                 (gt0_drpaddr_in), // input wire [8:0] gt0_drpaddr_in
@@ -250,6 +252,8 @@ assign  tied_to_vcc_i                        =  1'b1;
         .gt0_drpwe_in                   (gt0_drpwe_in), // input wire gt0_drpwe_in
         //------------------------- Digital Monitor Ports --------------------------
         .gt0_dmonitorout_out            (gt0_dmonitorout_out), // output wire [7:0] gt0_dmonitorout_out
+        //----------------------------- Loopback Ports -----------------------------
+        .gt0_loopback_in                (gt0_loopback_in), // input wire [2:0] gt0_loopback_in
         //------------------- RX Initialization and Reset Ports --------------------
         .gt0_eyescanreset_in            (gt0_eyescanreset_in), // input wire gt0_eyescanreset_in
         .gt0_rxuserrdy_in               (gt0_rxuserrdy_i), // input wire gt0_rxuserrdy_i

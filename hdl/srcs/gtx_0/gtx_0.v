@@ -86,7 +86,7 @@ input           gt0_data_valid_in,
     output   gt0_rxusrclk2_out,
 
     //_________________________________________________________________________
-    //GT0  (X1Y8)
+    //GT0  (X1Y10)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
     input   [8:0]   gt0_drpaddr_in,
@@ -97,6 +97,8 @@ input           gt0_data_valid_in,
     input           gt0_drpwe_in,
     //------------------------- Digital Monitor Ports --------------------------
     output  [7:0]   gt0_dmonitorout_out,
+    //----------------------------- Loopback Ports -----------------------------
+    input   [2:0]   gt0_loopback_in,
     //------------------- RX Initialization and Reset Ports --------------------
     input           gt0_eyescanreset_in,
     input           gt0_rxuserrdy_in,
@@ -147,7 +149,7 @@ input           gt0_data_valid_in,
     gtx_0_support #
     (
         .EXAMPLE_SIM_GTRESET_SPEEDUP    ("TRUE"),
-        .STABLE_CLOCK_PERIOD            (10)
+        .STABLE_CLOCK_PERIOD            (6)
     )
     inst
     (
@@ -165,7 +167,7 @@ input           gt0_data_valid_in,
     .gt0_rxusrclk_out(gt0_rxusrclk_out),
     .gt0_rxusrclk2_out(gt0_rxusrclk2_out),
     //_________________________________________________________________________
-    //GT0  (X1Y8)
+    //GT0  (X1Y10)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
         .gt0_drpaddr_in                 (gt0_drpaddr_in), // input wire [8:0] gt0_drpaddr_in
@@ -176,6 +178,8 @@ input           gt0_data_valid_in,
         .gt0_drpwe_in                   (gt0_drpwe_in), // input wire gt0_drpwe_in
     //------------------------- Digital Monitor Ports --------------------------
         .gt0_dmonitorout_out            (gt0_dmonitorout_out), // output wire [7:0] gt0_dmonitorout_out
+    //----------------------------- Loopback Ports -----------------------------
+        .gt0_loopback_in                (gt0_loopback_in), // input wire [2:0] gt0_loopback_in
     //------------------- RX Initialization and Reset Ports --------------------
         .gt0_eyescanreset_in            (gt0_eyescanreset_in), // input wire gt0_eyescanreset_in
         .gt0_rxuserrdy_in               (gt0_rxuserrdy_in), // input wire gt0_rxuserrdy_in

@@ -5,6 +5,8 @@
 module top_gtx_loopback_test (
     input SYSCLK_P,
     input SYSCLK_N,
+	input GT_SYSCLK_P,
+	input GT_SYSCLK_N,
     input GPIO_SW_E,
     input GPIO_SW_C,
     input GPIO_SW_N,
@@ -40,16 +42,30 @@ reg			hard_rst;
 reg			reconfig;
 reg			config_done;
 
-reg         rst;
 reg         rst_r;
 reg         rst_r_r;
+reg			gt_soft_reset_r;
+reg			gt_soft_reset_r_r;
+reg			gt_txresetdone_r;
+reg			gt_txresetdone_r_r;
+reg			gt_rxresetdone_r;
+reg			gt_rxresetdone_r_r;
 
-wire	sysclk;
-wire    drpclk;
-wire	usrclk_out;
+wire		rst;
+wire		gt_soft_reset;
+wire		sysclk;
+wire		sysclk_in;
+wire    	gt_sysclk;
+wire		gt_sysclk_in;
+wire		usrclk_out;
+wire		gt_txresetdone_i;
+wire		gt_txresetdone;
+wire		gt_rxresetdone_i;
+wire		gt_rxresetdone;
 
-wire	gt_rxdata_out;
-wire	gt_txdata_in;
+
+wire [15:0]		gt_rxdata_out;
+wire [15:0]		gt_txdata_in;
 
 assign	REC_CLOCK_C_P	= sysclk;
 assign	REC_CLOCK_C_N	= ~sysclk;
@@ -61,16 +77,40 @@ assign	GPIO_LED_0_LS	= config_done;
 
 assign	gt_txdata_in	= 16'h1234;
 
+assign	rst				= rst_r_r;
+assign	gt_soft_reset	= gt_soft_reset_r_r;
+
+assign	gt_txresetdone	= gt_txresetdone_r_r;
+assign	gt_rxresetdone	= gt_rxresetdone_r_r;
+
+// Synchronize GPIO SW reset to sysclk
 always @(posedge sysclk) begin
     rst_r   <= GPIO_SW_E;
     rst_r_r <= rst_r;
-    rst     <= rst_r_r;
+end
+
+// Synchronize config_done to gt soft reset
+always @(posedge gt_sysclk) begin
+	gt_soft_reset_r		<= ~config_done;
+	gt_soft_reset_r_r	<= gt_soft_reset_r;
+end
+
+// Synchronize resetdone signals to usrclk
+always @(posedge usrclk_out) begin
+	gt_txresetdone_i	<= gt_txresetdone_i;
+	gt_rxresetdone_r	<= gt_rxresetdone_i;
+	
+	gt_txresetdone_r_r	<= gt_txresetdone_r;
+	gt_rxresetdone_r_r	<= gt_rxresetdone_r;
 end
 
 always @(posedge sysclk) begin
     if (rst) begin
         state <= RESET; // Initial state
         config_done <= 0;
+		count <= 32'b0;
+		hard_rst <= 0;
+		reconfig <= 0;
     end else begin
         case (state)
             RESET : begin
@@ -112,10 +152,26 @@ IBUFGDS #(
 	.DIFF_TERM		("FALSE"),
 	.IBUF_LOW_PWR	("TRUE"),
 	.IOSTANDARD		("DEFAULT")
-) IBUFGDS_inst (
-	.O	(sysclk),
+) SYSCLK_IBUFGDS (
+	.O	(sysclk_in),
 	.I	(SYSCLK_P),
 	.IB	(SYSCLK_N)
+);
+
+BUFG SYSCLK_BUFG (
+	.O	(sysclk),
+	.I	(sysclk_in)
+);
+
+IBUFGDS GT_SYSCLK_IBUFGDS (
+	.O	(gt_sysclk_in),
+	.I	(GT_SYSCLK_P),
+	.IB	(GT_SYSCLK_N)
+);
+
+BUFG GT_SYSCLK_BUFG (
+	.O	(gt_sysclk),
+	.I	(gt_sysclk_in)
 );
 
 SI5324_Config_1_1_at_200MHz #(
@@ -130,8 +186,8 @@ SI5324_Config_1_1_at_200MHz #(
 );
 
 gtx_0 gtx_0_i (
-	.soft_reset_tx_in				(~rst), // input wire soft_reset_tx_in
-	.soft_reset_rx_in				(~rst), // input wire soft_reset_rx_in
+	.soft_reset_tx_in				(gt_soft_reset), // input wire soft_reset_tx_in
+	.soft_reset_rx_in				(gt_soft_reset), // input wire soft_reset_rx_in
 	.dont_reset_on_data_error_in	(1'b1), // input wire dont_reset_on_data_error_in
 	.q1_clk0_gtrefclk_pad_n_in		(SI5326_OUT_C_N), // input wire q1_clk0_gtrefclk_pad_n_in
 	.q1_clk0_gtrefclk_pad_p_in		(SI5326_OUT_C_P), // input wire q1_clk0_gtrefclk_pad_p_in
@@ -155,6 +211,8 @@ gtx_0 gtx_0_i (
     .gt0_drpwe_in                   (1'b0), // input wire gt0_drpwe_in
 //------------------------- Digital Monitor Ports --------------------------
     .gt0_dmonitorout_out            (), // output wire [7:0] gt0_dmonitorout_out
+//----------------------------- Loopback Ports -----------------------------
+	.gt0_loopback_in				(gt_loopback_vio),
 //------------------- RX Initialization and Reset Ports --------------------
     .gt0_eyescanreset_in            (1'b0), // input wire gt0_eyescanreset_in
     .gt0_rxuserrdy_in               (1'b1), // input wire gt0_rxuserrdy_in
@@ -177,7 +235,7 @@ gtx_0 gtx_0_i (
     .gt0_gtrxreset_in               (1'b0), // input wire gt0_gtrxreset_in
     .gt0_rxpmareset_in              (1'b0), // input wire gt0_rxpmareset_in
 //------------ Receive Ports -RX Initialization and Reset Ports ------------
-    .gt0_rxresetdone_out            (), // output wire gt0_rxresetdone_out
+    .gt0_rxresetdone_out            (gt_rxresetdone_i), // output wire gt0_rxresetdone_out
 //------------------- TX Initialization and Reset Ports --------------------
     .gt0_gttxreset_in               (1'b0), // input wire gt0_gttxreset_in
     .gt0_txuserrdy_in               (1'b1), // input wire gt0_txuserrdy_in
@@ -190,21 +248,26 @@ gtx_0 gtx_0_i (
     .gt0_txoutclkfabric_out         (), // output wire gt0_txoutclkfabric_out
     .gt0_txoutclkpcs_out            (), // output wire gt0_txoutclkpcs_out
 //----------- Transmit Ports - TX Initialization and Reset Ports -----------
-    .gt0_txresetdone_out            (), // output wire gt0_txresetdone_out
+    .gt0_txresetdone_out            (gt_txresetdone_i), // output wire gt0_txresetdone_out
 
 //____________________________COMMON PORTS________________________________
 	.gt0_qplllock_out				(), // output wire gt0_qplllock_out
 	.gt0_qpllrefclklost_out			(), // output wire gt0_qpllrefclklost_out
 	.gt0_qplloutclk_out				(), // output wire gt0_qplloutclk_out 
 	.gt0_qplloutrefclk_out			(), // output wire gt0_qplloutrefclk_out
-	.sysclk_in						(sysclk) // input wire sysclk_in
+	.sysclk_in						(gt_sysclk) // input wire sysclk_in
+);
+
+vio_0 gt_control_vio (
+	.clk		(gt_sysclk),
+	.probe_out0	(gt_loopback_vio)
 );
 
 ila_0 usrclk_ila (
 	.clk	(usrclk_out),
-	.probe0	(1'b0),
+	.probe0	(gt_txresetdone),
 	.probe1	(gt_txdata_in),
-	.probe2	(1'b0),
+	.probe2	(gt_rxresetdone),
 	.probe3	(gt_rxdata_out),
 	.probe4	(1'b0)
 );
