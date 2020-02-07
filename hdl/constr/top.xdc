@@ -24,7 +24,7 @@ set_property IOSTANDARD LVCMOS25 [get_ports IIC_SDA_MAIN]
 set_property PACKAGE_PIN P23 [get_ports IIC_MUX_RESET_B]
 set_property IOSTANDARD LVCMOS25 [get_ports IIC_MUX_RESET_B]
 
-# SI5324 Low Jitter Clock - GT Refclk
+# SI5324 Low Jitter Clock - GT REFCLK
 create_clock -period 5.0 [get_ports REC_CLOCK_C_P]
 
 set_property PACKAGE_PIN W28 [get_ports REC_CLOCK_C_N]
