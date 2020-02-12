@@ -185,6 +185,30 @@ SI5324_Config_1_1_at_200MHz #(
 	.sda		(IIC_SDA_MAIN)
 );
 
+Divider #(
+	.PERIOD		(156_250_000)
+) SI570_debug (
+	.clk		(gt_sysclk),
+	.rst_n		(~rst),
+	.square_out	(GPIO_LED_1_LS)
+);
+
+Divider #(
+	.PERIOD		(200_000_000)
+) SI5324_debug (
+	.clk		(SI5326_OUT_C_P),
+	.rst_n		(~rst),
+	.square_out	(GPIO_LED_2_LS)
+);
+
+Divider #(
+	.PERIOD		(200_000_000)
+) usrclk_debug (
+	.clk		(usrclk_out),
+	.rst_n		(~rst),
+	.square_out	(GPIO_LED_3_LS)
+);
+
 gtx_0 gtx_0_i (
 	.soft_reset_tx_in				(gt_soft_reset), // input wire soft_reset_tx_in
 	.soft_reset_rx_in				(gt_soft_reset), // input wire soft_reset_rx_in
