@@ -67,21 +67,21 @@ wire [2:0]	gt_loopback_vio;
 wire [15:0]	gt_rxdata_out;
 wire [15:0]	gt_txdata_in;
 
-assign	REC_CLOCK_C_P	= sysclk;
-assign	REC_CLOCK_C_N	= ~sysclk;
+assign	REC_CLOCK_C_P		= sysclk;
+assign	REC_CLOCK_C_N		= ~sysclk;
 
-assign	GPIO_LED_5_LS	= rst;
-assign	SI5326_RST_LS	= hard_rst;
-assign	IIC_MUX_RESET_B	= hard_rst;
-assign	GPIO_LED_0_LS	= config_done;
+assign	GPIO_LED_5_LS		= rst;
+assign	SI5326_RST_LS		= hard_rst;
+assign	IIC_MUX_RESET_B		= hard_rst;
+assign	GPIO_LED_0_LS		= config_done;
+assign	SI5326_INT_ALM_LS	= 0;
+assign	gt_txdata_in		= 16'h1234;
 
-assign	gt_txdata_in	= 16'h1234;
+assign	rst					= rst_r_r;
+assign	gt_soft_reset		= gt_soft_reset_r_r;
 
-assign	rst		= rst_r_r;
-assign	gt_soft_reset	= gt_soft_reset_r_r;
-
-assign	gt_txresetdone	= gt_txresetdone_r_r;
-assign	gt_rxresetdone	= gt_rxresetdone_r_r;
+assign	gt_txresetdone		= gt_txresetdone_r_r;
+assign	gt_rxresetdone		= gt_rxresetdone_r_r;
 
 // Synchronize GPIO SW reset to sysclk
 always @(posedge sysclk) begin
@@ -130,12 +130,12 @@ always @(posedge sysclk) begin
 				if (config_done == 0) begin
 					state <= ADD;
 					if (count == 32'd4_000) begin
-					   hard_rst = 1;
+						 hard_rst = 1;
 					end else if (count == 32'd8_000) begin
-					   reconfig = 1;
+						 reconfig = 1;
 					end else if (count == 32'd12_000) begin
-					   reconfig = 0;
-					   config_done = 1;
+						 reconfig = 0;
+						 config_done = 1;
 					end
 				end else begin
 					state <= IDLE;
@@ -202,7 +202,7 @@ gtx_0 gtx_0_i (
 //_________________________________________________________________________
 //GT0  (X0Y8)
 //____________________________CHANNEL PORTS________________________________
-//-------------------------- Channel - DRP Ports  --------------------------
+//-------------------------- Channel - DRP Ports	--------------------------
 	.gt0_drpaddr_in					(9'b0), // input wire [8:0] gt0_drpaddr_in
 	.gt0_drpdi_in					(16'b0), // input wire [15:0] gt0_drpdi_in
 	.gt0_drpdo_out					(), // output wire [15:0] gt0_drpdo_out

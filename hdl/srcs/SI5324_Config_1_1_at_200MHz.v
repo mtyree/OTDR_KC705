@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 // SI5324 AutoConfig generated based on 
-//        SI5324 Config 1-1 at 200MHz generated from SI DSPLLsim software
+//				SI5324 Config 1-1 at 200MHz generated from SI DSPLLsim software
 //
 // By Elliott Koehn
 //
@@ -19,7 +19,7 @@ module SI5324_Config_1_1_at_200MHz#(
 		input RECONFIG,
 		output scl,
 		inout sda
-    );
+		);
 
 	localparam IDLE = 3'd0; 
 	localparam CHECK = 3'd1;
@@ -73,7 +73,7 @@ module SI5324_Config_1_1_at_200MHz#(
 		IDLE:begin
 			clr = 1;
 			if(RECONFIG)
-				nextstate <= CHECK;
+				nextstate = CHECK;
 		end
 		CHECK:begin
 			clr = 0;
@@ -161,6 +161,7 @@ module SI5324_Config_1_1_at_200MHz#(
 		6'd41: begin SI_DATA = {8'hD0,8'd142,8'h00}; end
 		6'd42: begin SI_DATA = {8'hD0,8'd143,8'h00}; end
 		6'd43: begin SI_DATA = {8'hD0,8'd136,8'h40}; end
+		default: SI_DATA = 24'h000000;
 		endcase
 	end
 
@@ -169,16 +170,16 @@ module SI5324_Config_1_1_at_200MHz#(
 			.clkFreq(clkFreq),
 			.I2CFreq(I2CFreq)
 		) inst_I2C_master (
-			.clk      (clk),
-			.reset    (reset),
-			.data_in  (SI_DATA),
-			.start    (start),
-			.wr       (1),
-			.scl      (scl),
-			.sda      (sda),
-			.busy     (),
-			.done     (done),
-			.error    (),
+			.clk			(clk),
+			.reset		(reset),
+			.data_in	(SI_DATA),
+			.start		(start),
+			.wr				(1),
+			.scl			(scl),
+			.sda			(sda),
+			.busy			(),
+			.done			(done),
+			.error		(),
 			.data_out ()
 		);
 

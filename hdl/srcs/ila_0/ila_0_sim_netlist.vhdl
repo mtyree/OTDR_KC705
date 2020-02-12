@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Wed Jan 29 11:21:46 2020
+-- Date        : Mon Feb 10 08:43:34 2020
 -- Host        : nextlab running 64-bit Ubuntu 18.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/mtyree/ugrad_research/OTDR_KC705/hdl/srcs/ila_0/ila_0_sim_netlist.vhdl
@@ -16,41 +16,38 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ : in STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
     s_dclk_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_2\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    DIADI : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    DIPADIP : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper";
 end ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper is
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_16\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_17\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_18\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_19\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_20\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_24\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_25\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_26\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_27\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_28\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_34\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_35\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute BOX_TYPE : string;
-  attribute BOX_TYPE of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : label is "PRIMITIVE";
+  attribute BOX_TYPE of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
       DOB_REG => 1,
+      EN_ECC_READ => false,
+      EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -59,6 +56,14 @@ begin
       INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -123,8 +128,72 @@ begin
       INIT_3D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_3E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_3F => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_A => X"00000",
-      INIT_B => X"00000",
+      INIT_40 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_41 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_42 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_43 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_44 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_45 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_46 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_47 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_48 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_49 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_4F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_50 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_51 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_52 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_53 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_54 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_55 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_56 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_57 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_58 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_59 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_5F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_60 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_61 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_62 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_63 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_64 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_65 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_66 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_67 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_68 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_69 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_6F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_70 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_71 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_72 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_73 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_74 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_75 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_76 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_77 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_78 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_79 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7A => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7B => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7C => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7D => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_7F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_A => X"000000000",
+      INIT_B => X"000000000",
       INIT_FILE => "NONE",
       IS_CLKARDCLK_INVERTED => '0',
       IS_CLKBWRCLK_INVERTED => '0',
@@ -134,61 +203,66 @@ begin
       IS_RSTRAMB_INVERTED => '0',
       IS_RSTREGARSTREG_INVERTED => '0',
       IS_RSTREGB_INVERTED => '0',
+      RAM_EXTENSION_A => "NONE",
+      RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
       RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
-      READ_WIDTH_A => 18,
-      READ_WIDTH_B => 18,
+      READ_WIDTH_A => 36,
+      READ_WIDTH_B => 36,
       RSTREG_PRIORITY_A => "REGCE",
       RSTREG_PRIORITY_B => "REGCE",
       SIM_COLLISION_CHECK => "ALL",
       SIM_DEVICE => "7SERIES",
-      SRVAL_A => X"00000",
-      SRVAL_B => X"00000",
+      SRVAL_A => X"000000000",
+      SRVAL_B => X"000000000",
       WRITE_MODE_A => "READ_FIRST",
       WRITE_MODE_B => "READ_FIRST",
-      WRITE_WIDTH_A => 18,
-      WRITE_WIDTH_B => 18
+      WRITE_WIDTH_A => 36,
+      WRITE_WIDTH_B => 36
     )
         port map (
-      ADDRARDADDR(13 downto 4) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_2\(9 downto 0),
-      ADDRARDADDR(3 downto 0) => B"0000",
-      ADDRBWRADDR(13 downto 4) => Q(9 downto 0),
-      ADDRBWRADDR(3 downto 0) => B"0000",
-      CLKARDCLK => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\,
+      ADDRARDADDR(15) => '1',
+      ADDRARDADDR(14 downto 5) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(9 downto 0),
+      ADDRARDADDR(4 downto 0) => B"11111",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 5) => Q(9 downto 0),
+      ADDRBWRADDR(4 downto 0) => B"11111",
+      CASCADEINA => '0',
+      CASCADEINB => '0',
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CLKARDCLK => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\,
       CLKBWRCLK => s_dclk_o,
-      DIADI(15 downto 11) => B"00000",
-      DIADI(10 downto 8) => DIADI(5 downto 3),
-      DIADI(7 downto 3) => B"00000",
-      DIADI(2 downto 0) => DIADI(2 downto 0),
-      DIBDI(15 downto 0) => B"0000000000000000",
-      DIPADIP(1 downto 0) => B"00",
-      DIPBDIP(1 downto 0) => B"00",
-      DOADO(15 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_DOADO_UNCONNECTED\(15 downto 0),
-      DOBDO(15) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_16\,
-      DOBDO(14) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_17\,
-      DOBDO(13) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_18\,
-      DOBDO(12) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_19\,
-      DOBDO(11) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_20\,
-      DOBDO(10 downto 8) => D(5 downto 3),
-      DOBDO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_24\,
-      DOBDO(6) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_25\,
-      DOBDO(5) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_26\,
-      DOBDO(4) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_27\,
-      DOBDO(3) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_28\,
-      DOBDO(2 downto 0) => D(2 downto 0),
-      DOPADOP(1 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_DOPADOP_UNCONNECTED\(1 downto 0),
-      DOPBDOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_34\,
-      DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_n_35\,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      DIADI(31 downto 0) => DIADI(31 downto 0),
+      DIBDI(31 downto 0) => B"00000000000000000000000000000000",
+      DIPADIP(3 downto 0) => DIPADIP(3 downto 0),
+      DIPBDIP(3 downto 0) => B"0000",
+      DOADO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 0),
+      DOBDO(31 downto 24) => D(34 downto 27),
+      DOBDO(23 downto 16) => D(25 downto 18),
+      DOBDO(15 downto 8) => D(16 downto 9),
+      DOBDO(7 downto 0) => D(7 downto 0),
+      DOPADOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 0),
+      DOPBDOP(3) => D(35),
+      DOPBDOP(2) => D(26),
+      DOPBDOP(1) => D(17),
+      DOPBDOP(0) => D(8),
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
       ENARDEN => \out\,
-      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(0),
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(0),
+      INJECTDBITERR => '0',
+      INJECTSBITERR => '0',
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(0),
+      REGCEB => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(0),
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      WEA(1 downto 0) => B"11",
-      WEBWE(3 downto 0) => B"0000"
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      WEA(3 downto 0) => B"1111",
+      WEBWE(7 downto 0) => B"00000000"
     );
 end STRUCTURE;
 library IEEE;
@@ -327,7 +401,138 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_all_typeA_slice_12 is
+entity ila_0_ltlib_v1_0_0_all_typeA_slice_10 is
+  port (
+    SRL_D_I : out STD_LOGIC;
+    \out\ : out STD_LOGIC;
+    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    all_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    DOUT_O : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_10 : entity is "ltlib_v1_0_0_all_typeA_slice";
+end ila_0_ltlib_v1_0_0_all_typeA_slice_10;
+
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_10 is
+  signal cfg_data_0 : STD_LOGIC;
+  signal cfg_data_1 : STD_LOGIC;
+  signal cfg_data_2 : STD_LOGIC;
+  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal muxcy_lo : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is "yes";
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
+begin
+\I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\,
+      CE => '1',
+      D => muxcy_lo(3),
+      Q => \out\,
+      R => Q(0)
+    );
+u_carry4_inst: unisim.vcomponents.CARRY4
+     port map (
+      CI => DOUT_O,
+      CO(3) => muxcy_lo(3),
+      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => mux_di(3 downto 0),
+      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
+      S(3 downto 0) => sel(3 downto 0)
+    );
+u_srlA: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_0,
+      CDO => SRL_D_I,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(0),
+      I1 => all_in(1),
+      I2 => all_in(2),
+      I3 => all_in(3),
+      I4 => '1',
+      O5 => mux_di(0),
+      O6 => sel(0)
+    );
+u_srlB: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_1,
+      CDO => cfg_data_0,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(4),
+      I1 => all_in(5),
+      I2 => all_in(6),
+      I3 => all_in(7),
+      I4 => '1',
+      O5 => mux_di(1),
+      O6 => sel(1)
+    );
+u_srlC: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_2,
+      CDO => cfg_data_1,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(8),
+      I1 => all_in(9),
+      I2 => all_in(10),
+      I3 => all_in(11),
+      I4 => '1',
+      O5 => mux_di(2),
+      O6 => sel(2)
+    );
+u_srlD: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => mu_config_cs_serial_output(0),
+      CDO => cfg_data_2,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(12),
+      I1 => all_in(13),
+      I2 => all_in(14),
+      I3 => all_in(15),
+      I4 => '1',
+      O5 => mux_di(3),
+      O6 => sel(3)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity ila_0_ltlib_v1_0_0_all_typeA_slice_13 is
   port (
     srl_q_0 : out STD_LOGIC;
     \out\ : out STD_LOGIC;
@@ -341,10 +546,10 @@ entity ila_0_ltlib_v1_0_0_all_typeA_slice_12 is
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_12 : entity is "ltlib_v1_0_0_all_typeA_slice";
-end ila_0_ltlib_v1_0_0_all_typeA_slice_12;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_13 : entity is "ltlib_v1_0_0_all_typeA_slice";
+end ila_0_ltlib_v1_0_0_all_typeA_slice_13;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_12 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_13 is
   signal cfg_data_0 : STD_LOGIC;
   signal cfg_data_1 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
@@ -463,138 +668,6 @@ entity ila_0_ltlib_v1_0_0_all_typeA_slice_15 is
   port (
     srl_q_0 : out STD_LOGIC;
     \out\ : out STD_LOGIC;
-    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_dclk_o : in STD_LOGIC;
-    all_dly1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    all_dly2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_15 : entity is "ltlib_v1_0_0_all_typeA_slice";
-end ila_0_ltlib_v1_0_0_all_typeA_slice_15;
-
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_15 is
-  signal cfg_data_0 : STD_LOGIC;
-  signal cfg_data_1 : STD_LOGIC;
-  signal cfg_data_2 : STD_LOGIC;
-  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal muxcy_lo : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is "yes";
-  attribute BOX_TYPE : string;
-  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
-begin
-\I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\,
-      CE => '1',
-      D => muxcy_lo(3),
-      Q => \out\,
-      R => Q(0)
-    );
-u_carry4_inst: unisim.vcomponents.CARRY4
-     port map (
-      CI => CO(0),
-      CO(3) => muxcy_lo(3),
-      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
-      CYINIT => '0',
-      DI(3 downto 0) => mux_di(3 downto 0),
-      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
-      S(3 downto 0) => sel(3 downto 0)
-    );
-u_srlA: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_0,
-      CDO => srl_q_0,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => all_dly1(0),
-      I1 => all_dly2(0),
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(0),
-      O6 => sel(0)
-    );
-u_srlB: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_1,
-      CDO => cfg_data_0,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(1),
-      O6 => sel(1)
-    );
-u_srlC: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_2,
-      CDO => cfg_data_1,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(2),
-      O6 => sel(2)
-    );
-u_srlD: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => mu_config_cs_serial_output(0),
-      CDO => cfg_data_2,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(3),
-      O6 => sel(3)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_all_typeA_slice_17 is
-  port (
-    srl_q_0 : out STD_LOGIC;
-    \out\ : out STD_LOGIC;
     tc_config_cs_serial_output : in STD_LOGIC;
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
@@ -605,10 +678,10 @@ entity ila_0_ltlib_v1_0_0_all_typeA_slice_17 is
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_2\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_17 : entity is "ltlib_v1_0_0_all_typeA_slice";
-end ila_0_ltlib_v1_0_0_all_typeA_slice_17;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_15 : entity is "ltlib_v1_0_0_all_typeA_slice";
+end ila_0_ltlib_v1_0_0_all_typeA_slice_15;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_17 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_15 is
   signal cfg_data_0 : STD_LOGIC;
   signal cfg_data_1 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
@@ -714,6 +787,137 @@ u_srlD: unisim.vcomponents.CFGLUT5
       I1 => '1',
       I2 => '1',
       I3 => '1',
+      I4 => '1',
+      O5 => mux_di(3),
+      O6 => sel(3)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity ila_0_ltlib_v1_0_0_all_typeA_slice_3 is
+  port (
+    SRL_D_I : out STD_LOGIC;
+    \out\ : out STD_LOGIC;
+    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    all_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    DOUT_O : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_3 : entity is "ltlib_v1_0_0_all_typeA_slice";
+end ila_0_ltlib_v1_0_0_all_typeA_slice_3;
+
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_3 is
+  signal cfg_data_0 : STD_LOGIC;
+  signal cfg_data_1 : STD_LOGIC;
+  signal cfg_data_2 : STD_LOGIC;
+  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal muxcy_lo : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is "yes";
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
+begin
+\I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\,
+      CE => '1',
+      D => muxcy_lo(3),
+      Q => \out\,
+      R => Q(0)
+    );
+u_carry4_inst: unisim.vcomponents.CARRY4
+     port map (
+      CI => DOUT_O,
+      CO(3) => muxcy_lo(3),
+      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => mux_di(3 downto 0),
+      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
+      S(3 downto 0) => sel(3 downto 0)
+    );
+u_srlA: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_0,
+      CDO => SRL_D_I,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(0),
+      I1 => all_in(1),
+      I2 => all_in(2),
+      I3 => all_in(3),
+      I4 => '1',
+      O5 => mux_di(0),
+      O6 => sel(0)
+    );
+u_srlB: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_1,
+      CDO => cfg_data_0,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(4),
+      I1 => all_in(5),
+      I2 => all_in(6),
+      I3 => all_in(7),
+      I4 => '1',
+      O5 => mux_di(1),
+      O6 => sel(1)
+    );
+u_srlC: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_2,
+      CDO => cfg_data_1,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(8),
+      I1 => all_in(9),
+      I2 => all_in(10),
+      I3 => all_in(11),
+      I4 => '1',
+      O5 => mux_di(2),
+      O6 => sel(2)
+    );
+u_srlD: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => mu_config_cs_serial_output(0),
+      CDO => cfg_data_2,
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      I0 => all_in(12),
+      I1 => all_in(13),
+      I2 => all_in(14),
+      I3 => all_in(15),
       I4 => '1',
       O5 => mux_di(3),
       O6 => sel(3)
@@ -855,146 +1059,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_all_typeA_slice_9 is
-  port (
-    srl_q_0 : out STD_LOGIC;
-    \out\ : out STD_LOGIC;
-    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_dclk_o : in STD_LOGIC;
-    all_dly1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    all_dly2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_slice_9 : entity is "ltlib_v1_0_0_all_typeA_slice";
-end ila_0_ltlib_v1_0_0_all_typeA_slice_9;
-
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_slice_9 is
-  signal cfg_data_0 : STD_LOGIC;
-  signal cfg_data_1 : STD_LOGIC;
-  signal cfg_data_2 : STD_LOGIC;
-  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal muxcy_lo : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : label is "yes";
-  attribute BOX_TYPE : string;
-  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
-begin
-\I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\,
-      CE => '1',
-      D => muxcy_lo(3),
-      Q => \out\,
-      R => Q(0)
-    );
-u_carry4_inst: unisim.vcomponents.CARRY4
-     port map (
-      CI => CO(0),
-      CO(3) => muxcy_lo(3),
-      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
-      CYINIT => '0',
-      DI(3 downto 0) => mux_di(3 downto 0),
-      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
-      S(3 downto 0) => sel(3 downto 0)
-    );
-u_srlA: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_0,
-      CDO => srl_q_0,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => all_dly1(0),
-      I1 => all_dly2(0),
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(0),
-      O6 => sel(0)
-    );
-u_srlB: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_1,
-      CDO => cfg_data_0,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(1),
-      O6 => sel(1)
-    );
-u_srlC: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_2,
-      CDO => cfg_data_1,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(2),
-      O6 => sel(2)
-    );
-u_srlD: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => mu_config_cs_serial_output(0),
-      CDO => cfg_data_2,
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
-      I4 => '1',
-      O5 => mux_di(3),
-      O6 => sel(3)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0\ is
   port (
-    shift_en_reg : out STD_LOGIC;
+    SRL_Q_O : out STD_LOGIC;
     DOUT_O : out STD_LOGIC;
-    SRL_Q_O : in STD_LOGIC;
-    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SRL_D_I : in STD_LOGIC;
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
-    PROBES_I : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    all_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
     CI_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -1033,13 +1105,13 @@ u_srlA: unisim.vcomponents.CFGLUT5
     )
         port map (
       CDI => cfg_data_0,
-      CDO => shift_en_reg,
-      CE => E(0),
+      CDO => SRL_Q_O,
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(0),
-      I1 => PROBES_I(1),
-      I2 => PROBES_I(2),
-      I3 => PROBES_I(3),
+      I0 => all_in(0),
+      I1 => all_in(1),
+      I2 => all_in(2),
+      I3 => all_in(3),
       I4 => '1',
       O5 => mux_di(0),
       O6 => sel(0)
@@ -1052,12 +1124,12 @@ u_srlB: unisim.vcomponents.CFGLUT5
         port map (
       CDI => cfg_data_1,
       CDO => cfg_data_0,
-      CE => E(0),
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(4),
-      I1 => PROBES_I(5),
-      I2 => PROBES_I(6),
-      I3 => PROBES_I(7),
+      I0 => all_in(4),
+      I1 => all_in(5),
+      I2 => all_in(6),
+      I3 => all_in(7),
       I4 => '1',
       O5 => mux_di(1),
       O6 => sel(1)
@@ -1070,12 +1142,12 @@ u_srlC: unisim.vcomponents.CFGLUT5
         port map (
       CDI => cfg_data_2,
       CDO => cfg_data_1,
-      CE => E(0),
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(8),
-      I1 => PROBES_I(9),
-      I2 => PROBES_I(10),
-      I3 => PROBES_I(11),
+      I0 => all_in(8),
+      I1 => all_in(9),
+      I2 => all_in(10),
+      I3 => all_in(11),
       I4 => '1',
       O5 => mux_di(2),
       O6 => sel(2)
@@ -1086,14 +1158,14 @@ u_srlD: unisim.vcomponents.CFGLUT5
       IS_CLK_INVERTED => '0'
     )
         port map (
-      CDI => SRL_Q_O,
+      CDI => SRL_D_I,
       CDO => cfg_data_2,
-      CE => E(0),
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(12),
-      I1 => PROBES_I(13),
-      I2 => PROBES_I(14),
-      I3 => PROBES_I(15),
+      I0 => all_in(12),
+      I1 => all_in(13),
+      I2 => all_in(14),
+      I3 => all_in(15),
       I4 => '1',
       O5 => mux_di(3),
       O6 => sel(3)
@@ -1103,21 +1175,21 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_44\ is
+entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_9\ is
   port (
-    shift_en_reg : out STD_LOGIC;
+    SRL_Q_O : out STD_LOGIC;
     DOUT_O : out STD_LOGIC;
-    SRL_Q_O : in STD_LOGIC;
-    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SRL_D_I : in STD_LOGIC;
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
-    PROBES_I : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    all_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
     CI_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_44\ : entity is "ltlib_v1_0_0_all_typeA_slice";
-end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_44\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_9\ : entity is "ltlib_v1_0_0_all_typeA_slice";
+end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_9\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_44\ is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_9\ is
   signal cfg_data_0 : STD_LOGIC;
   signal cfg_data_1 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
@@ -1149,13 +1221,13 @@ u_srlA: unisim.vcomponents.CFGLUT5
     )
         port map (
       CDI => cfg_data_0,
-      CDO => shift_en_reg,
-      CE => E(0),
+      CDO => SRL_Q_O,
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(0),
-      I1 => PROBES_I(1),
-      I2 => PROBES_I(2),
-      I3 => PROBES_I(3),
+      I0 => all_in(0),
+      I1 => all_in(1),
+      I2 => all_in(2),
+      I3 => all_in(3),
       I4 => '1',
       O5 => mux_di(0),
       O6 => sel(0)
@@ -1168,12 +1240,12 @@ u_srlB: unisim.vcomponents.CFGLUT5
         port map (
       CDI => cfg_data_1,
       CDO => cfg_data_0,
-      CE => E(0),
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(4),
-      I1 => PROBES_I(5),
-      I2 => PROBES_I(6),
-      I3 => PROBES_I(7),
+      I0 => all_in(4),
+      I1 => all_in(5),
+      I2 => all_in(6),
+      I3 => all_in(7),
       I4 => '1',
       O5 => mux_di(1),
       O6 => sel(1)
@@ -1186,12 +1258,12 @@ u_srlC: unisim.vcomponents.CFGLUT5
         port map (
       CDI => cfg_data_2,
       CDO => cfg_data_1,
-      CE => E(0),
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(8),
-      I1 => PROBES_I(9),
-      I2 => PROBES_I(10),
-      I3 => PROBES_I(11),
+      I0 => all_in(8),
+      I1 => all_in(9),
+      I2 => all_in(10),
+      I3 => all_in(11),
       I4 => '1',
       O5 => mux_di(2),
       O6 => sel(2)
@@ -1202,130 +1274,14 @@ u_srlD: unisim.vcomponents.CFGLUT5
       IS_CLK_INVERTED => '0'
     )
         port map (
-      CDI => SRL_Q_O,
+      CDI => SRL_D_I,
       CDO => cfg_data_2,
-      CE => E(0),
+      CE => mu_config_cs_shift_en(0),
       CLK => s_dclk_o,
-      I0 => PROBES_I(12),
-      I1 => PROBES_I(13),
-      I2 => PROBES_I(14),
-      I3 => PROBES_I(15),
-      I4 => '1',
-      O5 => mux_di(3),
-      O6 => sel(3)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_52\ is
-  port (
-    shift_en_reg : out STD_LOGIC;
-    DOUT_O : out STD_LOGIC;
-    SRL_Q_O : in STD_LOGIC;
-    u_carry4_inst_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_dclk_o : in STD_LOGIC;
-    PROBES_I : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    CI_I : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_52\ : entity is "ltlib_v1_0_0_all_typeA_slice";
-end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_52\;
-
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_52\ is
-  signal cfg_data_0 : STD_LOGIC;
-  signal cfg_data_1 : STD_LOGIC;
-  signal cfg_data_2 : STD_LOGIC;
-  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute BOX_TYPE : string;
-  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
-begin
-u_carry4_inst: unisim.vcomponents.CARRY4
-     port map (
-      CI => CI_I,
-      CO(3) => DOUT_O,
-      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
-      CYINIT => '0',
-      DI(3 downto 0) => mux_di(3 downto 0),
-      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
-      S(3 downto 0) => sel(3 downto 0)
-    );
-u_srlA: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_0,
-      CDO => shift_en_reg,
-      CE => u_carry4_inst_0(0),
-      CLK => s_dclk_o,
-      I0 => PROBES_I(0),
-      I1 => PROBES_I(1),
-      I2 => PROBES_I(2),
-      I3 => PROBES_I(3),
-      I4 => '1',
-      O5 => mux_di(0),
-      O6 => sel(0)
-    );
-u_srlB: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_1,
-      CDO => cfg_data_0,
-      CE => u_carry4_inst_0(0),
-      CLK => s_dclk_o,
-      I0 => PROBES_I(4),
-      I1 => PROBES_I(5),
-      I2 => PROBES_I(6),
-      I3 => PROBES_I(7),
-      I4 => '1',
-      O5 => mux_di(1),
-      O6 => sel(1)
-    );
-u_srlC: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => cfg_data_2,
-      CDO => cfg_data_1,
-      CE => u_carry4_inst_0(0),
-      CLK => s_dclk_o,
-      I0 => PROBES_I(8),
-      I1 => PROBES_I(9),
-      I2 => PROBES_I(10),
-      I3 => PROBES_I(11),
-      I4 => '1',
-      O5 => mux_di(2),
-      O6 => sel(2)
-    );
-u_srlD: unisim.vcomponents.CFGLUT5
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      CDI => SRL_Q_O,
-      CDO => cfg_data_2,
-      CE => u_carry4_inst_0(0),
-      CLK => s_dclk_o,
-      I0 => PROBES_I(12),
-      I1 => PROBES_I(13),
-      I2 => PROBES_I(14),
-      I3 => PROBES_I(15),
+      I0 => all_in(12),
+      I1 => all_in(13),
+      I2 => all_in(14),
+      I3 => all_in(15),
       I4 => '1',
       O5 => mux_di(3),
       O6 => sel(3)
@@ -1337,12 +1293,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1\ is
   port (
-    SRL_Q_O : out STD_LOGIC;
     shift_en_reg : out STD_LOGIC;
-    SRL_D_I : in STD_LOGIC;
+    DOUT_O : out STD_LOGIC;
+    SRL_Q_O : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
-    PROBES_I : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    PROBES_I : in STD_LOGIC_VECTOR ( 15 downto 0 );
     CI_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -1367,7 +1323,7 @@ begin
 u_carry4_inst: unisim.vcomponents.CARRY4
      port map (
       CI => CI_I,
-      CO(3) => shift_en_reg,
+      CO(3) => DOUT_O,
       CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
       CYINIT => '0',
       DI(3 downto 0) => mux_di(3 downto 0),
@@ -1381,7 +1337,7 @@ u_srlA: unisim.vcomponents.CFGLUT5
     )
         port map (
       CDI => cfg_data_0,
-      CDO => SRL_Q_O,
+      CDO => shift_en_reg,
       CE => E(0),
       CLK => s_dclk_o,
       I0 => PROBES_I(0),
@@ -1402,10 +1358,10 @@ u_srlB: unisim.vcomponents.CFGLUT5
       CDO => cfg_data_0,
       CE => E(0),
       CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
+      I0 => PROBES_I(4),
+      I1 => PROBES_I(5),
+      I2 => PROBES_I(6),
+      I3 => PROBES_I(7),
       I4 => '1',
       O5 => mux_di(1),
       O6 => sel(1)
@@ -1420,10 +1376,10 @@ u_srlC: unisim.vcomponents.CFGLUT5
       CDO => cfg_data_1,
       CE => E(0),
       CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
+      I0 => PROBES_I(8),
+      I1 => PROBES_I(9),
+      I2 => PROBES_I(10),
+      I3 => PROBES_I(11),
       I4 => '1',
       O5 => mux_di(2),
       O6 => sel(2)
@@ -1434,14 +1390,14 @@ u_srlD: unisim.vcomponents.CFGLUT5
       IS_CLK_INVERTED => '0'
     )
         port map (
-      CDI => SRL_D_I,
+      CDI => SRL_Q_O,
       CDO => cfg_data_2,
       CE => E(0),
       CLK => s_dclk_o,
-      I0 => '1',
-      I1 => '1',
-      I2 => '1',
-      I3 => '1',
+      I0 => PROBES_I(12),
+      I1 => PROBES_I(13),
+      I2 => PROBES_I(14),
+      I3 => PROBES_I(15),
       I4 => '1',
       O5 => mux_di(3),
       O6 => sel(3)
@@ -1451,7 +1407,239 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_45\ is
+entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_42\ is
+  port (
+    shift_en_reg : out STD_LOGIC;
+    DOUT_O : out STD_LOGIC;
+    SRL_Q_O : in STD_LOGIC;
+    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    PROBES_I : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    CI_I : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_42\ : entity is "ltlib_v1_0_0_all_typeA_slice";
+end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_42\;
+
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_42\ is
+  signal cfg_data_0 : STD_LOGIC;
+  signal cfg_data_1 : STD_LOGIC;
+  signal cfg_data_2 : STD_LOGIC;
+  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
+begin
+u_carry4_inst: unisim.vcomponents.CARRY4
+     port map (
+      CI => CI_I,
+      CO(3) => DOUT_O,
+      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => mux_di(3 downto 0),
+      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
+      S(3 downto 0) => sel(3 downto 0)
+    );
+u_srlA: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_0,
+      CDO => shift_en_reg,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(0),
+      I1 => PROBES_I(1),
+      I2 => PROBES_I(2),
+      I3 => PROBES_I(3),
+      I4 => '1',
+      O5 => mux_di(0),
+      O6 => sel(0)
+    );
+u_srlB: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_1,
+      CDO => cfg_data_0,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(4),
+      I1 => PROBES_I(5),
+      I2 => PROBES_I(6),
+      I3 => PROBES_I(7),
+      I4 => '1',
+      O5 => mux_di(1),
+      O6 => sel(1)
+    );
+u_srlC: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_2,
+      CDO => cfg_data_1,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(8),
+      I1 => PROBES_I(9),
+      I2 => PROBES_I(10),
+      I3 => PROBES_I(11),
+      I4 => '1',
+      O5 => mux_di(2),
+      O6 => sel(2)
+    );
+u_srlD: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => SRL_Q_O,
+      CDO => cfg_data_2,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(12),
+      I1 => PROBES_I(13),
+      I2 => PROBES_I(14),
+      I3 => PROBES_I(15),
+      I4 => '1',
+      O5 => mux_di(3),
+      O6 => sel(3)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_50\ is
+  port (
+    shift_en_reg : out STD_LOGIC;
+    DOUT_O : out STD_LOGIC;
+    SRL_Q_O : in STD_LOGIC;
+    u_carry4_inst_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    PROBES_I : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    CI_I : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_50\ : entity is "ltlib_v1_0_0_all_typeA_slice";
+end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_50\;
+
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_50\ is
+  signal cfg_data_0 : STD_LOGIC;
+  signal cfg_data_1 : STD_LOGIC;
+  signal cfg_data_2 : STD_LOGIC;
+  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
+begin
+u_carry4_inst: unisim.vcomponents.CARRY4
+     port map (
+      CI => CI_I,
+      CO(3) => DOUT_O,
+      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => mux_di(3 downto 0),
+      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
+      S(3 downto 0) => sel(3 downto 0)
+    );
+u_srlA: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_0,
+      CDO => shift_en_reg,
+      CE => u_carry4_inst_0(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(0),
+      I1 => PROBES_I(1),
+      I2 => PROBES_I(2),
+      I3 => PROBES_I(3),
+      I4 => '1',
+      O5 => mux_di(0),
+      O6 => sel(0)
+    );
+u_srlB: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_1,
+      CDO => cfg_data_0,
+      CE => u_carry4_inst_0(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(4),
+      I1 => PROBES_I(5),
+      I2 => PROBES_I(6),
+      I3 => PROBES_I(7),
+      I4 => '1',
+      O5 => mux_di(1),
+      O6 => sel(1)
+    );
+u_srlC: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_2,
+      CDO => cfg_data_1,
+      CE => u_carry4_inst_0(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(8),
+      I1 => PROBES_I(9),
+      I2 => PROBES_I(10),
+      I3 => PROBES_I(11),
+      I4 => '1',
+      O5 => mux_di(2),
+      O6 => sel(2)
+    );
+u_srlD: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => SRL_Q_O,
+      CDO => cfg_data_2,
+      CE => u_carry4_inst_0(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(12),
+      I1 => PROBES_I(13),
+      I2 => PROBES_I(14),
+      I3 => PROBES_I(15),
+      I4 => '1',
+      O5 => mux_di(3),
+      O6 => sel(3)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2\ is
   port (
     SRL_Q_O : out STD_LOGIC;
     shift_en_reg : out STD_LOGIC;
@@ -1462,10 +1650,10 @@ entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_45\ is
     CI_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_45\ : entity is "ltlib_v1_0_0_all_typeA_slice";
-end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_45\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2\ : entity is "ltlib_v1_0_0_all_typeA_slice";
+end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_45\ is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2\ is
   signal cfg_data_0 : STD_LOGIC;
   signal cfg_data_1 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
@@ -1567,7 +1755,123 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_53\ is
+entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_43\ is
+  port (
+    SRL_Q_O : out STD_LOGIC;
+    shift_en_reg : out STD_LOGIC;
+    SRL_D_I : in STD_LOGIC;
+    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    PROBES_I : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    CI_I : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_43\ : entity is "ltlib_v1_0_0_all_typeA_slice";
+end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_43\;
+
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_43\ is
+  signal cfg_data_0 : STD_LOGIC;
+  signal cfg_data_1 : STD_LOGIC;
+  signal cfg_data_2 : STD_LOGIC;
+  signal mux_di : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal sel : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlA : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlB : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlC : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srlD : label is "PRIMITIVE";
+begin
+u_carry4_inst: unisim.vcomponents.CARRY4
+     port map (
+      CI => CI_I,
+      CO(3) => shift_en_reg,
+      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => mux_di(3 downto 0),
+      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
+      S(3 downto 0) => sel(3 downto 0)
+    );
+u_srlA: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_0,
+      CDO => SRL_Q_O,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => PROBES_I(0),
+      I1 => PROBES_I(1),
+      I2 => PROBES_I(2),
+      I3 => PROBES_I(3),
+      I4 => '1',
+      O5 => mux_di(0),
+      O6 => sel(0)
+    );
+u_srlB: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_1,
+      CDO => cfg_data_0,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => '1',
+      I1 => '1',
+      I2 => '1',
+      I3 => '1',
+      I4 => '1',
+      O5 => mux_di(1),
+      O6 => sel(1)
+    );
+u_srlC: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => cfg_data_2,
+      CDO => cfg_data_1,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => '1',
+      I1 => '1',
+      I2 => '1',
+      I3 => '1',
+      I4 => '1',
+      O5 => mux_di(2),
+      O6 => sel(2)
+    );
+u_srlD: unisim.vcomponents.CFGLUT5
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      CDI => SRL_D_I,
+      CDO => cfg_data_2,
+      CE => E(0),
+      CLK => s_dclk_o,
+      I0 => '1',
+      I1 => '1',
+      I2 => '1',
+      I3 => '1',
+      I4 => '1',
+      O5 => mux_di(3),
+      O6 => sel(3)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_51\ is
   port (
     SRL_Q_O : out STD_LOGIC;
     DOUT_O : out STD_LOGIC;
@@ -1578,10 +1882,10 @@ entity \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_53\ is
     CI_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_53\ : entity is "ltlib_v1_0_0_all_typeA_slice";
-end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_53\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_51\ : entity is "ltlib_v1_0_0_all_typeA_slice";
+end \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_51\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_53\ is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_51\ is
   signal cfg_data_0 : STD_LOGIC;
   signal cfg_data_1 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
@@ -1807,7 +2111,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_async_edge_xfer_18 is
+entity ila_0_ltlib_v1_0_0_async_edge_xfer_16 is
   port (
     dout_reg1_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
@@ -1815,10 +2119,10 @@ entity ila_0_ltlib_v1_0_0_async_edge_xfer_18 is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_async_edge_xfer_18 : entity is "ltlib_v1_0_0_async_edge_xfer";
-end ila_0_ltlib_v1_0_0_async_edge_xfer_18;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_async_edge_xfer_16 : entity is "ltlib_v1_0_0_async_edge_xfer";
+end ila_0_ltlib_v1_0_0_async_edge_xfer_16;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_async_edge_xfer_18 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_async_edge_xfer_16 is
   signal din_reg : STD_LOGIC;
   attribute shreg_extract : string;
   attribute shreg_extract of din_reg : signal is "no";
@@ -1920,7 +2224,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_async_edge_xfer_19 is
+entity ila_0_ltlib_v1_0_0_async_edge_xfer_17 is
   port (
     \out\ : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1930,10 +2234,10 @@ entity ila_0_ltlib_v1_0_0_async_edge_xfer_19 is
     last_din : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_async_edge_xfer_19 : entity is "ltlib_v1_0_0_async_edge_xfer";
-end ila_0_ltlib_v1_0_0_async_edge_xfer_19;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_async_edge_xfer_17 : entity is "ltlib_v1_0_0_async_edge_xfer";
+end ila_0_ltlib_v1_0_0_async_edge_xfer_17;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_async_edge_xfer_19 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_async_edge_xfer_17 is
   signal din_reg : STD_LOGIC;
   attribute shreg_extract : string;
   attribute shreg_extract of din_reg : signal is "no";
@@ -2044,7 +2348,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_async_edge_xfer_20 is
+entity ila_0_ltlib_v1_0_0_async_edge_xfer_18 is
   port (
     dout_reg1_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
@@ -2052,10 +2356,10 @@ entity ila_0_ltlib_v1_0_0_async_edge_xfer_20 is
     halt_out : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_async_edge_xfer_20 : entity is "ltlib_v1_0_0_async_edge_xfer";
-end ila_0_ltlib_v1_0_0_async_edge_xfer_20;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_async_edge_xfer_18 : entity is "ltlib_v1_0_0_async_edge_xfer";
+end ila_0_ltlib_v1_0_0_async_edge_xfer_18;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_async_edge_xfer_20 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_async_edge_xfer_18 is
   signal din_reg : STD_LOGIC;
   attribute shreg_extract : string;
   attribute shreg_extract of din_reg : signal is "no";
@@ -2195,7 +2499,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_cfglut4_46 is
+entity ila_0_ltlib_v1_0_0_cfglut4_44 is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     cfg_data_0 : out STD_LOGIC;
@@ -2205,10 +2509,10 @@ entity ila_0_ltlib_v1_0_0_cfglut4_46 is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut4_46 : entity is "ltlib_v1_0_0_cfglut4";
-end ila_0_ltlib_v1_0_0_cfglut4_46;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut4_44 : entity is "ltlib_v1_0_0_cfglut4";
+end ila_0_ltlib_v1_0_0_cfglut4_44;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut4_46 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut4_44 is
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of \I_YESLUT6.U_SRLC16E\ : label is "PRIMITIVE";
 begin
@@ -2270,7 +2574,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_cfglut5_40 is
+entity ila_0_ltlib_v1_0_0_cfglut5_38 is
   port (
     wcnt_lcmp_ce : out STD_LOGIC;
     SRL_D_I : out STD_LOGIC;
@@ -2280,10 +2584,10 @@ entity ila_0_ltlib_v1_0_0_cfglut5_40 is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut5_40 : entity is "ltlib_v1_0_0_cfglut5";
-end ila_0_ltlib_v1_0_0_cfglut5_40;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut5_38 : entity is "ltlib_v1_0_0_cfglut5";
+end ila_0_ltlib_v1_0_0_cfglut5_38;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut5_40 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut5_38 is
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of \I_YESLUT6.U_SRL32\ : label is "PRIMITIVE";
   attribute srl_name : string;
@@ -2307,7 +2611,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_cfglut5_47 is
+entity ila_0_ltlib_v1_0_0_cfglut5_45 is
   port (
     scnt_cmp_ce : out STD_LOGIC;
     cfg_data_1_0 : out STD_LOGIC;
@@ -2317,10 +2621,10 @@ entity ila_0_ltlib_v1_0_0_cfglut5_47 is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut5_47 : entity is "ltlib_v1_0_0_cfglut5";
-end ila_0_ltlib_v1_0_0_cfglut5_47;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut5_45 : entity is "ltlib_v1_0_0_cfglut5";
+end ila_0_ltlib_v1_0_0_cfglut5_45;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut5_47 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut5_45 is
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of \I_YESLUT6.U_SRL32\ : label is "PRIMITIVE";
   attribute srl_name : string;
@@ -2410,7 +2714,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_cfglut6_48 is
+entity ila_0_ltlib_v1_0_0_cfglut6_46 is
   port (
     \capture_qual_ctrl_reg[0]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     SRL_D_I : out STD_LOGIC;
@@ -2425,10 +2729,10 @@ entity ila_0_ltlib_v1_0_0_cfglut6_48 is
     \iscnt_reg[9]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut6_48 : entity is "ltlib_v1_0_0_cfglut6";
-end ila_0_ltlib_v1_0_0_cfglut6_48;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut6_46 : entity is "ltlib_v1_0_0_cfglut6";
+end ila_0_ltlib_v1_0_0_cfglut6_46;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut6_48 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut6_46 is
   signal \I_YESLUT6.SRL_Q31\ : STD_LOGIC;
   signal \I_YESLUT6.SRL_Q_0\ : STD_LOGIC;
   signal \I_YESLUT6.SRL_Q_1\ : STD_LOGIC;
@@ -2715,7 +3019,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_cfglut7_39 is
+entity ila_0_ltlib_v1_0_0_cfglut7_37 is
   port (
     \I_YESLUT6.I_YES_OREG.O_reg_reg_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     cfg_data_0 : out STD_LOGIC;
@@ -2729,10 +3033,10 @@ entity ila_0_ltlib_v1_0_0_cfglut7_39 is
     wcnt_hcmp : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut7_39 : entity is "ltlib_v1_0_0_cfglut7";
-end ila_0_ltlib_v1_0_0_cfglut7_39;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_cfglut7_37 : entity is "ltlib_v1_0_0_cfglut7";
+end ila_0_ltlib_v1_0_0_cfglut7_37;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut7_39 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_cfglut7_37 is
   signal \^i_yeslut6.i_yes_oreg.o_reg_reg_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \I_YESLUT6.SRL_MUX8__0\ : STD_LOGIC;
   signal \I_YESLUT6.SRL_Q31_0\ : STD_LOGIC;
@@ -2845,13 +3149,13 @@ entity ila_0_ltlib_v1_0_0_generic_memrd is
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    \input_data_reg[5]_0\ : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    \input_data_reg[31]_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC;
     read_data_en : in STD_LOGIC;
     read_reset_addr : in STD_LOGIC_VECTOR ( 9 downto 0 );
     \current_state_reg[2]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \input_data_reg[5]_1\ : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    \input_data_reg[35]_0\ : in STD_LOGIC_VECTOR ( 35 downto 0 );
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_generic_memrd : entity is "ltlib_v1_0_0_generic_memrd";
@@ -2859,19 +3163,26 @@ end ila_0_ltlib_v1_0_0_generic_memrd;
 
 architecture STRUCTURE of ila_0_ltlib_v1_0_0_generic_memrd is
   signal \^q\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal curr_read_block : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \curr_read_block[0]_i_1_n_0\ : STD_LOGIC;
+  signal \curr_read_block[1]_i_1_n_0\ : STD_LOGIC;
+  signal \curr_read_block[1]_i_2_n_0\ : STD_LOGIC;
+  signal \curr_read_block[1]_i_3_n_0\ : STD_LOGIC;
+  signal \curr_read_block[1]_i_4_n_0\ : STD_LOGIC;
+  signal \curr_read_block[1]_i_5_n_0\ : STD_LOGIC;
   signal current_state : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal \current_state[0]_i_1__5_n_0\ : STD_LOGIC;
   signal \current_state[0]_i_2_n_0\ : STD_LOGIC;
-  signal \current_state[1]_i_1__5_n_0\ : STD_LOGIC;
-  signal \current_state[2]_i_1__6_n_0\ : STD_LOGIC;
+  signal \current_state[0]_i_3_n_0\ : STD_LOGIC;
+  signal \current_state[1]_i_2_n_0\ : STD_LOGIC;
   signal \current_state[3]_i_2__6_n_0\ : STD_LOGIC;
-  signal \current_state[4]_i_1_n_0\ : STD_LOGIC;
+  signal \current_state[4]_i_2_n_0\ : STD_LOGIC;
   signal \current_state[6]_i_2_n_0\ : STD_LOGIC;
   signal data_out_en : STD_LOGIC;
-  signal data_out_en_1 : STD_LOGIC;
   signal data_out_en_i_1_n_0 : STD_LOGIC;
+  signal input_data : STD_LOGIC_VECTOR ( 35 downto 0 );
   signal \multiple_enable_latency.enable_out_reg[2]_srl2_n_0\ : STD_LOGIC;
   signal \multiple_read_latency.read_enable_out_reg[2]_srl2_n_0\ : STD_LOGIC;
+  signal next_state : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal p_0_in : STD_LOGIC;
   signal read_addr : STD_LOGIC;
   signal \read_addr[0]_i_1_n_0\ : STD_LOGIC;
@@ -2888,33 +3199,46 @@ architecture STRUCTURE of ila_0_ltlib_v1_0_0_generic_memrd is
   signal \read_addr[8]_i_2_n_0\ : STD_LOGIC;
   signal \read_addr[9]_i_2_n_0\ : STD_LOGIC;
   signal \read_addr[9]_i_3_n_0\ : STD_LOGIC;
+  signal \read_addr[9]_i_4_n_0\ : STD_LOGIC;
   signal read_en : STD_LOGIC;
   signal read_en_0 : STD_LOGIC;
   signal read_en_i_1_n_0 : STD_LOGIC;
+  signal read_en_i_3_n_0 : STD_LOGIC;
+  signal read_en_i_4_n_0 : STD_LOGIC;
+  signal read_en_i_5_n_0 : STD_LOGIC;
+  signal read_en_i_6_n_0 : STD_LOGIC;
+  signal read_en_i_7_n_0 : STD_LOGIC;
+  signal read_en_i_8_n_0 : STD_LOGIC;
+  signal read_en_i_9_n_0 : STD_LOGIC;
   signal read_en_temp : STD_LOGIC;
-  signal sel00 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \current_state[0]_i_1__5\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \current_state[2]_i_1__6\ : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \curr_read_block[1]_i_2\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \curr_read_block[1]_i_4\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \current_state[0]_i_2\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \current_state[0]_i_3\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \current_state[1]_i_1__5\ : label is "soft_lutpair84";
   attribute SOFT_HLUTNM of \current_state[3]_i_1__6\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \current_state[6]_i_2\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of data_out_en_i_1 : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \current_state[4]_i_2\ : label is "soft_lutpair84";
+  attribute SOFT_HLUTNM of data_out_en_i_1 : label is "soft_lutpair88";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \multiple_enable_latency.enable_out_reg[2]_srl2\ : label is "inst/\ila_core_inst/xsdb_memory_read_inst/multiple_enable_latency.enable_out_reg ";
   attribute srl_name : string;
   attribute srl_name of \multiple_enable_latency.enable_out_reg[2]_srl2\ : label is "inst/\ila_core_inst/xsdb_memory_read_inst/multiple_enable_latency.enable_out_reg[2]_srl2 ";
   attribute srl_bus_name of \multiple_read_latency.read_enable_out_reg[2]_srl2\ : label is "inst/\ila_core_inst/xsdb_memory_read_inst/multiple_read_latency.read_enable_out_reg ";
   attribute srl_name of \multiple_read_latency.read_enable_out_reg[2]_srl2\ : label is "inst/\ila_core_inst/xsdb_memory_read_inst/multiple_read_latency.read_enable_out_reg[2]_srl2 ";
-  attribute SOFT_HLUTNM of \read_addr[0]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \read_addr[1]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \read_addr[4]_i_2\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \read_addr[5]_i_2\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \read_addr[7]_i_1\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \read_addr[9]_i_3\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \read_addr[0]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \read_addr[1]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \read_addr[4]_i_2\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \read_addr[5]_i_2\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \read_addr[7]_i_1\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of \read_addr[9]_i_3\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \read_addr[9]_i_4\ : label is "soft_lutpair82";
   attribute SOFT_HLUTNM of read_en_i_1 : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of read_en_i_9 : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \xsdb_reg[10]_i_1\ : label is "soft_lutpair87";
 begin
   Q(9 downto 0) <= \^q\(9 downto 0);
-\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1\: unisim.vcomponents.LUT2
+\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
@@ -2923,76 +3247,184 @@ begin
       I1 => read_en_temp,
       O => D(0)
     );
-\current_state[0]_i_1__5\: unisim.vcomponents.LUT5
+\curr_read_block[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFA8A9"
+      INIT => X"FFFDFDDF00000200"
     )
         port map (
-      I0 => current_state(1),
-      I1 => current_state(2),
-      I2 => \current_state[3]_i_2__6_n_0\,
-      I3 => read_data_en,
-      I4 => \current_state[0]_i_2_n_0\,
-      O => \current_state[0]_i_1__5_n_0\
+      I0 => \curr_read_block[1]_i_4_n_0\,
+      I1 => next_state(4),
+      I2 => next_state(6),
+      I3 => next_state(5),
+      I4 => next_state(0),
+      I5 => curr_read_block(0),
+      O => \curr_read_block[0]_i_1_n_0\
     );
-\current_state[0]_i_2\: unisim.vcomponents.LUT6
+\curr_read_block[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFEFFFCFCC1"
+      INIT => X"FFAFFFBF00A00080"
     )
         port map (
-      I0 => current_state(1),
+      I0 => \curr_read_block[1]_i_2_n_0\,
+      I1 => \curr_read_block[1]_i_3_n_0\,
+      I2 => \curr_read_block[1]_i_4_n_0\,
+      I3 => next_state(4),
+      I4 => \curr_read_block[1]_i_5_n_0\,
+      I5 => curr_read_block(1),
+      O => \curr_read_block[1]_i_1_n_0\
+    );
+\curr_read_block[1]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"28"
+    )
+        port map (
+      I0 => next_state(5),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      O => \curr_read_block[1]_i_2_n_0\
+    );
+\curr_read_block[1]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFDFF00000000"
+    )
+        port map (
+      I0 => read_data_en,
       I1 => current_state(3),
-      I2 => current_state(6),
+      I2 => current_state(2),
       I3 => current_state(4),
-      I4 => current_state(2),
-      I5 => current_state(0),
+      I4 => \current_state[6]_i_2_n_0\,
+      I5 => next_state(0),
+      O => \curr_read_block[1]_i_3_n_0\
+    );
+\curr_read_block[1]_i_4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => next_state(1),
+      I1 => next_state(2),
+      I2 => next_state(3),
+      O => \curr_read_block[1]_i_4_n_0\
+    );
+\curr_read_block[1]_i_5\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"06"
+    )
+        port map (
+      I0 => next_state(6),
+      I1 => next_state(5),
+      I2 => next_state(0),
+      O => \curr_read_block[1]_i_5_n_0\
+    );
+\curr_read_block_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \curr_read_block[0]_i_1_n_0\,
+      Q => curr_read_block(0),
+      R => '0'
+    );
+\curr_read_block_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \curr_read_block[1]_i_1_n_0\,
+      Q => curr_read_block(1),
+      R => '0'
+    );
+\current_state[0]_i_1__5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFDFC03"
+    )
+        port map (
+      I0 => read_data_en,
+      I1 => current_state(2),
+      I2 => \current_state[0]_i_2_n_0\,
+      I3 => current_state(1),
+      I4 => current_state(0),
+      I5 => \current_state[0]_i_3_n_0\,
+      O => next_state(0)
+    );
+\current_state[0]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => current_state(3),
+      I1 => current_state(4),
+      I2 => current_state(6),
+      I3 => current_state(5),
       O => \current_state[0]_i_2_n_0\
     );
-\current_state[1]_i_1__5\: unisim.vcomponents.LUT6
+\current_state[0]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"000000000000002C"
+      INIT => X"FFFEFEE8"
+    )
+        port map (
+      I0 => current_state(3),
+      I1 => current_state(2),
+      I2 => current_state(4),
+      I3 => current_state(6),
+      I4 => current_state(5),
+      O => \current_state[0]_i_3_n_0\
+    );
+\current_state[1]_i_1__5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2C00"
     )
         port map (
       I0 => read_data_en,
       I1 => current_state(6),
       I2 => current_state(0),
-      I3 => \current_state[6]_i_2_n_0\,
-      I4 => current_state(3),
-      I5 => current_state(4),
-      O => \current_state[1]_i_1__5_n_0\
+      I3 => \current_state[1]_i_2_n_0\,
+      O => next_state(1)
     );
-\current_state[2]_i_1__6\: unisim.vcomponents.LUT5
+\current_state[1]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00010300"
+      INIT => X"00000001"
+    )
+        port map (
+      I0 => current_state(5),
+      I1 => current_state(4),
+      I2 => current_state(3),
+      I3 => current_state(2),
+      I4 => current_state(1),
+      O => \current_state[1]_i_2_n_0\
+    );
+\current_state[2]_i_1__6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000100030000"
     )
         port map (
       I0 => \current_state_reg[2]_0\(0),
-      I1 => \current_state[3]_i_2__6_n_0\,
-      I2 => current_state(0),
-      I3 => current_state(1),
-      I4 => current_state(2),
-      O => \current_state[2]_i_1__6_n_0\
+      I1 => \current_state[4]_i_2_n_0\,
+      I2 => current_state(3),
+      I3 => current_state(4),
+      I4 => current_state(1),
+      I5 => current_state(2),
+      O => next_state(2)
     );
-\current_state[3]_i_1__6\: unisim.vcomponents.LUT5
+\current_state[3]_i_1__6\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00000008"
+      INIT => X"2088"
     )
         port map (
-      I0 => current_state(2),
-      I1 => \current_state_reg[2]_0\(0),
-      I2 => current_state(0),
-      I3 => current_state(1),
-      I4 => \current_state[3]_i_2__6_n_0\,
-      O => data_out_en_1
+      I0 => \current_state[3]_i_2__6_n_0\,
+      I1 => current_state(5),
+      I2 => \current_state_reg[2]_0\(0),
+      I3 => current_state(2),
+      O => next_state(3)
     );
-\current_state[3]_i_2__6\: unisim.vcomponents.LUT3
+\current_state[3]_i_2__6\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FE"
+      INIT => X"00000001"
     )
         port map (
-      I0 => current_state(3),
-      I1 => current_state(6),
-      I2 => current_state(4),
+      I0 => current_state(0),
+      I1 => current_state(1),
+      I2 => current_state(6),
+      I3 => current_state(3),
+      I4 => current_state(4),
       O => \current_state[3]_i_2__6_n_0\
     );
 \current_state[4]_i_1\: unisim.vcomponents.LUT6
@@ -3001,33 +3433,58 @@ begin
     )
         port map (
       I0 => read_data_en,
-      I1 => current_state(0),
-      I2 => current_state(6),
-      I3 => \current_state[6]_i_2_n_0\,
+      I1 => \current_state[4]_i_2_n_0\,
+      I2 => current_state(2),
+      I3 => current_state(1),
       I4 => current_state(3),
       I5 => current_state(4),
-      O => \current_state[4]_i_1_n_0\
+      O => next_state(4)
     );
-\current_state[6]_i_1\: unisim.vcomponents.LUT6
+\current_state[4]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => current_state(6),
+      I1 => current_state(5),
+      I2 => current_state(0),
+      O => \current_state[4]_i_2_n_0\
+    );
+\current_state[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000001000000000"
     )
         port map (
       I0 => \current_state[6]_i_2_n_0\,
-      I1 => current_state(0),
+      I1 => curr_read_block(1),
       I2 => current_state(4),
-      I3 => current_state(3),
-      I4 => current_state(6),
+      I3 => current_state(2),
+      I4 => current_state(3),
       I5 => read_data_en,
-      O => sel00
+      O => next_state(5)
     );
-\current_state[6]_i_2\: unisim.vcomponents.LUT2
+\current_state[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E"
+      INIT => X"0000004000000000"
     )
         port map (
-      I0 => current_state(1),
-      I1 => current_state(2),
+      I0 => \current_state[6]_i_2_n_0\,
+      I1 => curr_read_block(1),
+      I2 => current_state(4),
+      I3 => current_state(2),
+      I4 => current_state(3),
+      I5 => read_data_en,
+      O => next_state(6)
+    );
+\current_state[6]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => current_state(0),
+      I1 => current_state(5),
+      I2 => current_state(6),
+      I3 => current_state(1),
       O => \current_state[6]_i_2_n_0\
     );
 \current_state_reg[0]\: unisim.vcomponents.FDSE
@@ -3037,7 +3494,7 @@ begin
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \current_state[0]_i_1__5_n_0\,
+      D => next_state(0),
       Q => current_state(0),
       S => SR(0)
     );
@@ -3048,7 +3505,7 @@ begin
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \current_state[1]_i_1__5_n_0\,
+      D => next_state(1),
       Q => current_state(1),
       R => SR(0)
     );
@@ -3059,7 +3516,7 @@ begin
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \current_state[2]_i_1__6_n_0\,
+      D => next_state(2),
       Q => current_state(2),
       R => SR(0)
     );
@@ -3070,7 +3527,7 @@ begin
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => data_out_en_1,
+      D => next_state(3),
       Q => current_state(3),
       R => SR(0)
     );
@@ -3081,8 +3538,19 @@ begin
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \current_state[4]_i_1_n_0\,
+      D => next_state(4),
       Q => current_state(4),
+      R => SR(0)
+    );
+\current_state_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => next_state(5),
+      Q => current_state(5),
       R => SR(0)
     );
 \current_state_reg[6]\: unisim.vcomponents.FDRE
@@ -3092,7 +3560,7 @@ begin
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => sel00,
+      D => next_state(6),
       Q => current_state(6),
       R => SR(0)
     );
@@ -3101,7 +3569,7 @@ data_out_en_i_1: unisim.vcomponents.LUT3
       INIT => X"B8"
     )
         port map (
-      I0 => data_out_en_1,
+      I0 => next_state(3),
       I1 => read_en_0,
       I2 => data_out_en,
       O => data_out_en_i_1_n_0
@@ -3121,8 +3589,118 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \input_data_reg[5]_1\(0),
-      Q => \input_data_reg[5]_0\(0),
+      D => \input_data_reg[35]_0\(0),
+      Q => input_data(0),
+      R => '0'
+    );
+\input_data_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(10),
+      Q => input_data(10),
+      R => '0'
+    );
+\input_data_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(11),
+      Q => input_data(11),
+      R => '0'
+    );
+\input_data_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(12),
+      Q => input_data(12),
+      R => '0'
+    );
+\input_data_reg[13]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(13),
+      Q => input_data(13),
+      R => '0'
+    );
+\input_data_reg[14]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(14),
+      Q => input_data(14),
+      R => '0'
+    );
+\input_data_reg[15]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(15),
+      Q => input_data(15),
+      R => '0'
+    );
+\input_data_reg[16]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(16),
+      Q => input_data(16),
+      R => '0'
+    );
+\input_data_reg[17]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(17),
+      Q => input_data(17),
+      R => '0'
+    );
+\input_data_reg[18]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(18),
+      Q => input_data(18),
+      R => '0'
+    );
+\input_data_reg[19]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(19),
+      Q => input_data(19),
       R => '0'
     );
 \input_data_reg[1]\: unisim.vcomponents.FDRE
@@ -3132,8 +3710,118 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \input_data_reg[5]_1\(1),
-      Q => \input_data_reg[5]_0\(1),
+      D => \input_data_reg[35]_0\(1),
+      Q => input_data(1),
+      R => '0'
+    );
+\input_data_reg[20]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(20),
+      Q => input_data(20),
+      R => '0'
+    );
+\input_data_reg[21]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(21),
+      Q => input_data(21),
+      R => '0'
+    );
+\input_data_reg[22]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(22),
+      Q => input_data(22),
+      R => '0'
+    );
+\input_data_reg[23]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(23),
+      Q => input_data(23),
+      R => '0'
+    );
+\input_data_reg[24]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(24),
+      Q => input_data(24),
+      R => '0'
+    );
+\input_data_reg[25]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(25),
+      Q => input_data(25),
+      R => '0'
+    );
+\input_data_reg[26]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(26),
+      Q => input_data(26),
+      R => '0'
+    );
+\input_data_reg[27]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(27),
+      Q => input_data(27),
+      R => '0'
+    );
+\input_data_reg[28]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(28),
+      Q => input_data(28),
+      R => '0'
+    );
+\input_data_reg[29]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(29),
+      Q => input_data(29),
       R => '0'
     );
 \input_data_reg[2]\: unisim.vcomponents.FDRE
@@ -3143,8 +3831,74 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \input_data_reg[5]_1\(2),
-      Q => \input_data_reg[5]_0\(2),
+      D => \input_data_reg[35]_0\(2),
+      Q => input_data(2),
+      R => '0'
+    );
+\input_data_reg[30]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(30),
+      Q => input_data(30),
+      R => '0'
+    );
+\input_data_reg[31]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(31),
+      Q => input_data(31),
+      R => '0'
+    );
+\input_data_reg[32]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(32),
+      Q => input_data(32),
+      R => '0'
+    );
+\input_data_reg[33]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(33),
+      Q => input_data(33),
+      R => '0'
+    );
+\input_data_reg[34]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(34),
+      Q => input_data(34),
+      R => '0'
+    );
+\input_data_reg[35]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(35),
+      Q => input_data(35),
       R => '0'
     );
 \input_data_reg[3]\: unisim.vcomponents.FDRE
@@ -3154,8 +3908,8 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \input_data_reg[5]_1\(3),
-      Q => \input_data_reg[5]_0\(3),
+      D => \input_data_reg[35]_0\(3),
+      Q => input_data(3),
       R => '0'
     );
 \input_data_reg[4]\: unisim.vcomponents.FDRE
@@ -3165,8 +3919,8 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \input_data_reg[5]_1\(4),
-      Q => \input_data_reg[5]_0\(4),
+      D => \input_data_reg[35]_0\(4),
+      Q => input_data(4),
       R => '0'
     );
 \input_data_reg[5]\: unisim.vcomponents.FDRE
@@ -3176,8 +3930,52 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       C => s_dclk_o,
       CE => '1',
-      D => \input_data_reg[5]_1\(5),
-      Q => \input_data_reg[5]_0\(5),
+      D => \input_data_reg[35]_0\(5),
+      Q => input_data(5),
+      R => '0'
+    );
+\input_data_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(6),
+      Q => input_data(6),
+      R => '0'
+    );
+\input_data_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(7),
+      Q => input_data(7),
+      R => '0'
+    );
+\input_data_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(8),
+      Q => input_data(8),
+      R => '0'
+    );
+\input_data_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => '1',
+      D => \input_data_reg[35]_0\(9),
+      Q => input_data(9),
       R => '0'
     );
 \multiple_enable_latency.enable_out_reg[2]_srl2\: unisim.vcomponents.SRL16E
@@ -3232,7 +4030,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => read_reset_addr(0),
-      I1 => \current_state[0]_i_1__5_n_0\,
+      I1 => next_state(0),
       I2 => \^q\(0),
       O => \read_addr[0]_i_1_n_0\
     );
@@ -3243,7 +4041,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \^q\(1),
       I1 => \^q\(0),
-      I2 => \current_state[0]_i_1__5_n_0\,
+      I2 => next_state(0),
       I3 => read_reset_addr(1),
       O => \read_addr[1]_i_1_n_0\
     );
@@ -3255,7 +4053,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
       I0 => \^q\(2),
       I1 => \^q\(1),
       I2 => \^q\(0),
-      I3 => \current_state[0]_i_1__5_n_0\,
+      I3 => next_state(0),
       I4 => read_reset_addr(2),
       O => \read_addr[2]_i_1_n_0\
     );
@@ -3268,7 +4066,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
       I1 => \^q\(2),
       I2 => \^q\(0),
       I3 => \^q\(1),
-      I4 => \current_state[0]_i_1__5_n_0\,
+      I4 => next_state(0),
       I5 => read_reset_addr(3),
       O => \read_addr[3]_i_1_n_0\
     );
@@ -3279,7 +4077,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \^q\(4),
       I1 => \read_addr[4]_i_2_n_0\,
-      I2 => \current_state[0]_i_1__5_n_0\,
+      I2 => next_state(0),
       I3 => read_reset_addr(4),
       O => \read_addr[4]_i_1_n_0\
     );
@@ -3301,7 +4099,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \^q\(5),
       I1 => \read_addr[5]_i_2_n_0\,
-      I2 => \current_state[0]_i_1__5_n_0\,
+      I2 => next_state(0),
       I3 => read_reset_addr(5),
       O => \read_addr[5]_i_1_n_0\
     );
@@ -3324,7 +4122,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \^q\(6),
       I1 => \read_addr[8]_i_2_n_0\,
-      I2 => \current_state[0]_i_1__5_n_0\,
+      I2 => next_state(0),
       I3 => read_reset_addr(6),
       O => \read_addr[6]_i_1_n_0\
     );
@@ -3336,7 +4134,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
       I0 => \^q\(7),
       I1 => \^q\(6),
       I2 => \read_addr[8]_i_2_n_0\,
-      I3 => \current_state[0]_i_1__5_n_0\,
+      I3 => next_state(0),
       I4 => read_reset_addr(7),
       O => \read_addr[7]_i_1_n_0\
     );
@@ -3349,7 +4147,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
       I1 => \^q\(7),
       I2 => \read_addr[8]_i_2_n_0\,
       I3 => \^q\(6),
-      I4 => \current_state[0]_i_1__5_n_0\,
+      I4 => next_state(0),
       I5 => read_reset_addr(8),
       O => \read_addr[8]_i_1_n_0\
     );
@@ -3368,15 +4166,15 @@ data_out_en_reg: unisim.vcomponents.FDRE
     );
 \read_addr[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000014"
+      INIT => X"0000000100010000"
     )
         port map (
-      I0 => \current_state[4]_i_1_n_0\,
-      I1 => \current_state[0]_i_1__5_n_0\,
-      I2 => sel00,
-      I3 => \current_state[1]_i_1__5_n_0\,
-      I4 => \current_state[2]_i_1__6_n_0\,
-      I5 => data_out_en_1,
+      I0 => next_state(5),
+      I1 => next_state(4),
+      I2 => \read_addr[9]_i_3_n_0\,
+      I3 => next_state(3),
+      I4 => next_state(0),
+      I5 => next_state(6),
       O => read_addr
     );
 \read_addr[9]_i_2\: unisim.vcomponents.LUT5
@@ -3386,12 +4184,21 @@ data_out_en_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \^q\(9),
       I1 => \^q\(8),
-      I2 => \read_addr[9]_i_3_n_0\,
-      I3 => \current_state[0]_i_1__5_n_0\,
+      I2 => \read_addr[9]_i_4_n_0\,
+      I3 => next_state(0),
       I4 => read_reset_addr(9),
       O => \read_addr[9]_i_2_n_0\
     );
-\read_addr[9]_i_3\: unisim.vcomponents.LUT3
+\read_addr[9]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => next_state(2),
+      I1 => next_state(1),
+      O => \read_addr[9]_i_3_n_0\
+    );
+\read_addr[9]_i_4\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"80"
     )
@@ -3399,7 +4206,7 @@ data_out_en_reg: unisim.vcomponents.FDRE
       I0 => \^q\(7),
       I1 => \read_addr[8]_i_2_n_0\,
       I2 => \^q\(6),
-      O => \read_addr[9]_i_3_n_0\
+      O => \read_addr[9]_i_4_n_0\
     );
 \read_addr_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -3486,23 +4293,110 @@ read_en_i_1: unisim.vcomponents.LUT3
       INIT => X"B8"
     )
         port map (
-      I0 => \current_state[1]_i_1__5_n_0\,
+      I0 => next_state(1),
       I1 => read_en_0,
       I2 => read_en,
       O => read_en_i_1_n_0
     );
 read_en_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000100010116"
+      INIT => X"0000030003002E22"
     )
         port map (
-      I0 => \current_state[0]_i_1__5_n_0\,
-      I1 => data_out_en_1,
-      I2 => sel00,
-      I3 => \current_state[4]_i_1_n_0\,
-      I4 => \current_state[2]_i_1__6_n_0\,
-      I5 => \current_state[1]_i_1__5_n_0\,
+      I0 => read_en_i_3_n_0,
+      I1 => next_state(0),
+      I2 => next_state(4),
+      I3 => read_en_i_4_n_0,
+      I4 => next_state(1),
+      I5 => next_state(2),
       O => read_en_0
+    );
+read_en_i_3: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0101010B545E5EF4"
+    )
+        port map (
+      I0 => read_data_en,
+      I1 => read_en_i_5_n_0,
+      I2 => read_en_i_6_n_0,
+      I3 => read_en_i_7_n_0,
+      I4 => read_en_i_8_n_0,
+      I5 => next_state(3),
+      O => read_en_i_3_n_0
+    );
+read_en_i_4: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000FEFFFFFF"
+    )
+        port map (
+      I0 => current_state(3),
+      I1 => current_state(2),
+      I2 => \current_state[6]_i_2_n_0\,
+      I3 => current_state(4),
+      I4 => read_data_en,
+      I5 => next_state(3),
+      O => read_en_i_4_n_0
+    );
+read_en_i_5: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000004"
+    )
+        port map (
+      I0 => current_state(3),
+      I1 => current_state(4),
+      I2 => current_state(1),
+      I3 => current_state(2),
+      I4 => read_en_i_9_n_0,
+      I5 => current_state(0),
+      O => read_en_i_5_n_0
+    );
+read_en_i_6: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000004"
+    )
+        port map (
+      I0 => current_state(4),
+      I1 => current_state(3),
+      I2 => current_state(1),
+      I3 => current_state(2),
+      I4 => read_en_i_9_n_0,
+      I5 => current_state(0),
+      O => read_en_i_6_n_0
+    );
+read_en_i_7: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000001000"
+    )
+        port map (
+      I0 => current_state(3),
+      I1 => current_state(2),
+      I2 => current_state(4),
+      I3 => curr_read_block(1),
+      I4 => current_state(1),
+      I5 => \current_state[4]_i_2_n_0\,
+      O => read_en_i_7_n_0
+    );
+read_en_i_8: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000010"
+    )
+        port map (
+      I0 => current_state(3),
+      I1 => current_state(2),
+      I2 => current_state(4),
+      I3 => curr_read_block(1),
+      I4 => current_state(1),
+      I5 => \current_state[4]_i_2_n_0\,
+      O => read_en_i_8_n_0
+    );
+read_en_i_9: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => current_state(5),
+      I1 => current_state(6),
+      O => read_en_i_9_n_0
     );
 read_en_reg: unisim.vcomponents.FDRE
      port map (
@@ -3511,6 +4405,186 @@ read_en_reg: unisim.vcomponents.FDRE
       D => read_en_i_1_n_0,
       Q => read_en,
       R => '0'
+    );
+\xsdb_reg[0]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0CFA0C0A"
+    )
+        port map (
+      I0 => input_data(0),
+      I1 => input_data(16),
+      I2 => curr_read_block(1),
+      I3 => curr_read_block(0),
+      I4 => input_data(32),
+      O => \input_data_reg[31]_0\(0)
+    );
+\xsdb_reg[10]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(26),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(10),
+      O => \input_data_reg[31]_0\(10)
+    );
+\xsdb_reg[11]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(27),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(11),
+      O => \input_data_reg[31]_0\(11)
+    );
+\xsdb_reg[12]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(28),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(12),
+      O => \input_data_reg[31]_0\(12)
+    );
+\xsdb_reg[13]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(29),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(13),
+      O => \input_data_reg[31]_0\(13)
+    );
+\xsdb_reg[14]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(30),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(14),
+      O => \input_data_reg[31]_0\(14)
+    );
+\xsdb_reg[15]_i_1__14\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(31),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(15),
+      O => \input_data_reg[31]_0\(15)
+    );
+\xsdb_reg[1]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0CFA0C0A"
+    )
+        port map (
+      I0 => input_data(1),
+      I1 => input_data(17),
+      I2 => curr_read_block(1),
+      I3 => curr_read_block(0),
+      I4 => input_data(33),
+      O => \input_data_reg[31]_0\(1)
+    );
+\xsdb_reg[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0CFA0C0A"
+    )
+        port map (
+      I0 => input_data(2),
+      I1 => input_data(18),
+      I2 => curr_read_block(1),
+      I3 => curr_read_block(0),
+      I4 => input_data(34),
+      O => \input_data_reg[31]_0\(2)
+    );
+\xsdb_reg[3]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0CFA0C0A"
+    )
+        port map (
+      I0 => input_data(3),
+      I1 => input_data(19),
+      I2 => curr_read_block(1),
+      I3 => curr_read_block(0),
+      I4 => input_data(35),
+      O => \input_data_reg[31]_0\(3)
+    );
+\xsdb_reg[4]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(20),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(4),
+      O => \input_data_reg[31]_0\(4)
+    );
+\xsdb_reg[5]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(21),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(5),
+      O => \input_data_reg[31]_0\(5)
+    );
+\xsdb_reg[6]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(22),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(6),
+      O => \input_data_reg[31]_0\(6)
+    );
+\xsdb_reg[7]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(23),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(7),
+      O => \input_data_reg[31]_0\(7)
+    );
+\xsdb_reg[8]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(24),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(8),
+      O => \input_data_reg[31]_0\(8)
+    );
+\xsdb_reg[9]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0B08"
+    )
+        port map (
+      I0 => input_data(25),
+      I1 => curr_read_block(0),
+      I2 => curr_read_block(1),
+      I3 => input_data(9),
+      O => \input_data_reg[31]_0\(9)
     );
 end STRUCTURE;
 library IEEE;
@@ -3596,7 +4670,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_rising_edge_detection_21 is
+entity ila_0_ltlib_v1_0_0_rising_edge_detection_19 is
   port (
     last_din : out STD_LOGIC;
     halt_out_reg : out STD_LOGIC;
@@ -3611,10 +4685,10 @@ entity ila_0_ltlib_v1_0_0_rising_edge_detection_21 is
     D : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_rising_edge_detection_21 : entity is "ltlib_v1_0_0_rising_edge_detection";
-end ila_0_ltlib_v1_0_0_rising_edge_detection_21;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_rising_edge_detection_19 : entity is "ltlib_v1_0_0_rising_edge_detection";
+end ila_0_ltlib_v1_0_0_rising_edge_detection_19;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_rising_edge_detection_21 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_rising_edge_detection_19 is
   signal \dout_pulse[1]_i_1_n_0\ : STD_LOGIC;
   signal halt_in_detection : STD_LOGIC;
   signal \^last_din\ : STD_LOGIC;
@@ -3692,23 +4766,26 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_xsdbs_v1_0_2_reg_ctl is
   port (
+    \G_1PIPE_IFACE.s_daddr_r_reg[0]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[11]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[9]\ : out STD_LOGIC;
     \slaveRegDo_ffa_reg[4]\ : out STD_LOGIC;
     \xsdb_reg_reg[15]_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]_1\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 12 downto 0 );
     s_den_o : in STD_LOGIC;
     s_dwe_o : in STD_LOGIC;
     slaveRegDo_ffa : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \slaveRegDo_mux_3_reg[0]\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_3_reg[14]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    \slaveRegDo_mux_3_reg[15]\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[15]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[10]\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[15]_1\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -3717,19 +4794,28 @@ entity ila_0_xsdbs_v1_0_2_reg_ctl is
 end ila_0_xsdbs_v1_0_2_reg_ctl;
 
 architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl is
+  signal \^g_1pipe_iface.s_daddr_r_reg[0]\ : STD_LOGIC;
+  signal \^g_1pipe_iface.s_daddr_r_reg[11]\ : STD_LOGIC;
+  signal \^g_1pipe_iface.s_daddr_r_reg[9]\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_1__13_n_0\ : STD_LOGIC;
-  signal \xsdb_reg[15]_i_2__1_n_0\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_3__1_n_0\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_4__1_n_0\ : STD_LOGIC;
-  signal \xsdb_reg[15]_i_5_n_0\ : STD_LOGIC;
-  signal \xsdb_reg[15]_i_6_n_0\ : STD_LOGIC;
   signal \^xsdb_reg_reg[15]_0\ : STD_LOGIC_VECTOR ( 15 downto 0 );
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \xsdb_reg[15]_i_5\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \xsdb_reg[15]_i_6\ : label is "soft_lutpair55";
 begin
+  \G_1PIPE_IFACE.s_daddr_r_reg[0]\ <= \^g_1pipe_iface.s_daddr_r_reg[0]\;
+  \G_1PIPE_IFACE.s_daddr_r_reg[11]\ <= \^g_1pipe_iface.s_daddr_r_reg[11]\;
+  \G_1PIPE_IFACE.s_daddr_r_reg[9]\ <= \^g_1pipe_iface.s_daddr_r_reg[9]\;
   \xsdb_reg_reg[15]_0\(15 downto 0) <= \^xsdb_reg_reg[15]_0\(15 downto 0);
-\slaveRegDo_mux_3[0]_i_3\: unisim.vcomponents.LUT5
+drdy_ffa_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => s_daddr_o(11),
+      I1 => s_daddr_o(10),
+      O => \^g_1pipe_iface.s_daddr_r_reg[11]\
+    );
+\slaveRegDo_mux_3[0]_i_4\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"F000CCAA"
     )
@@ -3741,106 +4827,51 @@ begin
       I4 => \slaveRegDo_mux_3_reg[0]_0\,
       O => \slaveRegDo_ffa_reg[4]\
     );
-\slaveRegDo_mux_3[11]_i_1\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[10]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CA00000000000000"
+      INIT => X"FFFFF888"
     )
         port map (
-      I0 => \^xsdb_reg_reg[15]_0\(11),
-      I1 => \slaveRegDo_mux_3_reg[14]\(3),
-      I2 => s_daddr_o(1),
-      I3 => s_daddr_o(3),
-      I4 => s_daddr_o(0),
-      I5 => s_daddr_o(2),
-      O => \xsdb_reg_reg[11]_0\
+      I0 => \slaveRegDo_mux_3_reg[15]\,
+      I1 => \^xsdb_reg_reg[15]_0\(10),
+      I2 => \slaveRegDo_mux_3_reg[15]_0\,
+      I3 => Q(2),
+      I4 => \slaveRegDo_mux_3_reg[10]\,
+      O => \xsdb_reg_reg[10]_0\
     );
-\slaveRegDo_mux_3[12]_i_1\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[15]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CA00000000000000"
+      INIT => X"FFFFF888"
     )
         port map (
-      I0 => \^xsdb_reg_reg[15]_0\(12),
-      I1 => \slaveRegDo_mux_3_reg[14]\(4),
-      I2 => s_daddr_o(1),
-      I3 => s_daddr_o(3),
-      I4 => s_daddr_o(0),
-      I5 => s_daddr_o(2),
-      O => \xsdb_reg_reg[12]_0\
+      I0 => \slaveRegDo_mux_3_reg[15]\,
+      I1 => \^xsdb_reg_reg[15]_0\(15),
+      I2 => \slaveRegDo_mux_3_reg[15]_0\,
+      I3 => Q(3),
+      I4 => \slaveRegDo_mux_3_reg[15]_1\,
+      O => \xsdb_reg_reg[15]_1\
     );
-\slaveRegDo_mux_3[13]_i_1\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CA00000000000000"
+      INIT => X"FFFFF888"
     )
         port map (
-      I0 => \^xsdb_reg_reg[15]_0\(13),
-      I1 => \slaveRegDo_mux_3_reg[14]\(5),
-      I2 => s_daddr_o(1),
-      I3 => s_daddr_o(3),
-      I4 => s_daddr_o(0),
-      I5 => s_daddr_o(2),
-      O => \xsdb_reg_reg[13]_0\
-    );
-\slaveRegDo_mux_3[14]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CA00000000000000"
-    )
-        port map (
-      I0 => \^xsdb_reg_reg[15]_0\(14),
-      I1 => \slaveRegDo_mux_3_reg[14]\(6),
-      I2 => s_daddr_o(1),
-      I3 => s_daddr_o(3),
-      I4 => s_daddr_o(0),
-      I5 => s_daddr_o(2),
-      O => \xsdb_reg_reg[14]_0\
-    );
-\slaveRegDo_mux_3[6]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CA00000000000000"
-    )
-        port map (
-      I0 => \^xsdb_reg_reg[15]_0\(6),
-      I1 => \slaveRegDo_mux_3_reg[14]\(0),
-      I2 => s_daddr_o(1),
-      I3 => s_daddr_o(3),
-      I4 => s_daddr_o(0),
-      I5 => s_daddr_o(2),
-      O => \xsdb_reg_reg[6]_0\
-    );
-\slaveRegDo_mux_3[8]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CA00000000000000"
-    )
-        port map (
-      I0 => \^xsdb_reg_reg[15]_0\(8),
-      I1 => \slaveRegDo_mux_3_reg[14]\(1),
-      I2 => s_daddr_o(1),
-      I3 => s_daddr_o(3),
-      I4 => s_daddr_o(0),
-      I5 => s_daddr_o(2),
-      O => \xsdb_reg_reg[8]_0\
-    );
-\slaveRegDo_mux_3[9]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CA00000000000000"
-    )
-        port map (
-      I0 => \^xsdb_reg_reg[15]_0\(9),
-      I1 => \slaveRegDo_mux_3_reg[14]\(2),
-      I2 => s_daddr_o(1),
-      I3 => s_daddr_o(3),
-      I4 => s_daddr_o(0),
-      I5 => s_daddr_o(2),
-      O => \xsdb_reg_reg[9]_0\
+      I0 => \slaveRegDo_mux_3_reg[15]\,
+      I1 => \^xsdb_reg_reg[15]_0\(7),
+      I2 => \slaveRegDo_mux_3_reg[15]_0\,
+      I3 => Q(1),
+      I4 => \slaveRegDo_mux_3_reg[7]\,
+      O => \xsdb_reg_reg[7]_0\
     );
 \xsdb_reg[15]_i_1__13\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D500000000000000"
+      INIT => X"8F00000000000000"
     )
         port map (
-      I0 => s_daddr_o(5),
-      I1 => s_daddr_o(3),
-      I2 => s_daddr_o(4),
-      I3 => \xsdb_reg[15]_i_2__1_n_0\,
+      I0 => s_daddr_o(3),
+      I1 => s_daddr_o(4),
+      I2 => s_daddr_o(5),
+      I3 => \^g_1pipe_iface.s_daddr_r_reg[0]\,
       I4 => \xsdb_reg[15]_i_3__1_n_0\,
       I5 => \xsdb_reg[15]_i_4__1_n_0\,
       O => \xsdb_reg[15]_i_1__13_n_0\
@@ -3852,7 +4883,7 @@ begin
         port map (
       I0 => s_daddr_o(0),
       I1 => s_daddr_o(1),
-      O => \xsdb_reg[15]_i_2__1_n_0\
+      O => \^g_1pipe_iface.s_daddr_r_reg[0]\
     );
 \xsdb_reg[15]_i_3__1\: unisim.vcomponents.LUT5
     generic map(
@@ -3871,32 +4902,26 @@ begin
       INIT => X"4000000000000000"
     )
         port map (
-      I0 => \xsdb_reg[15]_i_5_n_0\,
-      I1 => \xsdb_reg[15]_i_6_n_0\,
-      I2 => s_daddr_o(8),
-      I3 => s_daddr_o(11),
-      I4 => s_daddr_o(10),
-      I5 => s_daddr_o(9),
+      I0 => \^g_1pipe_iface.s_daddr_r_reg[11]\,
+      I1 => s_daddr_o(8),
+      I2 => s_daddr_o(5),
+      I3 => s_daddr_o(7),
+      I4 => s_daddr_o(4),
+      I5 => \^g_1pipe_iface.s_daddr_r_reg[9]\,
       O => \xsdb_reg[15]_i_4__1_n_0\
     );
-\xsdb_reg[15]_i_5\: unisim.vcomponents.LUT3
+\xsdb_reg[15]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7F"
+      INIT => X"8F8F008F008F008F"
     )
         port map (
-      I0 => s_daddr_o(4),
-      I1 => s_daddr_o(7),
-      I2 => s_daddr_o(5),
-      O => \xsdb_reg[15]_i_5_n_0\
-    );
-\xsdb_reg[15]_i_6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => s_daddr_o(6),
-      I1 => s_daddr_o(7),
-      O => \xsdb_reg[15]_i_6_n_0\
+      I0 => s_daddr_o(9),
+      I1 => s_daddr_o(10),
+      I2 => s_daddr_o(11),
+      I3 => s_daddr_o(8),
+      I4 => s_daddr_o(6),
+      I5 => s_daddr_o(7),
+      O => \^g_1pipe_iface.s_daddr_r_reg[9]\
     );
 \xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -4079,7 +5104,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_25 is
+entity ila_0_xsdbs_v1_0_2_reg_ctl_23 is
   port (
     \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
@@ -4103,10 +5128,10 @@ entity ila_0_xsdbs_v1_0_2_reg_ctl_25 is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_25 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_25;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_23 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_23;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_25 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_23 is
   signal \xsdb_reg[15]_i_1_n_0\ : STD_LOGIC;
 begin
 \xsdb_reg[15]_i_1\: unisim.vcomponents.LUT6
@@ -4303,7 +5328,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_26 is
+entity ila_0_xsdbs_v1_0_2_reg_ctl_24 is
   port (
     slaveRegDo_84 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -4312,10 +5337,10 @@ entity ila_0_xsdbs_v1_0_2_reg_ctl_26 is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_26 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_26;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_24 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_24;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_26 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_24 is
   signal \xsdb_reg[15]_i_1__0_n_0\ : STD_LOGIC;
 begin
 \xsdb_reg[15]_i_1__0\: unisim.vcomponents.LUT6
@@ -4512,501 +5537,36 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_27 is
+entity ila_0_xsdbs_v1_0_2_reg_ctl_25 is
   port (
-    D : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[3]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[3]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_3\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \slaveRegDo_mux_0_reg[15]_4\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_5\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[11]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[11]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[12]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[12]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[13]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[13]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[14]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[14]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_7\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_8\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_1\ : in STD_LOGIC;
-    slaveRegDo_82 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    slaveRegDo_84 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \slaveRegDo_mux_0[1]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2_0\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_27 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_27;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_25 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_25;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_27 is
-  signal \slaveRegDo_mux_0[11]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[11]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[12]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[12]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[13]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[13]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[14]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[14]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_8_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[3]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[3]_i_4_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_6_n_0\ : STD_LOGIC;
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_25 is
   signal \xsdb_reg[15]_i_1__1_n_0\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[0]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[10]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[11]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[12]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[13]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[14]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[15]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[1]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[2]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[3]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[4]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[5]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[6]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[7]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[8]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[9]\ : STD_LOGIC;
 begin
-\slaveRegDo_mux_0[0]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[0]\,
-      I1 => \slaveRegDo_mux_0[0]_i_3\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(0),
-      I5 => slaveRegDo_84(0),
-      O => \xsdb_reg_reg[0]_0\
-    );
-\slaveRegDo_mux_0[10]_i_8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[10]\,
-      I1 => \slaveRegDo_mux_0[10]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(10),
-      I5 => slaveRegDo_84(10),
-      O => \xsdb_reg_reg[10]_0\
-    );
-\slaveRegDo_mux_0[11]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEAEAEAAAAAAAAA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[11]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_3\(0),
-      I2 => \slaveRegDo_mux_0_reg[15]_4\,
-      I3 => \slaveRegDo_mux_0_reg[11]\,
-      I4 => \slaveRegDo_mux_0_reg[15]_5\,
-      I5 => \slaveRegDo_mux_0_reg[15]\,
-      O => D(2)
-    );
-\slaveRegDo_mux_0[11]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A828A02088088000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[15]_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_1\,
-      I2 => \slaveRegDo_mux_0_reg[15]_2\,
-      I3 => \slaveRegDo_mux_0[11]_i_3_n_0\,
-      I4 => \slaveRegDo_mux_0_reg[11]_0\,
-      I5 => \slaveRegDo_mux_0_reg[11]_1\,
-      O => \slaveRegDo_mux_0[11]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[11]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[11]\,
-      I1 => \slaveRegDo_mux_0[11]_i_2_0\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(11),
-      I5 => slaveRegDo_84(11),
-      O => \slaveRegDo_mux_0[11]_i_3_n_0\
-    );
-\slaveRegDo_mux_0[12]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEAEAEAAAAAAAAA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[12]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_3\(1),
-      I2 => \slaveRegDo_mux_0_reg[15]_4\,
-      I3 => \slaveRegDo_mux_0_reg[12]\,
-      I4 => \slaveRegDo_mux_0_reg[15]_5\,
-      I5 => \slaveRegDo_mux_0_reg[15]\,
-      O => D(3)
-    );
-\slaveRegDo_mux_0[12]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A828A02088088000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[15]_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_1\,
-      I2 => \slaveRegDo_mux_0_reg[15]_2\,
-      I3 => \slaveRegDo_mux_0[12]_i_3_n_0\,
-      I4 => \slaveRegDo_mux_0_reg[12]_0\,
-      I5 => \slaveRegDo_mux_0_reg[12]_1\,
-      O => \slaveRegDo_mux_0[12]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[12]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[12]\,
-      I1 => \slaveRegDo_mux_0[12]_i_2_0\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(12),
-      I5 => slaveRegDo_84(12),
-      O => \slaveRegDo_mux_0[12]_i_3_n_0\
-    );
-\slaveRegDo_mux_0[13]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEAEAEAAAAAAAAA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[13]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_3\(2),
-      I2 => \slaveRegDo_mux_0_reg[15]_4\,
-      I3 => \slaveRegDo_mux_0_reg[13]\,
-      I4 => \slaveRegDo_mux_0_reg[15]_5\,
-      I5 => \slaveRegDo_mux_0_reg[15]\,
-      O => D(4)
-    );
-\slaveRegDo_mux_0[13]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A828A02088088000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[15]_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_1\,
-      I2 => \slaveRegDo_mux_0_reg[15]_2\,
-      I3 => \slaveRegDo_mux_0[13]_i_3_n_0\,
-      I4 => \slaveRegDo_mux_0_reg[13]_0\,
-      I5 => \slaveRegDo_mux_0_reg[13]_1\,
-      O => \slaveRegDo_mux_0[13]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[13]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[13]\,
-      I1 => \slaveRegDo_mux_0[13]_i_2_0\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(13),
-      I5 => slaveRegDo_84(13),
-      O => \slaveRegDo_mux_0[13]_i_3_n_0\
-    );
-\slaveRegDo_mux_0[14]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEAEAEAAAAAAAAA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[14]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_3\(3),
-      I2 => \slaveRegDo_mux_0_reg[15]_4\,
-      I3 => \slaveRegDo_mux_0_reg[14]\,
-      I4 => \slaveRegDo_mux_0_reg[15]_5\,
-      I5 => \slaveRegDo_mux_0_reg[15]\,
-      O => D(5)
-    );
-\slaveRegDo_mux_0[14]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A828A02088088000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[15]_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_1\,
-      I2 => \slaveRegDo_mux_0_reg[15]_2\,
-      I3 => \slaveRegDo_mux_0[14]_i_3_n_0\,
-      I4 => \slaveRegDo_mux_0_reg[14]_0\,
-      I5 => \slaveRegDo_mux_0_reg[14]_1\,
-      O => \slaveRegDo_mux_0[14]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[14]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[14]\,
-      I1 => \slaveRegDo_mux_0[14]_i_2_0\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(14),
-      I5 => slaveRegDo_84(14),
-      O => \slaveRegDo_mux_0[14]_i_3_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEAEAEAAAAAAAAA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[15]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_6\,
-      I2 => \slaveRegDo_mux_0_reg[15]_5\,
-      I3 => \slaveRegDo_mux_0_reg[15]_3\(4),
-      I4 => \slaveRegDo_mux_0_reg[15]_4\,
-      I5 => \slaveRegDo_mux_0_reg[15]\,
-      O => D(6)
-    );
-\slaveRegDo_mux_0[15]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A828A02088088000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[15]_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_1\,
-      I2 => \slaveRegDo_mux_0_reg[15]_2\,
-      I3 => \slaveRegDo_mux_0[15]_i_8_n_0\,
-      I4 => \slaveRegDo_mux_0_reg[15]_7\,
-      I5 => \slaveRegDo_mux_0_reg[15]_8\,
-      O => \slaveRegDo_mux_0[15]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[15]\,
-      I1 => \slaveRegDo_mux_0[15]_i_2_0\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(15),
-      I5 => slaveRegDo_84(15),
-      O => \slaveRegDo_mux_0[15]_i_8_n_0\
-    );
-\slaveRegDo_mux_0[1]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[1]\,
-      I1 => \slaveRegDo_mux_0[1]_i_3\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(1),
-      I5 => slaveRegDo_84(1),
-      O => \xsdb_reg_reg[1]_0\
-    );
-\slaveRegDo_mux_0[2]_i_8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[2]\,
-      I1 => \slaveRegDo_mux_0[2]_i_3\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(2),
-      I5 => slaveRegDo_84(2),
-      O => \xsdb_reg_reg[2]_0\
-    );
-\slaveRegDo_mux_0[3]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEAEAEAAAAAAAAA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[3]_i_2_n_0\,
-      I1 => Q(0),
-      I2 => \slaveRegDo_mux_0_reg[6]\,
-      I3 => \slaveRegDo_mux_0_reg[3]\,
-      I4 => \slaveRegDo_mux_0_reg[6]_0\,
-      I5 => \slaveRegDo_mux_0_reg[15]\,
-      O => D(0)
-    );
-\slaveRegDo_mux_0[3]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A828A02088088000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[15]_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_1\,
-      I2 => \slaveRegDo_mux_0_reg[15]_2\,
-      I3 => \slaveRegDo_mux_0[3]_i_4_n_0\,
-      I4 => \slaveRegDo_mux_0_reg[3]_0\,
-      I5 => \slaveRegDo_mux_0_reg[3]_1\,
-      O => \slaveRegDo_mux_0[3]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[3]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[3]\,
-      I1 => \slaveRegDo_mux_0[3]_i_2_0\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(3),
-      I5 => slaveRegDo_84(3),
-      O => \slaveRegDo_mux_0[3]_i_4_n_0\
-    );
-\slaveRegDo_mux_0[4]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[4]\,
-      I1 => \slaveRegDo_mux_0[4]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(4),
-      I5 => slaveRegDo_84(4),
-      O => \xsdb_reg_reg[4]_0\
-    );
-\slaveRegDo_mux_0[5]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[5]\,
-      I1 => \slaveRegDo_mux_0[5]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(5),
-      I5 => slaveRegDo_84(5),
-      O => \xsdb_reg_reg[5]_0\
-    );
-\slaveRegDo_mux_0[6]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEAEAEAAAAAAAAA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[6]_i_2_n_0\,
-      I1 => Q(1),
-      I2 => \slaveRegDo_mux_0_reg[6]\,
-      I3 => \slaveRegDo_mux_0_reg[6]_1\,
-      I4 => \slaveRegDo_mux_0_reg[6]_0\,
-      I5 => \slaveRegDo_mux_0_reg[15]\,
-      O => D(1)
-    );
-\slaveRegDo_mux_0[6]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A828A02088088000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[15]_0\,
-      I1 => \slaveRegDo_mux_0_reg[15]_1\,
-      I2 => \slaveRegDo_mux_0_reg[15]_2\,
-      I3 => \slaveRegDo_mux_0[6]_i_6_n_0\,
-      I4 => \slaveRegDo_mux_0_reg[6]_2\,
-      I5 => \slaveRegDo_mux_0_reg[6]_3\,
-      O => \slaveRegDo_mux_0[6]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[6]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[6]\,
-      I1 => \slaveRegDo_mux_0[6]_i_2_0\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(6),
-      I5 => slaveRegDo_84(6),
-      O => \slaveRegDo_mux_0[6]_i_6_n_0\
-    );
-\slaveRegDo_mux_0[7]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[7]\,
-      I1 => \slaveRegDo_mux_0[7]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(7),
-      I5 => slaveRegDo_84(7),
-      O => \xsdb_reg_reg[7]_0\
-    );
-\slaveRegDo_mux_0[8]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[8]\,
-      I1 => \slaveRegDo_mux_0[8]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(8),
-      I5 => slaveRegDo_84(8),
-      O => \xsdb_reg_reg[8]_0\
-    );
-\slaveRegDo_mux_0[9]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[9]\,
-      I1 => \slaveRegDo_mux_0[9]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => slaveRegDo_82(9),
-      I5 => slaveRegDo_84(9),
-      O => \xsdb_reg_reg[9]_0\
-    );
 \xsdb_reg[15]_i_1__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000002000000000"
@@ -5028,7 +5588,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(0),
-      Q => \xsdb_reg_reg_n_0_[0]\,
+      Q => \xsdb_reg_reg[0]_0\,
       R => '0'
     );
 \xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
@@ -5039,7 +5599,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(10),
-      Q => \xsdb_reg_reg_n_0_[10]\,
+      Q => \xsdb_reg_reg[10]_0\,
       R => '0'
     );
 \xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
@@ -5050,7 +5610,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(11),
-      Q => \xsdb_reg_reg_n_0_[11]\,
+      Q => \xsdb_reg_reg[11]_0\,
       R => '0'
     );
 \xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
@@ -5061,7 +5621,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(12),
-      Q => \xsdb_reg_reg_n_0_[12]\,
+      Q => \xsdb_reg_reg[12]_0\,
       R => '0'
     );
 \xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
@@ -5072,7 +5632,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(13),
-      Q => \xsdb_reg_reg_n_0_[13]\,
+      Q => \xsdb_reg_reg[13]_0\,
       R => '0'
     );
 \xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
@@ -5083,7 +5643,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(14),
-      Q => \xsdb_reg_reg_n_0_[14]\,
+      Q => \xsdb_reg_reg[14]_0\,
       R => '0'
     );
 \xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
@@ -5094,7 +5654,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(15),
-      Q => \xsdb_reg_reg_n_0_[15]\,
+      Q => \xsdb_reg_reg[15]_0\,
       R => '0'
     );
 \xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
@@ -5105,7 +5665,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(1),
-      Q => \xsdb_reg_reg_n_0_[1]\,
+      Q => \xsdb_reg_reg[1]_0\,
       R => '0'
     );
 \xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
@@ -5116,7 +5676,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(2),
-      Q => \xsdb_reg_reg_n_0_[2]\,
+      Q => \xsdb_reg_reg[2]_0\,
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
@@ -5127,7 +5687,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(3),
-      Q => \xsdb_reg_reg_n_0_[3]\,
+      Q => \xsdb_reg_reg[3]_0\,
       R => '0'
     );
 \xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
@@ -5138,7 +5698,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(4),
-      Q => \xsdb_reg_reg_n_0_[4]\,
+      Q => \xsdb_reg_reg[4]_0\,
       R => '0'
     );
 \xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
@@ -5149,7 +5709,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(5),
-      Q => \xsdb_reg_reg_n_0_[5]\,
+      Q => \xsdb_reg_reg[5]_0\,
       R => '0'
     );
 \xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
@@ -5160,7 +5720,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(6),
-      Q => \xsdb_reg_reg_n_0_[6]\,
+      Q => \xsdb_reg_reg[6]_0\,
       R => '0'
     );
 \xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
@@ -5171,7 +5731,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(7),
-      Q => \xsdb_reg_reg_n_0_[7]\,
+      Q => \xsdb_reg_reg[7]_0\,
       R => '0'
     );
 \xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
@@ -5182,7 +5742,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(8),
-      Q => \xsdb_reg_reg_n_0_[8]\,
+      Q => \xsdb_reg_reg[8]_0\,
       R => '0'
     );
 \xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
@@ -5193,7 +5753,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__1_n_0\,
       D => s_di_o(9),
-      Q => \xsdb_reg_reg_n_0_[9]\,
+      Q => \xsdb_reg_reg[9]_0\,
       R => '0'
     );
 end STRUCTURE;
@@ -5201,21 +5761,686 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_28 is
+entity ila_0_xsdbs_v1_0_2_reg_ctl_26 is
   port (
-    slaveRegDo_81 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
+    \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_2\ : in STD_LOGIC;
+    slaveRegDo_84 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[15]_i_2_0\ : in STD_LOGIC;
+    slaveRegDo_80 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    slaveRegDo_82 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \slaveRegDo_mux_0[14]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[13]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[12]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[11]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[9]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[8]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[7]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[6]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[5]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_4_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[3]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[2]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[1]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_3_0\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_28 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_28;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_26 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_26;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_28 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_26 is
+  signal slaveRegDo_81 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \slaveRegDo_mux_0[0]_i_8_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[10]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[10]_i_4_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[11]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[11]_i_5_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[12]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[12]_i_5_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[13]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[13]_i_5_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[14]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[14]_i_5_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[15]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[15]_i_7_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[1]_i_8_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[2]_i_8_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[3]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[3]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[4]_i_10_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[5]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[5]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[6]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[6]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[7]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[7]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[8]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[8]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[9]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[9]_i_6_n_0\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_1__3_n_0\ : STD_LOGIC;
 begin
+\slaveRegDo_mux_0[0]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[0]_i_8_n_0\,
+      I1 => slaveRegDo_84(0),
+      I2 => \slaveRegDo_mux_0_reg[0]\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \xsdb_reg_reg[0]_0\
+    );
+\slaveRegDo_mux_0[0]_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(0),
+      I1 => \slaveRegDo_mux_0[0]_i_3_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(0),
+      I5 => slaveRegDo_82(0),
+      O => \slaveRegDo_mux_0[0]_i_8_n_0\
+    );
+\slaveRegDo_mux_0[10]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[10]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[10]\,
+      I3 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(6)
+    );
+\slaveRegDo_mux_0[10]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[10]_i_4_n_0\,
+      I1 => slaveRegDo_84(10),
+      I2 => \slaveRegDo_mux_0_reg[10]_0\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[10]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[10]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(10),
+      I1 => \slaveRegDo_mux_0[10]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(10),
+      I5 => slaveRegDo_82(10),
+      O => \slaveRegDo_mux_0[10]_i_4_n_0\
+    );
+\slaveRegDo_mux_0[11]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFF88888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[11]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[11]\,
+      I3 => \slaveRegDo_mux_0_reg[11]_0\,
+      I4 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(7)
+    );
+\slaveRegDo_mux_0[11]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[11]_i_5_n_0\,
+      I1 => slaveRegDo_84(11),
+      I2 => \slaveRegDo_mux_0_reg[11]_1\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[11]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[11]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(11),
+      I1 => \slaveRegDo_mux_0[11]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(11),
+      I5 => slaveRegDo_82(11),
+      O => \slaveRegDo_mux_0[11]_i_5_n_0\
+    );
+\slaveRegDo_mux_0[12]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFF88888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[12]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[12]\,
+      I3 => \slaveRegDo_mux_0_reg[12]_0\,
+      I4 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(8)
+    );
+\slaveRegDo_mux_0[12]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[12]_i_5_n_0\,
+      I1 => slaveRegDo_84(12),
+      I2 => \slaveRegDo_mux_0_reg[12]_1\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[12]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[12]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(12),
+      I1 => \slaveRegDo_mux_0[12]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(12),
+      I5 => slaveRegDo_82(12),
+      O => \slaveRegDo_mux_0[12]_i_5_n_0\
+    );
+\slaveRegDo_mux_0[13]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFF88888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[13]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[13]\,
+      I3 => \slaveRegDo_mux_0_reg[13]_0\,
+      I4 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(9)
+    );
+\slaveRegDo_mux_0[13]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[13]_i_5_n_0\,
+      I1 => slaveRegDo_84(13),
+      I2 => \slaveRegDo_mux_0_reg[13]_1\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[13]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[13]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(13),
+      I1 => \slaveRegDo_mux_0[13]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(13),
+      I5 => slaveRegDo_82(13),
+      O => \slaveRegDo_mux_0[13]_i_5_n_0\
+    );
+\slaveRegDo_mux_0[14]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFF88888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[14]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[14]\,
+      I3 => \slaveRegDo_mux_0_reg[14]_0\,
+      I4 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(10)
+    );
+\slaveRegDo_mux_0[14]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[14]_i_5_n_0\,
+      I1 => slaveRegDo_84(14),
+      I2 => \slaveRegDo_mux_0_reg[14]_1\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[14]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[14]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(14),
+      I1 => \slaveRegDo_mux_0[14]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(14),
+      I5 => slaveRegDo_82(14),
+      O => \slaveRegDo_mux_0[14]_i_5_n_0\
+    );
+\slaveRegDo_mux_0[15]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFF88888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[15]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[15]_1\,
+      I3 => \slaveRegDo_mux_0_reg[15]_2\,
+      I4 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(11)
+    );
+\slaveRegDo_mux_0[15]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[15]_i_7_n_0\,
+      I1 => slaveRegDo_84(15),
+      I2 => \slaveRegDo_mux_0_reg[15]_4\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[15]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[15]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(15),
+      I1 => \slaveRegDo_mux_0[15]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(15),
+      I5 => slaveRegDo_82(15),
+      O => \slaveRegDo_mux_0[15]_i_7_n_0\
+    );
+\slaveRegDo_mux_0[1]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[1]_i_8_n_0\,
+      I1 => slaveRegDo_84(1),
+      I2 => \slaveRegDo_mux_0_reg[1]\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \xsdb_reg_reg[1]_0\
+    );
+\slaveRegDo_mux_0[1]_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(1),
+      I1 => \slaveRegDo_mux_0[1]_i_3_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(1),
+      I5 => slaveRegDo_82(1),
+      O => \slaveRegDo_mux_0[1]_i_8_n_0\
+    );
+\slaveRegDo_mux_0[2]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[2]_i_8_n_0\,
+      I1 => slaveRegDo_84(2),
+      I2 => \slaveRegDo_mux_0_reg[2]\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \xsdb_reg_reg[2]_0\
+    );
+\slaveRegDo_mux_0[2]_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(2),
+      I1 => \slaveRegDo_mux_0[2]_i_3_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(2),
+      I5 => slaveRegDo_82(2),
+      O => \slaveRegDo_mux_0[2]_i_8_n_0\
+    );
+\slaveRegDo_mux_0[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF888888888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[3]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[3]\,
+      I3 => \slaveRegDo_mux_0_reg[3]_0\,
+      I4 => \slaveRegDo_mux_0_reg[3]_1\,
+      I5 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(0)
+    );
+\slaveRegDo_mux_0[3]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[3]_i_6_n_0\,
+      I1 => slaveRegDo_84(3),
+      I2 => \slaveRegDo_mux_0_reg[3]_2\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[3]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[3]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(3),
+      I1 => \slaveRegDo_mux_0[3]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(3),
+      I5 => slaveRegDo_82(3),
+      O => \slaveRegDo_mux_0[3]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[4]_i_10\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(4),
+      I1 => \slaveRegDo_mux_0[4]_i_4_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(4),
+      I5 => slaveRegDo_82(4),
+      O => \slaveRegDo_mux_0[4]_i_10_n_0\
+    );
+\slaveRegDo_mux_0[4]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[4]_i_10_n_0\,
+      I1 => slaveRegDo_84(4),
+      I2 => \slaveRegDo_mux_0_reg[4]\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \xsdb_reg_reg[4]_0\
+    );
+\slaveRegDo_mux_0[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF888888888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[5]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[5]\,
+      I3 => \slaveRegDo_mux_0_reg[5]_0\,
+      I4 => \slaveRegDo_mux_0_reg[5]_1\,
+      I5 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(1)
+    );
+\slaveRegDo_mux_0[5]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[5]_i_6_n_0\,
+      I1 => slaveRegDo_84(5),
+      I2 => \slaveRegDo_mux_0_reg[5]_2\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[5]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[5]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(5),
+      I1 => \slaveRegDo_mux_0[5]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(5),
+      I5 => slaveRegDo_82(5),
+      O => \slaveRegDo_mux_0[5]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF888888888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[6]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[6]\,
+      I3 => \slaveRegDo_mux_0_reg[6]_0\,
+      I4 => \slaveRegDo_mux_0_reg[6]_1\,
+      I5 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(2)
+    );
+\slaveRegDo_mux_0[6]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[6]_i_6_n_0\,
+      I1 => slaveRegDo_84(6),
+      I2 => \slaveRegDo_mux_0_reg[6]_2\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[6]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[6]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(6),
+      I1 => \slaveRegDo_mux_0[6]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(6),
+      I5 => slaveRegDo_82(6),
+      O => \slaveRegDo_mux_0[6]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF888888888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[7]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[7]\,
+      I3 => \slaveRegDo_mux_0_reg[7]_0\,
+      I4 => \slaveRegDo_mux_0_reg[7]_1\,
+      I5 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(3)
+    );
+\slaveRegDo_mux_0[7]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[7]_i_6_n_0\,
+      I1 => slaveRegDo_84(7),
+      I2 => \slaveRegDo_mux_0_reg[7]_2\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[7]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[7]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(7),
+      I1 => \slaveRegDo_mux_0[7]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(7),
+      I5 => slaveRegDo_82(7),
+      O => \slaveRegDo_mux_0[7]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF888888888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[8]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[8]\,
+      I3 => \slaveRegDo_mux_0_reg[8]_0\,
+      I4 => \slaveRegDo_mux_0_reg[8]_1\,
+      I5 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(4)
+    );
+\slaveRegDo_mux_0[8]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[8]_i_6_n_0\,
+      I1 => slaveRegDo_84(8),
+      I2 => \slaveRegDo_mux_0_reg[8]_2\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[8]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[8]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(8),
+      I1 => \slaveRegDo_mux_0[8]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(8),
+      I5 => slaveRegDo_82(8),
+      O => \slaveRegDo_mux_0[8]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF888888888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[9]_i_2_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[9]\,
+      I3 => \slaveRegDo_mux_0_reg[9]_0\,
+      I4 => \slaveRegDo_mux_0_reg[9]_1\,
+      I5 => \slaveRegDo_mux_0_reg[15]_0\,
+      O => D(5)
+    );
+\slaveRegDo_mux_0[9]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F000CCAAAAAAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[9]_i_6_n_0\,
+      I1 => slaveRegDo_84(9),
+      I2 => \slaveRegDo_mux_0_reg[9]_2\,
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_3\,
+      O => \slaveRegDo_mux_0[9]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[9]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
+    )
+        port map (
+      I0 => slaveRegDo_81(9),
+      I1 => \slaveRegDo_mux_0[9]_i_2_0\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => slaveRegDo_80(9),
+      I5 => slaveRegDo_82(9),
+      O => \slaveRegDo_mux_0[9]_i_6_n_0\
+    );
 \xsdb_reg[15]_i_1__3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000200000000"
@@ -5226,7 +6451,7 @@ begin
       I2 => s_daddr_o(1),
       I3 => s_daddr_o(3),
       I4 => s_daddr_o(4),
-      I5 => \xsdb_reg_reg[0]_0\,
+      I5 => \xsdb_reg_reg[0]_1\,
       O => \xsdb_reg[15]_i_1__3_n_0\
     );
 \xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
@@ -5410,101 +6635,156 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_31 is
+entity ila_0_xsdbs_v1_0_2_reg_ctl_29 is
   port (
     \G_1PIPE_IFACE.s_den_r_reg\ : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[15]_0\ : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]_1\ : out STD_LOGIC;
     \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]_2\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]_0\ : out STD_LOGIC_VECTOR ( 8 downto 0 );
     s_daddr_o : in STD_LOGIC_VECTOR ( 8 downto 0 );
     s_den_o : in STD_LOGIC;
     s_dwe_o : in STD_LOGIC;
     \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \slaveRegDo_mux_0_reg[4]\ : in STD_LOGIC;
     \slaveRegDo_mux_01__6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_3\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0_reg[10]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_2_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0[0]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_2_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_2_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \slaveRegDo_mux_0_reg[4]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_5\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_6\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
+    halt_ctrl : in STD_LOGIC;
+    \slaveRegDo_mux_0[2]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_2\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_31 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_31;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_29 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_29;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_31 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_29 is
   signal \^g_1pipe_iface.s_den_r_reg\ : STD_LOGIC;
-  signal slaveRegDo_6 : STD_LOGIC_VECTOR ( 10 to 10 );
-  signal \slaveRegDo_mux_0[0]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[0]_i_4_n_0\ : STD_LOGIC;
+  signal slaveRegDo_6 : STD_LOGIC_VECTOR ( 9 downto 4 );
+  signal \slaveRegDo_mux_0[4]_i_2_n_0\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_1__12_n_0\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_3__0_n_0\ : STD_LOGIC;
   signal \xsdb_reg_reg_n_0_[0]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[1]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[2]\ : STD_LOGIC;
 begin
   \G_1PIPE_IFACE.s_den_r_reg\ <= \^g_1pipe_iface.s_den_r_reg\;
-\slaveRegDo_mux_0[0]_i_1\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[0]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"F80F580F"
+    )
+        port map (
+      I0 => s_daddr_o(2),
+      I1 => \xsdb_reg_reg_n_0_[0]\,
+      I2 => s_daddr_o(0),
+      I3 => s_daddr_o(1),
+      I4 => \slaveRegDo_mux_0[0]_i_2\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[2]_2\
+    );
+\slaveRegDo_mux_0[1]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"C000A00F"
+    )
+        port map (
+      I0 => \xsdb_reg_reg_n_0_[1]\,
+      I1 => halt_ctrl,
+      I2 => s_daddr_o(2),
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      O => \xsdb_reg_reg[1]_0\
+    );
+\slaveRegDo_mux_0[2]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"CF00A000"
+    )
+        port map (
+      I0 => \xsdb_reg_reg_n_0_[2]\,
+      I1 => \slaveRegDo_mux_0[2]_i_2\,
+      I2 => s_daddr_o(2),
+      I3 => s_daddr_o(1),
+      I4 => s_daddr_o(0),
+      O => \xsdb_reg_reg[2]_0\
+    );
+\slaveRegDo_mux_0[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \slaveRegDo_mux_0_reg[0]\,
-      I1 => \slaveRegDo_mux_0[0]_i_2_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[0]_0\,
-      I3 => \slaveRegDo_mux_0_reg[0]_1\,
-      I4 => \slaveRegDo_mux_0_reg[0]_2\(0),
-      I5 => \slaveRegDo_mux_01__6\,
+      I0 => \slaveRegDo_mux_0_reg[4]\,
+      I1 => \slaveRegDo_mux_0[4]_i_2_n_0\,
+      I2 => \slaveRegDo_mux_01__6\,
+      I3 => \slaveRegDo_mux_0_reg[4]_0\(0),
+      I4 => \slaveRegDo_mux_0_reg[4]_1\,
+      I5 => \slaveRegDo_mux_0_reg[4]_2\,
       O => D(0)
     );
-\slaveRegDo_mux_0[0]_i_2\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33B800B800B800B8"
+      INIT => X"FFFFFFFFFFFF00F8"
     )
         port map (
-      I0 => \slaveRegDo_mux_0[0]_i_4_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => \slaveRegDo_mux_0_reg[10]_0\,
-      I3 => \slaveRegDo_mux_0_reg[10]_1\,
-      I4 => \slaveRegDo_mux_0_reg[0]_3\,
-      I5 => Q(0),
-      O => \slaveRegDo_mux_0[0]_i_2_n_0\
+      I0 => \slaveRegDo_mux_0_reg[4]_3\,
+      I1 => slaveRegDo_6(4),
+      I2 => \slaveRegDo_mux_0_reg[4]_4\,
+      I3 => \slaveRegDo_mux_0_reg[9]\,
+      I4 => \slaveRegDo_mux_0_reg[4]_5\,
+      I5 => \slaveRegDo_mux_0_reg[4]_6\,
+      O => \slaveRegDo_mux_0[4]_i_2_n_0\
     );
-\slaveRegDo_mux_0[0]_i_4\: unisim.vcomponents.LUT5
+\slaveRegDo_mux_0[7]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CFAFC0AF"
+      INIT => X"00000000FFFF0800"
     )
         port map (
-      I0 => \xsdb_reg_reg_n_0_[0]\,
-      I1 => \slaveRegDo_mux_0[0]_i_2_0\(0),
-      I2 => \slaveRegDo_mux_0[0]_i_2_1\,
-      I3 => \slaveRegDo_mux_0[0]_i_2_2\,
-      I4 => \slaveRegDo_mux_0[0]_i_2_3\,
-      O => \slaveRegDo_mux_0[0]_i_4_n_0\
+      I0 => \slaveRegDo_mux_0_reg[9]_0\,
+      I1 => s_daddr_o(2),
+      I2 => s_daddr_o(3),
+      I3 => slaveRegDo_6(7),
+      I4 => \slaveRegDo_mux_0_reg[7]\,
+      I5 => \slaveRegDo_mux_0_reg[9]\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[2]\
     );
-\slaveRegDo_mux_0[10]_i_4\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[8]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000FFB38080"
+      INIT => X"00000000FFFF0800"
     )
         port map (
-      I0 => slaveRegDo_6(10),
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => \slaveRegDo_mux_0_reg[10]_0\,
-      I3 => \slaveRegDo_mux_0_reg[10]_2\,
-      I4 => \slaveRegDo_mux_0_reg[10]_3\,
-      I5 => \slaveRegDo_mux_0_reg[10]_1\,
-      O => \xsdb_reg_reg[10]_0\
+      I0 => \slaveRegDo_mux_0_reg[9]_0\,
+      I1 => s_daddr_o(2),
+      I2 => s_daddr_o(3),
+      I3 => slaveRegDo_6(8),
+      I4 => \slaveRegDo_mux_0_reg[8]\,
+      I5 => \slaveRegDo_mux_0_reg[9]\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[2]_0\
+    );
+\slaveRegDo_mux_0[9]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000FFFF0800"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[9]_0\,
+      I1 => s_daddr_o(2),
+      I2 => s_daddr_o(3),
+      I3 => slaveRegDo_6(9),
+      I4 => \slaveRegDo_mux_0_reg[9]_1\,
+      I5 => \slaveRegDo_mux_0_reg[9]\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[2]_1\
     );
 \xsdb_reg[15]_i_1__12\: unisim.vcomponents.LUT6
     generic map(
@@ -5560,7 +6840,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(10),
-      Q => slaveRegDo_6(10),
+      Q => \xsdb_reg_reg[15]_0\(3),
       R => '0'
     );
 \xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
@@ -5571,7 +6851,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(11),
-      Q => \xsdb_reg_reg[15]_0\(7),
+      Q => \xsdb_reg_reg[15]_0\(4),
       R => '0'
     );
 \xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
@@ -5582,7 +6862,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(12),
-      Q => \xsdb_reg_reg[15]_0\(8),
+      Q => \xsdb_reg_reg[15]_0\(5),
       R => '0'
     );
 \xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
@@ -5593,7 +6873,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(13),
-      Q => \xsdb_reg_reg[15]_0\(9),
+      Q => \xsdb_reg_reg[15]_0\(6),
       R => '0'
     );
 \xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
@@ -5604,7 +6884,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(14),
-      Q => \xsdb_reg_reg[15]_0\(10),
+      Q => \xsdb_reg_reg[15]_0\(7),
       R => '0'
     );
 \xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
@@ -5615,7 +6895,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(15),
-      Q => \xsdb_reg_reg[15]_0\(11),
+      Q => \xsdb_reg_reg[15]_0\(8),
       R => '0'
     );
 \xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
@@ -5626,7 +6906,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(1),
-      Q => \xsdb_reg_reg[1]_0\,
+      Q => \xsdb_reg_reg_n_0_[1]\,
       R => '0'
     );
 \xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
@@ -5637,7 +6917,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(2),
-      Q => \xsdb_reg_reg[2]_0\,
+      Q => \xsdb_reg_reg_n_0_[2]\,
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
@@ -5659,7 +6939,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(4),
-      Q => \xsdb_reg_reg[15]_0\(1),
+      Q => slaveRegDo_6(4),
       R => '0'
     );
 \xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
@@ -5670,7 +6950,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(5),
-      Q => \xsdb_reg_reg[15]_0\(2),
+      Q => \xsdb_reg_reg[15]_0\(1),
       R => '0'
     );
 \xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
@@ -5681,7 +6961,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(6),
-      Q => \xsdb_reg_reg[15]_0\(3),
+      Q => \xsdb_reg_reg[15]_0\(2),
       R => '0'
     );
 \xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
@@ -5692,7 +6972,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(7),
-      Q => \xsdb_reg_reg[15]_0\(4),
+      Q => slaveRegDo_6(7),
       R => '0'
     );
 \xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
@@ -5703,7 +6983,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(8),
-      Q => \xsdb_reg_reg[15]_0\(5),
+      Q => slaveRegDo_6(8),
       R => '0'
     );
 \xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
@@ -5714,7 +6994,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__12_n_0\,
       D => s_di_o(9),
-      Q => \xsdb_reg_reg[15]_0\(6),
+      Q => slaveRegDo_6(9),
       R => '0'
     );
 end STRUCTURE;
@@ -5722,36 +7002,355 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_33 is
+entity ila_0_xsdbs_v1_0_2_reg_ctl_31 is
   port (
-    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_1\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_2\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_3\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_4\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_5\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_6\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_7\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_8\ : out STD_LOGIC;
     \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
+    \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
+    slaveRegDo_6 : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[15]_i_4_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[15]_i_4_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[14]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[14]_i_3_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[13]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[13]_i_3_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[12]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[12]_i_3_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[11]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[11]_i_3_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[2]_i_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \slaveRegDo_mux_0[2]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[1]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_2_0\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_33 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_33;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_31 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_31;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_33 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_31 is
+  signal \slaveRegDo_mux_0[11]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[12]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[13]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[14]_i_6_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[15]_i_10_n_0\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_1__6_n_0\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[0]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[11]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[12]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[13]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[14]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[15]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[1]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[2]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[3]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[4]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[5]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[6]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[7]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[8]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[9]\ : STD_LOGIC;
 begin
+\slaveRegDo_mux_0[0]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[0]\,
+      I4 => \slaveRegDo_mux_0[0]_i_2\,
+      I5 => \slaveRegDo_mux_0[0]_i_2_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_8\
+    );
+\slaveRegDo_mux_0[11]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBAAABAAABAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[11]_i_6_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[11]\,
+      I3 => \slaveRegDo_mux_0_reg[15]_0\,
+      I4 => slaveRegDo_6(0),
+      I5 => \slaveRegDo_mux_0_reg[15]_1\,
+      O => \xsdb_reg_reg[11]_0\
+    );
+\slaveRegDo_mux_0[11]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[11]\,
+      I4 => \slaveRegDo_mux_0[11]_i_3_0\,
+      I5 => \slaveRegDo_mux_0[11]_i_3_1\,
+      O => \slaveRegDo_mux_0[11]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[12]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBAAABAAABAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[12]_i_6_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[12]\,
+      I3 => \slaveRegDo_mux_0_reg[15]_0\,
+      I4 => slaveRegDo_6(1),
+      I5 => \slaveRegDo_mux_0_reg[15]_1\,
+      O => \xsdb_reg_reg[12]_0\
+    );
+\slaveRegDo_mux_0[12]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[12]\,
+      I4 => \slaveRegDo_mux_0[12]_i_3_0\,
+      I5 => \slaveRegDo_mux_0[12]_i_3_1\,
+      O => \slaveRegDo_mux_0[12]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[13]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBAAABAAABAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[13]_i_6_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[13]\,
+      I3 => \slaveRegDo_mux_0_reg[15]_0\,
+      I4 => slaveRegDo_6(2),
+      I5 => \slaveRegDo_mux_0_reg[15]_1\,
+      O => \xsdb_reg_reg[13]_0\
+    );
+\slaveRegDo_mux_0[13]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[13]\,
+      I4 => \slaveRegDo_mux_0[13]_i_3_0\,
+      I5 => \slaveRegDo_mux_0[13]_i_3_1\,
+      O => \slaveRegDo_mux_0[13]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[14]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBAAABAAABAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[14]_i_6_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[14]\,
+      I3 => \slaveRegDo_mux_0_reg[15]_0\,
+      I4 => slaveRegDo_6(3),
+      I5 => \slaveRegDo_mux_0_reg[15]_1\,
+      O => \xsdb_reg_reg[14]_0\
+    );
+\slaveRegDo_mux_0[14]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[14]\,
+      I4 => \slaveRegDo_mux_0[14]_i_3_0\,
+      I5 => \slaveRegDo_mux_0[14]_i_3_1\,
+      O => \slaveRegDo_mux_0[14]_i_6_n_0\
+    );
+\slaveRegDo_mux_0[15]_i_10\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[15]\,
+      I4 => \slaveRegDo_mux_0[15]_i_4_0\,
+      I5 => \slaveRegDo_mux_0[15]_i_4_1\,
+      O => \slaveRegDo_mux_0[15]_i_10_n_0\
+    );
+\slaveRegDo_mux_0[15]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBAAABAAABAAA"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[15]_i_10_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[15]\,
+      I2 => \slaveRegDo_mux_0_reg[15]_2\,
+      I3 => \slaveRegDo_mux_0_reg[15]_0\,
+      I4 => slaveRegDo_6(4),
+      I5 => \slaveRegDo_mux_0_reg[15]_1\,
+      O => \xsdb_reg_reg[15]_0\
+    );
+\slaveRegDo_mux_0[1]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[1]\,
+      I4 => \slaveRegDo_mux_0[2]_i_2\(0),
+      I5 => \slaveRegDo_mux_0[1]_i_2\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_7\
+    );
+\slaveRegDo_mux_0[2]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[2]\,
+      I4 => \slaveRegDo_mux_0[2]_i_2\(1),
+      I5 => \slaveRegDo_mux_0[2]_i_2_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_6\
+    );
+\slaveRegDo_mux_0[3]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[3]\,
+      I4 => \slaveRegDo_mux_0_reg[3]_0\,
+      I5 => \slaveRegDo_mux_0_reg[3]_1\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_5\
+    );
+\slaveRegDo_mux_0[4]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[4]\,
+      I4 => \slaveRegDo_mux_0[4]_i_2\,
+      I5 => \slaveRegDo_mux_0[4]_i_2_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_4\
+    );
+\slaveRegDo_mux_0[5]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[5]\,
+      I4 => \slaveRegDo_mux_0_reg[5]\,
+      I5 => \slaveRegDo_mux_0_reg[5]_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_3\
+    );
+\slaveRegDo_mux_0[6]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[6]\,
+      I4 => \slaveRegDo_mux_0_reg[6]\,
+      I5 => \slaveRegDo_mux_0_reg[6]_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_2\
+    );
+\slaveRegDo_mux_0[7]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[7]\,
+      I4 => \slaveRegDo_mux_0_reg[7]\,
+      I5 => \slaveRegDo_mux_0_reg[7]_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_1\
+    );
+\slaveRegDo_mux_0[8]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[8]\,
+      I4 => \slaveRegDo_mux_0_reg[8]\,
+      I5 => \slaveRegDo_mux_0_reg[8]_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\
+    );
+\slaveRegDo_mux_0[9]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A0A220228082000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[3]\,
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      I3 => \xsdb_reg_reg_n_0_[9]\,
+      I4 => \slaveRegDo_mux_0_reg[9]\,
+      I5 => \slaveRegDo_mux_0_reg[9]_0\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]\
+    );
 \xsdb_reg[15]_i_1__6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0200000000000000"
@@ -5762,7 +7361,7 @@ begin
       I2 => s_daddr_o(1),
       I3 => s_daddr_o(4),
       I4 => s_daddr_o(3),
-      I5 => \xsdb_reg_reg[0]_1\,
+      I5 => \xsdb_reg_reg[0]_0\,
       O => \xsdb_reg[15]_i_1__6_n_0\
     );
 \xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
@@ -5773,7 +7372,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(0),
-      Q => \xsdb_reg_reg[0]_0\,
+      Q => \xsdb_reg_reg_n_0_[0]\,
       R => '0'
     );
 \xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
@@ -5795,7 +7394,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(11),
-      Q => \xsdb_reg_reg[11]_0\,
+      Q => \xsdb_reg_reg_n_0_[11]\,
       R => '0'
     );
 \xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
@@ -5806,7 +7405,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(12),
-      Q => \xsdb_reg_reg[12]_0\,
+      Q => \xsdb_reg_reg_n_0_[12]\,
       R => '0'
     );
 \xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
@@ -5817,7 +7416,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(13),
-      Q => \xsdb_reg_reg[13]_0\,
+      Q => \xsdb_reg_reg_n_0_[13]\,
       R => '0'
     );
 \xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
@@ -5828,7 +7427,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(14),
-      Q => \xsdb_reg_reg[14]_0\,
+      Q => \xsdb_reg_reg_n_0_[14]\,
       R => '0'
     );
 \xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
@@ -5839,7 +7438,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(15),
-      Q => \xsdb_reg_reg[15]_0\,
+      Q => \xsdb_reg_reg_n_0_[15]\,
       R => '0'
     );
 \xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
@@ -5850,7 +7449,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(1),
-      Q => \xsdb_reg_reg[1]_0\,
+      Q => \xsdb_reg_reg_n_0_[1]\,
       R => '0'
     );
 \xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
@@ -5861,7 +7460,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(2),
-      Q => \xsdb_reg_reg[2]_0\,
+      Q => \xsdb_reg_reg_n_0_[2]\,
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
@@ -5872,7 +7471,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(3),
-      Q => \xsdb_reg_reg[3]_0\,
+      Q => \xsdb_reg_reg_n_0_[3]\,
       R => '0'
     );
 \xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
@@ -5883,7 +7482,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(4),
-      Q => \xsdb_reg_reg[4]_0\,
+      Q => \xsdb_reg_reg_n_0_[4]\,
       R => '0'
     );
 \xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
@@ -5894,7 +7493,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(5),
-      Q => \xsdb_reg_reg[5]_0\,
+      Q => \xsdb_reg_reg_n_0_[5]\,
       R => '0'
     );
 \xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
@@ -5905,7 +7504,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(6),
-      Q => \xsdb_reg_reg[6]_0\,
+      Q => \xsdb_reg_reg_n_0_[6]\,
       R => '0'
     );
 \xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
@@ -5916,7 +7515,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(7),
-      Q => \xsdb_reg_reg[7]_0\,
+      Q => \xsdb_reg_reg_n_0_[7]\,
       R => '0'
     );
 \xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
@@ -5927,7 +7526,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(8),
-      Q => \xsdb_reg_reg[8]_0\,
+      Q => \xsdb_reg_reg_n_0_[8]\,
       R => '0'
     );
 \xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
@@ -5938,7 +7537,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__6_n_0\,
       D => s_di_o(9),
-      Q => \xsdb_reg_reg[9]_0\,
+      Q => \xsdb_reg_reg_n_0_[9]\,
       R => '0'
     );
 end STRUCTURE;
@@ -5946,14 +7545,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_34 is
+entity ila_0_xsdbs_v1_0_2_reg_ctl_32 is
   port (
+    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
@@ -5966,16 +7565,31 @@ entity ila_0_xsdbs_v1_0_2_reg_ctl_34 is
     \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3_0\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_34 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_34;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_32 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_32;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_34 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_32 is
   signal \xsdb_reg[15]_i_1__7_n_0\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[10]\ : STD_LOGIC;
 begin
+\slaveRegDo_mux_0[10]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00CCF0AA"
+    )
+        port map (
+      I0 => \xsdb_reg_reg_n_0_[10]\,
+      I1 => \slaveRegDo_mux_0[10]_i_3\,
+      I2 => \slaveRegDo_mux_0[10]_i_3_0\,
+      I3 => s_daddr_o(0),
+      I4 => s_daddr_o(1),
+      O => \xsdb_reg_reg[10]_0\
+    );
 \xsdb_reg[15]_i_1__7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0100000000000000"
@@ -6008,7 +7622,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__7_n_0\,
       D => s_di_o(10),
-      Q => \xsdb_reg_reg[10]_0\,
+      Q => \xsdb_reg_reg_n_0_[10]\,
       R => '0'
     );
 \xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
@@ -6163,6 +7777,692 @@ begin
       CE => \xsdb_reg[15]_i_1__7_n_0\,
       D => s_di_o(9),
       Q => \xsdb_reg_reg[9]_0\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity ila_0_xsdbs_v1_0_2_reg_ctl_33 is
+  port (
+    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
+    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    read_reset_addr : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \slaveRegDo_mux_0[1]_i_2\ : in STD_LOGIC;
+    in0 : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
+    s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s_dclk_o : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_33 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_33;
+
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_33 is
+  signal \xsdb_reg[15]_i_1__8_n_0\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[0]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[11]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[12]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[13]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[14]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[15]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[1]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[2]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[3]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[4]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[5]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[6]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[7]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[8]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[9]\ : STD_LOGIC;
+begin
+\slaveRegDo_mux_0[0]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[0]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => SR(0),
+      I5 => read_reset_addr(0),
+      O => \xsdb_reg_reg[0]_0\
+    );
+\slaveRegDo_mux_0[11]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[11]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[11]\,
+      I5 => \slaveRegDo_mux_0_reg[11]_0\,
+      O => \xsdb_reg_reg[11]_0\
+    );
+\slaveRegDo_mux_0[12]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[12]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[12]\,
+      I5 => \slaveRegDo_mux_0_reg[12]_0\,
+      O => \xsdb_reg_reg[12]_0\
+    );
+\slaveRegDo_mux_0[13]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[13]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[13]\,
+      I5 => \slaveRegDo_mux_0_reg[13]_0\,
+      O => \xsdb_reg_reg[13]_0\
+    );
+\slaveRegDo_mux_0[14]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[14]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[14]\,
+      I5 => \slaveRegDo_mux_0_reg[14]_0\,
+      O => \xsdb_reg_reg[14]_0\
+    );
+\slaveRegDo_mux_0[15]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[15]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[15]_0\,
+      I5 => \slaveRegDo_mux_0_reg[15]_1\,
+      O => \xsdb_reg_reg[15]_0\
+    );
+\slaveRegDo_mux_0[1]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[1]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0[1]_i_2\,
+      I5 => read_reset_addr(1),
+      O => \xsdb_reg_reg[1]_0\
+    );
+\slaveRegDo_mux_0[2]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[2]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => in0,
+      I5 => read_reset_addr(2),
+      O => \xsdb_reg_reg[2]_0\
+    );
+\slaveRegDo_mux_0[3]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[3]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[3]\,
+      I5 => read_reset_addr(3),
+      O => \xsdb_reg_reg[3]_0\
+    );
+\slaveRegDo_mux_0[4]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[4]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0[4]_i_2\,
+      I5 => read_reset_addr(4),
+      O => \xsdb_reg_reg[4]_0\
+    );
+\slaveRegDo_mux_0[5]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[5]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[5]\,
+      I5 => read_reset_addr(5),
+      O => \xsdb_reg_reg[5]_0\
+    );
+\slaveRegDo_mux_0[6]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[6]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[6]\,
+      I5 => read_reset_addr(6),
+      O => \xsdb_reg_reg[6]_0\
+    );
+\slaveRegDo_mux_0[7]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[7]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[7]\,
+      I5 => read_reset_addr(7),
+      O => \xsdb_reg_reg[7]_0\
+    );
+\slaveRegDo_mux_0[8]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[8]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[8]\,
+      I5 => read_reset_addr(8),
+      O => \xsdb_reg_reg[8]_0\
+    );
+\slaveRegDo_mux_0[9]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8AA080A08A008000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[15]\,
+      I1 => \xsdb_reg_reg_n_0_[9]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_0_reg[9]\,
+      I5 => read_reset_addr(9),
+      O => \xsdb_reg_reg[9]_0\
+    );
+\xsdb_reg[15]_i_1__8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000000000000000"
+    )
+        port map (
+      I0 => s_daddr_o(0),
+      I1 => s_daddr_o(3),
+      I2 => s_daddr_o(4),
+      I3 => s_daddr_o(2),
+      I4 => s_daddr_o(1),
+      I5 => \xsdb_reg_reg[0]_1\,
+      O => \xsdb_reg[15]_i_1__8_n_0\
+    );
+\xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(0),
+      Q => \xsdb_reg_reg_n_0_[0]\,
+      R => '0'
+    );
+\xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(10),
+      Q => \xsdb_reg_reg[10]_0\,
+      R => '0'
+    );
+\xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(11),
+      Q => \xsdb_reg_reg_n_0_[11]\,
+      R => '0'
+    );
+\xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(12),
+      Q => \xsdb_reg_reg_n_0_[12]\,
+      R => '0'
+    );
+\xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(13),
+      Q => \xsdb_reg_reg_n_0_[13]\,
+      R => '0'
+    );
+\xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(14),
+      Q => \xsdb_reg_reg_n_0_[14]\,
+      R => '0'
+    );
+\xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(15),
+      Q => \xsdb_reg_reg_n_0_[15]\,
+      R => '0'
+    );
+\xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(1),
+      Q => \xsdb_reg_reg_n_0_[1]\,
+      R => '0'
+    );
+\xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(2),
+      Q => \xsdb_reg_reg_n_0_[2]\,
+      R => '0'
+    );
+\xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(3),
+      Q => \xsdb_reg_reg_n_0_[3]\,
+      R => '0'
+    );
+\xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(4),
+      Q => \xsdb_reg_reg_n_0_[4]\,
+      R => '0'
+    );
+\xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(5),
+      Q => \xsdb_reg_reg_n_0_[5]\,
+      R => '0'
+    );
+\xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(6),
+      Q => \xsdb_reg_reg_n_0_[6]\,
+      R => '0'
+    );
+\xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(7),
+      Q => \xsdb_reg_reg_n_0_[7]\,
+      R => '0'
+    );
+\xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(8),
+      Q => \xsdb_reg_reg_n_0_[8]\,
+      R => '0'
+    );
+\xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__8_n_0\,
+      D => s_di_o(9),
+      Q => \xsdb_reg_reg_n_0_[9]\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity ila_0_xsdbs_v1_0_2_reg_ctl_34 is
+  port (
+    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
+    read_reset_addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3_0\ : in STD_LOGIC;
+    s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s_dclk_o : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_34 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_34;
+
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_34 is
+  signal \xsdb_reg[15]_i_1__9_n_0\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[10]\ : STD_LOGIC;
+begin
+\slaveRegDo_mux_0[10]_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FAC00AC0"
+    )
+        port map (
+      I0 => \xsdb_reg_reg_n_0_[10]\,
+      I1 => \slaveRegDo_mux_0[10]_i_3\,
+      I2 => s_daddr_o(0),
+      I3 => s_daddr_o(1),
+      I4 => \slaveRegDo_mux_0[10]_i_3_0\,
+      O => \xsdb_reg_reg[10]_0\
+    );
+\xsdb_reg[15]_i_1__9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"1000000000000000"
+    )
+        port map (
+      I0 => s_daddr_o(0),
+      I1 => s_daddr_o(3),
+      I2 => s_daddr_o(4),
+      I3 => s_daddr_o(2),
+      I4 => s_daddr_o(1),
+      I5 => \xsdb_reg_reg[0]_0\,
+      O => \xsdb_reg[15]_i_1__9_n_0\
+    );
+\xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(0),
+      Q => read_reset_addr(0),
+      R => '0'
+    );
+\xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(10),
+      Q => \xsdb_reg_reg_n_0_[10]\,
+      R => '0'
+    );
+\xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(11),
+      Q => \xsdb_reg_reg[11]_0\,
+      R => '0'
+    );
+\xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(12),
+      Q => \xsdb_reg_reg[12]_0\,
+      R => '0'
+    );
+\xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(13),
+      Q => \xsdb_reg_reg[13]_0\,
+      R => '0'
+    );
+\xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(14),
+      Q => \xsdb_reg_reg[14]_0\,
+      R => '0'
+    );
+\xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(15),
+      Q => \xsdb_reg_reg[15]_0\,
+      R => '0'
+    );
+\xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(1),
+      Q => read_reset_addr(1),
+      R => '0'
+    );
+\xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(2),
+      Q => read_reset_addr(2),
+      R => '0'
+    );
+\xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(3),
+      Q => read_reset_addr(3),
+      R => '0'
+    );
+\xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(4),
+      Q => read_reset_addr(4),
+      R => '0'
+    );
+\xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(5),
+      Q => read_reset_addr(5),
+      R => '0'
+    );
+\xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(6),
+      Q => read_reset_addr(6),
+      R => '0'
+    );
+\xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(7),
+      Q => read_reset_addr(7),
+      R => '0'
+    );
+\xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(8),
+      Q => read_reset_addr(8),
+      R => '0'
+    );
+\xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_dclk_o,
+      CE => \xsdb_reg[15]_i_1__9_n_0\,
+      D => s_di_o(9),
+      Q => read_reset_addr(9),
       R => '0'
     );
 end STRUCTURE;
@@ -6185,722 +8485,7 @@ entity ila_0_xsdbs_v1_0_2_reg_ctl_35 is
     \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
-    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
-    s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    s_dclk_o : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_35 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_35;
-
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_35 is
-  signal \xsdb_reg[15]_i_1__8_n_0\ : STD_LOGIC;
-begin
-\xsdb_reg[15]_i_1__8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2000000000000000"
-    )
-        port map (
-      I0 => s_daddr_o(0),
-      I1 => s_daddr_o(3),
-      I2 => s_daddr_o(4),
-      I3 => s_daddr_o(2),
-      I4 => s_daddr_o(1),
-      I5 => \xsdb_reg_reg[0]_1\,
-      O => \xsdb_reg[15]_i_1__8_n_0\
-    );
-\xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(0),
-      Q => \xsdb_reg_reg[0]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(10),
-      Q => \xsdb_reg_reg[10]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(11),
-      Q => \xsdb_reg_reg[11]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(12),
-      Q => \xsdb_reg_reg[12]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(13),
-      Q => \xsdb_reg_reg[13]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(14),
-      Q => \xsdb_reg_reg[14]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(15),
-      Q => \xsdb_reg_reg[15]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(1),
-      Q => \xsdb_reg_reg[1]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(2),
-      Q => \xsdb_reg_reg[2]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(3),
-      Q => \xsdb_reg_reg[3]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(4),
-      Q => \xsdb_reg_reg[4]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(5),
-      Q => \xsdb_reg_reg[5]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(6),
-      Q => \xsdb_reg_reg[6]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(7),
-      Q => \xsdb_reg_reg[7]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(8),
-      Q => \xsdb_reg_reg[8]_0\,
-      R => '0'
-    );
-\xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__8_n_0\,
-      D => s_di_o(9),
-      Q => \xsdb_reg_reg[9]_0\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_36 is
-  port (
-    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
-    read_reset_addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
-    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_1\ : in STD_LOGIC;
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0[0]_i_3_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_3_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2_1\ : in STD_LOGIC;
-    s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    s_dclk_o : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_36 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_36;
-
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_36 is
-  signal \^read_reset_addr\ : STD_LOGIC_VECTOR ( 9 downto 0 );
-  signal \xsdb_reg[15]_i_1__9_n_0\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[10]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[11]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[12]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[13]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[14]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[15]\ : STD_LOGIC;
-begin
-  read_reset_addr(9 downto 0) <= \^read_reset_addr\(9 downto 0);
-\slaveRegDo_mux_0[0]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(0),
-      I1 => \slaveRegDo_mux_0[0]_i_3\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => SR(0),
-      I5 => \slaveRegDo_mux_0[0]_i_3_2\,
-      O => \xsdb_reg_reg[0]_0\
-    );
-\slaveRegDo_mux_0[10]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[10]\,
-      I1 => \slaveRegDo_mux_0[10]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[10]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[10]_i_2_1\,
-      O => \xsdb_reg_reg[10]_0\
-    );
-\slaveRegDo_mux_0[11]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[11]\,
-      I1 => \slaveRegDo_mux_0[11]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[11]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[11]_i_2_1\,
-      O => \xsdb_reg_reg[11]_0\
-    );
-\slaveRegDo_mux_0[12]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[12]\,
-      I1 => \slaveRegDo_mux_0[12]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[12]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[12]_i_2_1\,
-      O => \xsdb_reg_reg[12]_0\
-    );
-\slaveRegDo_mux_0[13]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[13]\,
-      I1 => \slaveRegDo_mux_0[13]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[13]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[13]_i_2_1\,
-      O => \xsdb_reg_reg[13]_0\
-    );
-\slaveRegDo_mux_0[14]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[14]\,
-      I1 => \slaveRegDo_mux_0[14]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[14]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[14]_i_2_1\,
-      O => \xsdb_reg_reg[14]_0\
-    );
-\slaveRegDo_mux_0[15]_i_9\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[15]\,
-      I1 => \slaveRegDo_mux_0[15]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[15]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[15]_i_2_1\,
-      O => \xsdb_reg_reg[15]_0\
-    );
-\slaveRegDo_mux_0[1]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(1),
-      I1 => \slaveRegDo_mux_0[1]_i_3\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[1]_i_3_0\,
-      I5 => \slaveRegDo_mux_0[1]_i_3_1\,
-      O => \xsdb_reg_reg[1]_0\
-    );
-\slaveRegDo_mux_0[2]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(2),
-      I1 => \slaveRegDo_mux_0[2]_i_3\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[2]_i_3_0\,
-      I5 => \slaveRegDo_mux_0[2]_i_3_1\,
-      O => \xsdb_reg_reg[2]_0\
-    );
-\slaveRegDo_mux_0[3]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(3),
-      I1 => \slaveRegDo_mux_0[3]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[3]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[3]_i_2_1\,
-      O => \xsdb_reg_reg[3]_0\
-    );
-\slaveRegDo_mux_0[4]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(4),
-      I1 => \slaveRegDo_mux_0[4]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[4]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[4]_i_2_1\,
-      O => \xsdb_reg_reg[4]_0\
-    );
-\slaveRegDo_mux_0[5]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(5),
-      I1 => \slaveRegDo_mux_0[5]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[5]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[5]_i_2_1\,
-      O => \xsdb_reg_reg[5]_0\
-    );
-\slaveRegDo_mux_0[6]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(6),
-      I1 => \slaveRegDo_mux_0[6]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[6]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[6]_i_2_1\,
-      O => \xsdb_reg_reg[6]_0\
-    );
-\slaveRegDo_mux_0[7]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(7),
-      I1 => \slaveRegDo_mux_0[7]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[7]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[7]_i_2_1\,
-      O => \xsdb_reg_reg[7]_0\
-    );
-\slaveRegDo_mux_0[8]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(8),
-      I1 => \slaveRegDo_mux_0[8]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[8]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[8]_i_2_1\,
-      O => \xsdb_reg_reg[8]_0\
-    );
-\slaveRegDo_mux_0[9]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^read_reset_addr\(9),
-      I1 => \slaveRegDo_mux_0[9]_i_2\,
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[9]_i_2_0\,
-      I5 => \slaveRegDo_mux_0[9]_i_2_1\,
-      O => \xsdb_reg_reg[9]_0\
-    );
-\xsdb_reg[15]_i_1__9\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1000000000000000"
-    )
-        port map (
-      I0 => s_daddr_o(0),
-      I1 => s_daddr_o(3),
-      I2 => s_daddr_o(4),
-      I3 => s_daddr_o(2),
-      I4 => s_daddr_o(1),
-      I5 => \xsdb_reg_reg[0]_1\,
-      O => \xsdb_reg[15]_i_1__9_n_0\
-    );
-\xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(0),
-      Q => \^read_reset_addr\(0),
-      R => '0'
-    );
-\xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(10),
-      Q => \xsdb_reg_reg_n_0_[10]\,
-      R => '0'
-    );
-\xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(11),
-      Q => \xsdb_reg_reg_n_0_[11]\,
-      R => '0'
-    );
-\xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(12),
-      Q => \xsdb_reg_reg_n_0_[12]\,
-      R => '0'
-    );
-\xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(13),
-      Q => \xsdb_reg_reg_n_0_[13]\,
-      R => '0'
-    );
-\xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(14),
-      Q => \xsdb_reg_reg_n_0_[14]\,
-      R => '0'
-    );
-\xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(15),
-      Q => \xsdb_reg_reg_n_0_[15]\,
-      R => '0'
-    );
-\xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(1),
-      Q => \^read_reset_addr\(1),
-      R => '0'
-    );
-\xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(2),
-      Q => \^read_reset_addr\(2),
-      R => '0'
-    );
-\xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(3),
-      Q => \^read_reset_addr\(3),
-      R => '0'
-    );
-\xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(4),
-      Q => \^read_reset_addr\(4),
-      R => '0'
-    );
-\xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(5),
-      Q => \^read_reset_addr\(5),
-      R => '0'
-    );
-\xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(6),
-      Q => \^read_reset_addr\(6),
-      R => '0'
-    );
-\xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(7),
-      Q => \^read_reset_addr\(7),
-      R => '0'
-    );
-\xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(8),
-      Q => \^read_reset_addr\(8),
-      R => '0'
-    );
-\xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_dclk_o,
-      CE => \xsdb_reg[15]_i_1__9_n_0\,
-      D => s_di_o(9),
-      Q => \^read_reset_addr\(9),
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_ctl_37 is
-  port (
-    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
+    in0 : out STD_LOGIC;
     \xsdb_reg_reg[1]_0\ : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -6909,10 +8494,10 @@ entity ila_0_xsdbs_v1_0_2_reg_ctl_37 is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_37 : entity is "xsdbs_v1_0_2_reg_ctl";
-end ila_0_xsdbs_v1_0_2_reg_ctl_37;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_ctl_35 : entity is "xsdbs_v1_0_2_reg_ctl";
+end ila_0_xsdbs_v1_0_2_reg_ctl_35;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_37 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_ctl_35 is
   signal \xsdb_reg[15]_i_1__10_n_0\ : STD_LOGIC;
 begin
 \xsdb_reg[15]_i_1__10\: unisim.vcomponents.LUT6
@@ -6920,11 +8505,11 @@ begin
       INIT => X"0200000000000000"
     )
         port map (
-      I0 => s_daddr_o(0),
-      I1 => s_daddr_o(1),
-      I2 => s_daddr_o(3),
-      I3 => s_daddr_o(4),
-      I4 => s_daddr_o(2),
+      I0 => s_daddr_o(2),
+      I1 => s_daddr_o(3),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => s_daddr_o(4),
       I5 => \xsdb_reg_reg[0]_0\,
       O => \xsdb_reg[15]_i_1__10_n_0\
     );
@@ -7024,7 +8609,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__10_n_0\,
       D => s_di_o(2),
-      Q => \xsdb_reg_reg[2]_0\,
+      Q => in0,
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
@@ -7111,14 +8696,14 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0\ is
   port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[3]\ : out STD_LOGIC;
     \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[0]\ : out STD_LOGIC;
     scnt_cmp_temp : out STD_LOGIC;
     \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
     wcnt_lcmp_temp : out STD_LOGIC;
@@ -7128,28 +8713,19 @@ entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0\ is
     \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
     halt_ctrl : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_01__6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_2\ : in STD_LOGIC;
     \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \slaveRegDo_mux_0[2]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_2_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \slaveRegDo_mux_0_reg[6]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]_1\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     DOUT_O : in STD_LOGIC;
     u_wcnt_lcmp_q : in STD_LOGIC;
     u_wcnt_hcmp_q : in STD_LOGIC;
@@ -7161,11 +8737,10 @@ entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0\ is
 end \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0\ is
-  signal \slaveRegDo_mux_0[2]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[2]_i_5_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[10]_i_5_n_0\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_1__11_n_0\ : STD_LOGIC;
   signal \^xsdb_reg_reg[0]_0\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[2]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[10]\ : STD_LOGIC;
   signal \xsdb_reg_reg_n_0_[3]\ : STD_LOGIC;
   signal \xsdb_reg_reg_n_0_[4]\ : STD_LOGIC;
   signal \xsdb_reg_reg_n_0_[5]\ : STD_LOGIC;
@@ -7178,133 +8753,121 @@ architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0\ is
   attribute SOFT_HLUTNM of u_wcnt_lcmp_q_i_1 : label is "soft_lutpair50";
 begin
   \xsdb_reg_reg[0]_0\ <= \^xsdb_reg_reg[0]_0\;
-\slaveRegDo_mux_0[2]_i_1\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[10]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFF888F888F888"
+      INIT => X"00F0CC00AAAAAAAA"
     )
         port map (
-      I0 => \slaveRegDo_mux_0_reg[2]\,
-      I1 => \slaveRegDo_mux_0[2]_i_2_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[2]_0\,
-      I3 => \slaveRegDo_mux_0_reg[2]_1\,
-      I4 => s_daddr_o(4),
-      I5 => \slaveRegDo_mux_01__6\,
-      O => D(0)
+      I0 => \slaveRegDo_mux_0[10]_i_5_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[10]_0\,
+      I2 => \slaveRegDo_mux_0_reg[10]_1\,
+      I3 => s_daddr_o(3),
+      I4 => s_daddr_o(2),
+      I5 => \slaveRegDo_mux_0_reg[10]\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[3]\
     );
-\slaveRegDo_mux_0[2]_i_2\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[10]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33B800B800B800B8"
+      INIT => X"00000000C2428202"
     )
         port map (
-      I0 => \slaveRegDo_mux_0[2]_i_5_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[2]_2\,
-      I2 => \slaveRegDo_mux_0_reg[6]\,
-      I3 => \slaveRegDo_mux_0_reg[2]_3\,
-      I4 => \slaveRegDo_mux_0_reg[9]\,
-      I5 => Q(0),
-      O => \slaveRegDo_mux_0[2]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[2]_i_5\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0AACC00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[2]\,
-      I1 => \slaveRegDo_mux_0[2]_i_2_0\,
-      I2 => \slaveRegDo_mux_0_reg[6]_1\(0),
-      I3 => \slaveRegDo_mux_0[2]_i_2_1\,
-      I4 => \slaveRegDo_mux_0[2]_i_2_2\,
-      O => \slaveRegDo_mux_0[2]_i_5_n_0\
+      I0 => s_daddr_o(0),
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(2),
+      I3 => \xsdb_reg_reg_n_0_[10]\,
+      I4 => \slaveRegDo_mux_0[10]_i_3_0\(3),
+      I5 => s_daddr_o(3),
+      O => \slaveRegDo_mux_0[10]_i_5_n_0\
     );
 \slaveRegDo_mux_0[3]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFF888F888F888"
+      INIT => X"00000000FFFFF888"
     )
         port map (
-      I0 => \slaveRegDo_mux_0_reg[6]_0\,
+      I0 => \slaveRegDo_mux_0_reg[6]\,
       I1 => \xsdb_reg_reg_n_0_[3]\,
-      I2 => \slaveRegDo_mux_0_reg[6]\,
-      I3 => \slaveRegDo_mux_0_reg[6]_2\(0),
-      I4 => \slaveRegDo_mux_0_reg[6]_1\(1),
-      I5 => \slaveRegDo_mux_0_reg[6]_3\,
+      I2 => \slaveRegDo_mux_0[10]_i_3_0\(0),
+      I3 => \slaveRegDo_mux_0_reg[6]_0\,
+      I4 => \slaveRegDo_mux_0_reg[3]\,
+      I5 => \slaveRegDo_mux_0_reg[10]\,
       O => \xsdb_reg_reg[3]_0\
     );
-\slaveRegDo_mux_0[4]_i_3\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[4]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80808080808080"
+      INIT => X"0000A0000C000000"
     )
         port map (
       I0 => \xsdb_reg_reg_n_0_[4]\,
-      I1 => \slaveRegDo_mux_0_reg[9]_0\,
-      I2 => \slaveRegDo_mux_0_reg[6]_0\,
-      I3 => Q(1),
-      I4 => \slaveRegDo_mux_0_reg[9]_1\,
-      I5 => \slaveRegDo_mux_0_reg[9]\,
+      I1 => Q(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => s_daddr_o(3),
+      I5 => s_daddr_o(2),
       O => \xsdb_reg_reg[4]_0\
     );
-\slaveRegDo_mux_0[5]_i_3\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[5]_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80808080808080"
+      INIT => X"00000000C1418101"
     )
         port map (
-      I0 => \xsdb_reg_reg_n_0_[5]\,
-      I1 => \slaveRegDo_mux_0_reg[9]_0\,
-      I2 => \slaveRegDo_mux_0_reg[6]_0\,
-      I3 => Q(2),
-      I4 => \slaveRegDo_mux_0_reg[9]_1\,
-      I5 => \slaveRegDo_mux_0_reg[9]\,
-      O => \xsdb_reg_reg[5]_0\
+      I0 => s_daddr_o(0),
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(2),
+      I3 => \xsdb_reg_reg_n_0_[5]\,
+      I4 => \slaveRegDo_mux_0[10]_i_3_0\(1),
+      I5 => s_daddr_o(3),
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[0]\
     );
-\slaveRegDo_mux_0[6]_i_4\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[6]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFF888F888F888"
+      INIT => X"00000000FFFFF888"
     )
         port map (
-      I0 => \slaveRegDo_mux_0_reg[6]_0\,
+      I0 => \slaveRegDo_mux_0_reg[6]\,
       I1 => \xsdb_reg_reg_n_0_[6]\,
-      I2 => \slaveRegDo_mux_0_reg[6]\,
-      I3 => \slaveRegDo_mux_0_reg[6]_2\(1),
-      I4 => \slaveRegDo_mux_0_reg[6]_1\(2),
-      I5 => \slaveRegDo_mux_0_reg[6]_3\,
+      I2 => \slaveRegDo_mux_0[10]_i_3_0\(2),
+      I3 => \slaveRegDo_mux_0_reg[6]_0\,
+      I4 => \slaveRegDo_mux_0_reg[6]_1\,
+      I5 => \slaveRegDo_mux_0_reg[10]\,
       O => \xsdb_reg_reg[6]_0\
     );
-\slaveRegDo_mux_0[7]_i_3\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[7]_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80808080808080"
+      INIT => X"0000A0000C000000"
     )
         port map (
       I0 => \xsdb_reg_reg_n_0_[7]\,
-      I1 => \slaveRegDo_mux_0_reg[9]_0\,
-      I2 => \slaveRegDo_mux_0_reg[6]_0\,
-      I3 => Q(3),
-      I4 => \slaveRegDo_mux_0_reg[9]_1\,
-      I5 => \slaveRegDo_mux_0_reg[9]\,
+      I1 => Q(1),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => s_daddr_o(3),
+      I5 => s_daddr_o(2),
       O => \xsdb_reg_reg[7]_0\
     );
-\slaveRegDo_mux_0[8]_i_3\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[8]_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80808080808080"
+      INIT => X"0000A0000C000000"
     )
         port map (
       I0 => \xsdb_reg_reg_n_0_[8]\,
-      I1 => \slaveRegDo_mux_0_reg[9]_0\,
-      I2 => \slaveRegDo_mux_0_reg[6]_0\,
-      I3 => Q(4),
-      I4 => \slaveRegDo_mux_0_reg[9]_1\,
-      I5 => \slaveRegDo_mux_0_reg[9]\,
+      I1 => Q(2),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => s_daddr_o(3),
+      I5 => s_daddr_o(2),
       O => \xsdb_reg_reg[8]_0\
     );
-\slaveRegDo_mux_0[9]_i_3\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[9]_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80808080808080"
+      INIT => X"0000A0000C000000"
     )
         port map (
       I0 => \xsdb_reg_reg_n_0_[9]\,
-      I1 => \slaveRegDo_mux_0_reg[9]_0\,
-      I2 => \slaveRegDo_mux_0_reg[6]_0\,
-      I3 => Q(5),
-      I4 => \slaveRegDo_mux_0_reg[9]_1\,
-      I5 => \slaveRegDo_mux_0_reg[9]\,
+      I1 => Q(3),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => s_daddr_o(3),
+      I5 => s_daddr_o(2),
       O => \xsdb_reg_reg[9]_0\
     );
 u_scnt_cmp_q_i_2: unisim.vcomponents.LUT2
@@ -7366,7 +8929,7 @@ u_wcnt_lcmp_q_i_1: unisim.vcomponents.LUT2
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__11_n_0\,
       D => s_di_o(10),
-      Q => \xsdb_reg_reg[10]_0\,
+      Q => \xsdb_reg_reg_n_0_[10]\,
       R => '0'
     );
 \xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
@@ -7443,7 +9006,7 @@ u_wcnt_lcmp_q_i_1: unisim.vcomponents.LUT2
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__11_n_0\,
       D => s_di_o(2),
-      Q => \xsdb_reg_reg_n_0_[2]\,
+      Q => \xsdb_reg_reg[2]_0\,
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
@@ -7737,7 +9300,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_29\ is
+entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_27\ is
   port (
     \G_1PIPE_IFACE.s_den_r_reg\ : out STD_LOGIC;
     \G_1PIPE_IFACE.s_daddr_r_reg[6]\ : out STD_LOGIC;
@@ -7749,10 +9312,10 @@ entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_29\ is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_29\ : entity is "xsdbs_v1_0_2_reg_ctl";
-end \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_29\;
+  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_27\ : entity is "xsdbs_v1_0_2_reg_ctl";
+end \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_27\;
 
-architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_29\ is
+architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_27\ is
   signal \^g_1pipe_iface.s_daddr_r_reg[6]\ : STD_LOGIC;
   signal \^g_1pipe_iface.s_den_r_reg\ : STD_LOGIC;
   signal \xsdb_reg[15]_i_1__4_n_0\ : STD_LOGIC;
@@ -7987,517 +9550,35 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_32\ is
+entity \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_30\ is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \G_1PIPE_IFACE.s_daddr_r_reg[7]\ : out STD_LOGIC;
-    \G_1PIPE_IFACE.s_daddr_r_reg[7]_0\ : out STD_LOGIC;
-    \G_1PIPE_IFACE.s_daddr_r_reg[7]_1\ : out STD_LOGIC;
-    in0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]_1\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[11]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[10]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[9]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[8]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[7]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[6]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[5]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \xsdb_reg_reg[0]_0\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
-    slaveRegDo_6 : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[4]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_4\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[4]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[4]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[5]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[7]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[7]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[8]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[8]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_5\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_6\ : in STD_LOGIC;
-    slaveRegDo_81 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \slaveRegDo_mux_0[0]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_2\ : in STD_LOGIC;
-    slaveRegDo_80 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \slaveRegDo_mux_0[1]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2\ : in STD_LOGIC;
+    \xsdb_reg_reg[0]_1\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_32\ : entity is "xsdbs_v1_0_2_reg_ctl";
-end \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_32\;
+  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_30\ : entity is "xsdbs_v1_0_2_reg_ctl";
+end \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_30\;
 
-architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_32\ is
-  signal \^in0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \slaveRegDo_mux_0[0]_i_5_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[10]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[10]_i_6_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[1]_i_5_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[2]_i_6_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[4]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[4]_i_4_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[5]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[5]_i_4_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[7]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[7]_i_4_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[8]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[8]_i_4_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[9]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[9]_i_4_n_0\ : STD_LOGIC;
+architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_30\ is
   signal \xsdb_reg[15]_i_1__5_n_0\ : STD_LOGIC;
-  signal \^xsdb_reg_reg[3]_1\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[0]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[10]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[11]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[12]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[13]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[14]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[15]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[4]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[5]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[6]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[7]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[8]\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[9]\ : STD_LOGIC;
 begin
-  in0(1 downto 0) <= \^in0\(1 downto 0);
-  \xsdb_reg_reg[3]_1\ <= \^xsdb_reg_reg[3]_1\;
-\slaveRegDo_mux_0[0]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[0]_i_5_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[0]\,
-      I4 => \slaveRegDo_mux_0_reg[0]_0\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \G_1PIPE_IFACE.s_daddr_r_reg[7]\
-    );
-\slaveRegDo_mux_0[0]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[0]\,
-      I1 => slaveRegDo_81(0),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[0]_i_3_2\,
-      I5 => slaveRegDo_80(0),
-      O => \slaveRegDo_mux_0[0]_i_5_n_0\
-    );
-\slaveRegDo_mux_0[10]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[10]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => \slaveRegDo_mux_0_reg[10]_1\,
-      I3 => \slaveRegDo_mux_0_reg[10]_0\,
-      O => D(5)
-    );
-\slaveRegDo_mux_0[10]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[10]_i_6_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[10]_5\,
-      I4 => \slaveRegDo_mux_0_reg[10]_6\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \slaveRegDo_mux_0[10]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[10]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[10]\,
-      I1 => slaveRegDo_81(10),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[10]_i_2_0\,
-      I5 => slaveRegDo_80(10),
-      O => \slaveRegDo_mux_0[10]_i_6_n_0\
-    );
-\slaveRegDo_mux_0[11]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[11]\,
-      I1 => slaveRegDo_81(11),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[11]_i_2\,
-      I5 => slaveRegDo_80(11),
-      O => \xsdb_reg_reg[11]_0\
-    );
-\slaveRegDo_mux_0[12]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[12]\,
-      I1 => slaveRegDo_81(12),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[12]_i_2\,
-      I5 => slaveRegDo_80(12),
-      O => \xsdb_reg_reg[12]_0\
-    );
-\slaveRegDo_mux_0[13]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[13]\,
-      I1 => slaveRegDo_81(13),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[13]_i_2\,
-      I5 => slaveRegDo_80(13),
-      O => \xsdb_reg_reg[13]_0\
-    );
-\slaveRegDo_mux_0[14]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[14]\,
-      I1 => slaveRegDo_81(14),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[14]_i_2\,
-      I5 => slaveRegDo_80(14),
-      O => \xsdb_reg_reg[14]_0\
-    );
-\slaveRegDo_mux_0[15]_i_10\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[15]\,
-      I1 => slaveRegDo_81(15),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[15]_i_2\,
-      I5 => slaveRegDo_80(15),
-      O => \xsdb_reg_reg[15]_0\
-    );
-\slaveRegDo_mux_0[1]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[1]_i_5_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[1]\,
-      I4 => \slaveRegDo_mux_0_reg[1]_0\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \G_1PIPE_IFACE.s_daddr_r_reg[7]_0\
-    );
-\slaveRegDo_mux_0[1]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^in0\(0),
-      I1 => slaveRegDo_81(1),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[1]_i_3_0\,
-      I5 => slaveRegDo_80(1),
-      O => \slaveRegDo_mux_0[1]_i_5_n_0\
-    );
-\slaveRegDo_mux_0[2]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[2]_i_6_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[2]\,
-      I4 => \slaveRegDo_mux_0_reg[2]_0\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \G_1PIPE_IFACE.s_daddr_r_reg[7]_1\
-    );
-\slaveRegDo_mux_0[2]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^in0\(1),
-      I1 => slaveRegDo_81(2),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[2]_i_3_0\,
-      I5 => slaveRegDo_80(2),
-      O => \slaveRegDo_mux_0[2]_i_6_n_0\
-    );
-\slaveRegDo_mux_0[3]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \^xsdb_reg_reg[3]_1\,
-      I1 => slaveRegDo_81(3),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[3]_i_2\,
-      I5 => slaveRegDo_80(3),
-      O => \xsdb_reg_reg[3]_0\
-    );
-\slaveRegDo_mux_0[4]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF88888888888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[4]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => slaveRegDo_6(0),
-      I3 => \slaveRegDo_mux_0_reg[9]\,
-      I4 => \slaveRegDo_mux_0_reg[4]\,
-      I5 => \slaveRegDo_mux_0_reg[10]_0\,
-      O => D(0)
-    );
-\slaveRegDo_mux_0[4]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[4]_i_4_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[4]_0\,
-      I4 => \slaveRegDo_mux_0_reg[4]_1\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \slaveRegDo_mux_0[4]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[4]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[4]\,
-      I1 => slaveRegDo_81(4),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[4]_i_2_0\,
-      I5 => slaveRegDo_80(4),
-      O => \slaveRegDo_mux_0[4]_i_4_n_0\
-    );
-\slaveRegDo_mux_0[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF88888888888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[5]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => slaveRegDo_6(1),
-      I3 => \slaveRegDo_mux_0_reg[9]\,
-      I4 => \slaveRegDo_mux_0_reg[5]\,
-      I5 => \slaveRegDo_mux_0_reg[10]_0\,
-      O => D(1)
-    );
-\slaveRegDo_mux_0[5]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[5]_i_4_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[5]_0\,
-      I4 => \slaveRegDo_mux_0_reg[5]_1\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \slaveRegDo_mux_0[5]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[5]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[5]\,
-      I1 => slaveRegDo_81(5),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[5]_i_2_0\,
-      I5 => slaveRegDo_80(5),
-      O => \slaveRegDo_mux_0[5]_i_4_n_0\
-    );
-\slaveRegDo_mux_0[6]_i_8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[6]\,
-      I1 => slaveRegDo_81(6),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[6]_i_2\,
-      I5 => slaveRegDo_80(6),
-      O => \xsdb_reg_reg[6]_0\
-    );
-\slaveRegDo_mux_0[7]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF88888888888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[7]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => slaveRegDo_6(2),
-      I3 => \slaveRegDo_mux_0_reg[9]\,
-      I4 => \slaveRegDo_mux_0_reg[7]\,
-      I5 => \slaveRegDo_mux_0_reg[10]_0\,
-      O => D(2)
-    );
-\slaveRegDo_mux_0[7]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[7]_i_4_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[7]_0\,
-      I4 => \slaveRegDo_mux_0_reg[7]_1\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \slaveRegDo_mux_0[7]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[7]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[7]\,
-      I1 => slaveRegDo_81(7),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[7]_i_2_0\,
-      I5 => slaveRegDo_80(7),
-      O => \slaveRegDo_mux_0[7]_i_4_n_0\
-    );
-\slaveRegDo_mux_0[8]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF88888888888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[8]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => slaveRegDo_6(3),
-      I3 => \slaveRegDo_mux_0_reg[9]\,
-      I4 => \slaveRegDo_mux_0_reg[8]\,
-      I5 => \slaveRegDo_mux_0_reg[10]_0\,
-      O => D(3)
-    );
-\slaveRegDo_mux_0[8]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[8]_i_4_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[8]_0\,
-      I4 => \slaveRegDo_mux_0_reg[8]_1\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \slaveRegDo_mux_0[8]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[8]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[8]\,
-      I1 => slaveRegDo_81(8),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[8]_i_2_0\,
-      I5 => slaveRegDo_80(8),
-      O => \slaveRegDo_mux_0[8]_i_4_n_0\
-    );
-\slaveRegDo_mux_0[9]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF88888888888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[9]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_0_reg[10]\,
-      I2 => slaveRegDo_6(4),
-      I3 => \slaveRegDo_mux_0_reg[9]\,
-      I4 => \slaveRegDo_mux_0_reg[9]_0\,
-      I5 => \slaveRegDo_mux_0_reg[10]_0\,
-      O => D(4)
-    );
-\slaveRegDo_mux_0[9]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[10]_2\,
-      I1 => \slaveRegDo_mux_0[9]_i_4_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[10]_3\,
-      I3 => \slaveRegDo_mux_0_reg[9]_1\,
-      I4 => \slaveRegDo_mux_0_reg[9]_2\,
-      I5 => \slaveRegDo_mux_0_reg[10]_4\,
-      O => \slaveRegDo_mux_0[9]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[9]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \xsdb_reg_reg_n_0_[9]\,
-      I1 => slaveRegDo_81(9),
-      I2 => \slaveRegDo_mux_0[0]_i_3_0\,
-      I3 => \slaveRegDo_mux_0[0]_i_3_1\,
-      I4 => \slaveRegDo_mux_0[9]_i_2_0\,
-      I5 => slaveRegDo_80(9),
-      O => \slaveRegDo_mux_0[9]_i_4_n_0\
-    );
 \xsdb_reg[15]_i_1__5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000200000000000"
@@ -8508,7 +9589,7 @@ begin
       I2 => s_daddr_o(4),
       I3 => s_daddr_o(3),
       I4 => s_daddr_o(2),
-      I5 => \xsdb_reg_reg[0]_0\,
+      I5 => \xsdb_reg_reg[0]_1\,
       O => \xsdb_reg[15]_i_1__5_n_0\
     );
 \xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
@@ -8519,7 +9600,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(0),
-      Q => \xsdb_reg_reg_n_0_[0]\,
+      Q => \xsdb_reg_reg[0]_0\,
       R => '0'
     );
 \xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
@@ -8530,7 +9611,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(10),
-      Q => \xsdb_reg_reg_n_0_[10]\,
+      Q => \xsdb_reg_reg[10]_0\,
       R => '0'
     );
 \xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
@@ -8541,7 +9622,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(11),
-      Q => \xsdb_reg_reg_n_0_[11]\,
+      Q => \xsdb_reg_reg[11]_0\,
       R => '0'
     );
 \xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
@@ -8552,7 +9633,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(12),
-      Q => \xsdb_reg_reg_n_0_[12]\,
+      Q => \xsdb_reg_reg[12]_0\,
       R => '0'
     );
 \xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
@@ -8563,7 +9644,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(13),
-      Q => \xsdb_reg_reg_n_0_[13]\,
+      Q => \xsdb_reg_reg[13]_0\,
       R => '0'
     );
 \xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
@@ -8574,7 +9655,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(14),
-      Q => \xsdb_reg_reg_n_0_[14]\,
+      Q => \xsdb_reg_reg[14]_0\,
       R => '0'
     );
 \xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
@@ -8585,7 +9666,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(15),
-      Q => \xsdb_reg_reg_n_0_[15]\,
+      Q => \xsdb_reg_reg[15]_0\,
       R => '0'
     );
 \xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
@@ -8596,7 +9677,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(1),
-      Q => \^in0\(0),
+      Q => \xsdb_reg_reg[2]_0\(0),
       R => '0'
     );
 \xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
@@ -8607,7 +9688,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(2),
-      Q => \^in0\(1),
+      Q => \xsdb_reg_reg[2]_0\(1),
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
@@ -8618,7 +9699,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(3),
-      Q => \^xsdb_reg_reg[3]_1\,
+      Q => \xsdb_reg_reg[3]_0\,
       R => '0'
     );
 \xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
@@ -8629,7 +9710,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(4),
-      Q => \xsdb_reg_reg_n_0_[4]\,
+      Q => \xsdb_reg_reg[4]_0\,
       R => '0'
     );
 \xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
@@ -8640,7 +9721,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(5),
-      Q => \xsdb_reg_reg_n_0_[5]\,
+      Q => \xsdb_reg_reg[5]_0\,
       R => '0'
     );
 \xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
@@ -8651,7 +9732,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(6),
-      Q => \xsdb_reg_reg_n_0_[6]\,
+      Q => \xsdb_reg_reg[6]_0\,
       R => '0'
     );
 \xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
@@ -8662,7 +9743,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(7),
-      Q => \xsdb_reg_reg_n_0_[7]\,
+      Q => \xsdb_reg_reg[7]_0\,
       R => '0'
     );
 \xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
@@ -8673,7 +9754,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(8),
-      Q => \xsdb_reg_reg_n_0_[8]\,
+      Q => \xsdb_reg_reg[8]_0\,
       R => '0'
     );
 \xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
@@ -8684,7 +9765,7 @@ begin
       C => s_dclk_o,
       CE => \xsdb_reg[15]_i_1__5_n_0\,
       D => s_di_o(9),
-      Q => \xsdb_reg_reg_n_0_[9]\,
+      Q => \xsdb_reg_reg[9]_0\,
       R => '0'
     );
 end STRUCTURE;
@@ -10423,209 +11504,209 @@ shift_en_reg: unisim.vcomponents.FDRE
     );
 \slaveRegDo_mux_4[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[0]\,
       I1 => Q(0),
-      I2 => \slaveRegDo_mux_4_reg[15]\(0),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(0),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(0),
       O => \parallel_dout_reg[0]_0\
     );
 \slaveRegDo_mux_4[10]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[10]\,
       I1 => Q(10),
-      I2 => \slaveRegDo_mux_4_reg[15]\(10),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(10),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(10),
       O => \parallel_dout_reg[10]_0\
     );
 \slaveRegDo_mux_4[11]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[11]\,
       I1 => Q(11),
-      I2 => \slaveRegDo_mux_4_reg[15]\(11),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(11),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(11),
       O => \parallel_dout_reg[11]_0\
     );
 \slaveRegDo_mux_4[12]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[12]\,
       I1 => Q(12),
-      I2 => \slaveRegDo_mux_4_reg[15]\(12),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(12),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(12),
       O => \parallel_dout_reg[12]_0\
     );
 \slaveRegDo_mux_4[13]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[13]\,
       I1 => Q(13),
-      I2 => \slaveRegDo_mux_4_reg[15]\(13),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(13),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(13),
       O => \parallel_dout_reg[13]_0\
     );
 \slaveRegDo_mux_4[14]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[14]\,
       I1 => Q(14),
-      I2 => \slaveRegDo_mux_4_reg[15]\(14),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(14),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(14),
       O => \parallel_dout_reg[14]_0\
     );
 \slaveRegDo_mux_4[15]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[15]\,
       I1 => Q(15),
-      I2 => \slaveRegDo_mux_4_reg[15]\(15),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(15),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(15),
       O => \parallel_dout_reg[15]_0\
     );
 \slaveRegDo_mux_4[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[1]\,
       I1 => Q(1),
-      I2 => \slaveRegDo_mux_4_reg[15]\(1),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(1),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(1),
       O => \parallel_dout_reg[1]_0\
     );
 \slaveRegDo_mux_4[2]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[2]\,
       I1 => Q(2),
-      I2 => \slaveRegDo_mux_4_reg[15]\(2),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(2),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(2),
       O => \parallel_dout_reg[2]_0\
     );
 \slaveRegDo_mux_4[3]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[3]\,
       I1 => Q(3),
-      I2 => \slaveRegDo_mux_4_reg[15]\(3),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(3),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(3),
       O => \parallel_dout_reg[3]_0\
     );
 \slaveRegDo_mux_4[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[4]\,
       I1 => Q(4),
-      I2 => \slaveRegDo_mux_4_reg[15]\(4),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(4),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(4),
       O => \parallel_dout_reg[4]_0\
     );
 \slaveRegDo_mux_4[5]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[5]\,
       I1 => Q(5),
-      I2 => \slaveRegDo_mux_4_reg[15]\(5),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(5),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(5),
       O => \parallel_dout_reg[5]_0\
     );
 \slaveRegDo_mux_4[6]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[6]\,
       I1 => Q(6),
-      I2 => \slaveRegDo_mux_4_reg[15]\(6),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(6),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(6),
       O => \parallel_dout_reg[6]_0\
     );
 \slaveRegDo_mux_4[7]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[7]\,
       I1 => Q(7),
-      I2 => \slaveRegDo_mux_4_reg[15]\(7),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(7),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(7),
       O => \parallel_dout_reg[7]_0\
     );
 \slaveRegDo_mux_4[8]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[8]\,
       I1 => Q(8),
-      I2 => \slaveRegDo_mux_4_reg[15]\(8),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(8),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(8),
       O => \parallel_dout_reg[8]_0\
     );
 \slaveRegDo_mux_4[9]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \parallel_dout_reg_n_0_[9]\,
       I1 => Q(9),
-      I2 => \slaveRegDo_mux_4_reg[15]\(9),
-      I3 => s_daddr_o(1),
-      I4 => s_daddr_o(0),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \slaveRegDo_mux_4_reg[15]\(9),
       I5 => \slaveRegDo_mux_4_reg[15]_0\(9),
       O => \parallel_dout_reg[9]_0\
     );
@@ -14240,23 +15321,29 @@ entity \ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5\ is
   port (
     capture_ctrl_config_serial_output : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \G_1PIPE_IFACE.s_daddr_r_reg[1]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[9]\ : out STD_LOGIC;
     \G_1PIPE_IFACE.s_daddr_r_reg[3]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
     \parallel_dout_reg[1]_0\ : out STD_LOGIC;
     \parallel_dout_reg[2]_0\ : out STD_LOGIC;
     \parallel_dout_reg[3]_0\ : out STD_LOGIC;
     \parallel_dout_reg[4]_0\ : out STD_LOGIC;
     \parallel_dout_reg[5]_0\ : out STD_LOGIC;
-    \parallel_dout_reg[10]_0\ : out STD_LOGIC;
-    \parallel_dout_reg[7]_0\ : out STD_LOGIC;
-    \parallel_dout_reg[15]_0\ : out STD_LOGIC;
-    \G_1PIPE_IFACE.s_daddr_r_reg[9]\ : out STD_LOGIC;
+    \parallel_dout_reg[6]_0\ : out STD_LOGIC;
+    \parallel_dout_reg[8]_0\ : out STD_LOGIC;
+    \parallel_dout_reg[9]_0\ : out STD_LOGIC;
+    \parallel_dout_reg[11]_0\ : out STD_LOGIC;
+    \parallel_dout_reg[12]_0\ : out STD_LOGIC;
+    \parallel_dout_reg[13]_0\ : out STD_LOGIC;
+    \parallel_dout_reg[14]_0\ : out STD_LOGIC;
+    \slaveRegDo_ff8_reg[15]\ : out STD_LOGIC;
+    \slaveRegDo_ff8_reg[15]_0\ : out STD_LOGIC;
+    \slaveRegDo_ff8_reg[15]_1\ : out STD_LOGIC;
     \G_1PIPE_IFACE.s_di_r_reg[15]\ : out STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
     s_dwe_o : in STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_den_o : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[0]\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[0]_0\ : in STD_LOGIC;
     slaveRegDo_ff9 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14266,12 +15353,11 @@ entity \ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5\ is
     \slaveRegDo_mux_3_reg[2]\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[3]\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[4]\ : in STD_LOGIC;
-    \slaveRegDo_mux_3_reg[15]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \slaveRegDo_mux_3_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[14]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \slaveRegDo_mux_3_reg[5]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_3_reg[5]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \slaveRegDo_mux_3_reg[10]\ : in STD_LOGIC;
-    s_den_o : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14280,14 +15366,13 @@ end \ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5\ is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \^g_1pipe_iface.s_daddr_r_reg[1]\ : STD_LOGIC;
   signal \^g_1pipe_iface.s_daddr_r_reg[9]\ : STD_LOGIC;
   signal \^g_1pipe_iface.s_di_r_reg[15]\ : STD_LOGIC;
-  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal clear : STD_LOGIC;
   signal \cnt[2]_i_1_n_0\ : STD_LOGIC;
   signal cnt_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal current_state : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \current_state[3]_i_4__0_n_0\ : STD_LOGIC;
   signal \current_state[3]_i_5__1_n_0\ : STD_LOGIC;
   signal \current_state[3]_i_6_n_0\ : STD_LOGIC;
   signal data_out_sel_i_1_n_0 : STD_LOGIC;
@@ -14318,7 +15403,7 @@ architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5\ is
   signal \shadow_reg_n_0_[9]\ : STD_LOGIC;
   signal shift_en : STD_LOGIC;
   signal shift_en_i_1_n_0 : STD_LOGIC;
-  signal \slaveRegDo_mux_3[0]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_3[0]_i_3_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \cnt[1]_i_1\ : label is "soft_lutpair54";
   attribute SOFT_HLUTNM of \cnt[2]_i_1\ : label is "soft_lutpair54";
@@ -14335,10 +15420,8 @@ architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5\ is
   attribute SOFT_HLUTNM of shift_en_i_1 : label is "soft_lutpair53";
 begin
   E(0) <= \^e\(0);
-  \G_1PIPE_IFACE.s_daddr_r_reg[1]\ <= \^g_1pipe_iface.s_daddr_r_reg[1]\;
   \G_1PIPE_IFACE.s_daddr_r_reg[9]\ <= \^g_1pipe_iface.s_daddr_r_reg[9]\;
   \G_1PIPE_IFACE.s_di_r_reg[15]\ <= \^g_1pipe_iface.s_di_r_reg[15]\;
-  Q(6 downto 0) <= \^q\(6 downto 0);
 \cnt[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -14473,11 +15556,11 @@ begin
       INIT => X"4000000000000000"
     )
         port map (
-      I0 => \^g_1pipe_iface.s_daddr_r_reg[1]\,
+      I0 => \current_state[3]_i_4__0_n_0\,
       I1 => s_daddr_o(0),
-      I2 => s_daddr_o(7),
-      I3 => s_daddr_o(6),
-      I4 => s_daddr_o(5),
+      I2 => s_daddr_o(11),
+      I3 => s_daddr_o(8),
+      I4 => s_daddr_o(6),
       I5 => \current_state[3]_i_5__1_n_0\,
       O => in2
     );
@@ -14499,24 +15582,24 @@ begin
         port map (
       I0 => s_daddr_o(1),
       I1 => s_daddr_o(2),
-      O => \^g_1pipe_iface.s_daddr_r_reg[1]\
+      O => \current_state[3]_i_4__0_n_0\
     );
 \current_state[3]_i_5__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000040000000"
+      INIT => X"0000000000400000"
     )
         port map (
       I0 => \^g_1pipe_iface.s_daddr_r_reg[9]\,
-      I1 => \current_state[3]_i_6_n_0\,
-      I2 => s_daddr_o(8),
-      I3 => s_daddr_o(11),
+      I1 => s_daddr_o(7),
+      I2 => s_daddr_o(5),
+      I3 => \current_state[3]_i_6_n_0\,
       I4 => s_den_o,
       I5 => s_daddr_o(12),
       O => \current_state[3]_i_5__1_n_0\
     );
 \current_state[3]_i_6\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"8"
+      INIT => X"7"
     )
         port map (
       I0 => s_daddr_o(3),
@@ -14606,7 +15689,7 @@ drdy_ff8_i_2: unisim.vcomponents.LUT2
      port map (
       C => s_dclk_o,
       CE => \^e\(0),
-      D => \^q\(3),
+      D => parallel_dout(11),
       Q => parallel_dout(10),
       R => '0'
     );
@@ -14614,24 +15697,24 @@ drdy_ff8_i_2: unisim.vcomponents.LUT2
      port map (
       C => s_dclk_o,
       CE => \^e\(0),
-      D => \^q\(4),
-      Q => \^q\(3),
+      D => parallel_dout(12),
+      Q => parallel_dout(11),
       R => '0'
     );
 \parallel_dout_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => \^e\(0),
-      D => \^q\(5),
-      Q => \^q\(4),
+      D => parallel_dout(13),
+      Q => parallel_dout(12),
       R => '0'
     );
 \parallel_dout_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => \^e\(0),
-      D => \^q\(6),
-      Q => \^q\(5),
+      D => parallel_dout(14),
+      Q => parallel_dout(13),
       R => '0'
     );
 \parallel_dout_reg[14]\: unisim.vcomponents.FDRE
@@ -14639,7 +15722,7 @@ drdy_ff8_i_2: unisim.vcomponents.LUT2
       C => s_dclk_o,
       CE => \^e\(0),
       D => parallel_dout(15),
-      Q => \^q\(6),
+      Q => parallel_dout(14),
       R => '0'
     );
 \parallel_dout_reg[15]\: unisim.vcomponents.FDRE
@@ -14686,7 +15769,7 @@ drdy_ff8_i_2: unisim.vcomponents.LUT2
      port map (
       C => s_dclk_o,
       CE => \^e\(0),
-      D => \^q\(0),
+      D => parallel_dout(6),
       Q => parallel_dout(5),
       R => '0'
     );
@@ -14695,14 +15778,14 @@ drdy_ff8_i_2: unisim.vcomponents.LUT2
       C => s_dclk_o,
       CE => \^e\(0),
       D => parallel_dout(7),
-      Q => \^q\(0),
+      Q => parallel_dout(6),
       R => '0'
     );
 \parallel_dout_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => \^e\(0),
-      D => \^q\(1),
+      D => parallel_dout(8),
       Q => parallel_dout(7),
       R => '0'
     );
@@ -14710,8 +15793,8 @@ drdy_ff8_i_2: unisim.vcomponents.LUT2
      port map (
       C => s_dclk_o,
       CE => \^e\(0),
-      D => \^q\(2),
-      Q => \^q\(1),
+      D => parallel_dout(9),
+      Q => parallel_dout(8),
       R => '0'
     );
 \parallel_dout_reg[9]\: unisim.vcomponents.FDRE
@@ -14719,7 +15802,7 @@ drdy_ff8_i_2: unisim.vcomponents.LUT2
       C => s_dclk_o,
       CE => \^e\(0),
       D => parallel_dout(10),
-      Q => \^q\(2),
+      Q => parallel_dout(9),
       R => '0'
     );
 serial_data_o: unisim.vcomponents.LUT3
@@ -15149,7 +16232,7 @@ shift_en_reg: unisim.vcomponents.FDRE
       Q => \^e\(0),
       R => '0'
     );
-\slaveRegDo_mux_3[0]_i_2\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[0]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"88FAF588FFFFFFFF"
     )
@@ -15160,33 +16243,85 @@ shift_en_reg: unisim.vcomponents.FDRE
       I3 => s_daddr_o(2),
       I4 => s_daddr_o(0),
       I5 => s_daddr_o(3),
-      O => \slaveRegDo_mux_3[0]_i_2_n_0\
+      O => \slaveRegDo_mux_3[0]_i_3_n_0\
     );
-\slaveRegDo_mux_3[10]_i_1\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[10]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00F0000000CC00AA"
+      INIT => X"C000000000000A00"
     )
         port map (
-      I0 => parallel_dout(10),
-      I1 => \slaveRegDo_mux_3_reg[10]\,
-      I2 => \slaveRegDo_mux_3_reg[15]\(2),
-      I3 => \slaveRegDo_mux_3_reg[5]_0\,
-      I4 => \slaveRegDo_mux_3_reg[5]\,
-      I5 => \slaveRegDo_mux_3_reg[0]\,
-      O => \parallel_dout_reg[10]_0\
+      I0 => \slaveRegDo_mux_3_reg[10]\,
+      I1 => parallel_dout(10),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(3),
+      I4 => s_daddr_o(0),
+      I5 => s_daddr_o(2),
+      O => \slaveRegDo_ff8_reg[15]\
     );
-\slaveRegDo_mux_3[15]_i_2\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00F0000000CC00AA"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => parallel_dout(15),
-      I1 => \slaveRegDo_mux_3_reg[10]\,
-      I2 => \slaveRegDo_mux_3_reg[15]\(3),
-      I3 => \slaveRegDo_mux_3_reg[5]_0\,
-      I4 => \slaveRegDo_mux_3_reg[5]\,
-      I5 => \slaveRegDo_mux_3_reg[0]\,
-      O => \parallel_dout_reg[15]_0\
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(11),
+      I2 => \slaveRegDo_mux_3_reg[5]\,
+      I3 => \slaveRegDo_mux_3_reg[14]\(4),
+      I4 => Q(4),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
+      O => \parallel_dout_reg[11]_0\
+    );
+\slaveRegDo_mux_3[12]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(12),
+      I2 => \slaveRegDo_mux_3_reg[5]\,
+      I3 => \slaveRegDo_mux_3_reg[14]\(5),
+      I4 => Q(5),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
+      O => \parallel_dout_reg[12]_0\
+    );
+\slaveRegDo_mux_3[13]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(13),
+      I2 => \slaveRegDo_mux_3_reg[5]\,
+      I3 => \slaveRegDo_mux_3_reg[14]\(6),
+      I4 => Q(6),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
+      O => \parallel_dout_reg[13]_0\
+    );
+\slaveRegDo_mux_3[14]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(14),
+      I2 => \slaveRegDo_mux_3_reg[5]\,
+      I3 => \slaveRegDo_mux_3_reg[14]\(7),
+      I4 => Q(7),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
+      O => \parallel_dout_reg[14]_0\
+    );
+\slaveRegDo_mux_3[15]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C000000000000A00"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_3_reg[10]\,
+      I1 => parallel_dout(15),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(3),
+      I4 => s_daddr_o(0),
+      I5 => s_daddr_o(2),
+      O => \slaveRegDo_ff8_reg[15]_1\
     );
 \slaveRegDo_mux_3[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -15234,33 +16369,72 @@ shift_en_reg: unisim.vcomponents.FDRE
     );
 \slaveRegDo_mux_3[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0C0000A00C0000A"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => parallel_dout(5),
-      I1 => \slaveRegDo_mux_3_reg[15]\(0),
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(5),
       I2 => \slaveRegDo_mux_3_reg[5]\,
-      I3 => \slaveRegDo_mux_3_reg[5]_0\,
-      I4 => \slaveRegDo_mux_3_reg[0]\,
-      I5 => \slaveRegDo_mux_3_reg[5]_1\(0),
+      I3 => \slaveRegDo_mux_3_reg[14]\(0),
+      I4 => Q(0),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
       O => \parallel_dout_reg[5]_0\
     );
-\slaveRegDo_mux_3[7]_i_1\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00F0000000CC00AA"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => parallel_dout(7),
-      I1 => \slaveRegDo_mux_3_reg[10]\,
-      I2 => \slaveRegDo_mux_3_reg[15]\(1),
-      I3 => \slaveRegDo_mux_3_reg[5]_0\,
-      I4 => \slaveRegDo_mux_3_reg[5]\,
-      I5 => \slaveRegDo_mux_3_reg[0]\,
-      O => \parallel_dout_reg[7]_0\
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(6),
+      I2 => \slaveRegDo_mux_3_reg[5]\,
+      I3 => \slaveRegDo_mux_3_reg[14]\(1),
+      I4 => Q(1),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
+      O => \parallel_dout_reg[6]_0\
+    );
+\slaveRegDo_mux_3[7]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C000000000000A00"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_3_reg[10]\,
+      I1 => parallel_dout(7),
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(3),
+      I4 => s_daddr_o(0),
+      I5 => s_daddr_o(2),
+      O => \slaveRegDo_ff8_reg[15]_0\
+    );
+\slaveRegDo_mux_3[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(8),
+      I2 => \slaveRegDo_mux_3_reg[5]\,
+      I3 => \slaveRegDo_mux_3_reg[14]\(2),
+      I4 => Q(2),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
+      O => \parallel_dout_reg[8]_0\
+    );
+\slaveRegDo_mux_3[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_3_reg[1]_0\,
+      I1 => parallel_dout(9),
+      I2 => \slaveRegDo_mux_3_reg[5]\,
+      I3 => \slaveRegDo_mux_3_reg[14]\(3),
+      I4 => Q(3),
+      I5 => \slaveRegDo_mux_3_reg[5]_0\,
+      O => \parallel_dout_reg[9]_0\
     );
 \slaveRegDo_mux_3_reg[0]_i_1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \slaveRegDo_mux_3[0]_i_2_n_0\,
+      I0 => \slaveRegDo_mux_3[0]_i_3_n_0\,
       I1 => \slaveRegDo_mux_3_reg[0]_0\,
       O => \G_1PIPE_IFACE.s_daddr_r_reg[3]\,
       S => \slaveRegDo_mux_3_reg[0]\
@@ -15276,14 +16450,14 @@ entity ila_0_xsdbs_v1_0_2_reg_stat is
     \xsdb_reg_reg[2]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
     \xsdb_reg_reg[4]_0\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 11 downto 0 );
     \slaveRegDo_mux_3_reg[4]\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[4]_0\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[4]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     slaveRegDo_ffa : in STD_LOGIC_VECTOR ( 0 to 0 );
     \slaveRegDo_mux_3_reg[4]_2\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \xsdb_reg_reg[5]_0\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    \xsdb_reg_reg[15]_0\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -15335,7 +16509,7 @@ begin
       I5 => \slaveRegDo_mux_3_reg[4]_2\,
       O => \xsdb_reg_reg[3]_0\
     );
-\slaveRegDo_mux_3[4]_i_4\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_3[4]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"D591C48000000000"
     )
@@ -15352,15 +16526,63 @@ begin
      port map (
       C => s_dclk_o,
       CE => E(0),
-      D => \xsdb_reg_reg[5]_0\(0),
+      D => \xsdb_reg_reg[15]_0\(0),
       Q => Q(0),
+      R => '0'
+    );
+\xsdb_reg_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(10),
+      Q => Q(6),
+      R => '0'
+    );
+\xsdb_reg_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(11),
+      Q => Q(7),
+      R => '0'
+    );
+\xsdb_reg_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(12),
+      Q => Q(8),
+      R => '0'
+    );
+\xsdb_reg_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(13),
+      Q => Q(9),
+      R => '0'
+    );
+\xsdb_reg_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(14),
+      Q => Q(10),
+      R => '0'
+    );
+\xsdb_reg_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(15),
+      Q => Q(11),
       R => '0'
     );
 \xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => E(0),
-      D => \xsdb_reg_reg[5]_0\(1),
+      D => \xsdb_reg_reg[15]_0\(1),
       Q => \xsdb_reg_reg_n_0_[1]\,
       R => '0'
     );
@@ -15368,7 +16590,7 @@ begin
      port map (
       C => s_dclk_o,
       CE => E(0),
-      D => \xsdb_reg_reg[5]_0\(2),
+      D => \xsdb_reg_reg[15]_0\(2),
       Q => \xsdb_reg_reg_n_0_[2]\,
       R => '0'
     );
@@ -15376,7 +16598,7 @@ begin
      port map (
       C => s_dclk_o,
       CE => E(0),
-      D => \xsdb_reg_reg[5]_0\(3),
+      D => \xsdb_reg_reg[15]_0\(3),
       Q => \xsdb_reg_reg_n_0_[3]\,
       R => '0'
     );
@@ -15384,7 +16606,7 @@ begin
      port map (
       C => s_dclk_o,
       CE => E(0),
-      D => \xsdb_reg_reg[5]_0\(4),
+      D => \xsdb_reg_reg[15]_0\(4),
       Q => \xsdb_reg_reg_n_0_[4]\,
       R => '0'
     );
@@ -15392,8 +16614,40 @@ begin
      port map (
       C => s_dclk_o,
       CE => E(0),
-      D => \xsdb_reg_reg[5]_0\(5),
+      D => \xsdb_reg_reg[15]_0\(5),
       Q => Q(1),
+      R => '0'
+    );
+\xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(6),
+      Q => Q(2),
+      R => '0'
+    );
+\xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(7),
+      Q => Q(3),
+      R => '0'
+    );
+\xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(8),
+      Q => Q(4),
+      R => '0'
+    );
+\xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_dclk_o,
+      CE => E(0),
+      D => \xsdb_reg_reg[15]_0\(9),
+      Q => Q(5),
       R => '0'
     );
 end STRUCTURE;
@@ -15401,97 +16655,291 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_stat_22 is
+entity ila_0_xsdbs_v1_0_2_reg_stat_20 is
   port (
-    Q : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[9]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
+    \slaveRegDo_mux_01__6\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[0]_0\ : in STD_LOGIC;
+    s_daddr_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[0]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[0]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_5\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_1\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \slaveRegDo_mux_0[2]_i_2_0\ : in STD_LOGIC;
     s_den_o : in STD_LOGIC;
-    \xsdb_reg_reg[9]_0\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \xsdb_reg_reg[9]_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_22 : entity is "xsdbs_v1_0_2_reg_stat";
-end ila_0_xsdbs_v1_0_2_reg_stat_22;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_20 : entity is "xsdbs_v1_0_2_reg_stat";
+end ila_0_xsdbs_v1_0_2_reg_stat_20;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_22 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_20 is
+  signal \slaveRegDo_mux_0[0]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[0]_i_4_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[1]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[1]_i_4_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[2]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[2]_i_4_n_0\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[0]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[1]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[2]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[3]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[5]\ : STD_LOGIC;
+  signal \xsdb_reg_reg_n_0_[6]\ : STD_LOGIC;
 begin
+\slaveRegDo_mux_0[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[2]\,
+      I1 => \slaveRegDo_mux_0[0]_i_2_n_0\,
+      I2 => \slaveRegDo_mux_01__6\,
+      I3 => \slaveRegDo_mux_0_reg[2]_0\(0),
+      I4 => \slaveRegDo_mux_0_reg[0]\,
+      I5 => \slaveRegDo_mux_0_reg[2]_1\,
+      O => D(0)
+    );
+\slaveRegDo_mux_0[0]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEEEFEEEE"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[0]_i_4_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[0]_0\,
+      I2 => s_daddr_o(3),
+      I3 => \slaveRegDo_mux_0_reg[5]\,
+      I4 => \slaveRegDo_mux_0_reg[0]_1\,
+      I5 => \slaveRegDo_mux_0_reg[0]_2\,
+      O => \slaveRegDo_mux_0[0]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[0]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0101000101000000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[2]_i_2_0\,
+      I1 => \slaveRegDo_mux_0_reg[5]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \xsdb_reg_reg_n_0_[0]\,
+      I5 => Q(0),
+      O => \slaveRegDo_mux_0[0]_i_4_n_0\
+    );
+\slaveRegDo_mux_0[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[2]\,
+      I1 => \slaveRegDo_mux_0[1]_i_2_n_0\,
+      I2 => \slaveRegDo_mux_01__6\,
+      I3 => \slaveRegDo_mux_0_reg[2]_0\(1),
+      I4 => \slaveRegDo_mux_0_reg[1]\,
+      I5 => \slaveRegDo_mux_0_reg[2]_1\,
+      O => D(1)
+    );
+\slaveRegDo_mux_0[1]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEEEFEEEE"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[1]_i_4_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[1]_0\,
+      I2 => s_daddr_o(3),
+      I3 => \slaveRegDo_mux_0_reg[5]\,
+      I4 => \slaveRegDo_mux_0_reg[1]_1\,
+      I5 => \slaveRegDo_mux_0_reg[1]_2\,
+      O => \slaveRegDo_mux_0[1]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[1]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0101000101000000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[2]_i_2_0\,
+      I1 => \slaveRegDo_mux_0_reg[5]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \xsdb_reg_reg_n_0_[1]\,
+      I5 => Q(1),
+      O => \slaveRegDo_mux_0[1]_i_4_n_0\
+    );
+\slaveRegDo_mux_0[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF888F888F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0_reg[2]\,
+      I1 => \slaveRegDo_mux_0[2]_i_2_n_0\,
+      I2 => \slaveRegDo_mux_01__6\,
+      I3 => \slaveRegDo_mux_0_reg[2]_0\(2),
+      I4 => \slaveRegDo_mux_0_reg[2]_2\,
+      I5 => \slaveRegDo_mux_0_reg[2]_1\,
+      O => D(2)
+    );
+\slaveRegDo_mux_0[2]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEEEFEEEE"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[2]_i_4_n_0\,
+      I1 => \slaveRegDo_mux_0_reg[2]_3\,
+      I2 => s_daddr_o(3),
+      I3 => \slaveRegDo_mux_0_reg[5]\,
+      I4 => \slaveRegDo_mux_0_reg[2]_4\,
+      I5 => \slaveRegDo_mux_0_reg[2]_5\,
+      O => \slaveRegDo_mux_0[2]_i_2_n_0\
+    );
+\slaveRegDo_mux_0[2]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0101000101000000"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_0[2]_i_2_0\,
+      I1 => \slaveRegDo_mux_0_reg[5]\,
+      I2 => s_daddr_o(1),
+      I3 => s_daddr_o(0),
+      I4 => \xsdb_reg_reg_n_0_[2]\,
+      I5 => Q(2),
+      O => \slaveRegDo_mux_0[2]_i_4_n_0\
+    );
+\slaveRegDo_mux_0[3]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000051400000"
+    )
+        port map (
+      I0 => s_daddr_o(1),
+      I1 => s_daddr_o(0),
+      I2 => \xsdb_reg_reg_n_0_[3]\,
+      I3 => Q(3),
+      I4 => s_daddr_o(3),
+      I5 => s_daddr_o(2),
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\
+    );
+\slaveRegDo_mux_0[5]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000FFFF4000"
+    )
+        port map (
+      I0 => s_daddr_o(2),
+      I1 => s_daddr_o(3),
+      I2 => \slaveRegDo_mux_0_reg[5]_0\,
+      I3 => \xsdb_reg_reg_n_0_[5]\,
+      I4 => \slaveRegDo_mux_0_reg[5]_1\,
+      I5 => \slaveRegDo_mux_0_reg[5]\,
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[2]\
+    );
+\slaveRegDo_mux_0[6]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000051400000"
+    )
+        port map (
+      I0 => s_daddr_o(1),
+      I1 => s_daddr_o(0),
+      I2 => \xsdb_reg_reg_n_0_[6]\,
+      I3 => Q(4),
+      I4 => s_daddr_o(3),
+      I5 => s_daddr_o(2),
+      O => \G_1PIPE_IFACE.s_daddr_r_reg[1]\
+    );
 \xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(0),
-      Q => Q(0),
+      D => \xsdb_reg_reg[9]_1\(0),
+      Q => \xsdb_reg_reg_n_0_[0]\,
       R => '0'
     );
 \xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(1),
-      Q => Q(1),
+      D => \xsdb_reg_reg[9]_1\(1),
+      Q => \xsdb_reg_reg_n_0_[1]\,
       R => '0'
     );
 \xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(2),
-      Q => Q(2),
+      D => \xsdb_reg_reg[9]_1\(2),
+      Q => \xsdb_reg_reg_n_0_[2]\,
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(3),
-      Q => Q(3),
+      D => \xsdb_reg_reg[9]_1\(3),
+      Q => \xsdb_reg_reg_n_0_[3]\,
       R => '0'
     );
 \xsdb_reg_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(4),
-      Q => Q(4),
+      D => \xsdb_reg_reg[9]_1\(4),
+      Q => \xsdb_reg_reg[9]_0\(0),
       R => '0'
     );
 \xsdb_reg_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(5),
-      Q => Q(5),
+      D => \xsdb_reg_reg[9]_1\(5),
+      Q => \xsdb_reg_reg_n_0_[5]\,
       R => '0'
     );
 \xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(6),
-      Q => Q(6),
+      D => \xsdb_reg_reg[9]_1\(6),
+      Q => \xsdb_reg_reg_n_0_[6]\,
       R => '0'
     );
 \xsdb_reg_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(7),
-      Q => Q(7),
+      D => \xsdb_reg_reg[9]_1\(7),
+      Q => \xsdb_reg_reg[9]_0\(1),
       R => '0'
     );
 \xsdb_reg_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(8),
-      Q => Q(8),
+      D => \xsdb_reg_reg[9]_1\(8),
+      Q => \xsdb_reg_reg[9]_0\(2),
       R => '0'
     );
 \xsdb_reg_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[9]_0\(9),
-      Q => Q(9),
+      D => \xsdb_reg_reg[9]_1\(9),
+      Q => \xsdb_reg_reg[9]_0\(3),
       R => '0'
     );
 end STRUCTURE;
@@ -15499,24 +16947,24 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_stat_23 is
+entity ila_0_xsdbs_v1_0_2_reg_stat_21 is
   port (
     D : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \slaveRegDo_mux_2_reg[1]\ : in STD_LOGIC;
     s_do_o : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \slaveRegDo_mux_2_reg[1]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_2_reg[0]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \slaveRegDo_mux_2_reg[1]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     slaveRegDo_mux_211_in : in STD_LOGIC;
-    s_daddr_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_den_o : in STD_LOGIC;
     \xsdb_reg_reg[1]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_23 : entity is "xsdbs_v1_0_2_reg_stat";
-end ila_0_xsdbs_v1_0_2_reg_stat_23;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_21 : entity is "xsdbs_v1_0_2_reg_stat";
+end ila_0_xsdbs_v1_0_2_reg_stat_21;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_23 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_21 is
   signal \slaveRegDo_mux_2[0]_i_2_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_2[1]_i_2_n_0\ : STD_LOGIC;
   signal \xsdb_reg_reg_n_0_[0]\ : STD_LOGIC;
@@ -15531,18 +16979,18 @@ begin
       I1 => s_do_o(0),
       I2 => \slaveRegDo_mux_2[0]_i_2_n_0\,
       I3 => \slaveRegDo_mux_2_reg[1]_0\,
-      I4 => \slaveRegDo_mux_2_reg[0]\(0),
+      I4 => \slaveRegDo_mux_2_reg[1]_1\(0),
       I5 => slaveRegDo_mux_211_in,
       O => D(0)
     );
 \slaveRegDo_mux_2[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000200000000000"
+      INIT => X"0000400000000000"
     )
         port map (
-      I0 => \xsdb_reg_reg_n_0_[0]\,
-      I1 => \slaveRegDo_mux_2_reg[0]\(2),
-      I2 => s_daddr_o(2),
+      I0 => s_daddr_o(4),
+      I1 => s_daddr_o(2),
+      I2 => \xsdb_reg_reg_n_0_[0]\,
       I3 => s_daddr_o(0),
       I4 => s_daddr_o(1),
       I5 => s_daddr_o(3),
@@ -15557,18 +17005,18 @@ begin
       I1 => s_do_o(1),
       I2 => \slaveRegDo_mux_2[1]_i_2_n_0\,
       I3 => \slaveRegDo_mux_2_reg[1]_0\,
-      I4 => \slaveRegDo_mux_2_reg[0]\(1),
+      I4 => \slaveRegDo_mux_2_reg[1]_1\(1),
       I5 => slaveRegDo_mux_211_in,
       O => D(1)
     );
 \slaveRegDo_mux_2[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000200000000000"
+      INIT => X"0000400000000000"
     )
         port map (
-      I0 => \xsdb_reg_reg_n_0_[1]\,
-      I1 => \slaveRegDo_mux_2_reg[0]\(2),
-      I2 => s_daddr_o(2),
+      I0 => s_daddr_o(4),
+      I1 => s_daddr_o(2),
+      I2 => \xsdb_reg_reg_n_0_[1]\,
       I3 => s_daddr_o(0),
       I4 => s_daddr_o(1),
       I5 => s_daddr_o(3),
@@ -15595,7 +17043,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_stat_24 is
+entity ila_0_xsdbs_v1_0_2_reg_stat_22 is
   port (
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_den_o : in STD_LOGIC;
@@ -15607,10 +17055,10 @@ entity ila_0_xsdbs_v1_0_2_reg_stat_24 is
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_24 : entity is "xsdbs_v1_0_2_reg_stat";
-end ila_0_xsdbs_v1_0_2_reg_stat_24;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_22 : entity is "xsdbs_v1_0_2_reg_stat";
+end ila_0_xsdbs_v1_0_2_reg_stat_22;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_24 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_22 is
   signal \slaveRegDo_mux_2[3]_i_3_n_0\ : STD_LOGIC;
   signal \xsdb_reg_reg_n_0_[3]\ : STD_LOGIC;
 begin
@@ -15651,111 +17099,57 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_stat_30 is
+entity ila_0_xsdbs_v1_0_2_reg_stat_28 is
   port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \xsdb_reg_reg[6]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \slaveRegDo_mux_01__6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0_reg[1]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_4\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0[1]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_2_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_2_3\ : in STD_LOGIC;
-    halt_ctrl : in STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 4 downto 0 );
     s_den_o : in STD_LOGIC;
-    \xsdb_reg_reg[6]_1\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    D : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_30 : entity is "xsdbs_v1_0_2_reg_stat";
-end ila_0_xsdbs_v1_0_2_reg_stat_30;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_28 : entity is "xsdbs_v1_0_2_reg_stat";
+end ila_0_xsdbs_v1_0_2_reg_stat_28;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_30 is
-  signal \slaveRegDo_mux_0[1]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[1]_i_4_n_0\ : STD_LOGIC;
-  signal \xsdb_reg_reg_n_0_[1]\ : STD_LOGIC;
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_28 is
 begin
-\slaveRegDo_mux_0[1]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFEAEAEA"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[1]_i_2_n_0\,
-      I1 => \slaveRegDo_mux_01__6\,
-      I2 => \slaveRegDo_mux_0_reg[1]\(0),
-      I3 => \slaveRegDo_mux_0_reg[1]_0\,
-      I4 => \slaveRegDo_mux_0_reg[1]_1\,
-      O => D(0)
-    );
-\slaveRegDo_mux_0[1]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"A8888888"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0_reg[1]_2\,
-      I1 => \slaveRegDo_mux_0[1]_i_4_n_0\,
-      I2 => \slaveRegDo_mux_0_reg[1]_3\,
-      I3 => \slaveRegDo_mux_0_reg[1]_4\,
-      I4 => Q(0),
-      O => \slaveRegDo_mux_0[1]_i_2_n_0\
-    );
-\slaveRegDo_mux_0[1]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A8288808A0208000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[1]_i_2_0\,
-      I1 => \slaveRegDo_mux_0[1]_i_2_1\,
-      I2 => \slaveRegDo_mux_0[1]_i_2_2\,
-      I3 => \xsdb_reg_reg_n_0_[1]\,
-      I4 => \slaveRegDo_mux_0[1]_i_2_3\,
-      I5 => halt_ctrl,
-      O => \slaveRegDo_mux_0[1]_i_4_n_0\
-    );
 \xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[6]_1\(0),
-      Q => \xsdb_reg_reg[6]_0\(0),
+      D => D(0),
+      Q => Q(0),
       R => '0'
     );
 \xsdb_reg_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[6]_1\(1),
-      Q => \xsdb_reg_reg_n_0_[1]\,
+      D => D(1),
+      Q => Q(1),
       R => '0'
     );
 \xsdb_reg_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[6]_1\(2),
-      Q => \xsdb_reg_reg[6]_0\(1),
+      D => D(2),
+      Q => Q(2),
       R => '0'
     );
 \xsdb_reg_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[6]_1\(3),
-      Q => \xsdb_reg_reg[6]_0\(2),
+      D => D(3),
+      Q => Q(3),
       R => '0'
     );
 \xsdb_reg_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_dclk_o,
       CE => s_den_o,
-      D => \xsdb_reg_reg[6]_1\(4),
-      Q => \xsdb_reg_reg[6]_0\(3),
+      D => D(4),
+      Q => Q(4),
       R => '0'
     );
 end STRUCTURE;
@@ -15763,7 +17157,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_xsdbs_v1_0_2_reg_stat_38 is
+entity ila_0_xsdbs_v1_0_2_reg_stat_36 is
   port (
     s_do_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s_den_i : in STD_LOGIC;
@@ -15771,10 +17165,10 @@ entity ila_0_xsdbs_v1_0_2_reg_stat_38 is
     s_dclk_i : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_38 : entity is "xsdbs_v1_0_2_reg_stat";
-end ila_0_xsdbs_v1_0_2_reg_stat_38;
+  attribute ORIG_REF_NAME of ila_0_xsdbs_v1_0_2_reg_stat_36 : entity is "xsdbs_v1_0_2_reg_stat";
+end ila_0_xsdbs_v1_0_2_reg_stat_36;
 
-architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_38 is
+architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stat_36 is
 begin
 \xsdb_reg_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -19481,14 +20875,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_width is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : in STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
     s_dclk_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    DIADI : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    DIPADIP : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_width : entity is "blk_mem_gen_v8_4_3_blk_mem_gen_prim_width";
@@ -19498,11 +20893,12 @@ architecture STRUCTURE of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_width is
 begin
 \prim_noinit.ram\: entity work.ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_wrapper
      port map (
-      D(5 downto 0) => D(5 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_2\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0),
-      DIADI(5 downto 0) => DIADI(5 downto 0),
+      D(35 downto 0) => D(35 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0),
+      DIADI(31 downto 0) => DIADI(31 downto 0),
+      DIPADIP(3 downto 0) => DIPADIP(3 downto 0),
       Q(9 downto 0) => Q(9 downto 0),
       \out\ => \out\,
       s_dclk_o => s_dclk_o
@@ -19563,14 +20959,14 @@ arm_detection_inst: entity work.ila_0_ltlib_v1_0_0_rising_edge_detection
       \out\ => arm_in_transferred,
       s_dclk_o => s_dclk_o
     );
-\asyncrounous_transfer.arm_out_transfer_inst\: entity work.ila_0_ltlib_v1_0_0_async_edge_xfer_18
+\asyncrounous_transfer.arm_out_transfer_inst\: entity work.ila_0_ltlib_v1_0_0_async_edge_xfer_16
      port map (
       Q(0) => \^q\(0),
       dout_reg1_reg_0(0) => dout_reg1_reg(0),
       s_dclk_o => s_dclk_o,
       temp_reg1_reg_0 => last_din_reg
     );
-\asyncrounous_transfer.halt_in_transfer_inst\: entity work.ila_0_ltlib_v1_0_0_async_edge_xfer_19
+\asyncrounous_transfer.halt_in_transfer_inst\: entity work.ila_0_ltlib_v1_0_0_async_edge_xfer_17
      port map (
       D(0) => \asyncrounous_transfer.halt_in_transfer_inst_n_1\,
       dout_reg0_reg_0 => last_din_reg,
@@ -19579,7 +20975,7 @@ arm_detection_inst: entity work.ila_0_ltlib_v1_0_0_rising_edge_detection
       \out\ => halt_in_transferred,
       s_dclk_o => s_dclk_o
     );
-\asyncrounous_transfer.halt_out_transfer_inst\: entity work.ila_0_ltlib_v1_0_0_async_edge_xfer_20
+\asyncrounous_transfer.halt_out_transfer_inst\: entity work.ila_0_ltlib_v1_0_0_async_edge_xfer_18
      port map (
       dout_reg1_reg_0(0) => dout_reg1_reg(1),
       halt_out => halt_out,
@@ -19594,7 +20990,7 @@ arm_detection_inst: entity work.ila_0_ltlib_v1_0_0_rising_edge_detection
       I0 => \^q\(0),
       O => \reset_out_reg[0]_0\(0)
     );
-halt_detection_inst: entity work.ila_0_ltlib_v1_0_0_rising_edge_detection_21
+halt_detection_inst: entity work.ila_0_ltlib_v1_0_0_rising_edge_detection_19
      port map (
       D(0) => \asyncrounous_transfer.halt_in_transfer_inst_n_1\,
       Q(0) => \^q\(0),
@@ -19770,7 +21166,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_all_typeA_11 is
+entity ila_0_ltlib_v1_0_0_all_typeA_12 is
   port (
     \out\ : out STD_LOGIC;
     mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -19783,10 +21179,10 @@ entity ila_0_ltlib_v1_0_0_all_typeA_11 is
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_11 : entity is "ltlib_v1_0_0_all_typeA";
-end ila_0_ltlib_v1_0_0_all_typeA_11;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_12 : entity is "ltlib_v1_0_0_all_typeA";
+end ila_0_ltlib_v1_0_0_all_typeA_12;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_11 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_12 is
   signal all_carry_0 : STD_LOGIC;
   signal drive_ci : STD_LOGIC;
   signal srl_q_0 : STD_LOGIC;
@@ -19800,7 +21196,7 @@ architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_11 is
   attribute XILINX_TRANSFORM_PINMAP : string;
   attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
 begin
-\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.ila_0_ltlib_v1_0_0_all_typeA_slice_12
+\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.ila_0_ltlib_v1_0_0_all_typeA_slice_13
      port map (
       CO(0) => all_carry_0,
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
@@ -19845,14 +21241,14 @@ use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_ltlib_v1_0_0_all_typeA_14 is
   port (
     \out\ : out STD_LOGIC;
-    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
+    shift_en_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
+    tc_config_cs_serial_output : in STD_LOGIC;
+    \parallel_dout_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
-    all_dly1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    all_dly2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC
+    D : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_14 : entity is "ltlib_v1_0_0_all_typeA";
@@ -19873,78 +21269,6 @@ architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_14 is
   attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
 begin
 \I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.ila_0_ltlib_v1_0_0_all_typeA_slice_15
-     port map (
-      CO(0) => all_carry_0,
-      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      Q(0) => Q(0),
-      all_dly1(0) => all_dly1(0),
-      all_dly2(0) => all_dly2(0),
-      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
-      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
-      \out\ => \out\,
-      s_dclk_o => s_dclk_o,
-      srl_q_0 => srl_q_0
-    );
-u_carry4_inst: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => all_carry_0,
-      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
-      CYINIT => '1',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
-      S(3 downto 1) => B"111",
-      S(0) => drive_ci
-    );
-u_srl_drive: unisim.vcomponents.SRLC32E
-    generic map(
-      INIT => X"00000000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A(4 downto 0) => B"11111",
-      CE => mu_config_cs_shift_en(0),
-      CLK => s_dclk_o,
-      D => srl_q_0,
-      Q => drive_ci,
-      Q31 => mu_config_cs_serial_input(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_all_typeA_16 is
-  port (
-    \out\ : out STD_LOGIC;
-    shift_en_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
-    tc_config_cs_serial_output : in STD_LOGIC;
-    \parallel_dout_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_dclk_o : in STD_LOGIC;
-    D : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_16 : entity is "ltlib_v1_0_0_all_typeA";
-end ila_0_ltlib_v1_0_0_all_typeA_16;
-
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_16 is
-  signal all_carry_0 : STD_LOGIC;
-  signal drive_ci : STD_LOGIC;
-  signal srl_q_0 : STD_LOGIC;
-  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute BOX_TYPE : string;
-  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
-  attribute BOX_TYPE of u_srl_drive : label is "PRIMITIVE";
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of u_srl_drive : label is "CFGLUT5";
-  attribute XILINX_TRANSFORM_PINMAP : string;
-  attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
-begin
-\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.ila_0_ltlib_v1_0_0_all_typeA_slice_17
      port map (
       CO(0) => all_carry_0,
       D(4 downto 0) => D(4 downto 0),
@@ -20058,26 +21382,27 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_all_typeA_8 is
+entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\ is
   port (
     \out\ : out STD_LOGIC;
     mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
     mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
     mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
-    all_dly1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    all_dly2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    all_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_all_typeA_8 : entity is "ltlib_v1_0_0_all_typeA";
-end ila_0_ltlib_v1_0_0_all_typeA_8;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\ : entity is "ltlib_v1_0_0_all_typeA";
+end \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_8 is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\ is
   signal all_carry_0 : STD_LOGIC;
+  signal all_carry_1 : STD_LOGIC;
   signal drive_ci : STD_LOGIC;
   signal srl_q_0 : STD_LOGIC;
+  signal srl_q_1 : STD_LOGIC;
   signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute BOX_TYPE : string;
@@ -20088,18 +21413,27 @@ architecture STRUCTURE of ila_0_ltlib_v1_0_0_all_typeA_8 is
   attribute XILINX_TRANSFORM_PINMAP : string;
   attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
 begin
-\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.ila_0_ltlib_v1_0_0_all_typeA_slice_9
+\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0\
      port map (
-      CO(0) => all_carry_0,
+      CI_I => all_carry_0,
+      DOUT_O => all_carry_1,
+      SRL_D_I => srl_q_1,
+      SRL_Q_O => srl_q_0,
+      all_in(15 downto 0) => all_in(15 downto 0),
+      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
+      s_dclk_o => s_dclk_o
+    );
+\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.ila_0_ltlib_v1_0_0_all_typeA_slice_3
+     port map (
+      DOUT_O => all_carry_1,
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       Q(0) => Q(0),
-      all_dly1(0) => all_dly1(0),
-      all_dly2(0) => all_dly2(0),
+      SRL_D_I => srl_q_1,
+      all_in(15 downto 0) => all_in(31 downto 16),
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
       \out\ => \out\,
-      s_dclk_o => s_dclk_o,
-      srl_q_0 => srl_q_0
+      s_dclk_o => s_dclk_o
     );
 u_carry4_inst: unisim.vcomponents.CARRY4
      port map (
@@ -20130,20 +21464,22 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\ is
+entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_8\ is
   port (
-    shift_en_reg : out STD_LOGIC;
-    SRL_Q_O : out STD_LOGIC;
-    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \out\ : out STD_LOGIC;
+    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_dclk_o : in STD_LOGIC;
-    PROBES_I : in STD_LOGIC_VECTOR ( 19 downto 0 );
-    SRL_D_I : in STD_LOGIC
+    all_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\ : entity is "ltlib_v1_0_0_all_typeA";
-end \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_8\ : entity is "ltlib_v1_0_0_all_typeA";
+end \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_8\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\ is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_8\ is
   signal all_carry_0 : STD_LOGIC;
   signal all_carry_1 : STD_LOGIC;
   signal drive_ci : STD_LOGIC;
@@ -20159,7 +21495,87 @@ architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0\ is
   attribute XILINX_TRANSFORM_PINMAP : string;
   attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
 begin
-\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0\
+\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_9\
+     port map (
+      CI_I => all_carry_0,
+      DOUT_O => all_carry_1,
+      SRL_D_I => srl_q_1,
+      SRL_Q_O => srl_q_0,
+      all_in(15 downto 0) => all_in(15 downto 0),
+      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
+      s_dclk_o => s_dclk_o
+    );
+\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.ila_0_ltlib_v1_0_0_all_typeA_slice_10
+     port map (
+      DOUT_O => all_carry_1,
+      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg_0\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      Q(0) => Q(0),
+      SRL_D_I => srl_q_1,
+      all_in(15 downto 0) => all_in(31 downto 16),
+      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
+      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
+      \out\ => \out\,
+      s_dclk_o => s_dclk_o
+    );
+u_carry4_inst: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => all_carry_0,
+      CO(2 downto 0) => NLW_u_carry4_inst_CO_UNCONNECTED(2 downto 0),
+      CYINIT => '1',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => NLW_u_carry4_inst_O_UNCONNECTED(3 downto 0),
+      S(3 downto 1) => B"111",
+      S(0) => drive_ci
+    );
+u_srl_drive: unisim.vcomponents.SRLC32E
+    generic map(
+      INIT => X"00000000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A(4 downto 0) => B"11111",
+      CE => mu_config_cs_shift_en(0),
+      CLK => s_dclk_o,
+      D => srl_q_0,
+      Q => drive_ci,
+      Q31 => mu_config_cs_serial_input(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized1\ is
+  port (
+    shift_en_reg : out STD_LOGIC;
+    SRL_Q_O : out STD_LOGIC;
+    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    PROBES_I : in STD_LOGIC_VECTOR ( 19 downto 0 );
+    SRL_D_I : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized1\ : entity is "ltlib_v1_0_0_all_typeA";
+end \ila_0_ltlib_v1_0_0_all_typeA__parameterized1\;
+
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized1\ is
+  signal all_carry_0 : STD_LOGIC;
+  signal all_carry_1 : STD_LOGIC;
+  signal drive_ci : STD_LOGIC;
+  signal srl_q_0 : STD_LOGIC;
+  signal srl_q_1 : STD_LOGIC;
+  signal NLW_u_carry4_inst_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_u_carry4_inst_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of u_carry4_inst : label is "PRIMITIVE";
+  attribute BOX_TYPE of u_srl_drive : label is "PRIMITIVE";
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of u_srl_drive : label is "CFGLUT5";
+  attribute XILINX_TRANSFORM_PINMAP : string;
+  attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
+begin
+\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1\
      port map (
       CI_I => all_carry_0,
       DOUT_O => all_carry_1,
@@ -20169,7 +21585,7 @@ begin
       s_dclk_o => s_dclk_o,
       shift_en_reg => srl_q_0
     );
-\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1\
+\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2\
      port map (
       CI_I => all_carry_1,
       E(0) => E(0),
@@ -20208,7 +21624,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_43\ is
+entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_41\ is
   port (
     shift_en_reg : out STD_LOGIC;
     shift_en_reg_0 : out STD_LOGIC;
@@ -20218,10 +21634,10 @@ entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_43\ is
     SRL_D_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_43\ : entity is "ltlib_v1_0_0_all_typeA";
-end \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_43\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_41\ : entity is "ltlib_v1_0_0_all_typeA";
+end \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_41\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_43\ is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_41\ is
   signal all_carry_0 : STD_LOGIC;
   signal all_carry_1 : STD_LOGIC;
   signal drive_ci : STD_LOGIC;
@@ -20237,7 +21653,7 @@ architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_43\ is
   attribute XILINX_TRANSFORM_PINMAP : string;
   attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
 begin
-\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_44\
+\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_42\
      port map (
       CI_I => all_carry_0,
       DOUT_O => all_carry_1,
@@ -20247,7 +21663,7 @@ begin
       s_dclk_o => s_dclk_o,
       shift_en_reg => srl_q_0
     );
-\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_45\
+\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_43\
      port map (
       CI_I => all_carry_1,
       E(0) => E(0),
@@ -20286,7 +21702,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_51\ is
+entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_49\ is
   port (
     DOUT_O : out STD_LOGIC;
     SRL_Q_O : out STD_LOGIC;
@@ -20296,10 +21712,10 @@ entity \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_51\ is
     SRL_D_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_51\ : entity is "ltlib_v1_0_0_all_typeA";
-end \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_51\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_49\ : entity is "ltlib_v1_0_0_all_typeA";
+end \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_49\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_51\ is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized1_49\ is
   signal all_carry_0 : STD_LOGIC;
   signal all_carry_1 : STD_LOGIC;
   signal drive_ci : STD_LOGIC;
@@ -20315,7 +21731,7 @@ architecture STRUCTURE of \ila_0_ltlib_v1_0_0_all_typeA__parameterized0_51\ is
   attribute XILINX_TRANSFORM_PINMAP : string;
   attribute XILINX_TRANSFORM_PINMAP of u_srl_drive : label is "O6:Q I0:A[0] I1:A[1] I2:A[2] I3:A[3] I4:A[4] CDI:D CDO:Q31";
 begin
-\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_52\
+\I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_50\
      port map (
       CI_I => all_carry_0,
       DOUT_O => all_carry_1,
@@ -20325,7 +21741,7 @@ begin
       shift_en_reg => srl_q_0,
       u_carry4_inst_0(0) => \iwcnt_reg[0]\(0)
     );
-\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_53\
+\I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE\: entity work.\ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_51\
      port map (
       CI_I => all_carry_1,
       DOUT_O => DOUT_O,
@@ -20368,30 +21784,34 @@ entity \ila_0_xsdbs_v1_0_2_reg__parameterized19\ is
   port (
     \G_1PIPE_IFACE.s_den_r_reg\ : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \xsdb_reg_reg[10]\ : out STD_LOGIC;
-    \xsdb_reg_reg[15]\ : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    \xsdb_reg_reg[2]\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]\ : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]_1\ : out STD_LOGIC;
     \xsdb_reg_reg[1]\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]_2\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 8 downto 0 );
     s_den_o : in STD_LOGIC;
     s_dwe_o : in STD_LOGIC;
     \xsdb_reg_reg[0]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \slaveRegDo_mux_0_reg[4]\ : in STD_LOGIC;
     \slaveRegDo_mux_01__6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_3\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0_reg[10]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0[0]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_2_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \slaveRegDo_mux_0_reg[4]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_5\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]_6\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
+    halt_ctrl : in STD_LOGIC;
+    \slaveRegDo_mux_0[2]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_2\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -20401,34 +21821,38 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized19\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized19\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_31
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_29
      port map (
       D(0) => D(0),
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]\ => \G_1PIPE_IFACE.s_daddr_r_reg[2]\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]_0\ => \G_1PIPE_IFACE.s_daddr_r_reg[2]_0\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]_1\ => \G_1PIPE_IFACE.s_daddr_r_reg[2]_1\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]_2\ => \G_1PIPE_IFACE.s_daddr_r_reg[2]_2\,
       \G_1PIPE_IFACE.s_den_r_reg\ => \G_1PIPE_IFACE.s_den_r_reg\,
-      Q(0) => Q(0),
+      halt_ctrl => halt_ctrl,
       s_daddr_o(8 downto 0) => s_daddr_o(8 downto 0),
       s_dclk_o => s_dclk_o,
       s_den_o => s_den_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
       s_dwe_o => s_dwe_o,
       \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
-      \slaveRegDo_mux_0[0]_i_2_0\(0) => \slaveRegDo_mux_0[0]_i_2\(0),
-      \slaveRegDo_mux_0[0]_i_2_1\ => \slaveRegDo_mux_0[0]_i_2_0\,
-      \slaveRegDo_mux_0[0]_i_2_2\ => \slaveRegDo_mux_0[0]_i_2_1\,
-      \slaveRegDo_mux_0[0]_i_2_3\ => \slaveRegDo_mux_0[0]_i_2_2\,
-      \slaveRegDo_mux_0_reg[0]\ => \slaveRegDo_mux_0_reg[0]\,
-      \slaveRegDo_mux_0_reg[0]_0\ => \slaveRegDo_mux_0_reg[0]_0\,
-      \slaveRegDo_mux_0_reg[0]_1\ => \slaveRegDo_mux_0_reg[0]_1\,
-      \slaveRegDo_mux_0_reg[0]_2\(0) => \slaveRegDo_mux_0_reg[0]_2\(0),
-      \slaveRegDo_mux_0_reg[0]_3\ => \slaveRegDo_mux_0_reg[0]_3\,
-      \slaveRegDo_mux_0_reg[10]\ => \slaveRegDo_mux_0_reg[10]\,
-      \slaveRegDo_mux_0_reg[10]_0\ => \slaveRegDo_mux_0_reg[10]_0\,
-      \slaveRegDo_mux_0_reg[10]_1\ => \slaveRegDo_mux_0_reg[10]_1\,
-      \slaveRegDo_mux_0_reg[10]_2\ => \slaveRegDo_mux_0_reg[10]_2\,
-      \slaveRegDo_mux_0_reg[10]_3\ => \slaveRegDo_mux_0_reg[10]_3\,
+      \slaveRegDo_mux_0[0]_i_2\ => \slaveRegDo_mux_0[0]_i_2\,
+      \slaveRegDo_mux_0[2]_i_2\ => \slaveRegDo_mux_0[2]_i_2\,
+      \slaveRegDo_mux_0_reg[4]\ => \slaveRegDo_mux_0_reg[4]\,
+      \slaveRegDo_mux_0_reg[4]_0\(0) => \slaveRegDo_mux_0_reg[4]_0\(0),
+      \slaveRegDo_mux_0_reg[4]_1\ => \slaveRegDo_mux_0_reg[4]_1\,
+      \slaveRegDo_mux_0_reg[4]_2\ => \slaveRegDo_mux_0_reg[4]_2\,
+      \slaveRegDo_mux_0_reg[4]_3\ => \slaveRegDo_mux_0_reg[4]_3\,
+      \slaveRegDo_mux_0_reg[4]_4\ => \slaveRegDo_mux_0_reg[4]_4\,
+      \slaveRegDo_mux_0_reg[4]_5\ => \slaveRegDo_mux_0_reg[4]_5\,
+      \slaveRegDo_mux_0_reg[4]_6\ => \slaveRegDo_mux_0_reg[4]_6\,
+      \slaveRegDo_mux_0_reg[7]\ => \slaveRegDo_mux_0_reg[7]\,
+      \slaveRegDo_mux_0_reg[8]\ => \slaveRegDo_mux_0_reg[8]\,
+      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0_reg[9]\,
+      \slaveRegDo_mux_0_reg[9]_0\ => \slaveRegDo_mux_0_reg[9]_0\,
+      \slaveRegDo_mux_0_reg[9]_1\ => \slaveRegDo_mux_0_reg[9]_1\,
       \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
-      \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
-      \xsdb_reg_reg[15]_0\(11 downto 0) => \xsdb_reg_reg[15]\(11 downto 0),
+      \xsdb_reg_reg[15]_0\(8 downto 0) => \xsdb_reg_reg[15]\(8 downto 0),
       \xsdb_reg_reg[1]_0\ => \xsdb_reg_reg[1]\,
       \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\
     );
@@ -20439,14 +21863,14 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized20\ is
   port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \xsdb_reg_reg[3]\ : out STD_LOGIC;
+    \xsdb_reg_reg[6]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[3]\ : out STD_LOGIC;
     \xsdb_reg_reg[4]\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]\ : out STD_LOGIC;
     \xsdb_reg_reg[7]\ : out STD_LOGIC;
     \xsdb_reg_reg[8]\ : out STD_LOGIC;
     \xsdb_reg_reg[9]\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[0]\ : out STD_LOGIC;
     scnt_cmp_temp : out STD_LOGIC;
     \xsdb_reg_reg[0]\ : out STD_LOGIC;
     wcnt_lcmp_temp : out STD_LOGIC;
@@ -20456,28 +21880,19 @@ entity \ila_0_xsdbs_v1_0_2_reg__parameterized20\ is
     \xsdb_reg_reg[13]\ : out STD_LOGIC;
     \xsdb_reg_reg[12]\ : out STD_LOGIC;
     \xsdb_reg_reg[11]\ : out STD_LOGIC;
-    \xsdb_reg_reg[10]\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]\ : out STD_LOGIC;
     halt_ctrl : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_01__6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_2\ : in STD_LOGIC;
     \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \slaveRegDo_mux_0[2]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \slaveRegDo_mux_0_reg[6]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]_1\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     DOUT_O : in STD_LOGIC;
     u_wcnt_lcmp_q : in STD_LOGIC;
     u_wcnt_hcmp_q : in STD_LOGIC;
@@ -20492,46 +21907,37 @@ architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized20\ is
 begin
 \I_EN_CTL_EQ1.U_CTL\: entity work.\ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0\
      port map (
-      D(0) => D(0),
       DOUT_O => DOUT_O,
-      Q(5 downto 0) => Q(5 downto 0),
+      \G_1PIPE_IFACE.s_daddr_r_reg[0]\ => \G_1PIPE_IFACE.s_daddr_r_reg[0]\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[3]\ => \G_1PIPE_IFACE.s_daddr_r_reg[3]\,
+      Q(3 downto 0) => Q(3 downto 0),
       halt_ctrl => halt_ctrl,
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
       scnt_cmp_temp => scnt_cmp_temp,
-      \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
-      \slaveRegDo_mux_0[2]_i_2_0\ => \slaveRegDo_mux_0[2]_i_2\,
-      \slaveRegDo_mux_0[2]_i_2_1\ => \slaveRegDo_mux_0[2]_i_2_0\,
-      \slaveRegDo_mux_0[2]_i_2_2\ => \slaveRegDo_mux_0[2]_i_2_1\,
-      \slaveRegDo_mux_0_reg[2]\ => \slaveRegDo_mux_0_reg[2]\,
-      \slaveRegDo_mux_0_reg[2]_0\ => \slaveRegDo_mux_0_reg[2]_0\,
-      \slaveRegDo_mux_0_reg[2]_1\ => \slaveRegDo_mux_0_reg[2]_1\,
-      \slaveRegDo_mux_0_reg[2]_2\ => \slaveRegDo_mux_0_reg[2]_2\,
-      \slaveRegDo_mux_0_reg[2]_3\ => \slaveRegDo_mux_0_reg[2]_3\,
+      \slaveRegDo_mux_0[10]_i_3_0\(3 downto 0) => \slaveRegDo_mux_0[10]_i_3\(3 downto 0),
+      \slaveRegDo_mux_0_reg[10]\ => \slaveRegDo_mux_0_reg[10]\,
+      \slaveRegDo_mux_0_reg[10]_0\ => \slaveRegDo_mux_0_reg[10]_0\,
+      \slaveRegDo_mux_0_reg[10]_1\ => \slaveRegDo_mux_0_reg[10]_1\,
+      \slaveRegDo_mux_0_reg[3]\ => \slaveRegDo_mux_0_reg[3]\,
       \slaveRegDo_mux_0_reg[6]\ => \slaveRegDo_mux_0_reg[6]\,
       \slaveRegDo_mux_0_reg[6]_0\ => \slaveRegDo_mux_0_reg[6]_0\,
-      \slaveRegDo_mux_0_reg[6]_1\(2 downto 0) => \slaveRegDo_mux_0_reg[6]_1\(2 downto 0),
-      \slaveRegDo_mux_0_reg[6]_2\(1 downto 0) => \slaveRegDo_mux_0_reg[6]_2\(1 downto 0),
-      \slaveRegDo_mux_0_reg[6]_3\ => \slaveRegDo_mux_0_reg[6]_3\,
-      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0_reg[9]\,
-      \slaveRegDo_mux_0_reg[9]_0\ => \slaveRegDo_mux_0_reg[9]_0\,
-      \slaveRegDo_mux_0_reg[9]_1\ => \slaveRegDo_mux_0_reg[9]_1\,
+      \slaveRegDo_mux_0_reg[6]_1\ => \slaveRegDo_mux_0_reg[6]_1\,
       u_wcnt_hcmp_q => u_wcnt_hcmp_q,
       u_wcnt_lcmp_q => u_wcnt_lcmp_q,
       wcnt_hcmp_temp => wcnt_hcmp_temp,
       wcnt_lcmp_temp => wcnt_lcmp_temp,
       \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
       \xsdb_reg_reg[0]_1\ => \xsdb_reg_reg[0]_0\,
-      \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
       \xsdb_reg_reg[11]_0\ => \xsdb_reg_reg[11]\,
       \xsdb_reg_reg[12]_0\ => \xsdb_reg_reg[12]\,
       \xsdb_reg_reg[13]_0\ => \xsdb_reg_reg[13]\,
       \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
       \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\,
+      \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\,
       \xsdb_reg_reg[3]_0\ => \xsdb_reg_reg[3]\,
       \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\,
-      \xsdb_reg_reg[5]_0\ => \xsdb_reg_reg[5]\,
       \xsdb_reg_reg[6]_0\ => \xsdb_reg_reg[6]\,
       \xsdb_reg_reg[7]_0\ => \xsdb_reg_reg[7]\,
       \xsdb_reg_reg[8]_0\ => \xsdb_reg_reg[8]\,
@@ -20544,23 +21950,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized21\ is
   port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \xsdb_reg_reg[6]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \slaveRegDo_mux_01__6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0_reg[1]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_4\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0[1]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_2_2\ : in STD_LOGIC;
-    halt_ctrl : in STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 4 downto 0 );
     s_den_o : in STD_LOGIC;
-    \xsdb_reg_reg[6]_0\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    D : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -20569,26 +21961,12 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized21\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized21\ is
 begin
-\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_30
+\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_28
      port map (
-      D(0) => D(0),
-      Q(0) => Q(0),
-      halt_ctrl => halt_ctrl,
+      D(4 downto 0) => D(4 downto 0),
+      Q(4 downto 0) => Q(4 downto 0),
       s_dclk_o => s_dclk_o,
-      s_den_o => s_den_o,
-      \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
-      \slaveRegDo_mux_0[1]_i_2_0\ => \slaveRegDo_mux_0[1]_i_2\,
-      \slaveRegDo_mux_0[1]_i_2_1\ => \slaveRegDo_mux_0[1]_i_2_0\,
-      \slaveRegDo_mux_0[1]_i_2_2\ => \slaveRegDo_mux_0[1]_i_2_1\,
-      \slaveRegDo_mux_0[1]_i_2_3\ => \slaveRegDo_mux_0[1]_i_2_2\,
-      \slaveRegDo_mux_0_reg[1]\(0) => \slaveRegDo_mux_0_reg[1]\(0),
-      \slaveRegDo_mux_0_reg[1]_0\ => \slaveRegDo_mux_0_reg[1]_0\,
-      \slaveRegDo_mux_0_reg[1]_1\ => \slaveRegDo_mux_0_reg[1]_1\,
-      \slaveRegDo_mux_0_reg[1]_2\ => \slaveRegDo_mux_0_reg[1]_2\,
-      \slaveRegDo_mux_0_reg[1]_3\ => \slaveRegDo_mux_0_reg[1]_3\,
-      \slaveRegDo_mux_0_reg[1]_4\ => \slaveRegDo_mux_0_reg[1]_4\,
-      \xsdb_reg_reg[6]_0\(3 downto 0) => \xsdb_reg_reg[6]\(3 downto 0),
-      \xsdb_reg_reg[6]_1\(4 downto 0) => \xsdb_reg_reg[6]_0\(4 downto 0)
+      s_den_o => s_den_o
     );
 end STRUCTURE;
 library IEEE;
@@ -20597,9 +21975,35 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized22\ is
   port (
-    Q : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \G_1PIPE_IFACE.s_daddr_r_reg[2]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ : out STD_LOGIC;
+    \xsdb_reg_reg[9]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
+    \slaveRegDo_mux_01__6\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[0]_0\ : in STD_LOGIC;
+    s_daddr_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[0]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[0]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]_5\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_1\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \slaveRegDo_mux_0[2]_i_2\ : in STD_LOGIC;
     s_den_o : in STD_LOGIC;
-    \xsdb_reg_reg[9]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \xsdb_reg_reg[9]_0\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -20608,12 +22012,38 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized22\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized22\ is
 begin
-\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_22
+\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_20
      port map (
-      Q(9 downto 0) => Q(9 downto 0),
+      D(2 downto 0) => D(2 downto 0),
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]\ => \G_1PIPE_IFACE.s_daddr_r_reg[2]\,
+      Q(4 downto 0) => Q(4 downto 0),
+      s_daddr_o(3 downto 0) => s_daddr_o(3 downto 0),
       s_dclk_o => s_dclk_o,
       s_den_o => s_den_o,
-      \xsdb_reg_reg[9]_0\(9 downto 0) => \xsdb_reg_reg[9]\(9 downto 0)
+      \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
+      \slaveRegDo_mux_0[2]_i_2_0\ => \slaveRegDo_mux_0[2]_i_2\,
+      \slaveRegDo_mux_0_reg[0]\ => \slaveRegDo_mux_0_reg[0]\,
+      \slaveRegDo_mux_0_reg[0]_0\ => \slaveRegDo_mux_0_reg[0]_0\,
+      \slaveRegDo_mux_0_reg[0]_1\ => \slaveRegDo_mux_0_reg[0]_1\,
+      \slaveRegDo_mux_0_reg[0]_2\ => \slaveRegDo_mux_0_reg[0]_2\,
+      \slaveRegDo_mux_0_reg[1]\ => \slaveRegDo_mux_0_reg[1]\,
+      \slaveRegDo_mux_0_reg[1]_0\ => \slaveRegDo_mux_0_reg[1]_0\,
+      \slaveRegDo_mux_0_reg[1]_1\ => \slaveRegDo_mux_0_reg[1]_1\,
+      \slaveRegDo_mux_0_reg[1]_2\ => \slaveRegDo_mux_0_reg[1]_2\,
+      \slaveRegDo_mux_0_reg[2]\ => \slaveRegDo_mux_0_reg[2]\,
+      \slaveRegDo_mux_0_reg[2]_0\(2 downto 0) => \slaveRegDo_mux_0_reg[2]_0\(2 downto 0),
+      \slaveRegDo_mux_0_reg[2]_1\ => \slaveRegDo_mux_0_reg[2]_1\,
+      \slaveRegDo_mux_0_reg[2]_2\ => \slaveRegDo_mux_0_reg[2]_2\,
+      \slaveRegDo_mux_0_reg[2]_3\ => \slaveRegDo_mux_0_reg[2]_3\,
+      \slaveRegDo_mux_0_reg[2]_4\ => \slaveRegDo_mux_0_reg[2]_4\,
+      \slaveRegDo_mux_0_reg[2]_5\ => \slaveRegDo_mux_0_reg[2]_5\,
+      \slaveRegDo_mux_0_reg[5]\ => \slaveRegDo_mux_0_reg[5]\,
+      \slaveRegDo_mux_0_reg[5]_0\ => \slaveRegDo_mux_0_reg[5]_0\,
+      \slaveRegDo_mux_0_reg[5]_1\ => \slaveRegDo_mux_0_reg[5]_1\,
+      \xsdb_reg_reg[9]_0\(3 downto 0) => \xsdb_reg_reg[9]\(3 downto 0),
+      \xsdb_reg_reg[9]_1\(9 downto 0) => \xsdb_reg_reg[9]_0\(9 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -20635,7 +22065,7 @@ entity \ila_0_xsdbs_v1_0_2_reg__parameterized34\ is
     \xsdb_reg_reg[5]\ : out STD_LOGIC;
     \xsdb_reg_reg[4]\ : out STD_LOGIC;
     \xsdb_reg_reg[3]\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]\ : out STD_LOGIC;
+    in0 : out STD_LOGIC;
     \xsdb_reg_reg[1]\ : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -20649,9 +22079,10 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized34\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized34\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_37
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_35
      port map (
       SR(0) => SR(0),
+      in0 => in0,
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
@@ -20663,7 +22094,6 @@ begin
       \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
       \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\,
       \xsdb_reg_reg[1]_0\ => \xsdb_reg_reg[1]\,
-      \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\,
       \xsdb_reg_reg[3]_0\ => \xsdb_reg_reg[3]\,
       \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\,
       \xsdb_reg_reg[5]_0\ => \xsdb_reg_reg[5]\,
@@ -20679,75 +22109,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized35\ is
   port (
-    \xsdb_reg_reg[0]\ : out STD_LOGIC;
-    read_reset_addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    \xsdb_reg_reg[1]\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]\ : out STD_LOGIC;
-    \xsdb_reg_reg[4]\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]\ : out STD_LOGIC;
-    \xsdb_reg_reg[7]\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]\ : out STD_LOGIC;
     \xsdb_reg_reg[10]\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]\ : out STD_LOGIC;
     \xsdb_reg_reg[15]\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]\ : out STD_LOGIC;
+    \xsdb_reg_reg[11]\ : out STD_LOGIC;
+    read_reset_addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_1\ : in STD_LOGIC;
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \slaveRegDo_mux_0[0]_i_3_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[1]_i_3_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2_1\ : in STD_LOGIC;
+    \xsdb_reg_reg[0]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3_0\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -20757,79 +22129,21 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized35\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized35\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_36
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_34
      port map (
-      SR(0) => SR(0),
       read_reset_addr(9 downto 0) => read_reset_addr(9 downto 0),
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
-      \slaveRegDo_mux_0[0]_i_3\ => \slaveRegDo_mux_0[0]_i_3\,
-      \slaveRegDo_mux_0[0]_i_3_0\ => \slaveRegDo_mux_0[0]_i_3_0\,
-      \slaveRegDo_mux_0[0]_i_3_1\ => \slaveRegDo_mux_0[0]_i_3_1\,
-      \slaveRegDo_mux_0[0]_i_3_2\ => \slaveRegDo_mux_0[0]_i_3_2\,
-      \slaveRegDo_mux_0[10]_i_2\ => \slaveRegDo_mux_0[10]_i_2\,
-      \slaveRegDo_mux_0[10]_i_2_0\ => \slaveRegDo_mux_0[10]_i_2_0\,
-      \slaveRegDo_mux_0[10]_i_2_1\ => \slaveRegDo_mux_0[10]_i_2_1\,
-      \slaveRegDo_mux_0[11]_i_2\ => \slaveRegDo_mux_0[11]_i_2\,
-      \slaveRegDo_mux_0[11]_i_2_0\ => \slaveRegDo_mux_0[11]_i_2_0\,
-      \slaveRegDo_mux_0[11]_i_2_1\ => \slaveRegDo_mux_0[11]_i_2_1\,
-      \slaveRegDo_mux_0[12]_i_2\ => \slaveRegDo_mux_0[12]_i_2\,
-      \slaveRegDo_mux_0[12]_i_2_0\ => \slaveRegDo_mux_0[12]_i_2_0\,
-      \slaveRegDo_mux_0[12]_i_2_1\ => \slaveRegDo_mux_0[12]_i_2_1\,
-      \slaveRegDo_mux_0[13]_i_2\ => \slaveRegDo_mux_0[13]_i_2\,
-      \slaveRegDo_mux_0[13]_i_2_0\ => \slaveRegDo_mux_0[13]_i_2_0\,
-      \slaveRegDo_mux_0[13]_i_2_1\ => \slaveRegDo_mux_0[13]_i_2_1\,
-      \slaveRegDo_mux_0[14]_i_2\ => \slaveRegDo_mux_0[14]_i_2\,
-      \slaveRegDo_mux_0[14]_i_2_0\ => \slaveRegDo_mux_0[14]_i_2_0\,
-      \slaveRegDo_mux_0[14]_i_2_1\ => \slaveRegDo_mux_0[14]_i_2_1\,
-      \slaveRegDo_mux_0[15]_i_2\ => \slaveRegDo_mux_0[15]_i_2\,
-      \slaveRegDo_mux_0[15]_i_2_0\ => \slaveRegDo_mux_0[15]_i_2_0\,
-      \slaveRegDo_mux_0[15]_i_2_1\ => \slaveRegDo_mux_0[15]_i_2_1\,
-      \slaveRegDo_mux_0[1]_i_3\ => \slaveRegDo_mux_0[1]_i_3\,
-      \slaveRegDo_mux_0[1]_i_3_0\ => \slaveRegDo_mux_0[1]_i_3_0\,
-      \slaveRegDo_mux_0[1]_i_3_1\ => \slaveRegDo_mux_0[1]_i_3_1\,
-      \slaveRegDo_mux_0[2]_i_3\ => \slaveRegDo_mux_0[2]_i_3\,
-      \slaveRegDo_mux_0[2]_i_3_0\ => \slaveRegDo_mux_0[2]_i_3_0\,
-      \slaveRegDo_mux_0[2]_i_3_1\ => \slaveRegDo_mux_0[2]_i_3_1\,
-      \slaveRegDo_mux_0[3]_i_2\ => \slaveRegDo_mux_0[3]_i_2\,
-      \slaveRegDo_mux_0[3]_i_2_0\ => \slaveRegDo_mux_0[3]_i_2_0\,
-      \slaveRegDo_mux_0[3]_i_2_1\ => \slaveRegDo_mux_0[3]_i_2_1\,
-      \slaveRegDo_mux_0[4]_i_2\ => \slaveRegDo_mux_0[4]_i_2\,
-      \slaveRegDo_mux_0[4]_i_2_0\ => \slaveRegDo_mux_0[4]_i_2_0\,
-      \slaveRegDo_mux_0[4]_i_2_1\ => \slaveRegDo_mux_0[4]_i_2_1\,
-      \slaveRegDo_mux_0[5]_i_2\ => \slaveRegDo_mux_0[5]_i_2\,
-      \slaveRegDo_mux_0[5]_i_2_0\ => \slaveRegDo_mux_0[5]_i_2_0\,
-      \slaveRegDo_mux_0[5]_i_2_1\ => \slaveRegDo_mux_0[5]_i_2_1\,
-      \slaveRegDo_mux_0[6]_i_2\ => \slaveRegDo_mux_0[6]_i_2\,
-      \slaveRegDo_mux_0[6]_i_2_0\ => \slaveRegDo_mux_0[6]_i_2_0\,
-      \slaveRegDo_mux_0[6]_i_2_1\ => \slaveRegDo_mux_0[6]_i_2_1\,
-      \slaveRegDo_mux_0[7]_i_2\ => \slaveRegDo_mux_0[7]_i_2\,
-      \slaveRegDo_mux_0[7]_i_2_0\ => \slaveRegDo_mux_0[7]_i_2_0\,
-      \slaveRegDo_mux_0[7]_i_2_1\ => \slaveRegDo_mux_0[7]_i_2_1\,
-      \slaveRegDo_mux_0[8]_i_2\ => \slaveRegDo_mux_0[8]_i_2\,
-      \slaveRegDo_mux_0[8]_i_2_0\ => \slaveRegDo_mux_0[8]_i_2_0\,
-      \slaveRegDo_mux_0[8]_i_2_1\ => \slaveRegDo_mux_0[8]_i_2_1\,
-      \slaveRegDo_mux_0[9]_i_2\ => \slaveRegDo_mux_0[9]_i_2\,
-      \slaveRegDo_mux_0[9]_i_2_0\ => \slaveRegDo_mux_0[9]_i_2_0\,
-      \slaveRegDo_mux_0[9]_i_2_1\ => \slaveRegDo_mux_0[9]_i_2_1\,
+      \slaveRegDo_mux_0[10]_i_3\ => \slaveRegDo_mux_0[10]_i_3\,
+      \slaveRegDo_mux_0[10]_i_3_0\ => \slaveRegDo_mux_0[10]_i_3_0\,
       \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
-      \xsdb_reg_reg[0]_1\ => \xsdb_reg_reg[0]_0\,
       \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
       \xsdb_reg_reg[11]_0\ => \xsdb_reg_reg[11]\,
       \xsdb_reg_reg[12]_0\ => \xsdb_reg_reg[12]\,
       \xsdb_reg_reg[13]_0\ => \xsdb_reg_reg[13]\,
       \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
-      \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\,
-      \xsdb_reg_reg[1]_0\ => \xsdb_reg_reg[1]\,
-      \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\,
-      \xsdb_reg_reg[3]_0\ => \xsdb_reg_reg[3]\,
-      \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\,
-      \xsdb_reg_reg[5]_0\ => \xsdb_reg_reg[5]\,
-      \xsdb_reg_reg[6]_0\ => \xsdb_reg_reg[6]\,
-      \xsdb_reg_reg[7]_0\ => \xsdb_reg_reg[7]\,
-      \xsdb_reg_reg[8]_0\ => \xsdb_reg_reg[8]\,
-      \xsdb_reg_reg[9]_0\ => \xsdb_reg_reg[9]\
+      \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\
     );
 end STRUCTURE;
 library IEEE;
@@ -20838,24 +22152,46 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized36\ is
   port (
-    \xsdb_reg_reg[15]\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]\ : out STD_LOGIC;
-    \xsdb_reg_reg[10]\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]\ : out STD_LOGIC;
-    \xsdb_reg_reg[7]\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]\ : out STD_LOGIC;
-    \xsdb_reg_reg[4]\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]\ : out STD_LOGIC;
-    \xsdb_reg_reg[1]\ : out STD_LOGIC;
     \xsdb_reg_reg[0]\ : out STD_LOGIC;
+    \xsdb_reg_reg[1]\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]\ : out STD_LOGIC;
+    \xsdb_reg_reg[3]\ : out STD_LOGIC;
+    \xsdb_reg_reg[4]\ : out STD_LOGIC;
+    \xsdb_reg_reg[5]\ : out STD_LOGIC;
+    \xsdb_reg_reg[6]\ : out STD_LOGIC;
+    \xsdb_reg_reg[7]\ : out STD_LOGIC;
+    \xsdb_reg_reg[8]\ : out STD_LOGIC;
+    \xsdb_reg_reg[9]\ : out STD_LOGIC;
+    \xsdb_reg_reg[11]\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]\ : out STD_LOGIC;
+    \xsdb_reg_reg[10]\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    read_reset_addr : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \slaveRegDo_mux_0[1]_i_2\ : in STD_LOGIC;
+    in0 : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -20865,11 +22201,33 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized36\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized36\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_35
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_33
      port map (
+      SR(0) => SR(0),
+      in0 => in0,
+      read_reset_addr(9 downto 0) => read_reset_addr(9 downto 0),
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
+      \slaveRegDo_mux_0[1]_i_2\ => \slaveRegDo_mux_0[1]_i_2\,
+      \slaveRegDo_mux_0[4]_i_2\ => \slaveRegDo_mux_0[4]_i_2\,
+      \slaveRegDo_mux_0_reg[11]\ => \slaveRegDo_mux_0_reg[11]\,
+      \slaveRegDo_mux_0_reg[11]_0\ => \slaveRegDo_mux_0_reg[11]_0\,
+      \slaveRegDo_mux_0_reg[12]\ => \slaveRegDo_mux_0_reg[12]\,
+      \slaveRegDo_mux_0_reg[12]_0\ => \slaveRegDo_mux_0_reg[12]_0\,
+      \slaveRegDo_mux_0_reg[13]\ => \slaveRegDo_mux_0_reg[13]\,
+      \slaveRegDo_mux_0_reg[13]_0\ => \slaveRegDo_mux_0_reg[13]_0\,
+      \slaveRegDo_mux_0_reg[14]\ => \slaveRegDo_mux_0_reg[14]\,
+      \slaveRegDo_mux_0_reg[14]_0\ => \slaveRegDo_mux_0_reg[14]_0\,
+      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0_reg[15]\,
+      \slaveRegDo_mux_0_reg[15]_0\ => \slaveRegDo_mux_0_reg[15]_0\,
+      \slaveRegDo_mux_0_reg[15]_1\ => \slaveRegDo_mux_0_reg[15]_1\,
+      \slaveRegDo_mux_0_reg[3]\ => \slaveRegDo_mux_0_reg[3]\,
+      \slaveRegDo_mux_0_reg[5]\ => \slaveRegDo_mux_0_reg[5]\,
+      \slaveRegDo_mux_0_reg[6]\ => \slaveRegDo_mux_0_reg[6]\,
+      \slaveRegDo_mux_0_reg[7]\ => \slaveRegDo_mux_0_reg[7]\,
+      \slaveRegDo_mux_0_reg[8]\ => \slaveRegDo_mux_0_reg[8]\,
+      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0_reg[9]\,
       \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
       \xsdb_reg_reg[0]_1\ => \xsdb_reg_reg[0]_0\,
       \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
@@ -20895,12 +22253,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized37\ is
   port (
+    \xsdb_reg_reg[10]\ : out STD_LOGIC;
     \xsdb_reg_reg[15]\ : out STD_LOGIC;
     \xsdb_reg_reg[14]\ : out STD_LOGIC;
     \xsdb_reg_reg[13]\ : out STD_LOGIC;
     \xsdb_reg_reg[12]\ : out STD_LOGIC;
     \xsdb_reg_reg[11]\ : out STD_LOGIC;
-    \xsdb_reg_reg[10]\ : out STD_LOGIC;
     \xsdb_reg_reg[9]\ : out STD_LOGIC;
     \xsdb_reg_reg[8]\ : out STD_LOGIC;
     \xsdb_reg_reg[7]\ : out STD_LOGIC;
@@ -20913,6 +22271,8 @@ entity \ila_0_xsdbs_v1_0_2_reg__parameterized37\ is
     \xsdb_reg_reg[0]\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_3_0\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -20922,11 +22282,13 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized37\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized37\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_34
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_32
      port map (
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
+      \slaveRegDo_mux_0[10]_i_3\ => \slaveRegDo_mux_0[10]_i_3\,
+      \slaveRegDo_mux_0[10]_i_3_0\ => \slaveRegDo_mux_0[10]_i_3_0\,
       \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
       \xsdb_reg_reg[0]_1\ => \xsdb_reg_reg[0]_0\,
       \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
@@ -20952,6 +22314,141 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized38\ is
   port (
+    \xsdb_reg_reg[11]\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_1\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_2\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_3\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_4\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_5\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_6\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_7\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[1]_8\ : out STD_LOGIC;
+    \xsdb_reg_reg[10]\ : out STD_LOGIC;
+    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \xsdb_reg_reg[0]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
+    slaveRegDo_6 : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[15]_i_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[15]_i_4_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[14]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[14]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[13]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[13]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[12]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[12]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[11]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[11]_i_3_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[2]_i_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \slaveRegDo_mux_0[2]_i_2_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[1]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_2_0\ : in STD_LOGIC;
+    s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s_dclk_o : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg__parameterized38\ : entity is "xsdbs_v1_0_2_reg";
+end \ila_0_xsdbs_v1_0_2_reg__parameterized38\;
+
+architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized38\ is
+begin
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_31
+     port map (
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_1\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_1\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_2\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_2\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_3\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_3\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_4\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_4\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_5\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_5\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_6\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_6\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_7\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_7\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_8\ => \G_1PIPE_IFACE.s_daddr_r_reg[1]_8\,
+      s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
+      s_dclk_o => s_dclk_o,
+      s_di_o(15 downto 0) => s_di_o(15 downto 0),
+      slaveRegDo_6(4 downto 0) => slaveRegDo_6(4 downto 0),
+      \slaveRegDo_mux_0[0]_i_2\ => \slaveRegDo_mux_0[0]_i_2\,
+      \slaveRegDo_mux_0[0]_i_2_0\ => \slaveRegDo_mux_0[0]_i_2_0\,
+      \slaveRegDo_mux_0[11]_i_3_0\ => \slaveRegDo_mux_0[11]_i_3\,
+      \slaveRegDo_mux_0[11]_i_3_1\ => \slaveRegDo_mux_0[11]_i_3_0\,
+      \slaveRegDo_mux_0[12]_i_3_0\ => \slaveRegDo_mux_0[12]_i_3\,
+      \slaveRegDo_mux_0[12]_i_3_1\ => \slaveRegDo_mux_0[12]_i_3_0\,
+      \slaveRegDo_mux_0[13]_i_3_0\ => \slaveRegDo_mux_0[13]_i_3\,
+      \slaveRegDo_mux_0[13]_i_3_1\ => \slaveRegDo_mux_0[13]_i_3_0\,
+      \slaveRegDo_mux_0[14]_i_3_0\ => \slaveRegDo_mux_0[14]_i_3\,
+      \slaveRegDo_mux_0[14]_i_3_1\ => \slaveRegDo_mux_0[14]_i_3_0\,
+      \slaveRegDo_mux_0[15]_i_4_0\ => \slaveRegDo_mux_0[15]_i_4\,
+      \slaveRegDo_mux_0[15]_i_4_1\ => \slaveRegDo_mux_0[15]_i_4_0\,
+      \slaveRegDo_mux_0[1]_i_2\ => \slaveRegDo_mux_0[1]_i_2\,
+      \slaveRegDo_mux_0[2]_i_2\(1 downto 0) => \slaveRegDo_mux_0[2]_i_2\(1 downto 0),
+      \slaveRegDo_mux_0[2]_i_2_0\ => \slaveRegDo_mux_0[2]_i_2_0\,
+      \slaveRegDo_mux_0[4]_i_2\ => \slaveRegDo_mux_0[4]_i_2\,
+      \slaveRegDo_mux_0[4]_i_2_0\ => \slaveRegDo_mux_0[4]_i_2_0\,
+      \slaveRegDo_mux_0_reg[11]\ => \slaveRegDo_mux_0_reg[11]\,
+      \slaveRegDo_mux_0_reg[12]\ => \slaveRegDo_mux_0_reg[12]\,
+      \slaveRegDo_mux_0_reg[13]\ => \slaveRegDo_mux_0_reg[13]\,
+      \slaveRegDo_mux_0_reg[14]\ => \slaveRegDo_mux_0_reg[14]\,
+      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0_reg[15]\,
+      \slaveRegDo_mux_0_reg[15]_0\ => \slaveRegDo_mux_0_reg[15]_0\,
+      \slaveRegDo_mux_0_reg[15]_1\ => \slaveRegDo_mux_0_reg[15]_1\,
+      \slaveRegDo_mux_0_reg[15]_2\ => \slaveRegDo_mux_0_reg[15]_2\,
+      \slaveRegDo_mux_0_reg[3]\ => \slaveRegDo_mux_0_reg[3]\,
+      \slaveRegDo_mux_0_reg[3]_0\ => \slaveRegDo_mux_0_reg[3]_0\,
+      \slaveRegDo_mux_0_reg[3]_1\ => \slaveRegDo_mux_0_reg[3]_1\,
+      \slaveRegDo_mux_0_reg[5]\ => \slaveRegDo_mux_0_reg[5]\,
+      \slaveRegDo_mux_0_reg[5]_0\ => \slaveRegDo_mux_0_reg[5]_0\,
+      \slaveRegDo_mux_0_reg[6]\ => \slaveRegDo_mux_0_reg[6]\,
+      \slaveRegDo_mux_0_reg[6]_0\ => \slaveRegDo_mux_0_reg[6]_0\,
+      \slaveRegDo_mux_0_reg[7]\ => \slaveRegDo_mux_0_reg[7]\,
+      \slaveRegDo_mux_0_reg[7]_0\ => \slaveRegDo_mux_0_reg[7]_0\,
+      \slaveRegDo_mux_0_reg[8]\ => \slaveRegDo_mux_0_reg[8]\,
+      \slaveRegDo_mux_0_reg[8]_0\ => \slaveRegDo_mux_0_reg[8]_0\,
+      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0_reg[9]\,
+      \slaveRegDo_mux_0_reg[9]_0\ => \slaveRegDo_mux_0_reg[9]_0\,
+      \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
+      \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
+      \xsdb_reg_reg[11]_0\ => \xsdb_reg_reg[11]\,
+      \xsdb_reg_reg[12]_0\ => \xsdb_reg_reg[12]\,
+      \xsdb_reg_reg[13]_0\ => \xsdb_reg_reg[13]\,
+      \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
+      \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_xsdbs_v1_0_2_reg__parameterized39\ is
+  port (
     \xsdb_reg_reg[15]\ : out STD_LOGIC;
     \xsdb_reg_reg[14]\ : out STD_LOGIC;
     \xsdb_reg_reg[13]\ : out STD_LOGIC;
@@ -20965,8 +22462,7 @@ entity \ila_0_xsdbs_v1_0_2_reg__parameterized38\ is
     \xsdb_reg_reg[5]\ : out STD_LOGIC;
     \xsdb_reg_reg[4]\ : out STD_LOGIC;
     \xsdb_reg_reg[3]\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]\ : out STD_LOGIC;
-    \xsdb_reg_reg[1]\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \xsdb_reg_reg[0]\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
@@ -20974,12 +22470,12 @@ entity \ila_0_xsdbs_v1_0_2_reg__parameterized38\ is
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg__parameterized38\ : entity is "xsdbs_v1_0_2_reg";
-end \ila_0_xsdbs_v1_0_2_reg__parameterized38\;
+  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg__parameterized39\ : entity is "xsdbs_v1_0_2_reg";
+end \ila_0_xsdbs_v1_0_2_reg__parameterized39\;
 
-architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized38\ is
+architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized39\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_33
+\I_EN_CTL_EQ1.U_CTL\: entity work.\ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_30\
      port map (
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
@@ -20992,8 +22488,7 @@ begin
       \xsdb_reg_reg[13]_0\ => \xsdb_reg_reg[13]\,
       \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
       \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\,
-      \xsdb_reg_reg[1]_0\ => \xsdb_reg_reg[1]\,
-      \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\,
+      \xsdb_reg_reg[2]_0\(1 downto 0) => \xsdb_reg_reg[2]\(1 downto 0),
       \xsdb_reg_reg[3]_0\ => \xsdb_reg_reg[3]\,
       \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\,
       \xsdb_reg_reg[5]_0\ => \xsdb_reg_reg[5]\,
@@ -21001,159 +22496,6 @@ begin
       \xsdb_reg_reg[7]_0\ => \xsdb_reg_reg[7]\,
       \xsdb_reg_reg[8]_0\ => \xsdb_reg_reg[8]\,
       \xsdb_reg_reg[9]_0\ => \xsdb_reg_reg[9]\
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_xsdbs_v1_0_2_reg__parameterized39\ is
-  port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \G_1PIPE_IFACE.s_daddr_r_reg[7]\ : out STD_LOGIC;
-    \G_1PIPE_IFACE.s_daddr_r_reg[7]_0\ : out STD_LOGIC;
-    \G_1PIPE_IFACE.s_daddr_r_reg[7]_1\ : out STD_LOGIC;
-    in0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \xsdb_reg_reg[3]\ : out STD_LOGIC;
-    \xsdb_reg_reg[3]_0\ : out STD_LOGIC;
-    \xsdb_reg_reg[6]\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]\ : out STD_LOGIC;
-    \xsdb_reg_reg[15]\ : out STD_LOGIC;
-    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
-    slaveRegDo_6 : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[4]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_4\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[1]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[2]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[4]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[4]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[5]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[7]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[7]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[8]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[8]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[9]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_5\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[10]_6\ : in STD_LOGIC;
-    slaveRegDo_81 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \slaveRegDo_mux_0[0]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_1\ : in STD_LOGIC;
-    slaveRegDo_80 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \slaveRegDo_mux_0[1]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2\ : in STD_LOGIC;
-    s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    s_dclk_o : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_xsdbs_v1_0_2_reg__parameterized39\ : entity is "xsdbs_v1_0_2_reg";
-end \ila_0_xsdbs_v1_0_2_reg__parameterized39\;
-
-architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized39\ is
-begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.\ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_32\
-     port map (
-      D(5 downto 0) => D(5 downto 0),
-      \G_1PIPE_IFACE.s_daddr_r_reg[7]\ => \G_1PIPE_IFACE.s_daddr_r_reg[7]\,
-      \G_1PIPE_IFACE.s_daddr_r_reg[7]_0\ => \G_1PIPE_IFACE.s_daddr_r_reg[7]_0\,
-      \G_1PIPE_IFACE.s_daddr_r_reg[7]_1\ => \G_1PIPE_IFACE.s_daddr_r_reg[7]_1\,
-      in0(1 downto 0) => in0(1 downto 0),
-      s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
-      s_dclk_o => s_dclk_o,
-      s_di_o(15 downto 0) => s_di_o(15 downto 0),
-      slaveRegDo_6(4 downto 0) => slaveRegDo_6(4 downto 0),
-      slaveRegDo_80(15 downto 0) => slaveRegDo_80(15 downto 0),
-      slaveRegDo_81(15 downto 0) => slaveRegDo_81(15 downto 0),
-      \slaveRegDo_mux_0[0]_i_3_0\ => \slaveRegDo_mux_0[0]_i_3\,
-      \slaveRegDo_mux_0[0]_i_3_1\ => \slaveRegDo_mux_0[0]_i_3_0\,
-      \slaveRegDo_mux_0[0]_i_3_2\ => \slaveRegDo_mux_0[0]_i_3_1\,
-      \slaveRegDo_mux_0[10]_i_2_0\ => \slaveRegDo_mux_0[10]_i_2\,
-      \slaveRegDo_mux_0[11]_i_2\ => \slaveRegDo_mux_0[11]_i_2\,
-      \slaveRegDo_mux_0[12]_i_2\ => \slaveRegDo_mux_0[12]_i_2\,
-      \slaveRegDo_mux_0[13]_i_2\ => \slaveRegDo_mux_0[13]_i_2\,
-      \slaveRegDo_mux_0[14]_i_2\ => \slaveRegDo_mux_0[14]_i_2\,
-      \slaveRegDo_mux_0[15]_i_2\ => \slaveRegDo_mux_0[15]_i_2\,
-      \slaveRegDo_mux_0[1]_i_3_0\ => \slaveRegDo_mux_0[1]_i_3\,
-      \slaveRegDo_mux_0[2]_i_3_0\ => \slaveRegDo_mux_0[2]_i_3\,
-      \slaveRegDo_mux_0[3]_i_2\ => \slaveRegDo_mux_0[3]_i_2\,
-      \slaveRegDo_mux_0[4]_i_2_0\ => \slaveRegDo_mux_0[4]_i_2\,
-      \slaveRegDo_mux_0[5]_i_2_0\ => \slaveRegDo_mux_0[5]_i_2\,
-      \slaveRegDo_mux_0[6]_i_2\ => \slaveRegDo_mux_0[6]_i_2\,
-      \slaveRegDo_mux_0[7]_i_2_0\ => \slaveRegDo_mux_0[7]_i_2\,
-      \slaveRegDo_mux_0[8]_i_2_0\ => \slaveRegDo_mux_0[8]_i_2\,
-      \slaveRegDo_mux_0[9]_i_2_0\ => \slaveRegDo_mux_0[9]_i_2\,
-      \slaveRegDo_mux_0_reg[0]\ => \slaveRegDo_mux_0_reg[0]\,
-      \slaveRegDo_mux_0_reg[0]_0\ => \slaveRegDo_mux_0_reg[0]_0\,
-      \slaveRegDo_mux_0_reg[10]\ => \slaveRegDo_mux_0_reg[10]\,
-      \slaveRegDo_mux_0_reg[10]_0\ => \slaveRegDo_mux_0_reg[10]_0\,
-      \slaveRegDo_mux_0_reg[10]_1\ => \slaveRegDo_mux_0_reg[10]_1\,
-      \slaveRegDo_mux_0_reg[10]_2\ => \slaveRegDo_mux_0_reg[10]_2\,
-      \slaveRegDo_mux_0_reg[10]_3\ => \slaveRegDo_mux_0_reg[10]_3\,
-      \slaveRegDo_mux_0_reg[10]_4\ => \slaveRegDo_mux_0_reg[10]_4\,
-      \slaveRegDo_mux_0_reg[10]_5\ => \slaveRegDo_mux_0_reg[10]_5\,
-      \slaveRegDo_mux_0_reg[10]_6\ => \slaveRegDo_mux_0_reg[10]_6\,
-      \slaveRegDo_mux_0_reg[1]\ => \slaveRegDo_mux_0_reg[1]\,
-      \slaveRegDo_mux_0_reg[1]_0\ => \slaveRegDo_mux_0_reg[1]_0\,
-      \slaveRegDo_mux_0_reg[2]\ => \slaveRegDo_mux_0_reg[2]\,
-      \slaveRegDo_mux_0_reg[2]_0\ => \slaveRegDo_mux_0_reg[2]_0\,
-      \slaveRegDo_mux_0_reg[4]\ => \slaveRegDo_mux_0_reg[4]\,
-      \slaveRegDo_mux_0_reg[4]_0\ => \slaveRegDo_mux_0_reg[4]_0\,
-      \slaveRegDo_mux_0_reg[4]_1\ => \slaveRegDo_mux_0_reg[4]_1\,
-      \slaveRegDo_mux_0_reg[5]\ => \slaveRegDo_mux_0_reg[5]\,
-      \slaveRegDo_mux_0_reg[5]_0\ => \slaveRegDo_mux_0_reg[5]_0\,
-      \slaveRegDo_mux_0_reg[5]_1\ => \slaveRegDo_mux_0_reg[5]_1\,
-      \slaveRegDo_mux_0_reg[7]\ => \slaveRegDo_mux_0_reg[7]\,
-      \slaveRegDo_mux_0_reg[7]_0\ => \slaveRegDo_mux_0_reg[7]_0\,
-      \slaveRegDo_mux_0_reg[7]_1\ => \slaveRegDo_mux_0_reg[7]_1\,
-      \slaveRegDo_mux_0_reg[8]\ => \slaveRegDo_mux_0_reg[8]\,
-      \slaveRegDo_mux_0_reg[8]_0\ => \slaveRegDo_mux_0_reg[8]_0\,
-      \slaveRegDo_mux_0_reg[8]_1\ => \slaveRegDo_mux_0_reg[8]_1\,
-      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0_reg[9]\,
-      \slaveRegDo_mux_0_reg[9]_0\ => \slaveRegDo_mux_0_reg[9]_0\,
-      \slaveRegDo_mux_0_reg[9]_1\ => \slaveRegDo_mux_0_reg[9]_1\,
-      \slaveRegDo_mux_0_reg[9]_2\ => \slaveRegDo_mux_0_reg[9]_2\,
-      \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
-      \xsdb_reg_reg[11]_0\ => \xsdb_reg_reg[11]\,
-      \xsdb_reg_reg[12]_0\ => \xsdb_reg_reg[12]\,
-      \xsdb_reg_reg[13]_0\ => \xsdb_reg_reg[13]\,
-      \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
-      \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\,
-      \xsdb_reg_reg[3]_0\ => \xsdb_reg_reg[3]\,
-      \xsdb_reg_reg[3]_1\ => \xsdb_reg_reg[3]_0\,
-      \xsdb_reg_reg[6]_0\ => \xsdb_reg_reg[6]\
     );
 end STRUCTURE;
 library IEEE;
@@ -21177,7 +22519,7 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized40\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized40\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.\ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_29\
+\I_EN_CTL_EQ1.U_CTL\: entity work.\ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_27\
      port map (
       \G_1PIPE_IFACE.s_daddr_r_reg[6]\ => \G_1PIPE_IFACE.s_daddr_r_reg[6]\,
       \G_1PIPE_IFACE.s_den_r_reg\ => \G_1PIPE_IFACE.s_den_r_reg\,
@@ -21195,9 +22537,80 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized41\ is
   port (
-    slaveRegDo_81 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    \xsdb_reg_reg[0]\ : out STD_LOGIC;
+    \xsdb_reg_reg[1]\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]\ : out STD_LOGIC;
+    \xsdb_reg_reg[4]\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \xsdb_reg_reg[0]\ : in STD_LOGIC;
+    \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_2\ : in STD_LOGIC;
+    slaveRegDo_84 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \slaveRegDo_mux_0_reg[0]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[1]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[2]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[3]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[4]\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[5]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[6]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[7]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[8]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[9]_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[10]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[11]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[12]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[13]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[14]_1\ : in STD_LOGIC;
+    \slaveRegDo_mux_0_reg[15]_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[15]_i_2\ : in STD_LOGIC;
+    slaveRegDo_80 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    slaveRegDo_82 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \slaveRegDo_mux_0[14]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[13]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[12]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[11]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[10]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[9]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[8]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[7]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[6]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[5]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[4]_i_4\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[3]_i_2\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[2]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[1]_i_3\ : in STD_LOGIC;
+    \slaveRegDo_mux_0[0]_i_3\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -21207,13 +22620,84 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized41\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized41\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_28
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_26
      port map (
+      D(11 downto 0) => D(11 downto 0),
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
-      slaveRegDo_81(15 downto 0) => slaveRegDo_81(15 downto 0),
-      \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\
+      slaveRegDo_80(15 downto 0) => slaveRegDo_80(15 downto 0),
+      slaveRegDo_82(15 downto 0) => slaveRegDo_82(15 downto 0),
+      slaveRegDo_84(15 downto 0) => slaveRegDo_84(15 downto 0),
+      \slaveRegDo_mux_0[0]_i_3_0\ => \slaveRegDo_mux_0[0]_i_3\,
+      \slaveRegDo_mux_0[10]_i_2_0\ => \slaveRegDo_mux_0[10]_i_2\,
+      \slaveRegDo_mux_0[11]_i_2_0\ => \slaveRegDo_mux_0[11]_i_2\,
+      \slaveRegDo_mux_0[12]_i_2_0\ => \slaveRegDo_mux_0[12]_i_2\,
+      \slaveRegDo_mux_0[13]_i_2_0\ => \slaveRegDo_mux_0[13]_i_2\,
+      \slaveRegDo_mux_0[14]_i_2_0\ => \slaveRegDo_mux_0[14]_i_2\,
+      \slaveRegDo_mux_0[15]_i_2_0\ => \slaveRegDo_mux_0[15]_i_2\,
+      \slaveRegDo_mux_0[1]_i_3_0\ => \slaveRegDo_mux_0[1]_i_3\,
+      \slaveRegDo_mux_0[2]_i_3_0\ => \slaveRegDo_mux_0[2]_i_3\,
+      \slaveRegDo_mux_0[3]_i_2_0\ => \slaveRegDo_mux_0[3]_i_2\,
+      \slaveRegDo_mux_0[4]_i_4_0\ => \slaveRegDo_mux_0[4]_i_4\,
+      \slaveRegDo_mux_0[5]_i_2_0\ => \slaveRegDo_mux_0[5]_i_2\,
+      \slaveRegDo_mux_0[6]_i_2_0\ => \slaveRegDo_mux_0[6]_i_2\,
+      \slaveRegDo_mux_0[7]_i_2_0\ => \slaveRegDo_mux_0[7]_i_2\,
+      \slaveRegDo_mux_0[8]_i_2_0\ => \slaveRegDo_mux_0[8]_i_2\,
+      \slaveRegDo_mux_0[9]_i_2_0\ => \slaveRegDo_mux_0[9]_i_2\,
+      \slaveRegDo_mux_0_reg[0]\ => \slaveRegDo_mux_0_reg[0]\,
+      \slaveRegDo_mux_0_reg[10]\ => \slaveRegDo_mux_0_reg[10]\,
+      \slaveRegDo_mux_0_reg[10]_0\ => \slaveRegDo_mux_0_reg[10]_0\,
+      \slaveRegDo_mux_0_reg[11]\ => \slaveRegDo_mux_0_reg[11]\,
+      \slaveRegDo_mux_0_reg[11]_0\ => \slaveRegDo_mux_0_reg[11]_0\,
+      \slaveRegDo_mux_0_reg[11]_1\ => \slaveRegDo_mux_0_reg[11]_1\,
+      \slaveRegDo_mux_0_reg[12]\ => \slaveRegDo_mux_0_reg[12]\,
+      \slaveRegDo_mux_0_reg[12]_0\ => \slaveRegDo_mux_0_reg[12]_0\,
+      \slaveRegDo_mux_0_reg[12]_1\ => \slaveRegDo_mux_0_reg[12]_1\,
+      \slaveRegDo_mux_0_reg[13]\ => \slaveRegDo_mux_0_reg[13]\,
+      \slaveRegDo_mux_0_reg[13]_0\ => \slaveRegDo_mux_0_reg[13]_0\,
+      \slaveRegDo_mux_0_reg[13]_1\ => \slaveRegDo_mux_0_reg[13]_1\,
+      \slaveRegDo_mux_0_reg[14]\ => \slaveRegDo_mux_0_reg[14]\,
+      \slaveRegDo_mux_0_reg[14]_0\ => \slaveRegDo_mux_0_reg[14]_0\,
+      \slaveRegDo_mux_0_reg[14]_1\ => \slaveRegDo_mux_0_reg[14]_1\,
+      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0_reg[15]\,
+      \slaveRegDo_mux_0_reg[15]_0\ => \slaveRegDo_mux_0_reg[15]_0\,
+      \slaveRegDo_mux_0_reg[15]_1\ => \slaveRegDo_mux_0_reg[15]_1\,
+      \slaveRegDo_mux_0_reg[15]_2\ => \slaveRegDo_mux_0_reg[15]_2\,
+      \slaveRegDo_mux_0_reg[15]_3\ => \slaveRegDo_mux_0_reg[15]_3\,
+      \slaveRegDo_mux_0_reg[15]_4\ => \slaveRegDo_mux_0_reg[15]_4\,
+      \slaveRegDo_mux_0_reg[1]\ => \slaveRegDo_mux_0_reg[1]\,
+      \slaveRegDo_mux_0_reg[2]\ => \slaveRegDo_mux_0_reg[2]\,
+      \slaveRegDo_mux_0_reg[3]\ => \slaveRegDo_mux_0_reg[3]\,
+      \slaveRegDo_mux_0_reg[3]_0\ => \slaveRegDo_mux_0_reg[3]_0\,
+      \slaveRegDo_mux_0_reg[3]_1\ => \slaveRegDo_mux_0_reg[3]_1\,
+      \slaveRegDo_mux_0_reg[3]_2\ => \slaveRegDo_mux_0_reg[3]_2\,
+      \slaveRegDo_mux_0_reg[4]\ => \slaveRegDo_mux_0_reg[4]\,
+      \slaveRegDo_mux_0_reg[5]\ => \slaveRegDo_mux_0_reg[5]\,
+      \slaveRegDo_mux_0_reg[5]_0\ => \slaveRegDo_mux_0_reg[5]_0\,
+      \slaveRegDo_mux_0_reg[5]_1\ => \slaveRegDo_mux_0_reg[5]_1\,
+      \slaveRegDo_mux_0_reg[5]_2\ => \slaveRegDo_mux_0_reg[5]_2\,
+      \slaveRegDo_mux_0_reg[6]\ => \slaveRegDo_mux_0_reg[6]\,
+      \slaveRegDo_mux_0_reg[6]_0\ => \slaveRegDo_mux_0_reg[6]_0\,
+      \slaveRegDo_mux_0_reg[6]_1\ => \slaveRegDo_mux_0_reg[6]_1\,
+      \slaveRegDo_mux_0_reg[6]_2\ => \slaveRegDo_mux_0_reg[6]_2\,
+      \slaveRegDo_mux_0_reg[7]\ => \slaveRegDo_mux_0_reg[7]\,
+      \slaveRegDo_mux_0_reg[7]_0\ => \slaveRegDo_mux_0_reg[7]_0\,
+      \slaveRegDo_mux_0_reg[7]_1\ => \slaveRegDo_mux_0_reg[7]_1\,
+      \slaveRegDo_mux_0_reg[7]_2\ => \slaveRegDo_mux_0_reg[7]_2\,
+      \slaveRegDo_mux_0_reg[8]\ => \slaveRegDo_mux_0_reg[8]\,
+      \slaveRegDo_mux_0_reg[8]_0\ => \slaveRegDo_mux_0_reg[8]_0\,
+      \slaveRegDo_mux_0_reg[8]_1\ => \slaveRegDo_mux_0_reg[8]_1\,
+      \slaveRegDo_mux_0_reg[8]_2\ => \slaveRegDo_mux_0_reg[8]_2\,
+      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0_reg[9]\,
+      \slaveRegDo_mux_0_reg[9]_0\ => \slaveRegDo_mux_0_reg[9]_0\,
+      \slaveRegDo_mux_0_reg[9]_1\ => \slaveRegDo_mux_0_reg[9]_1\,
+      \slaveRegDo_mux_0_reg[9]_2\ => \slaveRegDo_mux_0_reg[9]_2\,
+      \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
+      \xsdb_reg_reg[0]_1\ => \xsdb_reg_reg[0]_0\,
+      \xsdb_reg_reg[1]_0\ => \xsdb_reg_reg[1]\,
+      \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\,
+      \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\
     );
 end STRUCTURE;
 library IEEE;
@@ -21249,69 +22733,24 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \ila_0_xsdbs_v1_0_2_reg__parameterized43\ is
   port (
-    D : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    \xsdb_reg_reg[0]\ : out STD_LOGIC;
-    \xsdb_reg_reg[1]\ : out STD_LOGIC;
-    \xsdb_reg_reg[2]\ : out STD_LOGIC;
-    \xsdb_reg_reg[4]\ : out STD_LOGIC;
-    \xsdb_reg_reg[5]\ : out STD_LOGIC;
-    \xsdb_reg_reg[7]\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]\ : out STD_LOGIC;
+    \xsdb_reg_reg[14]\ : out STD_LOGIC;
+    \xsdb_reg_reg[13]\ : out STD_LOGIC;
+    \xsdb_reg_reg[12]\ : out STD_LOGIC;
+    \xsdb_reg_reg[11]\ : out STD_LOGIC;
     \xsdb_reg_reg[10]\ : out STD_LOGIC;
+    \xsdb_reg_reg[9]\ : out STD_LOGIC;
+    \xsdb_reg_reg[8]\ : out STD_LOGIC;
+    \xsdb_reg_reg[7]\ : out STD_LOGIC;
+    \xsdb_reg_reg[6]\ : out STD_LOGIC;
+    \xsdb_reg_reg[5]\ : out STD_LOGIC;
+    \xsdb_reg_reg[4]\ : out STD_LOGIC;
+    \xsdb_reg_reg[3]\ : out STD_LOGIC;
+    \xsdb_reg_reg[2]\ : out STD_LOGIC;
+    \xsdb_reg_reg[1]\ : out STD_LOGIC;
+    \xsdb_reg_reg[0]\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \xsdb_reg_reg[0]_0\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \slaveRegDo_mux_0_reg[6]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[3]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[3]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[3]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[6]_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_3\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \slaveRegDo_mux_0_reg[15]_4\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[11]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_5\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[11]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[11]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[12]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[12]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[12]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[13]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[13]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[13]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[14]\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[14]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[14]_1\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_6\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_7\ : in STD_LOGIC;
-    \slaveRegDo_mux_0_reg[15]_8\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[0]_i_3_1\ : in STD_LOGIC;
-    slaveRegDo_82 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    slaveRegDo_84 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \slaveRegDo_mux_0[1]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[2]_i_3\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[3]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[4]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[5]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[6]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[7]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[8]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[9]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[10]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[11]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[12]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[13]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[14]_i_2\ : in STD_LOGIC;
-    \slaveRegDo_mux_0[15]_i_2\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -21321,70 +22760,25 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized43\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized43\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_27
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_25
      port map (
-      D(6 downto 0) => D(6 downto 0),
-      Q(1 downto 0) => Q(1 downto 0),
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_di_o(15 downto 0) => s_di_o(15 downto 0),
-      slaveRegDo_82(15 downto 0) => slaveRegDo_82(15 downto 0),
-      slaveRegDo_84(15 downto 0) => slaveRegDo_84(15 downto 0),
-      \slaveRegDo_mux_0[0]_i_3\ => \slaveRegDo_mux_0[0]_i_3\,
-      \slaveRegDo_mux_0[0]_i_3_0\ => \slaveRegDo_mux_0[0]_i_3_0\,
-      \slaveRegDo_mux_0[0]_i_3_1\ => \slaveRegDo_mux_0[0]_i_3_1\,
-      \slaveRegDo_mux_0[10]_i_2\ => \slaveRegDo_mux_0[10]_i_2\,
-      \slaveRegDo_mux_0[11]_i_2_0\ => \slaveRegDo_mux_0[11]_i_2\,
-      \slaveRegDo_mux_0[12]_i_2_0\ => \slaveRegDo_mux_0[12]_i_2\,
-      \slaveRegDo_mux_0[13]_i_2_0\ => \slaveRegDo_mux_0[13]_i_2\,
-      \slaveRegDo_mux_0[14]_i_2_0\ => \slaveRegDo_mux_0[14]_i_2\,
-      \slaveRegDo_mux_0[15]_i_2_0\ => \slaveRegDo_mux_0[15]_i_2\,
-      \slaveRegDo_mux_0[1]_i_3\ => \slaveRegDo_mux_0[1]_i_3\,
-      \slaveRegDo_mux_0[2]_i_3\ => \slaveRegDo_mux_0[2]_i_3\,
-      \slaveRegDo_mux_0[3]_i_2_0\ => \slaveRegDo_mux_0[3]_i_2\,
-      \slaveRegDo_mux_0[4]_i_2\ => \slaveRegDo_mux_0[4]_i_2\,
-      \slaveRegDo_mux_0[5]_i_2\ => \slaveRegDo_mux_0[5]_i_2\,
-      \slaveRegDo_mux_0[6]_i_2_0\ => \slaveRegDo_mux_0[6]_i_2\,
-      \slaveRegDo_mux_0[7]_i_2\ => \slaveRegDo_mux_0[7]_i_2\,
-      \slaveRegDo_mux_0[8]_i_2\ => \slaveRegDo_mux_0[8]_i_2\,
-      \slaveRegDo_mux_0[9]_i_2\ => \slaveRegDo_mux_0[9]_i_2\,
-      \slaveRegDo_mux_0_reg[11]\ => \slaveRegDo_mux_0_reg[11]\,
-      \slaveRegDo_mux_0_reg[11]_0\ => \slaveRegDo_mux_0_reg[11]_0\,
-      \slaveRegDo_mux_0_reg[11]_1\ => \slaveRegDo_mux_0_reg[11]_1\,
-      \slaveRegDo_mux_0_reg[12]\ => \slaveRegDo_mux_0_reg[12]\,
-      \slaveRegDo_mux_0_reg[12]_0\ => \slaveRegDo_mux_0_reg[12]_0\,
-      \slaveRegDo_mux_0_reg[12]_1\ => \slaveRegDo_mux_0_reg[12]_1\,
-      \slaveRegDo_mux_0_reg[13]\ => \slaveRegDo_mux_0_reg[13]\,
-      \slaveRegDo_mux_0_reg[13]_0\ => \slaveRegDo_mux_0_reg[13]_0\,
-      \slaveRegDo_mux_0_reg[13]_1\ => \slaveRegDo_mux_0_reg[13]_1\,
-      \slaveRegDo_mux_0_reg[14]\ => \slaveRegDo_mux_0_reg[14]\,
-      \slaveRegDo_mux_0_reg[14]_0\ => \slaveRegDo_mux_0_reg[14]_0\,
-      \slaveRegDo_mux_0_reg[14]_1\ => \slaveRegDo_mux_0_reg[14]_1\,
-      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0_reg[15]\,
-      \slaveRegDo_mux_0_reg[15]_0\ => \slaveRegDo_mux_0_reg[15]_0\,
-      \slaveRegDo_mux_0_reg[15]_1\ => \slaveRegDo_mux_0_reg[15]_1\,
-      \slaveRegDo_mux_0_reg[15]_2\ => \slaveRegDo_mux_0_reg[15]_2\,
-      \slaveRegDo_mux_0_reg[15]_3\(4 downto 0) => \slaveRegDo_mux_0_reg[15]_3\(4 downto 0),
-      \slaveRegDo_mux_0_reg[15]_4\ => \slaveRegDo_mux_0_reg[15]_4\,
-      \slaveRegDo_mux_0_reg[15]_5\ => \slaveRegDo_mux_0_reg[15]_5\,
-      \slaveRegDo_mux_0_reg[15]_6\ => \slaveRegDo_mux_0_reg[15]_6\,
-      \slaveRegDo_mux_0_reg[15]_7\ => \slaveRegDo_mux_0_reg[15]_7\,
-      \slaveRegDo_mux_0_reg[15]_8\ => \slaveRegDo_mux_0_reg[15]_8\,
-      \slaveRegDo_mux_0_reg[3]\ => \slaveRegDo_mux_0_reg[3]\,
-      \slaveRegDo_mux_0_reg[3]_0\ => \slaveRegDo_mux_0_reg[3]_0\,
-      \slaveRegDo_mux_0_reg[3]_1\ => \slaveRegDo_mux_0_reg[3]_1\,
-      \slaveRegDo_mux_0_reg[6]\ => \slaveRegDo_mux_0_reg[6]\,
-      \slaveRegDo_mux_0_reg[6]_0\ => \slaveRegDo_mux_0_reg[6]_0\,
-      \slaveRegDo_mux_0_reg[6]_1\ => \slaveRegDo_mux_0_reg[6]_1\,
-      \slaveRegDo_mux_0_reg[6]_2\ => \slaveRegDo_mux_0_reg[6]_2\,
-      \slaveRegDo_mux_0_reg[6]_3\ => \slaveRegDo_mux_0_reg[6]_3\,
       \xsdb_reg_reg[0]_0\ => \xsdb_reg_reg[0]\,
       \xsdb_reg_reg[0]_1\ => \xsdb_reg_reg[0]_0\,
       \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
+      \xsdb_reg_reg[11]_0\ => \xsdb_reg_reg[11]\,
+      \xsdb_reg_reg[12]_0\ => \xsdb_reg_reg[12]\,
+      \xsdb_reg_reg[13]_0\ => \xsdb_reg_reg[13]\,
+      \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
+      \xsdb_reg_reg[15]_0\ => \xsdb_reg_reg[15]\,
       \xsdb_reg_reg[1]_0\ => \xsdb_reg_reg[1]\,
       \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\,
+      \xsdb_reg_reg[3]_0\ => \xsdb_reg_reg[3]\,
       \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\,
       \xsdb_reg_reg[5]_0\ => \xsdb_reg_reg[5]\,
+      \xsdb_reg_reg[6]_0\ => \xsdb_reg_reg[6]\,
       \xsdb_reg_reg[7]_0\ => \xsdb_reg_reg[7]\,
       \xsdb_reg_reg[8]_0\ => \xsdb_reg_reg[8]\,
       \xsdb_reg_reg[9]_0\ => \xsdb_reg_reg[9]\
@@ -21408,7 +22802,7 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized44\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized44\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_26
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_24
      port map (
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
@@ -21450,7 +22844,7 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized45\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized45\ is
 begin
-\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_25
+\I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl_23
      port map (
       s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
@@ -21495,7 +22889,7 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized47\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized47\ is
 begin
-\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_24
+\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_22
      port map (
       D(0) => D(0),
       \out\ => \out\,
@@ -21517,9 +22911,9 @@ entity \ila_0_xsdbs_v1_0_2_reg__parameterized49\ is
     \slaveRegDo_mux_2_reg[1]\ : in STD_LOGIC;
     s_do_o : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \slaveRegDo_mux_2_reg[1]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_2_reg[0]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \slaveRegDo_mux_2_reg[1]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     slaveRegDo_mux_211_in : in STD_LOGIC;
-    s_daddr_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_daddr_o : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_den_o : in STD_LOGIC;
     \xsdb_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_dclk_o : in STD_LOGIC
@@ -21530,17 +22924,17 @@ end \ila_0_xsdbs_v1_0_2_reg__parameterized49\;
 
 architecture STRUCTURE of \ila_0_xsdbs_v1_0_2_reg__parameterized49\ is
 begin
-\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_23
+\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_21
      port map (
       D(1 downto 0) => D(1 downto 0),
-      s_daddr_o(3 downto 0) => s_daddr_o(3 downto 0),
+      s_daddr_o(4 downto 0) => s_daddr_o(4 downto 0),
       s_dclk_o => s_dclk_o,
       s_den_o => s_den_o,
       s_do_o(1 downto 0) => s_do_o(1 downto 0),
       slaveRegDo_mux_211_in => slaveRegDo_mux_211_in,
-      \slaveRegDo_mux_2_reg[0]\(2 downto 0) => \slaveRegDo_mux_2_reg[0]\(2 downto 0),
       \slaveRegDo_mux_2_reg[1]\ => \slaveRegDo_mux_2_reg[1]\,
       \slaveRegDo_mux_2_reg[1]_0\ => \slaveRegDo_mux_2_reg[1]_0\,
+      \slaveRegDo_mux_2_reg[1]_1\(1 downto 0) => \slaveRegDo_mux_2_reg[1]_1\(1 downto 0),
       \xsdb_reg_reg[1]_0\(1 downto 0) => \xsdb_reg_reg[1]\(1 downto 0)
     );
 end STRUCTURE;
@@ -21599,7 +22993,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_38
+\I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat_36
      port map (
       din_i(15 downto 0) => din_i(15 downto 0),
       s_dclk_i => s_dclk_i,
@@ -21613,23 +23007,26 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_xsdbs_v1_0_2_reg_stream is
   port (
+    \G_1PIPE_IFACE.s_daddr_r_reg[0]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[11]\ : out STD_LOGIC;
+    \G_1PIPE_IFACE.s_daddr_r_reg[9]\ : out STD_LOGIC;
     \slaveRegDo_ffa_reg[4]\ : out STD_LOGIC;
     \xsdb_reg_reg[15]\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    \xsdb_reg_reg[6]\ : out STD_LOGIC;
-    \xsdb_reg_reg[8]\ : out STD_LOGIC;
-    \xsdb_reg_reg[9]\ : out STD_LOGIC;
-    \xsdb_reg_reg[11]\ : out STD_LOGIC;
-    \xsdb_reg_reg[12]\ : out STD_LOGIC;
-    \xsdb_reg_reg[13]\ : out STD_LOGIC;
-    \xsdb_reg_reg[14]\ : out STD_LOGIC;
+    \xsdb_reg_reg[7]\ : out STD_LOGIC;
+    \xsdb_reg_reg[10]\ : out STD_LOGIC;
+    \xsdb_reg_reg[15]_0\ : out STD_LOGIC;
     s_daddr_o : in STD_LOGIC_VECTOR ( 12 downto 0 );
     s_den_o : in STD_LOGIC;
     s_dwe_o : in STD_LOGIC;
     slaveRegDo_ffa : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \slaveRegDo_mux_3_reg[0]\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[0]_0\ : in STD_LOGIC;
-    \slaveRegDo_mux_3_reg[14]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    \slaveRegDo_mux_3_reg[15]\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[15]_0\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[7]\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[10]\ : in STD_LOGIC;
+    \slaveRegDo_mux_3_reg[15]_1\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
@@ -21641,7 +23038,10 @@ architecture STRUCTURE of ila_0_xsdbs_v1_0_2_reg_stream is
 begin
 \I_EN_CTL_EQ1.U_CTL\: entity work.ila_0_xsdbs_v1_0_2_reg_ctl
      port map (
-      Q(0) => Q(0),
+      \G_1PIPE_IFACE.s_daddr_r_reg[0]\ => \G_1PIPE_IFACE.s_daddr_r_reg[0]\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[11]\ => \G_1PIPE_IFACE.s_daddr_r_reg[11]\,
+      \G_1PIPE_IFACE.s_daddr_r_reg[9]\ => \G_1PIPE_IFACE.s_daddr_r_reg[9]\,
+      Q(3 downto 0) => Q(3 downto 0),
       s_daddr_o(12 downto 0) => s_daddr_o(12 downto 0),
       s_dclk_o => s_dclk_o,
       s_den_o => s_den_o,
@@ -21651,15 +23051,15 @@ begin
       \slaveRegDo_ffa_reg[4]\ => \slaveRegDo_ffa_reg[4]\,
       \slaveRegDo_mux_3_reg[0]\ => \slaveRegDo_mux_3_reg[0]\,
       \slaveRegDo_mux_3_reg[0]_0\ => \slaveRegDo_mux_3_reg[0]_0\,
-      \slaveRegDo_mux_3_reg[14]\(6 downto 0) => \slaveRegDo_mux_3_reg[14]\(6 downto 0),
-      \xsdb_reg_reg[11]_0\ => \xsdb_reg_reg[11]\,
-      \xsdb_reg_reg[12]_0\ => \xsdb_reg_reg[12]\,
-      \xsdb_reg_reg[13]_0\ => \xsdb_reg_reg[13]\,
-      \xsdb_reg_reg[14]_0\ => \xsdb_reg_reg[14]\,
+      \slaveRegDo_mux_3_reg[10]\ => \slaveRegDo_mux_3_reg[10]\,
+      \slaveRegDo_mux_3_reg[15]\ => \slaveRegDo_mux_3_reg[15]\,
+      \slaveRegDo_mux_3_reg[15]_0\ => \slaveRegDo_mux_3_reg[15]_0\,
+      \slaveRegDo_mux_3_reg[15]_1\ => \slaveRegDo_mux_3_reg[15]_1\,
+      \slaveRegDo_mux_3_reg[7]\ => \slaveRegDo_mux_3_reg[7]\,
+      \xsdb_reg_reg[10]_0\ => \xsdb_reg_reg[10]\,
       \xsdb_reg_reg[15]_0\(15 downto 0) => \xsdb_reg_reg[15]\(15 downto 0),
-      \xsdb_reg_reg[6]_0\ => \xsdb_reg_reg[6]\,
-      \xsdb_reg_reg[8]_0\ => \xsdb_reg_reg[8]\,
-      \xsdb_reg_reg[9]_0\ => \xsdb_reg_reg[9]\
+      \xsdb_reg_reg[15]_1\ => \xsdb_reg_reg[15]_0\,
+      \xsdb_reg_reg[7]_0\ => \xsdb_reg_reg[7]\
     );
 end STRUCTURE;
 library IEEE;
@@ -21672,14 +23072,14 @@ entity \ila_0_xsdbs_v1_0_2_reg_stream__parameterized0\ is
     \xsdb_reg_reg[2]\ : out STD_LOGIC;
     \xsdb_reg_reg[3]\ : out STD_LOGIC;
     \xsdb_reg_reg[4]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 11 downto 0 );
     \slaveRegDo_mux_3_reg[4]\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[4]_0\ : in STD_LOGIC;
     \slaveRegDo_mux_3_reg[4]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     slaveRegDo_ffa : in STD_LOGIC_VECTOR ( 0 to 0 );
     \slaveRegDo_mux_3_reg[4]_2\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \xsdb_reg_reg[5]\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    \xsdb_reg_reg[15]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -21691,18 +23091,18 @@ begin
 \I_EN_STAT_EQ1.U_STAT\: entity work.ila_0_xsdbs_v1_0_2_reg_stat
      port map (
       E(0) => E(0),
-      Q(1 downto 0) => Q(1 downto 0),
+      Q(11 downto 0) => Q(11 downto 0),
       s_dclk_o => s_dclk_o,
       slaveRegDo_ffa(0) => slaveRegDo_ffa(0),
       \slaveRegDo_mux_3_reg[4]\ => \slaveRegDo_mux_3_reg[4]\,
       \slaveRegDo_mux_3_reg[4]_0\ => \slaveRegDo_mux_3_reg[4]_0\,
       \slaveRegDo_mux_3_reg[4]_1\(3 downto 0) => \slaveRegDo_mux_3_reg[4]_1\(3 downto 0),
       \slaveRegDo_mux_3_reg[4]_2\ => \slaveRegDo_mux_3_reg[4]_2\,
+      \xsdb_reg_reg[15]_0\(15 downto 0) => \xsdb_reg_reg[15]\(15 downto 0),
       \xsdb_reg_reg[1]_0\ => \xsdb_reg_reg[1]\,
       \xsdb_reg_reg[2]_0\ => \xsdb_reg_reg[2]\,
       \xsdb_reg_reg[3]_0\ => \xsdb_reg_reg[3]\,
-      \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\,
-      \xsdb_reg_reg[5]_0\(5 downto 0) => \xsdb_reg_reg[5]\(5 downto 0)
+      \xsdb_reg_reg[4]_0\ => \xsdb_reg_reg[4]\
     );
 end STRUCTURE;
 library IEEE;
@@ -21711,14 +23111,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_generic_cstr is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : in STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
     s_dclk_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    DIADI : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    DIPADIP : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_v8_4_3_blk_mem_gen_generic_cstr";
@@ -21728,11 +23129,12 @@ architecture STRUCTURE of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_generic_cstr is
 begin
 \ramloop[0].ram.r\: entity work.ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_prim_width
      port map (
-      D(5 downto 0) => D(5 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0),
-      DIADI(5 downto 0) => DIADI(5 downto 0),
+      D(35 downto 0) => D(35 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0),
+      DIADI(31 downto 0) => DIADI(31 downto 0),
+      DIPADIP(3 downto 0) => DIPADIP(3 downto 0),
       Q(9 downto 0) => Q(9 downto 0),
       \out\ => \out\,
       s_dclk_o => s_dclk_o
@@ -21751,14 +23153,14 @@ entity ila_0_ila_v6_2_9_ila_register is
     shift_en_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
     mu_config_cs_shift_en : out STD_LOGIC_VECTOR ( 4 downto 0 );
     shift_en_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    read_data_en : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    read_reset_addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    in0 : out STD_LOGIC;
+    en_adv_trigger_1 : out STD_LOGIC;
+    capture_qual_ctrl_1 : out STD_LOGIC_VECTOR ( 1 downto 0 );
     halt_ctrl : out STD_LOGIC;
     arm_ctrl : out STD_LOGIC;
-    read_reset_addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
-    in0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    use_probe_debug_circuit_1 : out STD_LOGIC;
-    en_adv_trigger_1 : out STD_LOGIC;
-    read_data_en : out STD_LOGIC;
     debug_data_in : out STD_LOGIC_VECTOR ( 15 downto 0 );
     scnt_cmp_temp : out STD_LOGIC;
     wcnt_lcmp_temp : out STD_LOGIC;
@@ -21774,7 +23176,7 @@ entity ila_0_ila_v6_2_9_ila_register is
     u_wcnt_lcmp_q : in STD_LOGIC;
     u_wcnt_hcmp_q : in STD_LOGIC;
     mu_config_cs_serial_input : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    \xsdb_reg_reg[15]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \xsdb_reg_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \xsdb_reg_reg[9]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     \xsdb_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
@@ -21898,6 +23300,7 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal adv_rb_drdy3_reg_srl4_n_0 : STD_LOGIC;
   signal adv_rb_drdy4 : STD_LOGIC;
   signal \^arm_ctrl\ : STD_LOGIC;
+  signal \^capture_qual_ctrl_1\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal clk_lost : STD_LOGIC;
   signal \clk_lost_cnt[8]_i_1_n_0\ : STD_LOGIC;
   signal \clk_lost_cnt[8]_i_2_n_0\ : STD_LOGIC;
@@ -21921,7 +23324,6 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal \current_state[6]_i_4_n_0\ : STD_LOGIC;
   signal \current_state[6]_i_5_n_0\ : STD_LOGIC;
   signal \current_state[6]_i_6_n_0\ : STD_LOGIC;
-  signal \current_state[6]_i_7_n_0\ : STD_LOGIC;
   signal \^debug_data_in\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal drdyCount0 : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \drdyCount1__4\ : STD_LOGIC;
@@ -21938,14 +23340,16 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal \drdyCount_reg_n_0_[4]\ : STD_LOGIC;
   signal \drdyCount_reg_n_0_[5]\ : STD_LOGIC;
   signal drdy_ff7 : STD_LOGIC;
+  signal drdy_ff7_i_2_n_0 : STD_LOGIC;
   signal drdy_ff8 : STD_LOGIC;
   signal drdy_ff8_i_3_n_0 : STD_LOGIC;
-  signal drdy_ff8_i_4_n_0 : STD_LOGIC;
   signal drdy_ff9 : STD_LOGIC;
   signal drdy_ff9_i_2_n_0 : STD_LOGIC;
   signal drdy_ff9_i_3_n_0 : STD_LOGIC;
   signal drdy_ffa : STD_LOGIC;
   signal drdy_ffa_i_1_n_0 : STD_LOGIC;
+  signal drdy_ffa_i_3_n_0 : STD_LOGIC;
+  signal drdy_ffa_i_4_n_0 : STD_LOGIC;
   signal drdy_mux_ff : STD_LOGIC;
   signal drdy_mux_ff1 : STD_LOGIC;
   signal drdy_mux_ff_i_1_n_0 : STD_LOGIC;
@@ -21954,6 +23358,7 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   attribute DONT_TOUCH of dummy_temp : signal is std.standard.true;
   signal dummy_temp1 : STD_LOGIC;
   attribute DONT_TOUCH of dummy_temp1 : signal is std.standard.true;
+  signal \^en_adv_trigger_1\ : STD_LOGIC;
   signal \^halt_ctrl\ : STD_LOGIC;
   signal ila_clk_flag : STD_LOGIC;
   signal ila_clk_flag_i_1_n_0 : STD_LOGIC;
@@ -21962,6 +23367,7 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   attribute async_reg of ila_clk_flag_sync1 : signal is "true";
   signal ila_clk_flag_sync2 : STD_LOGIC;
   attribute async_reg of ila_clk_flag_sync2 : signal is "true";
+  signal \^in0\ : STD_LOGIC;
   signal \isSRLAddress__0\ : STD_LOGIC;
   signal next_state_ila : STD_LOGIC;
   signal next_state_xsdb : STD_LOGIC;
@@ -21970,7 +23376,7 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal \p_0_in__8\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal p_2_in : STD_LOGIC;
   signal p_3_in : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal parallel_dout : STD_LOGIC_VECTOR ( 14 downto 6 );
+  signal \^read_reset_addr\ : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal regAck_reg : STD_LOGIC;
   signal \regAck_reg_n_0_[1]\ : STD_LOGIC;
   signal regAck_temp : STD_LOGIC;
@@ -21981,6 +23387,7 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal regDrdy_i_4_n_0 : STD_LOGIC;
   signal regDrdy_i_5_n_0 : STD_LOGIC;
   signal regDrdy_i_6_n_0 : STD_LOGIC;
+  signal regDrdy_i_7_n_0 : STD_LOGIC;
   signal regDrdy_reg_n_0 : STD_LOGIC;
   signal reg_15_n_0 : STD_LOGIC;
   signal reg_15_n_1 : STD_LOGIC;
@@ -21997,21 +23404,11 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal reg_15_n_8 : STD_LOGIC;
   signal reg_15_n_9 : STD_LOGIC;
   signal reg_16_n_0 : STD_LOGIC;
-  signal reg_16_n_11 : STD_LOGIC;
-  signal reg_16_n_12 : STD_LOGIC;
-  signal reg_16_n_13 : STD_LOGIC;
-  signal reg_16_n_14 : STD_LOGIC;
-  signal reg_16_n_15 : STD_LOGIC;
-  signal reg_16_n_16 : STD_LOGIC;
-  signal reg_16_n_17 : STD_LOGIC;
-  signal reg_16_n_18 : STD_LOGIC;
-  signal reg_16_n_19 : STD_LOGIC;
-  signal reg_16_n_20 : STD_LOGIC;
-  signal reg_16_n_21 : STD_LOGIC;
-  signal reg_16_n_22 : STD_LOGIC;
-  signal reg_16_n_23 : STD_LOGIC;
-  signal reg_16_n_24 : STD_LOGIC;
-  signal reg_16_n_25 : STD_LOGIC;
+  signal reg_16_n_1 : STD_LOGIC;
+  signal reg_16_n_2 : STD_LOGIC;
+  signal reg_16_n_3 : STD_LOGIC;
+  signal reg_16_n_4 : STD_LOGIC;
+  signal reg_16_n_5 : STD_LOGIC;
   signal reg_17_n_0 : STD_LOGIC;
   signal reg_17_n_1 : STD_LOGIC;
   signal reg_17_n_10 : STD_LOGIC;
@@ -22062,13 +23459,9 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal reg_19_n_9 : STD_LOGIC;
   signal reg_1a_n_0 : STD_LOGIC;
   signal reg_1a_n_1 : STD_LOGIC;
+  signal reg_1a_n_10 : STD_LOGIC;
   signal reg_1a_n_11 : STD_LOGIC;
-  signal reg_1a_n_13 : STD_LOGIC;
-  signal reg_1a_n_14 : STD_LOGIC;
   signal reg_1a_n_15 : STD_LOGIC;
-  signal reg_1a_n_16 : STD_LOGIC;
-  signal reg_1a_n_17 : STD_LOGIC;
-  signal reg_1a_n_18 : STD_LOGIC;
   signal reg_1a_n_2 : STD_LOGIC;
   signal reg_1a_n_3 : STD_LOGIC;
   signal reg_1a_n_4 : STD_LOGIC;
@@ -22076,11 +23469,15 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal reg_1a_n_6 : STD_LOGIC;
   signal reg_1a_n_7 : STD_LOGIC;
   signal reg_1a_n_8 : STD_LOGIC;
+  signal reg_1a_n_9 : STD_LOGIC;
   signal reg_6_n_0 : STD_LOGIC;
   signal reg_6_n_1 : STD_LOGIC;
+  signal reg_6_n_11 : STD_LOGIC;
+  signal reg_6_n_12 : STD_LOGIC;
+  signal reg_6_n_13 : STD_LOGIC;
+  signal reg_6_n_14 : STD_LOGIC;
   signal reg_6_n_15 : STD_LOGIC;
   signal reg_6_n_16 : STD_LOGIC;
-  signal reg_6_n_2 : STD_LOGIC;
   signal reg_7_n_0 : STD_LOGIC;
   signal reg_7_n_1 : STD_LOGIC;
   signal reg_7_n_12 : STD_LOGIC;
@@ -22097,6 +23494,22 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal reg_7_n_7 : STD_LOGIC;
   signal reg_80_n_0 : STD_LOGIC;
   signal reg_80_n_1 : STD_LOGIC;
+  signal reg_81_n_0 : STD_LOGIC;
+  signal reg_81_n_1 : STD_LOGIC;
+  signal reg_81_n_10 : STD_LOGIC;
+  signal reg_81_n_11 : STD_LOGIC;
+  signal reg_81_n_12 : STD_LOGIC;
+  signal reg_81_n_13 : STD_LOGIC;
+  signal reg_81_n_14 : STD_LOGIC;
+  signal reg_81_n_15 : STD_LOGIC;
+  signal reg_81_n_2 : STD_LOGIC;
+  signal reg_81_n_3 : STD_LOGIC;
+  signal reg_81_n_4 : STD_LOGIC;
+  signal reg_81_n_5 : STD_LOGIC;
+  signal reg_81_n_6 : STD_LOGIC;
+  signal reg_81_n_7 : STD_LOGIC;
+  signal reg_81_n_8 : STD_LOGIC;
+  signal reg_81_n_9 : STD_LOGIC;
   signal reg_83_n_0 : STD_LOGIC;
   signal reg_83_n_1 : STD_LOGIC;
   signal reg_83_n_10 : STD_LOGIC;
@@ -22147,6 +23560,7 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal reg_9_n_7 : STD_LOGIC;
   signal reg_9_n_8 : STD_LOGIC;
   signal reg_9_n_9 : STD_LOGIC;
+  signal reg_srl_fff_n_10 : STD_LOGIC;
   signal reg_srl_fff_n_11 : STD_LOGIC;
   signal reg_srl_fff_n_12 : STD_LOGIC;
   signal reg_srl_fff_n_13 : STD_LOGIC;
@@ -22157,22 +23571,36 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal reg_srl_fff_n_18 : STD_LOGIC;
   signal reg_srl_fff_n_19 : STD_LOGIC;
   signal reg_srl_fff_n_2 : STD_LOGIC;
-  signal reg_srl_fff_n_20 : STD_LOGIC;
   signal reg_srl_fff_n_3 : STD_LOGIC;
+  signal reg_srl_fff_n_4 : STD_LOGIC;
+  signal reg_srl_fff_n_5 : STD_LOGIC;
+  signal reg_srl_fff_n_6 : STD_LOGIC;
+  signal reg_srl_fff_n_7 : STD_LOGIC;
+  signal reg_srl_fff_n_8 : STD_LOGIC;
+  signal reg_srl_fff_n_9 : STD_LOGIC;
   signal reg_stream_ffd_n_0 : STD_LOGIC;
-  signal reg_stream_ffd_n_17 : STD_LOGIC;
-  signal reg_stream_ffd_n_18 : STD_LOGIC;
-  signal reg_stream_ffd_n_19 : STD_LOGIC;
+  signal reg_stream_ffd_n_1 : STD_LOGIC;
+  signal reg_stream_ffd_n_2 : STD_LOGIC;
   signal reg_stream_ffd_n_20 : STD_LOGIC;
   signal reg_stream_ffd_n_21 : STD_LOGIC;
   signal reg_stream_ffd_n_22 : STD_LOGIC;
-  signal reg_stream_ffd_n_23 : STD_LOGIC;
+  signal reg_stream_ffd_n_3 : STD_LOGIC;
   signal reg_stream_ffe_n_0 : STD_LOGIC;
   signal reg_stream_ffe_n_1 : STD_LOGIC;
+  signal reg_stream_ffe_n_10 : STD_LOGIC;
+  signal reg_stream_ffe_n_11 : STD_LOGIC;
+  signal reg_stream_ffe_n_12 : STD_LOGIC;
+  signal reg_stream_ffe_n_13 : STD_LOGIC;
+  signal reg_stream_ffe_n_14 : STD_LOGIC;
+  signal reg_stream_ffe_n_15 : STD_LOGIC;
   signal reg_stream_ffe_n_2 : STD_LOGIC;
   signal reg_stream_ffe_n_3 : STD_LOGIC;
   signal reg_stream_ffe_n_4 : STD_LOGIC;
   signal reg_stream_ffe_n_5 : STD_LOGIC;
+  signal reg_stream_ffe_n_6 : STD_LOGIC;
+  signal reg_stream_ffe_n_7 : STD_LOGIC;
+  signal reg_stream_ffe_n_8 : STD_LOGIC;
+  signal reg_stream_ffe_n_9 : STD_LOGIC;
   signal s_daddr : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal s_dclk_flag : STD_LOGIC;
   signal s_dclk_flag_i_1_n_0 : STD_LOGIC;
@@ -22196,7 +23624,6 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal \shift_reg1_reg_n_0_[4]\ : STD_LOGIC;
   signal slaveRegDo_6 : STD_LOGIC_VECTOR ( 15 downto 3 );
   signal slaveRegDo_80 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal slaveRegDo_81 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal slaveRegDo_82 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal slaveRegDo_84 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal slaveRegDo_890 : STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -22225,54 +23652,39 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal \slaveRegDo_mux[9]_i_2_n_0\ : STD_LOGIC;
   signal slaveRegDo_mux_0 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \slaveRegDo_mux_01__6\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[10]_i_10_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[10]_i_11_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[10]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[10]_i_5_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[10]_i_9_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_0[15]_i_11_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_0[15]_i_12_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_0[15]_i_13_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_14_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_15_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_16_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_17_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_18_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_19_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_20_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_21_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_0[15]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_4_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_5_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_0[15]_i_6_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[15]_i_7_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[2]_i_10_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[2]_i_9_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_10_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_11_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_12_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_5_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[6]_i_9_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_0[9]_i_7_n_0\ : STD_LOGIC;
-  signal slaveRegDo_mux_1 : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \slaveRegDo_mux_0[15]_i_8_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[15]_i_9_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[4]_i_8_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[4]_i_9_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_0[9]_i_8_n_0\ : STD_LOGIC;
+  signal slaveRegDo_mux_1 : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal \slaveRegDo_mux_1[0]_i_1_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_1[1]_i_1_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_1[2]_i_1_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_1[4]_i_1_n_0\ : STD_LOGIC;
   signal slaveRegDo_mux_2 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal slaveRegDo_mux_211_in : STD_LOGIC;
   signal \slaveRegDo_mux_2[15]_i_1_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_2[2]_i_1_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_2[2]_i_3_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_2[2]_i_4_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_2[3]_i_2_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_2[3]_i_4_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_2[4]_i_1_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_2[4]_i_3_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_2[4]_i_4_n_0\ : STD_LOGIC;
   signal slaveRegDo_mux_3 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \slaveRegDo_mux_3[0]_i_2_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_3[14]_i_2_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_3[15]_i_1_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_3[15]_i_3_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_3[15]_i_4_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_3[15]_i_5_n_0\ : STD_LOGIC;
   signal \slaveRegDo_mux_3[4]_i_2_n_0\ : STD_LOGIC;
-  signal \slaveRegDo_mux_3[4]_i_3_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_3[4]_i_4_n_0\ : STD_LOGIC;
+  signal \slaveRegDo_mux_3[4]_i_5_n_0\ : STD_LOGIC;
   signal slaveRegDo_mux_4 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal slaveRegDo_mux_5 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \slaveRegDo_mux_reg_n_0_[0]\ : STD_LOGIC;
@@ -22291,7 +23703,6 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   signal \slaveRegDo_mux_reg_n_0_[7]\ : STD_LOGIC;
   signal \slaveRegDo_mux_reg_n_0_[8]\ : STD_LOGIC;
   signal \slaveRegDo_mux_reg_n_0_[9]\ : STD_LOGIC;
-  signal \^use_probe_debug_circuit_1\ : STD_LOGIC;
   signal xsdb_rden_ff7 : STD_LOGIC;
   signal xsdb_rden_ff8 : STD_LOGIC;
   signal NLW_reg_890_dout_o_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -22327,33 +23738,34 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   attribute srl_name : string;
   attribute srl_name of adv_rb_drdy3_reg_srl4 : label is "inst/\ila_core_inst/u_ila_regs/adv_rb_drdy3_reg_srl4 ";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \clk_lost_cnt[1]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \clk_lost_cnt[2]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \clk_lost_cnt[3]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \clk_lost_cnt[4]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \clk_lost_cnt[7]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \clk_lost_cnt[8]_i_3\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \count0[0]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \count0[1]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \count0[2]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \count0[3]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \count0[4]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \count1[0]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \count1[1]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \count1[2]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \count1[3]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \count1[4]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of count_tt_i_1 : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \clk_lost_cnt[1]_i_1\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \clk_lost_cnt[2]_i_1\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \clk_lost_cnt[3]_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \clk_lost_cnt[4]_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \clk_lost_cnt[7]_i_1\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \clk_lost_cnt[8]_i_3\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \count0[0]_i_1\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \count0[1]_i_1\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \count0[2]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \count0[3]_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \count0[4]_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \count1[0]_i_1\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \count1[1]_i_1\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \count1[2]_i_1\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \count1[3]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \count1[4]_i_1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of count_tt_i_1 : label is "soft_lutpair76";
   attribute SOFT_HLUTNM of \current_state[6]_i_4\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \current_state[6]_i_5\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \drdyCount[2]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \drdyCount[3]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \drdyCount[4]_i_2\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \drdyCount[4]_i_4\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \drdyCount[5]_i_5\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of drdy_ff8_i_3 : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of drdy_ff8_i_4 : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of drdy_ff9_i_2 : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \current_state[6]_i_5\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \drdyCount[1]_i_1\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \drdyCount[2]_i_1\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \drdyCount[3]_i_1\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \drdyCount[4]_i_2\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \drdyCount[4]_i_4\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of drdy_ff7_i_2 : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of drdy_ff9_i_2 : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of drdy_ffa_i_3 : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of drdy_ffa_i_4 : label is "soft_lutpair66";
   attribute DONT_TOUCH of dummy_temp1_reg : label is std.standard.true;
   attribute KEEP : string;
   attribute KEEP of dummy_temp1_reg : label is "yes";
@@ -22364,7 +23776,8 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   attribute KEEP of ila_clk_flag_sync1_reg : label is "yes";
   attribute ASYNC_REG_boolean of ila_clk_flag_sync2_reg : label is std.standard.true;
   attribute KEEP of ila_clk_flag_sync2_reg : label is "yes";
-  attribute SOFT_HLUTNM of regDrdy_i_4 : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of regDrdy_i_4 : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of regDrdy_i_5 : label is "soft_lutpair64";
   attribute C_ADDR_W : integer;
   attribute C_ADDR_W of reg_890 : label is 13;
   attribute C_CTLRST_VAL : string;
@@ -22382,41 +23795,38 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_register is
   attribute KEEP of s_dclk_flag_sync1_reg : label is "yes";
   attribute ASYNC_REG_boolean of s_dclk_flag_sync2_reg : label is std.standard.true;
   attribute KEEP of s_dclk_flag_sync2_reg : label is "yes";
-  attribute SOFT_HLUTNM of \shift_reg0[4]_i_3\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \shift_reg1[4]_i_3\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \slaveRegDo_ff8[15]_i_1\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[10]_i_10\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[10]_i_11\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[10]_i_3\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_15\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_16\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_18\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_19\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_20\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_21\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_3\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_4\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_5\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[2]_i_10\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[2]_i_9\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[6]_i_11\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[6]_i_3\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[6]_i_9\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_1[0]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_1[1]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_2[2]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_2[2]_i_3\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_2[3]_i_2\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[15]_i_3\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[15]_i_4\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[4]_i_3\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \shift_reg0[4]_i_3\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \shift_reg1[4]_i_3\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \slaveRegDo_ff8[15]_i_1\ : label is "soft_lutpair76";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_11\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_12\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_13\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_3\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[15]_i_8\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[4]_i_9\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_0[9]_i_8\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_1[0]_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_1[1]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_1[2]_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_1[4]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_2[2]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_2[3]_i_2\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_2[4]_i_4\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[14]_i_2\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[15]_i_3\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[15]_i_4\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[4]_i_4\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \slaveRegDo_mux_3[4]_i_5\ : label is "soft_lutpair68";
 begin
   SR(0) <= \^sr\(0);
   arm_ctrl <= \^arm_ctrl\;
+  capture_qual_ctrl_1(1 downto 0) <= \^capture_qual_ctrl_1\(1 downto 0);
   debug_data_in(15 downto 0) <= \^debug_data_in\(15 downto 0);
+  en_adv_trigger_1 <= \^en_adv_trigger_1\;
   halt_ctrl <= \^halt_ctrl\;
+  in0 <= \^in0\;
+  read_reset_addr(9 downto 0) <= \^read_reset_addr\(9 downto 0);
   s_dclk_o <= \^s_dclk_o\;
-  use_probe_debug_circuit_1 <= \^use_probe_debug_circuit_1\;
 \MU_SRL[0].mu_srl_reg\: entity work.ila_0_xsdbs_v1_0_2_reg_p2s
      port map (
       E(0) => mu_config_cs_shift_en(0),
@@ -22447,7 +23857,7 @@ begin
       s_di_o(14 downto 0) => s_di(14 downto 0),
       s_dwe_o => s_dwe,
       serial_dout_reg_0 => \MU_SRL[0].mu_srl_reg_n_0\,
-      \shadow_reg[15]_0\ => reg_srl_fff_n_20
+      \shadow_reg[15]_0\ => reg_srl_fff_n_19
     );
 \MU_SRL[1].mu_srl_reg\: entity work.\ila_0_xsdbs_v1_0_2_reg_p2s__parameterized0\
      port map (
@@ -22492,7 +23902,7 @@ begin
       s_di_o(14 downto 0) => s_di(14 downto 0),
       s_dwe_o => s_dwe,
       serial_dout_reg_0 => \MU_SRL[1].mu_srl_reg_n_0\,
-      \shadow_reg[15]_0\ => reg_srl_fff_n_20,
+      \shadow_reg[15]_0\ => reg_srl_fff_n_19,
       \slaveRegDo_mux_4_reg[15]\(15) => \MU_SRL[0].mu_srl_reg_n_4\,
       \slaveRegDo_mux_4_reg[15]\(14) => \MU_SRL[0].mu_srl_reg_n_5\,
       \slaveRegDo_mux_4_reg[15]\(13) => \MU_SRL[0].mu_srl_reg_n_6\,
@@ -22553,7 +23963,7 @@ begin
       s_di_o(14 downto 0) => s_di(14 downto 0),
       s_dwe_o => s_dwe,
       serial_dout_reg_0 => \MU_SRL[2].mu_srl_reg_n_0\,
-      \shadow_reg[15]_0\ => reg_srl_fff_n_20
+      \shadow_reg[15]_0\ => reg_srl_fff_n_19
     );
 \MU_SRL[3].mu_srl_reg\: entity work.\ila_0_xsdbs_v1_0_2_reg_p2s__parameterized2\
      port map (
@@ -22582,7 +23992,7 @@ begin
       s_di_o(14 downto 0) => s_di(14 downto 0),
       s_dwe_o => s_dwe,
       serial_dout_reg_0 => \MU_SRL[3].mu_srl_reg_n_0\,
-      \shadow_reg[15]_0\ => reg_srl_fff_n_20
+      \shadow_reg[15]_0\ => reg_srl_fff_n_19
     );
 \MU_SRL[4].mu_srl_reg\: entity work.\ila_0_xsdbs_v1_0_2_reg_p2s__parameterized3\
      port map (
@@ -22611,7 +24021,7 @@ begin
       s_di_o(14 downto 0) => s_di(14 downto 0),
       s_dwe_o => s_dwe,
       serial_dout_reg_0 => \MU_SRL[4].mu_srl_reg_n_0\,
-      \shadow_reg[15]_0\ => reg_srl_fff_n_20,
+      \shadow_reg[15]_0\ => reg_srl_fff_n_19,
       \slaveRegDo_mux_4_reg[0]\ => \MU_SRL[1].mu_srl_reg_n_18\,
       \slaveRegDo_mux_4_reg[10]\ => \MU_SRL[1].mu_srl_reg_n_8\,
       \slaveRegDo_mux_4_reg[11]\ => \MU_SRL[1].mu_srl_reg_n_7\,
@@ -22655,7 +24065,7 @@ begin
       s_den_o => s_den,
       s_di_o(14 downto 0) => s_di(14 downto 0),
       s_dwe_o => s_dwe,
-      \shadow_reg[15]_0\ => reg_srl_fff_n_20,
+      \shadow_reg[15]_0\ => reg_srl_fff_n_19,
       tc_config_cs_serial_output => tc_config_cs_serial_output
     );
 U_XSDB_SLAVE: entity work.ila_0_xsdbs_v1_0_2_xsdbs
@@ -22688,11 +24098,11 @@ U_XSDB_SLAVE: entity work.ila_0_xsdbs_v1_0_2_xsdbs
     );
 adv_drdy_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFEFFF00002000"
+      INIT => X"FFFFBFFF00008000"
     )
         port map (
       I0 => s_den,
-      I1 => drdy_ff8_i_4_n_0,
+      I1 => drdy_ff8_i_3_n_0,
       I2 => s_daddr(2),
       I3 => s_daddr(3),
       I4 => regDrdy_i_3_n_0,
@@ -23245,11 +24655,11 @@ count_tt_reg: unisim.vcomponents.FDSE
     )
         port map (
       I0 => s_daddr(2),
-      I1 => \slaveRegDo_mux_0[2]_i_9_n_0\,
+      I1 => \slaveRegDo_mux_0[4]_i_9_n_0\,
       I2 => \current_state[6]_i_4_n_0\,
       I3 => \current_state[6]_i_5_n_0\,
-      I4 => \current_state[6]_i_6_n_0\,
-      I5 => \current_state[6]_i_7_n_0\,
+      I4 => reg_stream_ffd_n_2,
+      I5 => \current_state[6]_i_6_n_0\,
       O => read_data_en
     );
 \current_state[6]_i_4\: unisim.vcomponents.LUT4
@@ -23265,39 +24675,26 @@ count_tt_reg: unisim.vcomponents.FDSE
     );
 \current_state[6]_i_5\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8F"
+      INIT => X"D5"
     )
         port map (
-      I0 => s_daddr(4),
-      I1 => s_daddr(3),
-      I2 => s_daddr(5),
+      I0 => s_daddr(5),
+      I1 => s_daddr(4),
+      I2 => s_daddr(3),
       O => \current_state[6]_i_5_n_0\
     );
 \current_state[6]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8F8F008F008F008F"
-    )
-        port map (
-      I0 => s_daddr(9),
-      I1 => s_daddr(10),
-      I2 => s_daddr(11),
-      I3 => s_daddr(8),
-      I4 => s_daddr(6),
-      I5 => s_daddr(7),
-      O => \current_state[6]_i_6_n_0\
-    );
-\current_state[6]_i_7\: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"8000000000000000"
     )
         port map (
-      I0 => s_daddr(5),
+      I0 => s_daddr(4),
       I1 => s_daddr(7),
-      I2 => s_daddr(4),
+      I2 => s_daddr(5),
       I3 => s_daddr(8),
       I4 => s_daddr(11),
       I5 => s_daddr(10),
-      O => \current_state[6]_i_7_n_0\
+      O => \current_state[6]_i_6_n_0\
     );
 \drdyCount[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -23371,8 +24768,8 @@ count_tt_reg: unisim.vcomponents.FDSE
       INIT => X"FFFFFFFF00001000"
     )
         port map (
-      I0 => drdy_ff9_i_2_n_0,
-      I1 => \slaveRegDo_mux_0[2]_i_9_n_0\,
+      I0 => regDrdy_i_5_n_0,
+      I1 => \slaveRegDo_mux_0[4]_i_9_n_0\,
       I2 => s_daddr(2),
       I3 => s_daddr(3),
       I4 => \drdyCount[4]_i_4_n_0\,
@@ -23384,9 +24781,9 @@ count_tt_reg: unisim.vcomponents.FDSE
       INIT => X"7FFF"
     )
         port map (
-      I0 => s_daddr(5),
+      I0 => s_daddr(4),
       I1 => s_daddr(7),
-      I2 => s_daddr(4),
+      I2 => s_daddr(5),
       I3 => s_daddr(6),
       O => \drdyCount[4]_i_4_n_0\
     );
@@ -23515,16 +24912,27 @@ count_tt_reg: unisim.vcomponents.FDSE
     );
 drdy_ff7_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1000000000000000"
+      INIT => X"8000000000000000"
     )
         port map (
-      I0 => drdy_ff9_i_2_n_0,
-      I1 => s_daddr(3),
-      I2 => s_daddr(2),
-      I3 => s_daddr(1),
-      I4 => s_daddr(0),
+      I0 => s_daddr(8),
+      I1 => s_daddr(11),
+      I2 => s_daddr(10),
+      I3 => s_daddr(9),
+      I4 => drdy_ff7_i_2_n_0,
       I5 => drdy_ff9_i_3_n_0,
       O => xsdb_rden_ff7
+    );
+drdy_ff7_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"4000"
+    )
+        port map (
+      I0 => s_daddr(3),
+      I1 => s_daddr(2),
+      I2 => s_daddr(1),
+      I3 => s_daddr(0),
+      O => drdy_ff7_i_2_n_0
     );
 drdy_ff7_reg: unisim.vcomponents.FDRE
      port map (
@@ -23536,34 +24944,25 @@ drdy_ff7_reg: unisim.vcomponents.FDRE
     );
 drdy_ff8_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000800000000"
+      INIT => X"0000080000000000"
     )
         port map (
       I0 => s_daddr(11),
       I1 => s_daddr(8),
-      I2 => reg_srl_fff_n_19,
+      I2 => reg_srl_fff_n_2,
       I3 => drdy_ff8_i_3_n_0,
-      I4 => drdy_ff8_i_4_n_0,
+      I4 => drdy_ffa_i_4_n_0,
       I5 => drdy_ff9_i_3_n_0,
       O => xsdb_rden_ff8
     );
 drdy_ff8_i_3: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => s_daddr(2),
-      I1 => s_daddr(3),
-      O => drdy_ff8_i_3_n_0
-    );
-drdy_ff8_i_4: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
+      INIT => X"1"
     )
         port map (
       I0 => s_daddr(0),
       I1 => s_daddr(1),
-      O => drdy_ff8_i_4_n_0
+      O => drdy_ff8_i_3_n_0
     );
 drdy_ff8_reg: unisim.vcomponents.FDRE
      port map (
@@ -23575,26 +24974,26 @@ drdy_ff8_reg: unisim.vcomponents.FDRE
     );
 drdy_ff9_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000004000000000"
-    )
-        port map (
-      I0 => drdy_ff9_i_2_n_0,
-      I1 => s_daddr(3),
-      I2 => s_daddr(0),
-      I3 => s_daddr(2),
-      I4 => s_daddr(1),
-      I5 => drdy_ff9_i_3_n_0,
-      O => sel
-    );
-drdy_ff9_i_2: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
+      INIT => X"8000000000000000"
     )
         port map (
       I0 => s_daddr(8),
       I1 => s_daddr(11),
       I2 => s_daddr(10),
       I3 => s_daddr(9),
+      I4 => drdy_ff9_i_2_n_0,
+      I5 => drdy_ff9_i_3_n_0,
+      O => sel
+    );
+drdy_ff9_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0040"
+    )
+        port map (
+      I0 => s_daddr(1),
+      I1 => s_daddr(0),
+      I2 => s_daddr(3),
+      I3 => s_daddr(2),
       O => drdy_ff9_i_2_n_0
     );
 drdy_ff9_i_3: unisim.vcomponents.LUT6
@@ -23605,9 +25004,9 @@ drdy_ff9_i_3: unisim.vcomponents.LUT6
       I0 => s_dwe,
       I1 => s_den,
       I2 => s_daddr(6),
-      I3 => s_daddr(4),
+      I3 => s_daddr(5),
       I4 => s_daddr(7),
-      I5 => s_daddr(5),
+      I5 => s_daddr(4),
       O => drdy_ff9_i_3_n_0
     );
 drdy_ff9_reg: unisim.vcomponents.FDRE
@@ -23620,16 +25019,34 @@ drdy_ff9_reg: unisim.vcomponents.FDRE
     );
 drdy_ffa_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000100000000000"
+      INIT => X"0000200000000000"
     )
         port map (
-      I0 => drdy_ff9_i_2_n_0,
-      I1 => s_daddr(0),
-      I2 => s_daddr(1),
-      I3 => s_daddr(3),
-      I4 => s_daddr(2),
+      I0 => s_daddr(8),
+      I1 => reg_stream_ffd_n_1,
+      I2 => s_daddr(9),
+      I3 => drdy_ffa_i_3_n_0,
+      I4 => drdy_ffa_i_4_n_0,
       I5 => drdy_ff9_i_3_n_0,
       O => drdy_ffa_i_1_n_0
+    );
+drdy_ffa_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => s_daddr(1),
+      I1 => s_daddr(0),
+      O => drdy_ffa_i_3_n_0
+    );
+drdy_ffa_i_4: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => s_daddr(2),
+      I1 => s_daddr(3),
+      O => drdy_ffa_i_4_n_0
     );
 drdy_ffa_reg: unisim.vcomponents.FDRE
      port map (
@@ -23787,14 +25204,14 @@ regDrdy_i_1: unisim.vcomponents.LUT6
     );
 regDrdy_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => drdy_ff9,
       I1 => adv_rb_drdy4,
-      I2 => drdy_ff8,
-      I3 => s_daddr(1),
-      I4 => s_daddr(0),
+      I2 => s_daddr(1),
+      I3 => s_daddr(0),
+      I4 => drdy_ff8,
       I5 => drdy_ffa,
       O => regDrdy_i_2_n_0
     );
@@ -23803,12 +25220,12 @@ regDrdy_i_3: unisim.vcomponents.LUT6
       INIT => X"EFFFFFFFFFFFFFFF"
     )
         port map (
-      I0 => drdy_ff9_i_2_n_0,
+      I0 => regDrdy_i_5_n_0,
       I1 => s_daddr(12),
       I2 => s_daddr(6),
-      I3 => s_daddr(4),
+      I3 => s_daddr(5),
       I4 => s_daddr(7),
-      I5 => s_daddr(5),
+      I5 => s_daddr(4),
       O => regDrdy_i_3_n_0
     );
 regDrdy_i_4: unisim.vcomponents.LUT4
@@ -23816,26 +25233,37 @@ regDrdy_i_4: unisim.vcomponents.LUT4
       INIT => X"FF40"
     )
         port map (
-      I0 => regDrdy_i_5_n_0,
+      I0 => regDrdy_i_6_n_0,
       I1 => s_daddr(2),
       I2 => s_daddr(3),
-      I3 => regDrdy_i_6_n_0,
+      I3 => regDrdy_i_7_n_0,
       O => regDrdy_i_4_n_0
     );
-regDrdy_i_5: unisim.vcomponents.LUT6
+regDrdy_i_5: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"CCAAFFF0CCAA00F0"
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => s_daddr(8),
+      I1 => s_daddr(11),
+      I2 => s_daddr(10),
+      I3 => s_daddr(9),
+      O => regDrdy_i_5_n_0
+    );
+regDrdy_i_6: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => regAck_reg,
       I1 => drdy_mux_ff1,
-      I2 => adv_drdy,
-      I3 => s_daddr(1),
-      I4 => s_daddr(0),
+      I2 => s_daddr(1),
+      I3 => s_daddr(0),
+      I4 => adv_drdy,
       I5 => \regAck_reg_n_0_[1]\,
-      O => regDrdy_i_5_n_0
+      O => regDrdy_i_6_n_0
     );
-regDrdy_i_6: unisim.vcomponents.LUT6
+regDrdy_i_7: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000040007FFF"
     )
@@ -23846,7 +25274,7 @@ regDrdy_i_6: unisim.vcomponents.LUT6
       I3 => s_daddr(0),
       I4 => drdy_mux_ff1,
       I5 => s_daddr(3),
-      O => regDrdy_i_6_n_0
+      O => regDrdy_i_7_n_0
     );
 regDrdy_reg: unisim.vcomponents.FDRE
      port map (
@@ -23859,6 +25287,7 @@ regDrdy_reg: unisim.vcomponents.FDRE
 reg_15: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized34\
      port map (
       SR(0) => \^sr\(0),
+      in0 => \^in0\,
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
@@ -23870,7 +25299,6 @@ reg_15: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized34\
       \xsdb_reg_reg[14]\ => reg_15_n_1,
       \xsdb_reg_reg[15]\ => reg_15_n_0,
       \xsdb_reg_reg[1]\ => reg_15_n_14,
-      \xsdb_reg_reg[2]\ => \^use_probe_debug_circuit_1\,
       \xsdb_reg_reg[3]\ => reg_15_n_12,
       \xsdb_reg_reg[4]\ => reg_15_n_11,
       \xsdb_reg_reg[5]\ => reg_15_n_10,
@@ -23881,114 +25309,80 @@ reg_15: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized34\
     );
 reg_16: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized35\
      port map (
-      SR(0) => \^sr\(0),
-      read_reset_addr(9 downto 0) => read_reset_addr(9 downto 0),
+      read_reset_addr(9 downto 0) => \^read_reset_addr\(9 downto 0),
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
-      \slaveRegDo_mux_0[0]_i_3\ => reg_18_n_15,
-      \slaveRegDo_mux_0[0]_i_3_0\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      \slaveRegDo_mux_0[0]_i_3_1\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      \slaveRegDo_mux_0[0]_i_3_2\ => reg_17_n_15,
-      \slaveRegDo_mux_0[10]_i_2\ => reg_18_n_5,
-      \slaveRegDo_mux_0[10]_i_2_0\ => reg_15_n_5,
-      \slaveRegDo_mux_0[10]_i_2_1\ => reg_17_n_5,
-      \slaveRegDo_mux_0[11]_i_2\ => reg_18_n_4,
-      \slaveRegDo_mux_0[11]_i_2_0\ => reg_15_n_4,
-      \slaveRegDo_mux_0[11]_i_2_1\ => reg_17_n_4,
-      \slaveRegDo_mux_0[12]_i_2\ => reg_18_n_3,
-      \slaveRegDo_mux_0[12]_i_2_0\ => reg_15_n_3,
-      \slaveRegDo_mux_0[12]_i_2_1\ => reg_17_n_3,
-      \slaveRegDo_mux_0[13]_i_2\ => reg_18_n_2,
-      \slaveRegDo_mux_0[13]_i_2_0\ => reg_15_n_2,
-      \slaveRegDo_mux_0[13]_i_2_1\ => reg_17_n_2,
-      \slaveRegDo_mux_0[14]_i_2\ => reg_18_n_1,
-      \slaveRegDo_mux_0[14]_i_2_0\ => reg_15_n_1,
-      \slaveRegDo_mux_0[14]_i_2_1\ => reg_17_n_1,
-      \slaveRegDo_mux_0[15]_i_2\ => reg_18_n_0,
-      \slaveRegDo_mux_0[15]_i_2_0\ => reg_15_n_0,
-      \slaveRegDo_mux_0[15]_i_2_1\ => reg_17_n_0,
-      \slaveRegDo_mux_0[1]_i_3\ => reg_18_n_14,
-      \slaveRegDo_mux_0[1]_i_3_0\ => reg_15_n_14,
-      \slaveRegDo_mux_0[1]_i_3_1\ => reg_17_n_14,
-      \slaveRegDo_mux_0[2]_i_3\ => reg_18_n_13,
-      \slaveRegDo_mux_0[2]_i_3_0\ => \^use_probe_debug_circuit_1\,
-      \slaveRegDo_mux_0[2]_i_3_1\ => reg_17_n_13,
-      \slaveRegDo_mux_0[3]_i_2\ => reg_18_n_12,
-      \slaveRegDo_mux_0[3]_i_2_0\ => reg_15_n_12,
-      \slaveRegDo_mux_0[3]_i_2_1\ => reg_17_n_12,
-      \slaveRegDo_mux_0[4]_i_2\ => reg_18_n_11,
-      \slaveRegDo_mux_0[4]_i_2_0\ => reg_15_n_11,
-      \slaveRegDo_mux_0[4]_i_2_1\ => reg_17_n_11,
-      \slaveRegDo_mux_0[5]_i_2\ => reg_18_n_10,
-      \slaveRegDo_mux_0[5]_i_2_0\ => reg_15_n_10,
-      \slaveRegDo_mux_0[5]_i_2_1\ => reg_17_n_10,
-      \slaveRegDo_mux_0[6]_i_2\ => reg_18_n_9,
-      \slaveRegDo_mux_0[6]_i_2_0\ => reg_15_n_9,
-      \slaveRegDo_mux_0[6]_i_2_1\ => reg_17_n_9,
-      \slaveRegDo_mux_0[7]_i_2\ => reg_18_n_8,
-      \slaveRegDo_mux_0[7]_i_2_0\ => reg_15_n_8,
-      \slaveRegDo_mux_0[7]_i_2_1\ => reg_17_n_8,
-      \slaveRegDo_mux_0[8]_i_2\ => reg_18_n_7,
-      \slaveRegDo_mux_0[8]_i_2_0\ => reg_15_n_7,
-      \slaveRegDo_mux_0[8]_i_2_1\ => reg_17_n_7,
-      \slaveRegDo_mux_0[9]_i_2\ => reg_18_n_6,
-      \slaveRegDo_mux_0[9]_i_2_0\ => reg_15_n_6,
-      \slaveRegDo_mux_0[9]_i_2_1\ => reg_17_n_6,
-      \xsdb_reg_reg[0]\ => reg_16_n_0,
-      \xsdb_reg_reg[0]_0\ => reg_6_n_0,
-      \xsdb_reg_reg[10]\ => reg_16_n_20,
-      \xsdb_reg_reg[11]\ => reg_16_n_21,
-      \xsdb_reg_reg[12]\ => reg_16_n_22,
-      \xsdb_reg_reg[13]\ => reg_16_n_23,
-      \xsdb_reg_reg[14]\ => reg_16_n_24,
-      \xsdb_reg_reg[15]\ => reg_16_n_25,
-      \xsdb_reg_reg[1]\ => reg_16_n_11,
-      \xsdb_reg_reg[2]\ => reg_16_n_12,
-      \xsdb_reg_reg[3]\ => reg_16_n_13,
-      \xsdb_reg_reg[4]\ => reg_16_n_14,
-      \xsdb_reg_reg[5]\ => reg_16_n_15,
-      \xsdb_reg_reg[6]\ => reg_16_n_16,
-      \xsdb_reg_reg[7]\ => reg_16_n_17,
-      \xsdb_reg_reg[8]\ => reg_16_n_18,
-      \xsdb_reg_reg[9]\ => reg_16_n_19
+      \slaveRegDo_mux_0[10]_i_3\ => reg_15_n_5,
+      \slaveRegDo_mux_0[10]_i_3_0\ => reg_17_n_15,
+      \xsdb_reg_reg[0]\ => reg_6_n_0,
+      \xsdb_reg_reg[10]\ => reg_16_n_0,
+      \xsdb_reg_reg[11]\ => reg_16_n_5,
+      \xsdb_reg_reg[12]\ => reg_16_n_4,
+      \xsdb_reg_reg[13]\ => reg_16_n_3,
+      \xsdb_reg_reg[14]\ => reg_16_n_2,
+      \xsdb_reg_reg[15]\ => reg_16_n_1
     );
 reg_17: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized36\
      port map (
+      SR(0) => \^sr\(0),
+      in0 => \^in0\,
+      read_reset_addr(9 downto 0) => \^read_reset_addr\(9 downto 0),
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
-      \xsdb_reg_reg[0]\ => reg_17_n_15,
+      \slaveRegDo_mux_0[1]_i_2\ => reg_15_n_14,
+      \slaveRegDo_mux_0[4]_i_2\ => reg_15_n_11,
+      \slaveRegDo_mux_0_reg[11]\ => reg_15_n_4,
+      \slaveRegDo_mux_0_reg[11]_0\ => reg_16_n_5,
+      \slaveRegDo_mux_0_reg[12]\ => reg_15_n_3,
+      \slaveRegDo_mux_0_reg[12]_0\ => reg_16_n_4,
+      \slaveRegDo_mux_0_reg[13]\ => reg_15_n_2,
+      \slaveRegDo_mux_0_reg[13]_0\ => reg_16_n_3,
+      \slaveRegDo_mux_0_reg[14]\ => reg_15_n_1,
+      \slaveRegDo_mux_0_reg[14]_0\ => reg_16_n_2,
+      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0[15]_i_13_n_0\,
+      \slaveRegDo_mux_0_reg[15]_0\ => reg_15_n_0,
+      \slaveRegDo_mux_0_reg[15]_1\ => reg_16_n_1,
+      \slaveRegDo_mux_0_reg[3]\ => reg_15_n_12,
+      \slaveRegDo_mux_0_reg[5]\ => reg_15_n_10,
+      \slaveRegDo_mux_0_reg[6]\ => reg_15_n_9,
+      \slaveRegDo_mux_0_reg[7]\ => reg_15_n_8,
+      \slaveRegDo_mux_0_reg[8]\ => reg_15_n_7,
+      \slaveRegDo_mux_0_reg[9]\ => reg_15_n_6,
+      \xsdb_reg_reg[0]\ => reg_17_n_0,
       \xsdb_reg_reg[0]_0\ => reg_6_n_0,
-      \xsdb_reg_reg[10]\ => reg_17_n_5,
-      \xsdb_reg_reg[11]\ => reg_17_n_4,
-      \xsdb_reg_reg[12]\ => reg_17_n_3,
-      \xsdb_reg_reg[13]\ => reg_17_n_2,
-      \xsdb_reg_reg[14]\ => reg_17_n_1,
-      \xsdb_reg_reg[15]\ => reg_17_n_0,
-      \xsdb_reg_reg[1]\ => reg_17_n_14,
-      \xsdb_reg_reg[2]\ => reg_17_n_13,
-      \xsdb_reg_reg[3]\ => reg_17_n_12,
-      \xsdb_reg_reg[4]\ => reg_17_n_11,
-      \xsdb_reg_reg[5]\ => reg_17_n_10,
-      \xsdb_reg_reg[6]\ => reg_17_n_9,
-      \xsdb_reg_reg[7]\ => reg_17_n_8,
-      \xsdb_reg_reg[8]\ => reg_17_n_7,
-      \xsdb_reg_reg[9]\ => reg_17_n_6
+      \xsdb_reg_reg[10]\ => reg_17_n_15,
+      \xsdb_reg_reg[11]\ => reg_17_n_10,
+      \xsdb_reg_reg[12]\ => reg_17_n_11,
+      \xsdb_reg_reg[13]\ => reg_17_n_12,
+      \xsdb_reg_reg[14]\ => reg_17_n_13,
+      \xsdb_reg_reg[15]\ => reg_17_n_14,
+      \xsdb_reg_reg[1]\ => reg_17_n_1,
+      \xsdb_reg_reg[2]\ => reg_17_n_2,
+      \xsdb_reg_reg[3]\ => reg_17_n_3,
+      \xsdb_reg_reg[4]\ => reg_17_n_4,
+      \xsdb_reg_reg[5]\ => reg_17_n_5,
+      \xsdb_reg_reg[6]\ => reg_17_n_6,
+      \xsdb_reg_reg[7]\ => reg_17_n_7,
+      \xsdb_reg_reg[8]\ => reg_17_n_8,
+      \xsdb_reg_reg[9]\ => reg_17_n_9
     );
 reg_18: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized37\
      port map (
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
+      \slaveRegDo_mux_0[10]_i_3\ => reg_1a_n_5,
+      \slaveRegDo_mux_0[10]_i_3_0\ => reg_19_n_15,
       \xsdb_reg_reg[0]\ => reg_18_n_15,
       \xsdb_reg_reg[0]_0\ => reg_6_n_0,
-      \xsdb_reg_reg[10]\ => reg_18_n_5,
-      \xsdb_reg_reg[11]\ => reg_18_n_4,
-      \xsdb_reg_reg[12]\ => reg_18_n_3,
-      \xsdb_reg_reg[13]\ => reg_18_n_2,
-      \xsdb_reg_reg[14]\ => reg_18_n_1,
-      \xsdb_reg_reg[15]\ => reg_18_n_0,
+      \xsdb_reg_reg[10]\ => reg_18_n_0,
+      \xsdb_reg_reg[11]\ => reg_18_n_5,
+      \xsdb_reg_reg[12]\ => reg_18_n_4,
+      \xsdb_reg_reg[13]\ => reg_18_n_3,
+      \xsdb_reg_reg[14]\ => reg_18_n_2,
+      \xsdb_reg_reg[15]\ => reg_18_n_1,
       \xsdb_reg_reg[1]\ => reg_18_n_14,
       \xsdb_reg_reg[2]\ => reg_18_n_13,
       \xsdb_reg_reg[3]\ => reg_18_n_12,
@@ -24001,109 +25395,97 @@ reg_18: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized37\
     );
 reg_19: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized38\
      port map (
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]\ => reg_19_n_5,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ => reg_19_n_6,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_1\ => reg_19_n_7,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_2\ => reg_19_n_8,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_3\ => reg_19_n_9,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_4\ => reg_19_n_10,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_5\ => reg_19_n_11,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_6\ => reg_19_n_12,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_7\ => reg_19_n_13,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_8\ => reg_19_n_14,
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
-      \xsdb_reg_reg[0]\ => reg_19_n_15,
-      \xsdb_reg_reg[0]_0\ => reg_6_n_0,
-      \xsdb_reg_reg[10]\ => reg_19_n_5,
-      \xsdb_reg_reg[11]\ => reg_19_n_4,
-      \xsdb_reg_reg[12]\ => reg_19_n_3,
+      slaveRegDo_6(4 downto 0) => slaveRegDo_6(15 downto 11),
+      \slaveRegDo_mux_0[0]_i_2\ => reg_1a_n_15,
+      \slaveRegDo_mux_0[0]_i_2_0\ => reg_18_n_15,
+      \slaveRegDo_mux_0[11]_i_3\ => reg_1a_n_4,
+      \slaveRegDo_mux_0[11]_i_3_0\ => reg_18_n_5,
+      \slaveRegDo_mux_0[12]_i_3\ => reg_1a_n_3,
+      \slaveRegDo_mux_0[12]_i_3_0\ => reg_18_n_4,
+      \slaveRegDo_mux_0[13]_i_3\ => reg_1a_n_2,
+      \slaveRegDo_mux_0[13]_i_3_0\ => reg_18_n_3,
+      \slaveRegDo_mux_0[14]_i_3\ => reg_1a_n_1,
+      \slaveRegDo_mux_0[14]_i_3_0\ => reg_18_n_2,
+      \slaveRegDo_mux_0[15]_i_4\ => reg_1a_n_0,
+      \slaveRegDo_mux_0[15]_i_4_0\ => reg_18_n_1,
+      \slaveRegDo_mux_0[1]_i_2\ => reg_18_n_14,
+      \slaveRegDo_mux_0[2]_i_2\(1 downto 0) => \^capture_qual_ctrl_1\(1 downto 0),
+      \slaveRegDo_mux_0[2]_i_2_0\ => reg_18_n_13,
+      \slaveRegDo_mux_0[4]_i_2\ => reg_1a_n_11,
+      \slaveRegDo_mux_0[4]_i_2_0\ => reg_18_n_11,
+      \slaveRegDo_mux_0_reg[11]\ => reg_7_n_16,
+      \slaveRegDo_mux_0_reg[12]\ => reg_7_n_15,
+      \slaveRegDo_mux_0_reg[13]\ => reg_7_n_14,
+      \slaveRegDo_mux_0_reg[14]\ => reg_7_n_13,
+      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
+      \slaveRegDo_mux_0_reg[15]_0\ => drdy_ff7_i_2_n_0,
+      \slaveRegDo_mux_0_reg[15]_1\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
+      \slaveRegDo_mux_0_reg[15]_2\ => reg_7_n_12,
+      \slaveRegDo_mux_0_reg[3]\ => \slaveRegDo_mux_0[9]_i_8_n_0\,
+      \slaveRegDo_mux_0_reg[3]_0\ => \^en_adv_trigger_1\,
+      \slaveRegDo_mux_0_reg[3]_1\ => reg_18_n_12,
+      \slaveRegDo_mux_0_reg[5]\ => reg_1a_n_10,
+      \slaveRegDo_mux_0_reg[5]_0\ => reg_18_n_10,
+      \slaveRegDo_mux_0_reg[6]\ => reg_1a_n_9,
+      \slaveRegDo_mux_0_reg[6]_0\ => reg_18_n_9,
+      \slaveRegDo_mux_0_reg[7]\ => reg_1a_n_8,
+      \slaveRegDo_mux_0_reg[7]_0\ => reg_18_n_8,
+      \slaveRegDo_mux_0_reg[8]\ => reg_1a_n_7,
+      \slaveRegDo_mux_0_reg[8]_0\ => reg_18_n_7,
+      \slaveRegDo_mux_0_reg[9]\ => reg_1a_n_6,
+      \slaveRegDo_mux_0_reg[9]_0\ => reg_18_n_6,
+      \xsdb_reg_reg[0]\ => reg_6_n_0,
+      \xsdb_reg_reg[10]\ => reg_19_n_15,
+      \xsdb_reg_reg[11]\ => reg_19_n_0,
+      \xsdb_reg_reg[12]\ => reg_19_n_1,
       \xsdb_reg_reg[13]\ => reg_19_n_2,
-      \xsdb_reg_reg[14]\ => reg_19_n_1,
-      \xsdb_reg_reg[15]\ => reg_19_n_0,
-      \xsdb_reg_reg[1]\ => reg_19_n_14,
-      \xsdb_reg_reg[2]\ => reg_19_n_13,
-      \xsdb_reg_reg[3]\ => reg_19_n_12,
-      \xsdb_reg_reg[4]\ => reg_19_n_11,
-      \xsdb_reg_reg[5]\ => reg_19_n_10,
-      \xsdb_reg_reg[6]\ => reg_19_n_9,
-      \xsdb_reg_reg[7]\ => reg_19_n_8,
-      \xsdb_reg_reg[8]\ => reg_19_n_7,
-      \xsdb_reg_reg[9]\ => reg_19_n_6
+      \xsdb_reg_reg[14]\ => reg_19_n_3,
+      \xsdb_reg_reg[15]\ => reg_19_n_4
     );
 reg_1a: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized39\
      port map (
-      D(5) => reg_1a_n_0,
-      D(4) => reg_1a_n_1,
-      D(3) => reg_1a_n_2,
-      D(2) => reg_1a_n_3,
-      D(1) => reg_1a_n_4,
-      D(0) => reg_1a_n_5,
-      \G_1PIPE_IFACE.s_daddr_r_reg[7]\ => reg_1a_n_6,
-      \G_1PIPE_IFACE.s_daddr_r_reg[7]_0\ => reg_1a_n_7,
-      \G_1PIPE_IFACE.s_daddr_r_reg[7]_1\ => reg_1a_n_8,
-      in0(1 downto 0) => in0(1 downto 0),
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
-      slaveRegDo_6(4 downto 2) => slaveRegDo_6(9 downto 7),
-      slaveRegDo_6(1 downto 0) => slaveRegDo_6(5 downto 4),
-      slaveRegDo_80(15 downto 0) => slaveRegDo_80(15 downto 0),
-      slaveRegDo_81(15 downto 0) => slaveRegDo_81(15 downto 0),
-      \slaveRegDo_mux_0[0]_i_3\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      \slaveRegDo_mux_0[0]_i_3_0\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      \slaveRegDo_mux_0[0]_i_3_1\ => reg_19_n_15,
-      \slaveRegDo_mux_0[10]_i_2\ => reg_19_n_5,
-      \slaveRegDo_mux_0[11]_i_2\ => reg_19_n_4,
-      \slaveRegDo_mux_0[12]_i_2\ => reg_19_n_3,
-      \slaveRegDo_mux_0[13]_i_2\ => reg_19_n_2,
-      \slaveRegDo_mux_0[14]_i_2\ => reg_19_n_1,
-      \slaveRegDo_mux_0[15]_i_2\ => reg_19_n_0,
-      \slaveRegDo_mux_0[1]_i_3\ => reg_19_n_14,
-      \slaveRegDo_mux_0[2]_i_3\ => reg_19_n_13,
-      \slaveRegDo_mux_0[3]_i_2\ => reg_19_n_12,
-      \slaveRegDo_mux_0[4]_i_2\ => reg_19_n_11,
-      \slaveRegDo_mux_0[5]_i_2\ => reg_19_n_10,
-      \slaveRegDo_mux_0[6]_i_2\ => reg_19_n_9,
-      \slaveRegDo_mux_0[7]_i_2\ => reg_19_n_8,
-      \slaveRegDo_mux_0[8]_i_2\ => reg_19_n_7,
-      \slaveRegDo_mux_0[9]_i_2\ => reg_19_n_6,
-      \slaveRegDo_mux_0_reg[0]\ => reg_16_n_0,
-      \slaveRegDo_mux_0_reg[0]_0\ => reg_83_n_7,
-      \slaveRegDo_mux_0_reg[10]\ => \slaveRegDo_mux_0[10]_i_3_n_0\,
-      \slaveRegDo_mux_0_reg[10]_0\ => \slaveRegDo_mux_0[15]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[10]_1\ => reg_6_n_2,
-      \slaveRegDo_mux_0_reg[10]_2\ => \slaveRegDo_mux_0[10]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[10]_3\ => \slaveRegDo_mux_0[6]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[10]_4\ => \slaveRegDo_mux_0[10]_i_9_n_0\,
-      \slaveRegDo_mux_0_reg[10]_5\ => reg_16_n_20,
-      \slaveRegDo_mux_0_reg[10]_6\ => reg_83_n_15,
-      \slaveRegDo_mux_0_reg[1]\ => reg_16_n_11,
-      \slaveRegDo_mux_0_reg[1]_0\ => reg_83_n_8,
-      \slaveRegDo_mux_0_reg[2]\ => reg_16_n_12,
-      \slaveRegDo_mux_0_reg[2]_0\ => reg_83_n_9,
-      \slaveRegDo_mux_0_reg[4]\ => reg_7_n_1,
-      \slaveRegDo_mux_0_reg[4]_0\ => reg_16_n_14,
-      \slaveRegDo_mux_0_reg[4]_1\ => reg_83_n_10,
-      \slaveRegDo_mux_0_reg[5]\ => reg_7_n_2,
-      \slaveRegDo_mux_0_reg[5]_0\ => reg_16_n_15,
-      \slaveRegDo_mux_0_reg[5]_1\ => reg_83_n_11,
-      \slaveRegDo_mux_0_reg[7]\ => reg_7_n_3,
-      \slaveRegDo_mux_0_reg[7]_0\ => reg_16_n_17,
-      \slaveRegDo_mux_0_reg[7]_1\ => reg_83_n_12,
-      \slaveRegDo_mux_0_reg[8]\ => reg_7_n_4,
-      \slaveRegDo_mux_0_reg[8]_0\ => reg_16_n_18,
-      \slaveRegDo_mux_0_reg[8]_1\ => reg_83_n_13,
-      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0[15]_i_4_n_0\,
-      \slaveRegDo_mux_0_reg[9]_0\ => reg_7_n_5,
-      \slaveRegDo_mux_0_reg[9]_1\ => reg_16_n_19,
-      \slaveRegDo_mux_0_reg[9]_2\ => reg_83_n_14,
-      \xsdb_reg_reg[0]\ => reg_6_n_0,
-      \xsdb_reg_reg[11]\ => reg_1a_n_14,
-      \xsdb_reg_reg[12]\ => reg_1a_n_15,
-      \xsdb_reg_reg[13]\ => reg_1a_n_16,
-      \xsdb_reg_reg[14]\ => reg_1a_n_17,
-      \xsdb_reg_reg[15]\ => reg_1a_n_18,
-      \xsdb_reg_reg[3]\ => reg_1a_n_11,
-      \xsdb_reg_reg[3]_0\ => en_adv_trigger_1,
-      \xsdb_reg_reg[6]\ => reg_1a_n_13
+      \xsdb_reg_reg[0]\ => reg_1a_n_15,
+      \xsdb_reg_reg[0]_0\ => reg_6_n_0,
+      \xsdb_reg_reg[10]\ => reg_1a_n_5,
+      \xsdb_reg_reg[11]\ => reg_1a_n_4,
+      \xsdb_reg_reg[12]\ => reg_1a_n_3,
+      \xsdb_reg_reg[13]\ => reg_1a_n_2,
+      \xsdb_reg_reg[14]\ => reg_1a_n_1,
+      \xsdb_reg_reg[15]\ => reg_1a_n_0,
+      \xsdb_reg_reg[2]\(1 downto 0) => \^capture_qual_ctrl_1\(1 downto 0),
+      \xsdb_reg_reg[3]\ => \^en_adv_trigger_1\,
+      \xsdb_reg_reg[4]\ => reg_1a_n_11,
+      \xsdb_reg_reg[5]\ => reg_1a_n_10,
+      \xsdb_reg_reg[6]\ => reg_1a_n_9,
+      \xsdb_reg_reg[7]\ => reg_1a_n_8,
+      \xsdb_reg_reg[8]\ => reg_1a_n_7,
+      \xsdb_reg_reg[9]\ => reg_1a_n_6
     );
 reg_6: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized19\
      port map (
       D(0) => reg_6_n_1,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]\ => reg_6_n_11,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]_0\ => reg_6_n_12,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]_1\ => reg_6_n_13,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]_2\ => reg_6_n_16,
       \G_1PIPE_IFACE.s_den_r_reg\ => reg_6_n_0,
-      Q(0) => reg_9_n_9,
+      halt_ctrl => \^halt_ctrl\,
       s_daddr_o(8 downto 5) => s_daddr(12 downto 9),
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
@@ -24111,106 +25493,82 @@ reg_6: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized19\
       s_di_o(15 downto 0) => s_di(15 downto 0),
       s_dwe_o => s_dwe,
       \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
-      \slaveRegDo_mux_0[0]_i_2\(0) => reg_8_n_4,
-      \slaveRegDo_mux_0[0]_i_2_0\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      \slaveRegDo_mux_0[0]_i_2_1\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      \slaveRegDo_mux_0[0]_i_2_2\ => \^arm_ctrl\,
-      \slaveRegDo_mux_0_reg[0]\ => \slaveRegDo_mux_0[15]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[0]_0\ => \slaveRegDo_mux_0[10]_i_3_n_0\,
-      \slaveRegDo_mux_0_reg[0]_1\ => reg_1a_n_6,
-      \slaveRegDo_mux_0_reg[0]_2\(0) => \slaveRegDo_mux_1[0]_i_1_n_0\,
-      \slaveRegDo_mux_0_reg[0]_3\ => \slaveRegDo_mux_0[9]_i_7_n_0\,
-      \slaveRegDo_mux_0_reg[10]\ => \slaveRegDo_mux_0[15]_i_6_n_0\,
-      \slaveRegDo_mux_0_reg[10]_0\ => \slaveRegDo_mux_0[10]_i_10_n_0\,
-      \slaveRegDo_mux_0_reg[10]_1\ => \slaveRegDo_mux_0[15]_i_7_n_0\,
-      \slaveRegDo_mux_0_reg[10]_2\ => reg_7_n_17,
-      \slaveRegDo_mux_0_reg[10]_3\ => \slaveRegDo_mux_0[10]_i_11_n_0\,
+      \slaveRegDo_mux_0[0]_i_2\ => \^arm_ctrl\,
+      \slaveRegDo_mux_0[2]_i_2\ => reg_7_n_17,
+      \slaveRegDo_mux_0_reg[4]\ => \slaveRegDo_mux_0[15]_i_6_n_0\,
+      \slaveRegDo_mux_0_reg[4]_0\(0) => \slaveRegDo_mux_1[4]_i_1_n_0\,
+      \slaveRegDo_mux_0_reg[4]_1\ => reg_81_n_15,
+      \slaveRegDo_mux_0_reg[4]_2\ => \slaveRegDo_mux_0[15]_i_3_n_0\,
+      \slaveRegDo_mux_0_reg[4]_3\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
+      \slaveRegDo_mux_0_reg[4]_4\ => reg_7_n_3,
+      \slaveRegDo_mux_0_reg[4]_5\ => reg_19_n_10,
+      \slaveRegDo_mux_0_reg[4]_6\ => reg_17_n_4,
+      \slaveRegDo_mux_0_reg[7]\ => reg_7_n_4,
+      \slaveRegDo_mux_0_reg[8]\ => reg_7_n_5,
+      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
+      \slaveRegDo_mux_0_reg[9]_0\ => drdy_ffa_i_3_n_0,
+      \slaveRegDo_mux_0_reg[9]_1\ => reg_7_n_6,
       \xsdb_reg_reg[0]\ => \TC_SRL[0].tc_srl_reg_n_2\,
-      \xsdb_reg_reg[10]\ => reg_6_n_2,
-      \xsdb_reg_reg[15]\(11 downto 7) => slaveRegDo_6(15 downto 11),
-      \xsdb_reg_reg[15]\(6 downto 0) => slaveRegDo_6(9 downto 3),
-      \xsdb_reg_reg[1]\ => reg_6_n_16,
+      \xsdb_reg_reg[15]\(8 downto 3) => slaveRegDo_6(15 downto 10),
+      \xsdb_reg_reg[15]\(2 downto 1) => slaveRegDo_6(6 downto 5),
+      \xsdb_reg_reg[15]\(0) => slaveRegDo_6(3),
+      \xsdb_reg_reg[1]\ => reg_6_n_14,
       \xsdb_reg_reg[2]\ => reg_6_n_15
     );
 reg_7: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized20\
      port map (
-      D(0) => reg_7_n_0,
       DOUT_O => DOUT_O,
-      Q(5) => reg_9_n_0,
-      Q(4) => reg_9_n_1,
-      Q(3) => reg_9_n_2,
-      Q(2) => reg_9_n_4,
-      Q(1) => reg_9_n_5,
-      Q(0) => reg_9_n_7,
+      \G_1PIPE_IFACE.s_daddr_r_reg[0]\ => reg_7_n_7,
+      \G_1PIPE_IFACE.s_daddr_r_reg[3]\ => reg_7_n_2,
+      Q(3) => reg_9_n_6,
+      Q(2) => reg_9_n_7,
+      Q(1) => reg_9_n_8,
+      Q(0) => reg_9_n_9,
       halt_ctrl => \^halt_ctrl\,
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
       scnt_cmp_temp => scnt_cmp_temp,
-      \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
-      \slaveRegDo_mux_0[2]_i_2\ => reg_6_n_15,
-      \slaveRegDo_mux_0[2]_i_2_0\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      \slaveRegDo_mux_0[2]_i_2_1\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      \slaveRegDo_mux_0_reg[2]\ => \slaveRegDo_mux_0[15]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[2]_0\ => \slaveRegDo_mux_0[10]_i_3_n_0\,
-      \slaveRegDo_mux_0_reg[2]_1\ => reg_1a_n_8,
-      \slaveRegDo_mux_0_reg[2]_2\ => \slaveRegDo_mux_0[15]_i_6_n_0\,
-      \slaveRegDo_mux_0_reg[2]_3\ => \slaveRegDo_mux_0[15]_i_7_n_0\,
-      \slaveRegDo_mux_0_reg[6]\ => \slaveRegDo_mux_0[10]_i_10_n_0\,
-      \slaveRegDo_mux_0_reg[6]_0\ => \slaveRegDo_mux_0[10]_i_11_n_0\,
-      \slaveRegDo_mux_0_reg[6]_1\(2) => reg_8_n_1,
-      \slaveRegDo_mux_0_reg[6]_1\(1) => reg_8_n_2,
-      \slaveRegDo_mux_0_reg[6]_1\(0) => reg_8_n_3,
-      \slaveRegDo_mux_0_reg[6]_2\(1) => slaveRegDo_6(6),
-      \slaveRegDo_mux_0_reg[6]_2\(0) => slaveRegDo_6(3),
-      \slaveRegDo_mux_0_reg[6]_3\ => \slaveRegDo_mux_0[6]_i_9_n_0\,
-      \slaveRegDo_mux_0_reg[9]\ => \slaveRegDo_mux_0[9]_i_7_n_0\,
-      \slaveRegDo_mux_0_reg[9]_0\ => \slaveRegDo_mux_0[6]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[9]_1\ => \slaveRegDo_mux_0[10]_i_5_n_0\,
+      \slaveRegDo_mux_0[10]_i_3\(3) => slaveRegDo_6(10),
+      \slaveRegDo_mux_0[10]_i_3\(2 downto 1) => slaveRegDo_6(6 downto 5),
+      \slaveRegDo_mux_0[10]_i_3\(0) => slaveRegDo_6(3),
+      \slaveRegDo_mux_0_reg[10]\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
+      \slaveRegDo_mux_0_reg[10]_0\ => reg_18_n_0,
+      \slaveRegDo_mux_0_reg[10]_1\ => reg_16_n_0,
+      \slaveRegDo_mux_0_reg[3]\ => reg_9_n_5,
+      \slaveRegDo_mux_0_reg[6]\ => drdy_ff7_i_2_n_0,
+      \slaveRegDo_mux_0_reg[6]_0\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
+      \slaveRegDo_mux_0_reg[6]_1\ => reg_9_n_4,
       u_wcnt_hcmp_q => u_wcnt_hcmp_q,
       u_wcnt_lcmp_q => u_wcnt_lcmp_q,
       wcnt_hcmp_temp => wcnt_hcmp_temp,
       wcnt_lcmp_temp => wcnt_lcmp_temp,
       \xsdb_reg_reg[0]\ => \^arm_ctrl\,
       \xsdb_reg_reg[0]_0\ => reg_6_n_0,
-      \xsdb_reg_reg[10]\ => reg_7_n_17,
       \xsdb_reg_reg[11]\ => reg_7_n_16,
       \xsdb_reg_reg[12]\ => reg_7_n_15,
       \xsdb_reg_reg[13]\ => reg_7_n_14,
       \xsdb_reg_reg[14]\ => reg_7_n_13,
       \xsdb_reg_reg[15]\ => reg_7_n_12,
-      \xsdb_reg_reg[3]\ => reg_7_n_6,
-      \xsdb_reg_reg[4]\ => reg_7_n_1,
-      \xsdb_reg_reg[5]\ => reg_7_n_2,
-      \xsdb_reg_reg[6]\ => reg_7_n_7,
-      \xsdb_reg_reg[7]\ => reg_7_n_3,
-      \xsdb_reg_reg[8]\ => reg_7_n_4,
-      \xsdb_reg_reg[9]\ => reg_7_n_5
+      \xsdb_reg_reg[2]\ => reg_7_n_17,
+      \xsdb_reg_reg[3]\ => reg_7_n_0,
+      \xsdb_reg_reg[4]\ => reg_7_n_3,
+      \xsdb_reg_reg[6]\ => reg_7_n_1,
+      \xsdb_reg_reg[7]\ => reg_7_n_4,
+      \xsdb_reg_reg[8]\ => reg_7_n_5,
+      \xsdb_reg_reg[9]\ => reg_7_n_6
     );
 reg_8: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized21\
      port map (
-      D(0) => reg_8_n_0,
-      Q(0) => reg_9_n_8,
-      halt_ctrl => \^halt_ctrl\,
+      D(4) => clk_lost,
+      D(3 downto 0) => \xsdb_reg_reg[3]\(3 downto 0),
+      Q(4) => reg_8_n_0,
+      Q(3) => reg_8_n_1,
+      Q(2) => reg_8_n_2,
+      Q(1) => reg_8_n_3,
+      Q(0) => reg_8_n_4,
       s_dclk_o => \^s_dclk_o\,
-      s_den_o => s_den,
-      \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
-      \slaveRegDo_mux_0[1]_i_2\ => \slaveRegDo_mux_0[6]_i_5_n_0\,
-      \slaveRegDo_mux_0[1]_i_2_0\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      \slaveRegDo_mux_0[1]_i_2_1\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      \slaveRegDo_mux_0[1]_i_2_2\ => reg_6_n_16,
-      \slaveRegDo_mux_0_reg[1]\(0) => \slaveRegDo_mux_1[1]_i_1_n_0\,
-      \slaveRegDo_mux_0_reg[1]_0\ => reg_1a_n_7,
-      \slaveRegDo_mux_0_reg[1]_1\ => \slaveRegDo_mux_0[10]_i_3_n_0\,
-      \slaveRegDo_mux_0_reg[1]_2\ => \slaveRegDo_mux_0[15]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[1]_3\ => \slaveRegDo_mux_0[9]_i_7_n_0\,
-      \slaveRegDo_mux_0_reg[1]_4\ => \slaveRegDo_mux_0[10]_i_5_n_0\,
-      \xsdb_reg_reg[6]\(3) => reg_8_n_1,
-      \xsdb_reg_reg[6]\(2) => reg_8_n_2,
-      \xsdb_reg_reg[6]\(1) => reg_8_n_3,
-      \xsdb_reg_reg[6]\(0) => reg_8_n_4,
-      \xsdb_reg_reg[6]_0\(4) => clk_lost,
-      \xsdb_reg_reg[6]_0\(3 downto 0) => \xsdb_reg_reg[3]\(3 downto 0)
+      s_den_o => s_den
     );
 reg_80: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized40\
      port map (
@@ -24225,11 +25583,93 @@ reg_80: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized40\
     );
 reg_81: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized41\
      port map (
+      D(11) => reg_81_n_0,
+      D(10) => reg_81_n_1,
+      D(9) => reg_81_n_2,
+      D(8) => reg_81_n_3,
+      D(7) => reg_81_n_4,
+      D(6) => reg_81_n_5,
+      D(5) => reg_81_n_6,
+      D(4) => reg_81_n_7,
+      D(3) => reg_81_n_8,
+      D(2) => reg_81_n_9,
+      D(1) => reg_81_n_10,
+      D(0) => reg_81_n_11,
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
-      slaveRegDo_81(15 downto 0) => slaveRegDo_81(15 downto 0),
-      \xsdb_reg_reg[0]\ => reg_80_n_0
+      slaveRegDo_80(15 downto 0) => slaveRegDo_80(15 downto 0),
+      slaveRegDo_82(15 downto 0) => slaveRegDo_82(15 downto 0),
+      slaveRegDo_84(15 downto 0) => slaveRegDo_84(15 downto 0),
+      \slaveRegDo_mux_0[0]_i_3\ => reg_83_n_15,
+      \slaveRegDo_mux_0[10]_i_2\ => reg_83_n_5,
+      \slaveRegDo_mux_0[11]_i_2\ => reg_83_n_4,
+      \slaveRegDo_mux_0[12]_i_2\ => reg_83_n_3,
+      \slaveRegDo_mux_0[13]_i_2\ => reg_83_n_2,
+      \slaveRegDo_mux_0[14]_i_2\ => reg_83_n_1,
+      \slaveRegDo_mux_0[15]_i_2\ => reg_83_n_0,
+      \slaveRegDo_mux_0[1]_i_3\ => reg_83_n_14,
+      \slaveRegDo_mux_0[2]_i_3\ => reg_83_n_13,
+      \slaveRegDo_mux_0[3]_i_2\ => reg_83_n_12,
+      \slaveRegDo_mux_0[4]_i_4\ => reg_83_n_11,
+      \slaveRegDo_mux_0[5]_i_2\ => reg_83_n_10,
+      \slaveRegDo_mux_0[6]_i_2\ => reg_83_n_9,
+      \slaveRegDo_mux_0[7]_i_2\ => reg_83_n_8,
+      \slaveRegDo_mux_0[8]_i_2\ => reg_83_n_7,
+      \slaveRegDo_mux_0[9]_i_2\ => reg_83_n_6,
+      \slaveRegDo_mux_0_reg[0]\ => reg_85_n_15,
+      \slaveRegDo_mux_0_reg[10]\ => reg_7_n_2,
+      \slaveRegDo_mux_0_reg[10]_0\ => reg_85_n_5,
+      \slaveRegDo_mux_0_reg[11]\ => reg_19_n_0,
+      \slaveRegDo_mux_0_reg[11]_0\ => reg_17_n_10,
+      \slaveRegDo_mux_0_reg[11]_1\ => reg_85_n_4,
+      \slaveRegDo_mux_0_reg[12]\ => reg_19_n_1,
+      \slaveRegDo_mux_0_reg[12]_0\ => reg_17_n_11,
+      \slaveRegDo_mux_0_reg[12]_1\ => reg_85_n_3,
+      \slaveRegDo_mux_0_reg[13]\ => reg_19_n_2,
+      \slaveRegDo_mux_0_reg[13]_0\ => reg_17_n_12,
+      \slaveRegDo_mux_0_reg[13]_1\ => reg_85_n_2,
+      \slaveRegDo_mux_0_reg[14]\ => reg_19_n_3,
+      \slaveRegDo_mux_0_reg[14]_0\ => reg_17_n_13,
+      \slaveRegDo_mux_0_reg[14]_1\ => reg_85_n_1,
+      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0[15]_i_3_n_0\,
+      \slaveRegDo_mux_0_reg[15]_0\ => \slaveRegDo_mux_0[15]_i_6_n_0\,
+      \slaveRegDo_mux_0_reg[15]_1\ => reg_19_n_4,
+      \slaveRegDo_mux_0_reg[15]_2\ => reg_17_n_14,
+      \slaveRegDo_mux_0_reg[15]_3\ => \slaveRegDo_mux_0[15]_i_8_n_0\,
+      \slaveRegDo_mux_0_reg[15]_4\ => reg_85_n_0,
+      \slaveRegDo_mux_0_reg[1]\ => reg_85_n_14,
+      \slaveRegDo_mux_0_reg[2]\ => reg_85_n_13,
+      \slaveRegDo_mux_0_reg[3]\ => reg_7_n_0,
+      \slaveRegDo_mux_0_reg[3]_0\ => reg_19_n_11,
+      \slaveRegDo_mux_0_reg[3]_1\ => reg_17_n_3,
+      \slaveRegDo_mux_0_reg[3]_2\ => reg_85_n_12,
+      \slaveRegDo_mux_0_reg[4]\ => reg_85_n_11,
+      \slaveRegDo_mux_0_reg[5]\ => reg_9_n_3,
+      \slaveRegDo_mux_0_reg[5]_0\ => reg_19_n_9,
+      \slaveRegDo_mux_0_reg[5]_1\ => reg_17_n_5,
+      \slaveRegDo_mux_0_reg[5]_2\ => reg_85_n_10,
+      \slaveRegDo_mux_0_reg[6]\ => reg_7_n_1,
+      \slaveRegDo_mux_0_reg[6]_0\ => reg_19_n_8,
+      \slaveRegDo_mux_0_reg[6]_1\ => reg_17_n_6,
+      \slaveRegDo_mux_0_reg[6]_2\ => reg_85_n_9,
+      \slaveRegDo_mux_0_reg[7]\ => reg_6_n_11,
+      \slaveRegDo_mux_0_reg[7]_0\ => reg_19_n_7,
+      \slaveRegDo_mux_0_reg[7]_1\ => reg_17_n_7,
+      \slaveRegDo_mux_0_reg[7]_2\ => reg_85_n_8,
+      \slaveRegDo_mux_0_reg[8]\ => reg_6_n_12,
+      \slaveRegDo_mux_0_reg[8]_0\ => reg_19_n_6,
+      \slaveRegDo_mux_0_reg[8]_1\ => reg_17_n_8,
+      \slaveRegDo_mux_0_reg[8]_2\ => reg_85_n_7,
+      \slaveRegDo_mux_0_reg[9]\ => reg_6_n_13,
+      \slaveRegDo_mux_0_reg[9]_0\ => reg_19_n_5,
+      \slaveRegDo_mux_0_reg[9]_1\ => reg_17_n_9,
+      \slaveRegDo_mux_0_reg[9]_2\ => reg_85_n_6,
+      \xsdb_reg_reg[0]\ => reg_81_n_12,
+      \xsdb_reg_reg[0]_0\ => reg_80_n_0,
+      \xsdb_reg_reg[1]\ => reg_81_n_13,
+      \xsdb_reg_reg[2]\ => reg_81_n_14,
+      \xsdb_reg_reg[4]\ => reg_81_n_15
     );
 reg_82: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized42\
      port map (
@@ -24241,78 +25681,26 @@ reg_82: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized42\
     );
 reg_83: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized43\
      port map (
-      D(6) => reg_83_n_0,
-      D(5) => reg_83_n_1,
-      D(4) => reg_83_n_2,
-      D(3) => reg_83_n_3,
-      D(2) => reg_83_n_4,
-      D(1) => reg_83_n_5,
-      D(0) => reg_83_n_6,
-      Q(1) => reg_9_n_3,
-      Q(0) => reg_9_n_6,
       s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_di_o(15 downto 0) => s_di(15 downto 0),
-      slaveRegDo_82(15 downto 0) => slaveRegDo_82(15 downto 0),
-      slaveRegDo_84(15 downto 0) => slaveRegDo_84(15 downto 0),
-      \slaveRegDo_mux_0[0]_i_3\ => reg_85_n_15,
-      \slaveRegDo_mux_0[0]_i_3_0\ => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      \slaveRegDo_mux_0[0]_i_3_1\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      \slaveRegDo_mux_0[10]_i_2\ => reg_85_n_5,
-      \slaveRegDo_mux_0[11]_i_2\ => reg_85_n_4,
-      \slaveRegDo_mux_0[12]_i_2\ => reg_85_n_3,
-      \slaveRegDo_mux_0[13]_i_2\ => reg_85_n_2,
-      \slaveRegDo_mux_0[14]_i_2\ => reg_85_n_1,
-      \slaveRegDo_mux_0[15]_i_2\ => reg_85_n_0,
-      \slaveRegDo_mux_0[1]_i_3\ => reg_85_n_14,
-      \slaveRegDo_mux_0[2]_i_3\ => reg_85_n_13,
-      \slaveRegDo_mux_0[3]_i_2\ => reg_85_n_12,
-      \slaveRegDo_mux_0[4]_i_2\ => reg_85_n_11,
-      \slaveRegDo_mux_0[5]_i_2\ => reg_85_n_10,
-      \slaveRegDo_mux_0[6]_i_2\ => reg_85_n_9,
-      \slaveRegDo_mux_0[7]_i_2\ => reg_85_n_8,
-      \slaveRegDo_mux_0[8]_i_2\ => reg_85_n_7,
-      \slaveRegDo_mux_0[9]_i_2\ => reg_85_n_6,
-      \slaveRegDo_mux_0_reg[11]\ => reg_7_n_16,
-      \slaveRegDo_mux_0_reg[11]_0\ => reg_16_n_21,
-      \slaveRegDo_mux_0_reg[11]_1\ => reg_1a_n_14,
-      \slaveRegDo_mux_0_reg[12]\ => reg_7_n_15,
-      \slaveRegDo_mux_0_reg[12]_0\ => reg_16_n_22,
-      \slaveRegDo_mux_0_reg[12]_1\ => reg_1a_n_15,
-      \slaveRegDo_mux_0_reg[13]\ => reg_7_n_14,
-      \slaveRegDo_mux_0_reg[13]_0\ => reg_16_n_23,
-      \slaveRegDo_mux_0_reg[13]_1\ => reg_1a_n_16,
-      \slaveRegDo_mux_0_reg[14]\ => reg_7_n_13,
-      \slaveRegDo_mux_0_reg[14]_0\ => reg_16_n_24,
-      \slaveRegDo_mux_0_reg[14]_1\ => reg_1a_n_17,
-      \slaveRegDo_mux_0_reg[15]\ => \slaveRegDo_mux_0[15]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[15]_0\ => \slaveRegDo_mux_0[10]_i_3_n_0\,
-      \slaveRegDo_mux_0_reg[15]_1\ => \slaveRegDo_mux_0[15]_i_6_n_0\,
-      \slaveRegDo_mux_0_reg[15]_2\ => \slaveRegDo_mux_0[15]_i_7_n_0\,
-      \slaveRegDo_mux_0_reg[15]_3\(4 downto 0) => slaveRegDo_6(15 downto 11),
-      \slaveRegDo_mux_0_reg[15]_4\ => \slaveRegDo_mux_0[15]_i_4_n_0\,
-      \slaveRegDo_mux_0_reg[15]_5\ => \slaveRegDo_mux_0[15]_i_3_n_0\,
-      \slaveRegDo_mux_0_reg[15]_6\ => reg_7_n_12,
-      \slaveRegDo_mux_0_reg[15]_7\ => reg_16_n_25,
-      \slaveRegDo_mux_0_reg[15]_8\ => reg_1a_n_18,
-      \slaveRegDo_mux_0_reg[3]\ => reg_7_n_6,
-      \slaveRegDo_mux_0_reg[3]_0\ => reg_16_n_13,
-      \slaveRegDo_mux_0_reg[3]_1\ => reg_1a_n_11,
-      \slaveRegDo_mux_0_reg[6]\ => \slaveRegDo_mux_0[6]_i_3_n_0\,
-      \slaveRegDo_mux_0_reg[6]_0\ => \slaveRegDo_mux_0[6]_i_5_n_0\,
-      \slaveRegDo_mux_0_reg[6]_1\ => reg_7_n_7,
-      \slaveRegDo_mux_0_reg[6]_2\ => reg_16_n_16,
-      \slaveRegDo_mux_0_reg[6]_3\ => reg_1a_n_13,
-      \xsdb_reg_reg[0]\ => reg_83_n_7,
+      \xsdb_reg_reg[0]\ => reg_83_n_15,
       \xsdb_reg_reg[0]_0\ => reg_80_n_0,
-      \xsdb_reg_reg[10]\ => reg_83_n_15,
-      \xsdb_reg_reg[1]\ => reg_83_n_8,
-      \xsdb_reg_reg[2]\ => reg_83_n_9,
-      \xsdb_reg_reg[4]\ => reg_83_n_10,
-      \xsdb_reg_reg[5]\ => reg_83_n_11,
-      \xsdb_reg_reg[7]\ => reg_83_n_12,
-      \xsdb_reg_reg[8]\ => reg_83_n_13,
-      \xsdb_reg_reg[9]\ => reg_83_n_14
+      \xsdb_reg_reg[10]\ => reg_83_n_5,
+      \xsdb_reg_reg[11]\ => reg_83_n_4,
+      \xsdb_reg_reg[12]\ => reg_83_n_3,
+      \xsdb_reg_reg[13]\ => reg_83_n_2,
+      \xsdb_reg_reg[14]\ => reg_83_n_1,
+      \xsdb_reg_reg[15]\ => reg_83_n_0,
+      \xsdb_reg_reg[1]\ => reg_83_n_14,
+      \xsdb_reg_reg[2]\ => reg_83_n_13,
+      \xsdb_reg_reg[3]\ => reg_83_n_12,
+      \xsdb_reg_reg[4]\ => reg_83_n_11,
+      \xsdb_reg_reg[5]\ => reg_83_n_10,
+      \xsdb_reg_reg[6]\ => reg_83_n_9,
+      \xsdb_reg_reg[7]\ => reg_83_n_8,
+      \xsdb_reg_reg[8]\ => reg_83_n_7,
+      \xsdb_reg_reg[9]\ => reg_83_n_6
     );
 reg_84: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized44\
      port map (
@@ -24354,22 +25742,21 @@ reg_887: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized47\
       s_den_o => s_den,
       s_do_o(0) => slaveRegDo_890(3),
       \slaveRegDo_mux_2_reg[3]\ => \slaveRegDo_mux_2[3]_i_2_n_0\,
-      \slaveRegDo_mux_2_reg[3]_0\ => \slaveRegDo_mux_2[3]_i_4_n_0\
+      \slaveRegDo_mux_2_reg[3]_0\ => \slaveRegDo_mux_2[4]_i_3_n_0\
     );
 reg_88d: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized49\
      port map (
       D(1) => reg_88d_n_0,
       D(0) => reg_88d_n_1,
-      s_daddr_o(3 downto 0) => s_daddr(3 downto 0),
+      s_daddr_o(4 downto 0) => s_daddr(4 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_den_o => s_den,
       s_do_o(1 downto 0) => slaveRegDo_890(1 downto 0),
       slaveRegDo_mux_211_in => slaveRegDo_mux_211_in,
-      \slaveRegDo_mux_2_reg[0]\(2) => s_daddr(4),
-      \slaveRegDo_mux_2_reg[0]\(1) => \slaveRegDo_mux_1[1]_i_1_n_0\,
-      \slaveRegDo_mux_2_reg[0]\(0) => \slaveRegDo_mux_1[0]_i_1_n_0\,
-      \slaveRegDo_mux_2_reg[1]\ => \slaveRegDo_mux_2[3]_i_4_n_0\,
+      \slaveRegDo_mux_2_reg[1]\ => \slaveRegDo_mux_2[4]_i_3_n_0\,
       \slaveRegDo_mux_2_reg[1]_0\ => \slaveRegDo_mux_2[3]_i_2_n_0\,
+      \slaveRegDo_mux_2_reg[1]_1\(1) => \slaveRegDo_mux_1[1]_i_1_n_0\,
+      \slaveRegDo_mux_2_reg[1]_1\(0) => \slaveRegDo_mux_1[0]_i_1_n_0\,
       \xsdb_reg_reg[1]\(1 downto 0) => \xsdb_reg_reg[1]\(1 downto 0)
     );
 reg_890: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized52\
@@ -24386,103 +25773,154 @@ reg_890: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized52\
     );
 reg_9: entity work.\ila_0_xsdbs_v1_0_2_reg__parameterized22\
      port map (
-      Q(9) => reg_9_n_0,
-      Q(8) => reg_9_n_1,
-      Q(7) => reg_9_n_2,
-      Q(6) => reg_9_n_3,
-      Q(5) => reg_9_n_4,
-      Q(4) => reg_9_n_5,
-      Q(3) => reg_9_n_6,
-      Q(2) => reg_9_n_7,
-      Q(1) => reg_9_n_8,
-      Q(0) => reg_9_n_9,
+      D(2) => reg_9_n_0,
+      D(1) => reg_9_n_1,
+      D(0) => reg_9_n_2,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]\ => reg_9_n_4,
+      \G_1PIPE_IFACE.s_daddr_r_reg[1]_0\ => reg_9_n_5,
+      \G_1PIPE_IFACE.s_daddr_r_reg[2]\ => reg_9_n_3,
+      Q(4) => reg_8_n_0,
+      Q(3) => reg_8_n_1,
+      Q(2) => reg_8_n_2,
+      Q(1) => reg_8_n_3,
+      Q(0) => reg_8_n_4,
+      s_daddr_o(3 downto 0) => s_daddr(3 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_den_o => s_den,
-      \xsdb_reg_reg[9]\(9 downto 0) => \xsdb_reg_reg[9]\(9 downto 0)
+      \slaveRegDo_mux_01__6\ => \slaveRegDo_mux_01__6\,
+      \slaveRegDo_mux_0[2]_i_2\ => drdy_ffa_i_4_n_0,
+      \slaveRegDo_mux_0_reg[0]\ => reg_81_n_12,
+      \slaveRegDo_mux_0_reg[0]_0\ => reg_19_n_14,
+      \slaveRegDo_mux_0_reg[0]_1\ => reg_6_n_16,
+      \slaveRegDo_mux_0_reg[0]_2\ => reg_17_n_0,
+      \slaveRegDo_mux_0_reg[1]\ => reg_81_n_13,
+      \slaveRegDo_mux_0_reg[1]_0\ => reg_19_n_13,
+      \slaveRegDo_mux_0_reg[1]_1\ => reg_6_n_14,
+      \slaveRegDo_mux_0_reg[1]_2\ => reg_17_n_1,
+      \slaveRegDo_mux_0_reg[2]\ => \slaveRegDo_mux_0[15]_i_6_n_0\,
+      \slaveRegDo_mux_0_reg[2]_0\(2) => \slaveRegDo_mux_1[2]_i_1_n_0\,
+      \slaveRegDo_mux_0_reg[2]_0\(1) => \slaveRegDo_mux_1[1]_i_1_n_0\,
+      \slaveRegDo_mux_0_reg[2]_0\(0) => \slaveRegDo_mux_1[0]_i_1_n_0\,
+      \slaveRegDo_mux_0_reg[2]_1\ => \slaveRegDo_mux_0[15]_i_3_n_0\,
+      \slaveRegDo_mux_0_reg[2]_2\ => reg_81_n_14,
+      \slaveRegDo_mux_0_reg[2]_3\ => reg_19_n_12,
+      \slaveRegDo_mux_0_reg[2]_4\ => reg_6_n_15,
+      \slaveRegDo_mux_0_reg[2]_5\ => reg_17_n_2,
+      \slaveRegDo_mux_0_reg[5]\ => \slaveRegDo_mux_0[15]_i_11_n_0\,
+      \slaveRegDo_mux_0_reg[5]_0\ => reg_stream_ffd_n_0,
+      \slaveRegDo_mux_0_reg[5]_1\ => reg_7_n_7,
+      \xsdb_reg_reg[9]\(3) => reg_9_n_6,
+      \xsdb_reg_reg[9]\(2) => reg_9_n_7,
+      \xsdb_reg_reg[9]\(1) => reg_9_n_8,
+      \xsdb_reg_reg[9]\(0) => reg_9_n_9,
+      \xsdb_reg_reg[9]_0\(9 downto 0) => \xsdb_reg_reg[9]\(9 downto 0)
     );
 reg_srl_fff: entity work.\ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5\
      port map (
       D(0) => D(0),
       E(0) => shift_en_reg(0),
-      \G_1PIPE_IFACE.s_daddr_r_reg[1]\ => reg_srl_fff_n_2,
       \G_1PIPE_IFACE.s_daddr_r_reg[3]\ => reg_srl_fff_n_3,
-      \G_1PIPE_IFACE.s_daddr_r_reg[9]\ => reg_srl_fff_n_19,
-      \G_1PIPE_IFACE.s_di_r_reg[15]\ => reg_srl_fff_n_20,
-      Q(6 downto 3) => parallel_dout(14 downto 11),
-      Q(2 downto 1) => parallel_dout(9 downto 8),
-      Q(0) => parallel_dout(6),
+      \G_1PIPE_IFACE.s_daddr_r_reg[9]\ => reg_srl_fff_n_2,
+      \G_1PIPE_IFACE.s_di_r_reg[15]\ => reg_srl_fff_n_19,
+      Q(7) => reg_stream_ffe_n_5,
+      Q(6) => reg_stream_ffe_n_6,
+      Q(5) => reg_stream_ffe_n_7,
+      Q(4) => reg_stream_ffe_n_8,
+      Q(3) => reg_stream_ffe_n_10,
+      Q(2) => reg_stream_ffe_n_11,
+      Q(1) => reg_stream_ffe_n_13,
+      Q(0) => reg_stream_ffe_n_14,
       capture_ctrl_config_serial_output => capture_ctrl_config_serial_output,
-      \parallel_dout_reg[10]_0\ => reg_srl_fff_n_16,
-      \parallel_dout_reg[15]_0\ => reg_srl_fff_n_18,
-      \parallel_dout_reg[1]_0\ => reg_srl_fff_n_11,
-      \parallel_dout_reg[2]_0\ => reg_srl_fff_n_12,
-      \parallel_dout_reg[3]_0\ => reg_srl_fff_n_13,
-      \parallel_dout_reg[4]_0\ => reg_srl_fff_n_14,
-      \parallel_dout_reg[5]_0\ => reg_srl_fff_n_15,
-      \parallel_dout_reg[7]_0\ => reg_srl_fff_n_17,
+      \parallel_dout_reg[11]_0\ => reg_srl_fff_n_12,
+      \parallel_dout_reg[12]_0\ => reg_srl_fff_n_13,
+      \parallel_dout_reg[13]_0\ => reg_srl_fff_n_14,
+      \parallel_dout_reg[14]_0\ => reg_srl_fff_n_15,
+      \parallel_dout_reg[1]_0\ => reg_srl_fff_n_4,
+      \parallel_dout_reg[2]_0\ => reg_srl_fff_n_5,
+      \parallel_dout_reg[3]_0\ => reg_srl_fff_n_6,
+      \parallel_dout_reg[4]_0\ => reg_srl_fff_n_7,
+      \parallel_dout_reg[5]_0\ => reg_srl_fff_n_8,
+      \parallel_dout_reg[6]_0\ => reg_srl_fff_n_9,
+      \parallel_dout_reg[8]_0\ => reg_srl_fff_n_10,
+      \parallel_dout_reg[9]_0\ => reg_srl_fff_n_11,
       s_daddr_o(12 downto 0) => s_daddr(12 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_den_o => s_den,
       s_di_o(15 downto 0) => s_di(15 downto 0),
       s_dwe_o => s_dwe,
+      \slaveRegDo_ff8_reg[15]\ => reg_srl_fff_n_16,
+      \slaveRegDo_ff8_reg[15]_0\ => reg_srl_fff_n_17,
+      \slaveRegDo_ff8_reg[15]_1\ => reg_srl_fff_n_18,
       slaveRegDo_ff9(0) => slaveRegDo_ff9(4),
-      \slaveRegDo_mux_3_reg[0]\ => \slaveRegDo_mux_3[15]_i_5_n_0\,
-      \slaveRegDo_mux_3_reg[0]_0\ => reg_stream_ffd_n_0,
+      \slaveRegDo_mux_3_reg[0]\ => \slaveRegDo_mux_3[0]_i_2_n_0\,
+      \slaveRegDo_mux_3_reg[0]_0\ => reg_stream_ffd_n_3,
       \slaveRegDo_mux_3_reg[10]\ => \slaveRegDo_ff8_reg_n_0_[15]\,
-      \slaveRegDo_mux_3_reg[15]\(3) => \^debug_data_in\(15),
-      \slaveRegDo_mux_3_reg[15]\(2) => \^debug_data_in\(10),
-      \slaveRegDo_mux_3_reg[15]\(1) => \^debug_data_in\(7),
-      \slaveRegDo_mux_3_reg[15]\(0) => \^debug_data_in\(5),
+      \slaveRegDo_mux_3_reg[14]\(7 downto 4) => \^debug_data_in\(14 downto 11),
+      \slaveRegDo_mux_3_reg[14]\(3 downto 2) => \^debug_data_in\(9 downto 8),
+      \slaveRegDo_mux_3_reg[14]\(1 downto 0) => \^debug_data_in\(6 downto 5),
       \slaveRegDo_mux_3_reg[1]\ => \slaveRegDo_mux_3[4]_i_2_n_0\,
-      \slaveRegDo_mux_3_reg[1]_0\ => \slaveRegDo_mux_3[4]_i_3_n_0\,
+      \slaveRegDo_mux_3_reg[1]_0\ => \slaveRegDo_mux_3[14]_i_2_n_0\,
       \slaveRegDo_mux_3_reg[1]_1\ => reg_stream_ffe_n_0,
       \slaveRegDo_mux_3_reg[2]\ => reg_stream_ffe_n_1,
       \slaveRegDo_mux_3_reg[3]\ => reg_stream_ffe_n_2,
       \slaveRegDo_mux_3_reg[4]\ => reg_stream_ffe_n_3,
-      \slaveRegDo_mux_3_reg[5]\ => \slaveRegDo_mux_3[15]_i_4_n_0\,
-      \slaveRegDo_mux_3_reg[5]_0\ => \slaveRegDo_mux_3[15]_i_3_n_0\,
-      \slaveRegDo_mux_3_reg[5]_1\(0) => reg_stream_ffe_n_4
+      \slaveRegDo_mux_3_reg[5]\ => \slaveRegDo_mux_3[15]_i_3_n_0\,
+      \slaveRegDo_mux_3_reg[5]_0\ => \slaveRegDo_mux_3[15]_i_4_n_0\
     );
 reg_stream_ffd: entity work.ila_0_xsdbs_v1_0_2_reg_stream
      port map (
-      Q(0) => reg_stream_ffe_n_5,
+      \G_1PIPE_IFACE.s_daddr_r_reg[0]\ => reg_stream_ffd_n_0,
+      \G_1PIPE_IFACE.s_daddr_r_reg[11]\ => reg_stream_ffd_n_1,
+      \G_1PIPE_IFACE.s_daddr_r_reg[9]\ => reg_stream_ffd_n_2,
+      Q(3) => reg_stream_ffe_n_4,
+      Q(2) => reg_stream_ffe_n_9,
+      Q(1) => reg_stream_ffe_n_12,
+      Q(0) => reg_stream_ffe_n_15,
       s_daddr_o(12 downto 0) => s_daddr(12 downto 0),
       s_dclk_o => \^s_dclk_o\,
       s_den_o => s_den,
       s_di_o(15 downto 0) => s_di(15 downto 0),
       s_dwe_o => s_dwe,
       slaveRegDo_ffa(0) => slaveRegDo_ffa(4),
-      \slaveRegDo_ffa_reg[4]\ => reg_stream_ffd_n_0,
-      \slaveRegDo_mux_3_reg[0]\ => \slaveRegDo_mux_3[15]_i_4_n_0\,
-      \slaveRegDo_mux_3_reg[0]_0\ => \slaveRegDo_mux_3[15]_i_3_n_0\,
-      \slaveRegDo_mux_3_reg[14]\(6 downto 3) => parallel_dout(14 downto 11),
-      \slaveRegDo_mux_3_reg[14]\(2 downto 1) => parallel_dout(9 downto 8),
-      \slaveRegDo_mux_3_reg[14]\(0) => parallel_dout(6),
-      \xsdb_reg_reg[11]\ => reg_stream_ffd_n_20,
-      \xsdb_reg_reg[12]\ => reg_stream_ffd_n_21,
-      \xsdb_reg_reg[13]\ => reg_stream_ffd_n_22,
-      \xsdb_reg_reg[14]\ => reg_stream_ffd_n_23,
+      \slaveRegDo_ffa_reg[4]\ => reg_stream_ffd_n_3,
+      \slaveRegDo_mux_3_reg[0]\ => \slaveRegDo_mux_3[4]_i_5_n_0\,
+      \slaveRegDo_mux_3_reg[0]_0\ => \slaveRegDo_mux_3[4]_i_4_n_0\,
+      \slaveRegDo_mux_3_reg[10]\ => reg_srl_fff_n_16,
+      \slaveRegDo_mux_3_reg[15]\ => \slaveRegDo_mux_3[15]_i_3_n_0\,
+      \slaveRegDo_mux_3_reg[15]_0\ => \slaveRegDo_mux_3[15]_i_4_n_0\,
+      \slaveRegDo_mux_3_reg[15]_1\ => reg_srl_fff_n_18,
+      \slaveRegDo_mux_3_reg[7]\ => reg_srl_fff_n_17,
+      \xsdb_reg_reg[10]\ => reg_stream_ffd_n_21,
       \xsdb_reg_reg[15]\(15 downto 0) => \^debug_data_in\(15 downto 0),
-      \xsdb_reg_reg[6]\ => reg_stream_ffd_n_17,
-      \xsdb_reg_reg[8]\ => reg_stream_ffd_n_18,
-      \xsdb_reg_reg[9]\ => reg_stream_ffd_n_19
+      \xsdb_reg_reg[15]_0\ => reg_stream_ffd_n_22,
+      \xsdb_reg_reg[7]\ => reg_stream_ffd_n_20
     );
 reg_stream_ffe: entity work.\ila_0_xsdbs_v1_0_2_reg_stream__parameterized0\
      port map (
       E(0) => E(0),
-      Q(1) => reg_stream_ffe_n_4,
-      Q(0) => reg_stream_ffe_n_5,
+      Q(11) => reg_stream_ffe_n_4,
+      Q(10) => reg_stream_ffe_n_5,
+      Q(9) => reg_stream_ffe_n_6,
+      Q(8) => reg_stream_ffe_n_7,
+      Q(7) => reg_stream_ffe_n_8,
+      Q(6) => reg_stream_ffe_n_9,
+      Q(5) => reg_stream_ffe_n_10,
+      Q(4) => reg_stream_ffe_n_11,
+      Q(3) => reg_stream_ffe_n_12,
+      Q(2) => reg_stream_ffe_n_13,
+      Q(1) => reg_stream_ffe_n_14,
+      Q(0) => reg_stream_ffe_n_15,
       s_dclk_o => \^s_dclk_o\,
       slaveRegDo_ffa(0) => slaveRegDo_ffa(4),
-      \slaveRegDo_mux_3_reg[4]\ => \slaveRegDo_mux_3[15]_i_3_n_0\,
-      \slaveRegDo_mux_3_reg[4]_0\ => \slaveRegDo_mux_3[15]_i_4_n_0\,
+      \slaveRegDo_mux_3_reg[4]\ => \slaveRegDo_mux_3[4]_i_4_n_0\,
+      \slaveRegDo_mux_3_reg[4]_0\ => \slaveRegDo_mux_3[4]_i_5_n_0\,
       \slaveRegDo_mux_3_reg[4]_1\(3 downto 0) => \^debug_data_in\(4 downto 1),
-      \slaveRegDo_mux_3_reg[4]_2\ => \slaveRegDo_mux_3[15]_i_5_n_0\,
+      \slaveRegDo_mux_3_reg[4]_2\ => \slaveRegDo_mux_3[0]_i_2_n_0\,
+      \xsdb_reg_reg[15]\(15 downto 0) => \xsdb_reg_reg[15]\(15 downto 0),
       \xsdb_reg_reg[1]\ => reg_stream_ffe_n_0,
       \xsdb_reg_reg[2]\ => reg_stream_ffe_n_1,
       \xsdb_reg_reg[3]\ => reg_stream_ffe_n_2,
-      \xsdb_reg_reg[4]\ => reg_stream_ffe_n_3,
-      \xsdb_reg_reg[5]\(5 downto 0) => Q(5 downto 0)
+      \xsdb_reg_reg[4]\ => reg_stream_ffe_n_3
     );
 s_dclk_flag_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -24914,7 +26352,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
     );
 \slaveRegDo_mux[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAFAAAEEAAAAAAAA"
+      INIT => X"00F000CCAAAAAAAA"
     )
         port map (
       I0 => \slaveRegDo_mux[4]_i_2_n_0\,
@@ -24927,15 +26365,15 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
     );
 \slaveRegDo_mux[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000B383B080"
+      INIT => X"CCFFAAF0CC00AAF0"
     )
         port map (
-      I0 => slaveRegDo_mux_3(4),
-      I1 => s_daddr(10),
-      I2 => s_daddr(11),
-      I3 => slaveRegDo_mux_2(4),
-      I4 => slaveRegDo_mux_0(4),
-      I5 => s_daddr(12),
+      I0 => slaveRegDo_mux_1(4),
+      I1 => slaveRegDo_mux_3(4),
+      I2 => slaveRegDo_mux_0(4),
+      I3 => s_daddr(10),
+      I4 => s_daddr(11),
+      I5 => slaveRegDo_mux_2(4),
       O => \slaveRegDo_mux[4]_i_2_n_0\
     );
 \slaveRegDo_mux[5]_i_1\: unisim.vcomponents.LUT6
@@ -25068,211 +26506,75 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
       I5 => s_daddr(12),
       O => \slaveRegDo_mux[9]_i_2_n_0\
     );
-\slaveRegDo_mux_0[10]_i_10\: unisim.vcomponents.LUT2
+\slaveRegDo_mux_0[15]_i_11\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      O => \slaveRegDo_mux_0[10]_i_10_n_0\
-    );
-\slaveRegDo_mux_0[10]_i_11\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      O => \slaveRegDo_mux_0[10]_i_11_n_0\
-    );
-\slaveRegDo_mux_0[10]_i_3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0100"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_01__6\,
-      I1 => s_daddr(8),
-      I2 => s_daddr(9),
-      I3 => \slaveRegDo_mux_0[15]_i_13_n_0\,
-      O => \slaveRegDo_mux_0[10]_i_3_n_0\
-    );
-\slaveRegDo_mux_0[10]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000004E44"
+      INIT => X"F4"
     )
         port map (
       I0 => s_daddr(7),
-      I1 => \slaveRegDo_mux_0[6]_i_11_n_0\,
-      I2 => \slaveRegDo_mux_0[6]_i_12_n_0\,
-      I3 => reg_srl_fff_n_2,
-      I4 => reg_80_n_1,
-      I5 => \slaveRegDo_mux_0[6]_i_10_n_0\,
-      O => \slaveRegDo_mux_0[10]_i_5_n_0\
-    );
-\slaveRegDo_mux_0[10]_i_9\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[15]_i_7_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_6_n_0\,
-      O => \slaveRegDo_mux_0[10]_i_9_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_11\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"44444444000000F0"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[6]_i_12_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_14_n_0\,
-      I2 => \slaveRegDo_mux_0[15]_i_15_n_0\,
-      I3 => s_daddr(5),
-      I4 => s_daddr(6),
-      I5 => s_daddr(0),
+      I1 => s_daddr(4),
+      I2 => s_daddr(5),
       O => \slaveRegDo_mux_0[15]_i_11_n_0\
     );
-\slaveRegDo_mux_0[15]_i_12\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[15]_i_12\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FF10FFFFFF10FF10"
+      INIT => X"0400"
     )
         port map (
-      I0 => s_daddr(0),
-      I1 => reg_80_n_1,
-      I2 => \slaveRegDo_mux_0[15]_i_16_n_0\,
-      I3 => \slaveRegDo_mux_0[15]_i_17_n_0\,
-      I4 => \slaveRegDo_mux_0[15]_i_18_n_0\,
-      I5 => \slaveRegDo_mux_0[15]_i_19_n_0\,
-      O => \slaveRegDo_mux_0[15]_i_12_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0005001500000000"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[15]_i_20_n_0\,
-      I1 => s_daddr(7),
-      I2 => s_daddr(3),
-      I3 => reg_80_n_1,
-      I4 => s_daddr(2),
-      I5 => \slaveRegDo_mux_0[15]_i_21_n_0\,
-      O => \slaveRegDo_mux_0[15]_i_13_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_14\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000076"
-    )
-        port map (
-      I0 => s_daddr(1),
+      I0 => s_daddr(3),
       I1 => s_daddr(2),
-      I2 => s_daddr(7),
-      I3 => s_daddr(5),
-      I4 => s_daddr(6),
-      O => \slaveRegDo_mux_0[15]_i_14_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_15\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"02003EFF"
-    )
-        port map (
-      I0 => s_daddr(1),
-      I1 => s_daddr(3),
-      I2 => s_daddr(4),
-      I3 => s_daddr(2),
-      I4 => s_daddr(7),
-      O => \slaveRegDo_mux_0[15]_i_15_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_16\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0203017C"
-    )
-        port map (
-      I0 => s_daddr(2),
-      I1 => s_daddr(4),
-      I2 => s_daddr(3),
-      I3 => s_daddr(1),
-      I4 => s_daddr(7),
-      O => \slaveRegDo_mux_0[15]_i_16_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_17\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000010"
-    )
-        port map (
-      I0 => s_daddr(4),
-      I1 => s_daddr(3),
       I2 => s_daddr(0),
       I3 => s_daddr(1),
-      I4 => s_daddr(5),
-      I5 => s_daddr(6),
-      O => \slaveRegDo_mux_0[15]_i_17_n_0\
+      O => \slaveRegDo_mux_0[15]_i_12_n_0\
     );
-\slaveRegDo_mux_0[15]_i_18\: unisim.vcomponents.LUT3
+\slaveRegDo_mux_0[15]_i_13\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"C1"
+      INIT => X"40404440"
     )
         port map (
-      I0 => s_daddr(2),
-      I1 => s_daddr(4),
-      I2 => s_daddr(3),
-      O => \slaveRegDo_mux_0[15]_i_18_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_19\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000040"
-    )
-        port map (
-      I0 => s_daddr(7),
-      I1 => s_daddr(0),
-      I2 => s_daddr(1),
-      I3 => s_daddr(5),
-      I4 => s_daddr(6),
-      O => \slaveRegDo_mux_0[15]_i_19_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_20\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"F08F"
-    )
-        port map (
-      I0 => s_daddr(1),
+      I0 => s_daddr(3),
       I1 => s_daddr(2),
-      I2 => s_daddr(7),
+      I2 => s_daddr(5),
       I3 => s_daddr(4),
-      O => \slaveRegDo_mux_0[15]_i_20_n_0\
+      I4 => s_daddr(7),
+      O => \slaveRegDo_mux_0[15]_i_13_n_0\
     );
-\slaveRegDo_mux_0[15]_i_21\: unisim.vcomponents.LUT5
+\slaveRegDo_mux_0[15]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"BFFFFFFB"
+      INIT => X"00020000"
     )
         port map (
-      I0 => s_daddr(2),
+      I0 => \slaveRegDo_mux_0[15]_i_9_n_0\,
       I1 => s_daddr(4),
       I2 => s_daddr(3),
-      I3 => s_daddr(0),
-      I4 => s_daddr(1),
-      O => \slaveRegDo_mux_0[15]_i_21_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"20"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[6]_i_5_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      I2 => \slaveRegDo_mux_0[15]_i_12_n_0\,
+      I3 => s_daddr(5),
+      I4 => s_daddr(7),
       O => \slaveRegDo_mux_0[15]_i_3_n_0\
     );
-\slaveRegDo_mux_0[15]_i_4\: unisim.vcomponents.LUT3
+\slaveRegDo_mux_0[15]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"20"
+      INIT => X"0000000000000001"
     )
         port map (
-      I0 => \slaveRegDo_mux_0[6]_i_5_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      I2 => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      O => \slaveRegDo_mux_0[15]_i_4_n_0\
+      I0 => s_daddr(6),
+      I1 => s_daddr(9),
+      I2 => s_daddr(8),
+      I3 => \slaveRegDo_mux_01__6\,
+      I4 => s_daddr(7),
+      I5 => s_daddr(5),
+      O => \slaveRegDo_mux_0[15]_i_6_n_0\
     );
-\slaveRegDo_mux_0[15]_i_5\: unisim.vcomponents.LUT4
+\slaveRegDo_mux_0[15]_i_8\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"F4"
+    )
+        port map (
+      I0 => s_daddr(3),
+      I1 => s_daddr(2),
+      I2 => s_daddr(4),
+      O => \slaveRegDo_mux_0[15]_i_8_n_0\
+    );
+\slaveRegDo_mux_0[15]_i_9\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0001"
     )
@@ -25280,143 +26582,59 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
       I0 => \slaveRegDo_mux_01__6\,
       I1 => s_daddr(8),
       I2 => s_daddr(9),
-      I3 => \slaveRegDo_mux_0[15]_i_13_n_0\,
-      O => \slaveRegDo_mux_0[15]_i_5_n_0\
+      I3 => s_daddr(6),
+      O => \slaveRegDo_mux_0[15]_i_9_n_0\
     );
-\slaveRegDo_mux_0[15]_i_6\: unisim.vcomponents.LUT3
+\slaveRegDo_mux_0[4]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"02"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[6]_i_10_n_0\,
-      I1 => s_daddr(5),
-      I2 => s_daddr(6),
-      O => \slaveRegDo_mux_0[15]_i_6_n_0\
-    );
-\slaveRegDo_mux_0[15]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000007070000FF00"
-    )
-        port map (
-      I0 => s_daddr(1),
-      I1 => s_daddr(2),
-      I2 => \slaveRegDo_mux_0[6]_i_12_n_0\,
-      I3 => \slaveRegDo_mux_0[6]_i_11_n_0\,
-      I4 => reg_80_n_1,
-      I5 => s_daddr(7),
-      O => \slaveRegDo_mux_0[15]_i_7_n_0\
-    );
-\slaveRegDo_mux_0[2]_i_10\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => s_daddr(8),
-      I1 => s_daddr(9),
-      O => \slaveRegDo_mux_0[2]_i_10_n_0\
-    );
-\slaveRegDo_mux_0[2]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFA8AAA8A8"
+      INIT => X"FFFFFFFFFFFF8A88"
     )
         port map (
       I0 => s_daddr(7),
-      I1 => reg_80_n_1,
-      I2 => \slaveRegDo_mux_0[6]_i_12_n_0\,
-      I3 => \slaveRegDo_mux_0[2]_i_9_n_0\,
-      I4 => s_daddr(2),
-      I5 => \slaveRegDo_mux_0[2]_i_10_n_0\,
+      I1 => \slaveRegDo_mux_0[4]_i_8_n_0\,
+      I2 => \slaveRegDo_mux_0[4]_i_9_n_0\,
+      I3 => s_daddr(2),
+      I4 => s_daddr(9),
+      I5 => s_daddr(8),
       O => \slaveRegDo_mux_01__6\
     );
-\slaveRegDo_mux_0[2]_i_9\: unisim.vcomponents.LUT2
+\slaveRegDo_mux_0[4]_i_8\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => s_daddr(3),
+      I1 => s_daddr(4),
+      I2 => s_daddr(5),
+      I3 => s_daddr(6),
+      O => \slaveRegDo_mux_0[4]_i_8_n_0\
+    );
+\slaveRegDo_mux_0[4]_i_9\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => s_daddr(0),
       I1 => s_daddr(1),
-      O => \slaveRegDo_mux_0[2]_i_9_n_0\
+      O => \slaveRegDo_mux_0[4]_i_9_n_0\
     );
-\slaveRegDo_mux_0[6]_i_10\: unisim.vcomponents.LUT6
+\slaveRegDo_mux_0[9]_i_8\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00033F2903000054"
+      INIT => X"0000AE00"
     )
         port map (
-      I0 => s_daddr(0),
+      I0 => s_daddr(5),
       I1 => s_daddr(4),
-      I2 => s_daddr(3),
-      I3 => s_daddr(1),
-      I4 => s_daddr(7),
-      I5 => s_daddr(2),
-      O => \slaveRegDo_mux_0[6]_i_10_n_0\
-    );
-\slaveRegDo_mux_0[6]_i_11\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"37720004"
-    )
-        port map (
-      I0 => s_daddr(2),
-      I1 => s_daddr(4),
-      I2 => s_daddr(1),
-      I3 => s_daddr(0),
-      I4 => s_daddr(3),
-      O => \slaveRegDo_mux_0[6]_i_11_n_0\
-    );
-\slaveRegDo_mux_0[6]_i_12\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => s_daddr(4),
-      I1 => s_daddr(3),
-      O => \slaveRegDo_mux_0[6]_i_12_n_0\
-    );
-\slaveRegDo_mux_0[6]_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"02"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[10]_i_5_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      I2 => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      O => \slaveRegDo_mux_0[6]_i_3_n_0\
-    );
-\slaveRegDo_mux_0[6]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"080A0002080A080A"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[6]_i_10_n_0\,
-      I1 => s_daddr(7),
-      I2 => reg_80_n_1,
-      I3 => \slaveRegDo_mux_0[6]_i_11_n_0\,
-      I4 => \slaveRegDo_mux_0[6]_i_12_n_0\,
-      I5 => reg_srl_fff_n_2,
-      O => \slaveRegDo_mux_0[6]_i_5_n_0\
-    );
-\slaveRegDo_mux_0[6]_i_9\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      O => \slaveRegDo_mux_0[6]_i_9_n_0\
-    );
-\slaveRegDo_mux_0[9]_i_7\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \slaveRegDo_mux_0[15]_i_11_n_0\,
-      I1 => \slaveRegDo_mux_0[15]_i_12_n_0\,
-      O => \slaveRegDo_mux_0[9]_i_7_n_0\
+      I2 => s_daddr(7),
+      I3 => s_daddr(3),
+      I4 => s_daddr(2),
+      O => \slaveRegDo_mux_0[9]_i_8_n_0\
     );
 \slaveRegDo_mux_0_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_6_n_1,
+      D => reg_9_n_2,
       Q => slaveRegDo_mux_0(0),
       R => '0'
     );
@@ -25424,7 +26642,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_1a_n_0,
+      D => reg_81_n_5,
       Q => slaveRegDo_mux_0(10),
       R => '0'
     );
@@ -25432,7 +26650,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_83_n_4,
+      D => reg_81_n_4,
       Q => slaveRegDo_mux_0(11),
       R => '0'
     );
@@ -25440,7 +26658,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_83_n_3,
+      D => reg_81_n_3,
       Q => slaveRegDo_mux_0(12),
       R => '0'
     );
@@ -25448,7 +26666,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_83_n_2,
+      D => reg_81_n_2,
       Q => slaveRegDo_mux_0(13),
       R => '0'
     );
@@ -25456,7 +26674,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_83_n_1,
+      D => reg_81_n_1,
       Q => slaveRegDo_mux_0(14),
       R => '0'
     );
@@ -25464,7 +26682,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_83_n_0,
+      D => reg_81_n_0,
       Q => slaveRegDo_mux_0(15),
       R => '0'
     );
@@ -25472,7 +26690,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_8_n_0,
+      D => reg_9_n_1,
       Q => slaveRegDo_mux_0(1),
       R => '0'
     );
@@ -25480,7 +26698,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_7_n_0,
+      D => reg_9_n_0,
       Q => slaveRegDo_mux_0(2),
       R => '0'
     );
@@ -25488,7 +26706,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_83_n_6,
+      D => reg_81_n_11,
       Q => slaveRegDo_mux_0(3),
       R => '0'
     );
@@ -25496,7 +26714,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_1a_n_5,
+      D => reg_6_n_1,
       Q => slaveRegDo_mux_0(4),
       R => '0'
     );
@@ -25504,7 +26722,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_1a_n_4,
+      D => reg_81_n_10,
       Q => slaveRegDo_mux_0(5),
       R => '0'
     );
@@ -25512,7 +26730,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_83_n_5,
+      D => reg_81_n_9,
       Q => slaveRegDo_mux_0(6),
       R => '0'
     );
@@ -25520,7 +26738,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_1a_n_3,
+      D => reg_81_n_8,
       Q => slaveRegDo_mux_0(7),
       R => '0'
     );
@@ -25528,7 +26746,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_1a_n_2,
+      D => reg_81_n_7,
       Q => slaveRegDo_mux_0(8),
       R => '0'
     );
@@ -25536,31 +26754,55 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_1a_n_1,
+      D => reg_81_n_6,
       Q => slaveRegDo_mux_0(9),
       R => '0'
     );
-\slaveRegDo_mux_1[0]_i_1\: unisim.vcomponents.LUT4
+\slaveRegDo_mux_1[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00EF"
+      INIT => X"FDFDFDF9"
     )
         port map (
-      I0 => s_daddr(0),
-      I1 => s_daddr(1),
-      I2 => s_daddr(3),
-      I3 => s_daddr(4),
+      I0 => s_daddr(3),
+      I1 => s_daddr(4),
+      I2 => s_daddr(1),
+      I3 => s_daddr(0),
+      I4 => s_daddr(2),
       O => \slaveRegDo_mux_1[0]_i_1_n_0\
     );
 \slaveRegDo_mux_1[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0400"
+      INIT => X"0200"
+    )
+        port map (
+      I0 => s_daddr(2),
+      I1 => s_daddr(0),
+      I2 => s_daddr(4),
+      I3 => s_daddr(3),
+      O => \slaveRegDo_mux_1[1]_i_1_n_0\
+    );
+\slaveRegDo_mux_1[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000100"
+    )
+        port map (
+      I0 => s_daddr(2),
+      I1 => s_daddr(0),
+      I2 => s_daddr(1),
+      I3 => s_daddr(4),
+      I4 => s_daddr(3),
+      O => \slaveRegDo_mux_1[2]_i_1_n_0\
+    );
+\slaveRegDo_mux_1[4]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0040"
     )
         port map (
       I0 => s_daddr(4),
-      I1 => s_daddr(3),
-      I2 => s_daddr(0),
-      I3 => s_daddr(2),
-      O => \slaveRegDo_mux_1[1]_i_1_n_0\
+      I1 => s_daddr(0),
+      I2 => s_daddr(3),
+      I3 => s_daddr(1),
+      O => \slaveRegDo_mux_1[4]_i_1_n_0\
     );
 \slaveRegDo_mux_1_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -25582,8 +26824,16 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => s_daddr(4),
+      D => \slaveRegDo_mux_1[2]_i_1_n_0\,
       Q => slaveRegDo_mux_1(2),
+      R => '0'
+    );
+\slaveRegDo_mux_1_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => \^s_dclk_o\,
+      CE => '1',
+      D => \slaveRegDo_mux_1[4]_i_1_n_0\,
+      Q => slaveRegDo_mux_1(4),
       R => '0'
     );
 \slaveRegDo_mux_2[15]_i_1\: unisim.vcomponents.LUT1
@@ -25591,80 +26841,87 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
       INIT => X"1"
     )
         port map (
-      I0 => \slaveRegDo_mux_2[3]_i_4_n_0\,
+      I0 => \slaveRegDo_mux_2[4]_i_3_n_0\,
       O => \slaveRegDo_mux_2[15]_i_1_n_0\
     );
-\slaveRegDo_mux_2[2]_i_1\: unisim.vcomponents.LUT5
+\slaveRegDo_mux_2[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F8888888"
+      INIT => X"F888"
     )
         port map (
-      I0 => s_daddr(4),
+      I0 => \slaveRegDo_mux_1[2]_i_1_n_0\,
       I1 => slaveRegDo_mux_211_in,
-      I2 => \slaveRegDo_mux_2[2]_i_3_n_0\,
-      I3 => \slaveRegDo_mux_2[2]_i_4_n_0\,
-      I4 => slaveRegDo_890(2),
+      I2 => slaveRegDo_890(2),
+      I3 => \slaveRegDo_mux_2[4]_i_3_n_0\,
       O => \slaveRegDo_mux_2[2]_i_1_n_0\
-    );
-\slaveRegDo_mux_2[2]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000055557577"
-    )
-        port map (
-      I0 => s_daddr(7),
-      I1 => reg_80_n_1,
-      I2 => reg_srl_fff_n_2,
-      I3 => s_daddr(0),
-      I4 => \slaveRegDo_mux_0[6]_i_12_n_0\,
-      I5 => \slaveRegDo_mux_0[2]_i_10_n_0\,
-      O => slaveRegDo_mux_211_in
-    );
-\slaveRegDo_mux_2[2]_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000100"
-    )
-        port map (
-      I0 => s_daddr(3),
-      I1 => s_daddr(1),
-      I2 => s_daddr(0),
-      I3 => s_daddr(4),
-      I4 => s_daddr(2),
-      O => \slaveRegDo_mux_2[2]_i_3_n_0\
-    );
-\slaveRegDo_mux_2[2]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000000EF00000000"
-    )
-        port map (
-      I0 => s_daddr(4),
-      I1 => s_daddr(2),
-      I2 => s_daddr(3),
-      I3 => reg_80_n_1,
-      I4 => \slaveRegDo_mux_0[2]_i_10_n_0\,
-      I5 => s_daddr(7),
-      O => \slaveRegDo_mux_2[2]_i_4_n_0\
     );
 \slaveRegDo_mux_2[3]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
-      I0 => \slaveRegDo_mux_2[2]_i_4_n_0\,
+      I0 => \slaveRegDo_mux_2[3]_i_4_n_0\,
       I1 => slaveRegDo_mux_211_in,
       O => \slaveRegDo_mux_2[3]_i_2_n_0\
     );
 \slaveRegDo_mux_2[3]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000400000000"
+      INIT => X"000000FB00000000"
     )
         port map (
       I0 => s_daddr(2),
-      I1 => s_daddr(4),
-      I2 => s_daddr(0),
-      I3 => s_daddr(1),
-      I4 => s_daddr(3),
-      I5 => \slaveRegDo_mux_2[3]_i_2_n_0\,
+      I1 => s_daddr(3),
+      I2 => s_daddr(4),
+      I3 => reg_80_n_1,
+      I4 => \slaveRegDo_mux_2[4]_i_4_n_0\,
+      I5 => s_daddr(7),
       O => \slaveRegDo_mux_2[3]_i_4_n_0\
+    );
+\slaveRegDo_mux_2[4]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F888"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_1[4]_i_1_n_0\,
+      I1 => slaveRegDo_mux_211_in,
+      I2 => slaveRegDo_890(4),
+      I3 => \slaveRegDo_mux_2[4]_i_3_n_0\,
+      O => \slaveRegDo_mux_2[4]_i_1_n_0\
+    );
+\slaveRegDo_mux_2[4]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000055557FFF"
+    )
+        port map (
+      I0 => s_daddr(7),
+      I1 => s_daddr(0),
+      I2 => s_daddr(1),
+      I3 => s_daddr(2),
+      I4 => \slaveRegDo_mux_0[4]_i_8_n_0\,
+      I5 => \slaveRegDo_mux_2[4]_i_4_n_0\,
+      O => slaveRegDo_mux_211_in
+    );
+\slaveRegDo_mux_2[4]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000020"
+    )
+        port map (
+      I0 => \slaveRegDo_mux_2[3]_i_2_n_0\,
+      I1 => s_daddr(2),
+      I2 => s_daddr(4),
+      I3 => s_daddr(3),
+      I4 => s_daddr(1),
+      I5 => s_daddr(0),
+      O => \slaveRegDo_mux_2[4]_i_3_n_0\
+    );
+\slaveRegDo_mux_2[4]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => s_daddr(8),
+      I1 => s_daddr(9),
+      O => \slaveRegDo_mux_2[4]_i_4_n_0\
     );
 \slaveRegDo_mux_2_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -25750,9 +27007,9 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => slaveRegDo_890(4),
+      D => \slaveRegDo_mux_2[4]_i_1_n_0\,
       Q => slaveRegDo_mux_2(4),
-      R => \slaveRegDo_mux_2[15]_i_1_n_0\
+      R => '0'
     );
 \slaveRegDo_mux_2_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -25794,41 +27051,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
       Q => slaveRegDo_mux_2(9),
       R => \slaveRegDo_mux_2[15]_i_1_n_0\
     );
-\slaveRegDo_mux_3[15]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => s_daddr(8),
-      I1 => s_daddr(9),
-      I2 => s_daddr(6),
-      I3 => s_daddr(4),
-      I4 => s_daddr(7),
-      I5 => s_daddr(5),
-      O => \slaveRegDo_mux_3[15]_i_1_n_0\
-    );
-\slaveRegDo_mux_3[15]_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"6F"
-    )
-        port map (
-      I0 => s_daddr(2),
-      I1 => s_daddr(0),
-      I2 => s_daddr(3),
-      O => \slaveRegDo_mux_3[15]_i_3_n_0\
-    );
-\slaveRegDo_mux_3[15]_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"5090"
-    )
-        port map (
-      I0 => s_daddr(1),
-      I1 => s_daddr(2),
-      I2 => s_daddr(3),
-      I3 => s_daddr(0),
-      O => \slaveRegDo_mux_3[15]_i_4_n_0\
-    );
-\slaveRegDo_mux_3[15]_i_5\: unisim.vcomponents.LUT4
+\slaveRegDo_mux_3[0]_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3FF5"
     )
@@ -25837,7 +27060,53 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
       I1 => s_daddr(0),
       I2 => s_daddr(1),
       I3 => s_daddr(2),
-      O => \slaveRegDo_mux_3[15]_i_5_n_0\
+      O => \slaveRegDo_mux_3[0]_i_2_n_0\
+    );
+\slaveRegDo_mux_3[14]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => s_daddr(1),
+      I1 => s_daddr(3),
+      I2 => s_daddr(0),
+      I3 => s_daddr(2),
+      O => \slaveRegDo_mux_3[14]_i_2_n_0\
+    );
+\slaveRegDo_mux_3[15]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => s_daddr(8),
+      I1 => s_daddr(9),
+      I2 => s_daddr(6),
+      I3 => s_daddr(5),
+      I4 => s_daddr(7),
+      I5 => s_daddr(4),
+      O => \slaveRegDo_mux_3[15]_i_1_n_0\
+    );
+\slaveRegDo_mux_3[15]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"4000"
+    )
+        port map (
+      I0 => s_daddr(1),
+      I1 => s_daddr(3),
+      I2 => s_daddr(0),
+      I3 => s_daddr(2),
+      O => \slaveRegDo_mux_3[15]_i_3_n_0\
+    );
+\slaveRegDo_mux_3[15]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0800"
+    )
+        port map (
+      I0 => s_daddr(1),
+      I1 => s_daddr(3),
+      I2 => s_daddr(0),
+      I3 => s_daddr(2),
+      O => \slaveRegDo_mux_3[15]_i_4_n_0\
     );
 \slaveRegDo_mux_3[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -25852,16 +27121,26 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
       I5 => slaveRegDo_ff9(4),
       O => \slaveRegDo_mux_3[4]_i_2_n_0\
     );
-\slaveRegDo_mux_3[4]_i_3\: unisim.vcomponents.LUT4
+\slaveRegDo_mux_3[4]_i_4\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8000"
+      INIT => X"6F"
     )
         port map (
-      I0 => s_daddr(1),
-      I1 => s_daddr(3),
+      I0 => s_daddr(2),
+      I1 => s_daddr(0),
+      I2 => s_daddr(3),
+      O => \slaveRegDo_mux_3[4]_i_4_n_0\
+    );
+\slaveRegDo_mux_3[4]_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2822"
+    )
+        port map (
+      I0 => s_daddr(3),
+      I1 => s_daddr(1),
       I2 => s_daddr(0),
       I3 => s_daddr(2),
-      O => \slaveRegDo_mux_3[4]_i_3_n_0\
+      O => \slaveRegDo_mux_3[4]_i_5_n_0\
     );
 \slaveRegDo_mux_3_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -25875,7 +27154,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_16,
+      D => reg_stream_ffd_n_21,
       Q => slaveRegDo_mux_3(10),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25883,7 +27162,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_stream_ffd_n_20,
+      D => reg_srl_fff_n_12,
       Q => slaveRegDo_mux_3(11),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25891,7 +27170,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_stream_ffd_n_21,
+      D => reg_srl_fff_n_13,
       Q => slaveRegDo_mux_3(12),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25899,7 +27178,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_stream_ffd_n_22,
+      D => reg_srl_fff_n_14,
       Q => slaveRegDo_mux_3(13),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25907,7 +27186,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_stream_ffd_n_23,
+      D => reg_srl_fff_n_15,
       Q => slaveRegDo_mux_3(14),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25915,7 +27194,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_18,
+      D => reg_stream_ffd_n_22,
       Q => slaveRegDo_mux_3(15),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25923,7 +27202,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_11,
+      D => reg_srl_fff_n_4,
       Q => slaveRegDo_mux_3(1),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25931,7 +27210,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_12,
+      D => reg_srl_fff_n_5,
       Q => slaveRegDo_mux_3(2),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25939,7 +27218,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_13,
+      D => reg_srl_fff_n_6,
       Q => slaveRegDo_mux_3(3),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25947,7 +27226,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_14,
+      D => reg_srl_fff_n_7,
       Q => slaveRegDo_mux_3(4),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25955,7 +27234,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_15,
+      D => reg_srl_fff_n_8,
       Q => slaveRegDo_mux_3(5),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25963,7 +27242,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_stream_ffd_n_17,
+      D => reg_srl_fff_n_9,
       Q => slaveRegDo_mux_3(6),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25971,7 +27250,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_srl_fff_n_17,
+      D => reg_stream_ffd_n_20,
       Q => slaveRegDo_mux_3(7),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25979,7 +27258,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_stream_ffd_n_18,
+      D => reg_srl_fff_n_10,
       Q => slaveRegDo_mux_3(8),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -25987,7 +27266,7 @@ s_dclk_flag_sync2_reg: unisim.vcomponents.FDRE
      port map (
       C => \^s_dclk_o\,
       CE => '1',
-      D => reg_stream_ffd_n_19,
+      D => reg_srl_fff_n_11,
       Q => slaveRegDo_mux_3(9),
       R => \slaveRegDo_mux_3[15]_i_1_n_0\
     );
@@ -26448,7 +27727,7 @@ end ila_0_ltlib_v1_0_0_allx_typeA;
 architecture STRUCTURE of ila_0_ltlib_v1_0_0_allx_typeA is
   signal all_dly2 : STD_LOGIC_VECTOR ( 4 downto 0 );
 begin
-DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_16
+DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_14
      port map (
       D(4 downto 0) => D(4 downto 0),
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\(0) => Q(0),
@@ -26514,7 +27793,8 @@ entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0\ is
     s_dclk_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \probeDelay1_reg[0]_0\ : in STD_LOGIC;
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0\ : entity is "ltlib_v1_0_0_allx_typeA";
@@ -26548,16 +27828,16 @@ DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA
      port map (
       C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       CE => '1',
-      D => probe_data(0),
+      D => probe4(0),
       Q => all_dly1(0),
-      R => '0'
+      R => \probeDelay1_reg[0]_0\
     );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_10\ is
+entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_11\ is
   port (
     \out\ : out STD_LOGIC;
     mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -26569,66 +27849,14 @@ entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_10\ is
     probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_10\ : entity is "ltlib_v1_0_0_allx_typeA";
-end \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_10\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_11\ : entity is "ltlib_v1_0_0_allx_typeA";
+end \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_11\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_10\ is
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_11\ is
   signal all_dly1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal all_dly2 : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
-DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_11
-     port map (
-      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      Q(0) => Q(0),
-      all_dly1(0) => all_dly1(0),
-      all_dly2(0) => all_dly2(0),
-      mu_config_cs_serial_input(0) => mu_config_cs_serial_input(0),
-      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
-      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
-      \out\ => \out\,
-      s_dclk_o => s_dclk_o
-    );
-\i_use_input_reg_eq1.probeDelay2_reg[0]\: unisim.vcomponents.FDRE
-     port map (
-      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      CE => '1',
-      D => all_dly1(0),
-      Q => all_dly2(0),
-      R => '0'
-    );
-\probeDelay1_reg[0]\: unisim.vcomponents.FDRE
-     port map (
-      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      CE => '1',
-      D => probe_data(0),
-      Q => all_dly1(0),
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_13\ is
-  port (
-    \out\ : out STD_LOGIC;
-    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_dclk_o : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_13\ : entity is "ltlib_v1_0_0_allx_typeA";
-end \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_13\;
-
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_13\ is
-  signal all_dly1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal all_dly2 : STD_LOGIC_VECTOR ( 0 to 0 );
-begin
-DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_14
+DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_12
      port map (
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       Q(0) => Q(0),
@@ -26670,7 +27898,8 @@ entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_4\ is
     s_dclk_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \probeDelay1_reg[0]_0\ : in STD_LOGIC;
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_4\ : entity is "ltlib_v1_0_0_allx_typeA";
@@ -26704,16 +27933,16 @@ DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_5
      port map (
       C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       CE => '1',
-      D => probe_data(0),
+      D => probe2(0),
       Q => all_dly1(0),
-      R => '0'
+      R => \probeDelay1_reg[0]_0\
     );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_7\ is
+entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1\ is
   port (
     \out\ : out STD_LOGIC;
     mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -26722,22 +27951,21 @@ entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_7\ is
     s_dclk_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \probeDelay1_reg[0]_0\ : in STD_LOGIC;
+    probe3 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_7\ : entity is "ltlib_v1_0_0_allx_typeA";
-end \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_7\;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1\ : entity is "ltlib_v1_0_0_allx_typeA";
+end \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1\;
 
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_7\ is
-  signal all_dly1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal all_dly2 : STD_LOGIC_VECTOR ( 0 to 0 );
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1\ is
+  signal all_in : STD_LOGIC_VECTOR ( 31 downto 0 );
 begin
-DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_8
+DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized0\
      port map (
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       Q(0) => Q(0),
-      all_dly1(0) => all_dly1(0),
-      all_dly2(0) => all_dly2(0),
+      all_in(31 downto 0) => all_in(31 downto 0),
       mu_config_cs_serial_input(0) => mu_config_cs_serial_input(0),
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
@@ -26748,8 +27976,420 @@ DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_8
      port map (
       C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       CE => '1',
-      D => all_dly1(0),
-      Q => all_dly2(0),
+      D => all_in(0),
+      Q => all_in(1),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(20),
+      Q => all_in(21),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(22),
+      Q => all_in(23),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(24),
+      Q => all_in(25),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(26),
+      Q => all_in(27),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(28),
+      Q => all_in(29),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(30),
+      Q => all_in(31),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(2),
+      Q => all_in(3),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(4),
+      Q => all_in(5),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(6),
+      Q => all_in(7),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(8),
+      Q => all_in(9),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(10),
+      Q => all_in(11),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(12),
+      Q => all_in(13),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(14),
+      Q => all_in(15),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(16),
+      Q => all_in(17),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(18),
+      Q => all_in(19),
+      R => '0'
+    );
+\probeDelay1_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(0),
+      Q => all_in(0),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(10),
+      Q => all_in(20),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(11),
+      Q => all_in(22),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(12),
+      Q => all_in(24),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(13),
+      Q => all_in(26),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(14),
+      Q => all_in(28),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(15),
+      Q => all_in(30),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(1),
+      Q => all_in(2),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(2),
+      Q => all_in(4),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(3),
+      Q => all_in(6),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(4),
+      Q => all_in(8),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(5),
+      Q => all_in(10),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(6),
+      Q => all_in(12),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(7),
+      Q => all_in(14),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(8),
+      Q => all_in(16),
+      R => \probeDelay1_reg[0]_0\
+    );
+\probeDelay1_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe3(9),
+      Q => all_in(18),
+      R => \probeDelay1_reg[0]_0\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1_7\ is
+  port (
+    \out\ : out STD_LOGIC;
+    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
+    probe_data : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    \probeDelay1_reg[15]_0\ : in STD_LOGIC;
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1_7\ : entity is "ltlib_v1_0_0_allx_typeA";
+end \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1_7\;
+
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_allx_typeA__parameterized1_7\ is
+  signal all_in : STD_LOGIC_VECTOR ( 31 downto 0 );
+begin
+DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized0_8\
+     port map (
+      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      Q(0) => Q(0),
+      all_in(31 downto 0) => all_in(31 downto 0),
+      mu_config_cs_serial_input(0) => mu_config_cs_serial_input(0),
+      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
+      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
+      \out\ => \out\,
+      s_dclk_o => s_dclk_o
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(0),
+      Q => all_in(1),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(20),
+      Q => all_in(21),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(22),
+      Q => all_in(23),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(24),
+      Q => all_in(25),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(26),
+      Q => all_in(27),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(28),
+      Q => all_in(29),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(30),
+      Q => all_in(31),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(2),
+      Q => all_in(3),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(4),
+      Q => all_in(5),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(6),
+      Q => all_in(7),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(8),
+      Q => all_in(9),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(10),
+      Q => all_in(11),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(12),
+      Q => all_in(13),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(14),
+      Q => all_in(15),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(16),
+      Q => all_in(17),
+      R => '0'
+    );
+\i_use_input_reg_eq1.probeDelay2_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => all_in(18),
+      Q => all_in(19),
       R => '0'
     );
 \probeDelay1_reg[0]\: unisim.vcomponents.FDRE
@@ -26757,7 +28397,127 @@ DUT: entity work.ila_0_ltlib_v1_0_0_all_typeA_8
       C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       CE => '1',
       D => probe_data(0),
-      Q => all_dly1(0),
+      Q => all_in(0),
+      R => '0'
+    );
+\probeDelay1_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(10),
+      Q => all_in(20),
+      R => '0'
+    );
+\probeDelay1_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(11),
+      Q => all_in(22),
+      R => '0'
+    );
+\probeDelay1_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(12),
+      Q => all_in(24),
+      R => '0'
+    );
+\probeDelay1_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(13),
+      Q => all_in(26),
+      R => '0'
+    );
+\probeDelay1_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(14),
+      Q => all_in(28),
+      R => '0'
+    );
+\probeDelay1_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe1(0),
+      Q => all_in(30),
+      R => \probeDelay1_reg[15]_0\
+    );
+\probeDelay1_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(1),
+      Q => all_in(2),
+      R => '0'
+    );
+\probeDelay1_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(2),
+      Q => all_in(4),
+      R => '0'
+    );
+\probeDelay1_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(3),
+      Q => all_in(6),
+      R => '0'
+    );
+\probeDelay1_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(4),
+      Q => all_in(8),
+      R => '0'
+    );
+\probeDelay1_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(5),
+      Q => all_in(10),
+      R => '0'
+    );
+\probeDelay1_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(6),
+      Q => all_in(12),
+      R => '0'
+    );
+\probeDelay1_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(7),
+      Q => all_in(14),
+      R => '0'
+    );
+\probeDelay1_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(8),
+      Q => all_in(16),
+      R => '0'
+    );
+\probeDelay1_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => probe_data(9),
+      Q => all_in(18),
       R => '0'
     );
 end STRUCTURE;
@@ -26784,7 +28544,7 @@ architecture STRUCTURE of ila_0_ltlib_v1_0_0_allx_typeA_nodelay is
   signal \^probedelay1_reg[9]_0\ : STD_LOGIC_VECTOR ( 9 downto 0 );
 begin
   \probeDelay1_reg[9]_0\(9 downto 0) <= \^probedelay1_reg[9]_0\(9 downto 0);
-DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized0\
+DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized1\
      port map (
       E(0) => E(0),
       PROBES_I(19) => \^probedelay1_reg[9]_0\(9),
@@ -26897,7 +28657,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_allx_typeA_nodelay_42 is
+entity ila_0_ltlib_v1_0_0_allx_typeA_nodelay_40 is
   port (
     shift_en_reg : out STD_LOGIC;
     shift_en_reg_0 : out STD_LOGIC;
@@ -26907,12 +28667,12 @@ entity ila_0_ltlib_v1_0_0_allx_typeA_nodelay_42 is
     SRL_D_I : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_42 : entity is "ltlib_v1_0_0_allx_typeA_nodelay";
-end ila_0_ltlib_v1_0_0_allx_typeA_nodelay_42;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_40 : entity is "ltlib_v1_0_0_allx_typeA_nodelay";
+end ila_0_ltlib_v1_0_0_allx_typeA_nodelay_40;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_42 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_40 is
 begin
-DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized0_43\
+DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized1_41\
      port map (
       E(0) => E(0),
       PROBES_I(19 downto 0) => PROBES_I(19 downto 0),
@@ -26926,7 +28686,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_allx_typeA_nodelay_50 is
+entity ila_0_ltlib_v1_0_0_allx_typeA_nodelay_48 is
   port (
     DOUT_O : out STD_LOGIC;
     SRL_Q_O : out STD_LOGIC;
@@ -26937,13 +28697,13 @@ entity ila_0_ltlib_v1_0_0_allx_typeA_nodelay_50 is
     \probeDelay1_reg[9]_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_50 : entity is "ltlib_v1_0_0_allx_typeA_nodelay";
-end ila_0_ltlib_v1_0_0_allx_typeA_nodelay_50;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_48 : entity is "ltlib_v1_0_0_allx_typeA_nodelay";
+end ila_0_ltlib_v1_0_0_allx_typeA_nodelay_48;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_50 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_allx_typeA_nodelay_48 is
   signal all_dly2 : STD_LOGIC_VECTOR ( 9 downto 0 );
 begin
-DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized0_51\
+DUT: entity work.\ila_0_ltlib_v1_0_0_all_typeA__parameterized1_49\
      port map (
       DOUT_O => DOUT_O,
       PROBES_I(19) => all_dly2(9),
@@ -27058,14 +28818,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_top is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : in STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
     s_dclk_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    DIADI : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    DIPADIP : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_top : entity is "blk_mem_gen_v8_4_3_blk_mem_gen_top";
@@ -27075,11 +28836,12 @@ architecture STRUCTURE of ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_top is
 begin
 \valid.cstr\: entity work.ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_generic_cstr
      port map (
-      D(5 downto 0) => D(5 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0),
-      DIADI(5 downto 0) => DIADI(5 downto 0),
+      D(35 downto 0) => D(35 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0),
+      DIADI(31 downto 0) => DIADI(31 downto 0),
+      DIPADIP(3 downto 0) => DIPADIP(3 downto 0),
       Q(9 downto 0) => Q(9 downto 0),
       \out\ => \out\,
       s_dclk_o => s_dclk_o
@@ -27173,7 +28935,7 @@ architecture STRUCTURE of \ila_0_ltlib_v1_0_0_match__parameterized0\ is
   attribute KEEP of \yes_output_reg.dout_reg_reg\ : label is "yes";
 begin
   D(0) <= \yes_output_reg.dout_reg\;
-\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_13\
+\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_11\
      port map (
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       Q(0) => Q(0),
@@ -27206,7 +28968,8 @@ entity \ila_0_ltlib_v1_0_0_match__parameterized0_0\ is
     s_dclk_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \out\ : in STD_LOGIC;
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_match__parameterized0_0\ : entity is "ltlib_v1_0_0_match";
@@ -27223,7 +28986,7 @@ architecture STRUCTURE of \ila_0_ltlib_v1_0_0_match__parameterized0_0\ is
   attribute KEEP of \yes_output_reg.dout_reg_reg\ : label is "yes";
 begin
   D(0) <= \yes_output_reg.dout_reg\;
-\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_10\
+\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_4\
      port map (
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       Q(0) => Q(0),
@@ -27231,57 +28994,8 @@ begin
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
       \out\ => match_dout,
-      probe_data(0) => probe_data(0),
-      s_dclk_o => s_dclk_o
-    );
-\yes_output_reg.dout_reg_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      CE => '1',
-      D => match_dout,
-      Q => \yes_output_reg.dout_reg\,
-      R => Q(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_match__parameterized0_1\ is
-  port (
-    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_dclk_o : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_match__parameterized0_1\ : entity is "ltlib_v1_0_0_match";
-end \ila_0_ltlib_v1_0_0_match__parameterized0_1\;
-
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_match__parameterized0_1\ is
-  signal match_dout : STD_LOGIC;
-  signal \yes_output_reg.dout_reg\ : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of \yes_output_reg.dout_reg\ : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \yes_output_reg.dout_reg_reg\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \yes_output_reg.dout_reg_reg\ : label is "yes";
-begin
-  D(0) <= \yes_output_reg.dout_reg\;
-\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_7\
-     port map (
-      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      Q(0) => Q(0),
-      mu_config_cs_serial_input(0) => mu_config_cs_serial_input(0),
-      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
-      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
-      \out\ => match_dout,
-      probe_data(0) => probe_data(0),
+      probe2(0) => probe2(0),
+      \probeDelay1_reg[0]_0\ => \out\,
       s_dclk_o => s_dclk_o
     );
 \yes_output_reg.dout_reg_reg\: unisim.vcomponents.FDRE
@@ -27306,63 +29020,14 @@ entity \ila_0_ltlib_v1_0_0_match__parameterized0_2\ is
     s_dclk_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \out\ : in STD_LOGIC;
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_match__parameterized0_2\ : entity is "ltlib_v1_0_0_match";
 end \ila_0_ltlib_v1_0_0_match__parameterized0_2\;
 
 architecture STRUCTURE of \ila_0_ltlib_v1_0_0_match__parameterized0_2\ is
-  signal match_dout : STD_LOGIC;
-  signal \yes_output_reg.dout_reg\ : STD_LOGIC;
-  attribute async_reg : string;
-  attribute async_reg of \yes_output_reg.dout_reg\ : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \yes_output_reg.dout_reg_reg\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \yes_output_reg.dout_reg_reg\ : label is "yes";
-begin
-  D(0) <= \yes_output_reg.dout_reg\;
-\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_4\
-     port map (
-      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      Q(0) => Q(0),
-      mu_config_cs_serial_input(0) => mu_config_cs_serial_input(0),
-      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
-      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
-      \out\ => match_dout,
-      probe_data(0) => probe_data(0),
-      s_dclk_o => s_dclk_o
-    );
-\yes_output_reg.dout_reg_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      CE => '1',
-      D => match_dout,
-      Q => \yes_output_reg.dout_reg\,
-      R => Q(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \ila_0_ltlib_v1_0_0_match__parameterized0_3\ is
-  port (
-    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_dclk_o : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_match__parameterized0_3\ : entity is "ltlib_v1_0_0_match";
-end \ila_0_ltlib_v1_0_0_match__parameterized0_3\;
-
-architecture STRUCTURE of \ila_0_ltlib_v1_0_0_match__parameterized0_3\ is
   signal match_dout : STD_LOGIC;
   signal \yes_output_reg.dout_reg\ : STD_LOGIC;
   attribute async_reg : string;
@@ -27381,7 +29046,114 @@ begin
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
       \out\ => match_dout,
-      probe_data(0) => probe_data(0),
+      probe4(0) => probe4(0),
+      \probeDelay1_reg[0]_0\ => \out\,
+      s_dclk_o => s_dclk_o
+    );
+\yes_output_reg.dout_reg_reg\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => match_dout,
+      Q => \yes_output_reg.dout_reg\,
+      R => Q(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_ltlib_v1_0_0_match__parameterized1\ is
+  port (
+    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
+    probe_data : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    \out\ : in STD_LOGIC;
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_match__parameterized1\ : entity is "ltlib_v1_0_0_match";
+end \ila_0_ltlib_v1_0_0_match__parameterized1\;
+
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_match__parameterized1\ is
+  signal match_dout : STD_LOGIC;
+  signal \yes_output_reg.dout_reg\ : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of \yes_output_reg.dout_reg\ : signal is "true";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of \yes_output_reg.dout_reg_reg\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \yes_output_reg.dout_reg_reg\ : label is "yes";
+begin
+  D(0) <= \yes_output_reg.dout_reg\;
+\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized1_7\
+     port map (
+      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      Q(0) => Q(0),
+      mu_config_cs_serial_input(0) => mu_config_cs_serial_input(0),
+      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
+      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
+      \out\ => match_dout,
+      probe1(0) => probe1(0),
+      \probeDelay1_reg[15]_0\ => \out\,
+      probe_data(14 downto 0) => probe_data(14 downto 0),
+      s_dclk_o => s_dclk_o
+    );
+\yes_output_reg.dout_reg_reg\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => match_dout,
+      Q => \yes_output_reg.dout_reg\,
+      R => Q(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \ila_0_ltlib_v1_0_0_match__parameterized1_1\ is
+  port (
+    mu_config_cs_serial_input : out STD_LOGIC_VECTOR ( 0 to 0 );
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_serial_output : in STD_LOGIC_VECTOR ( 0 to 0 );
+    mu_config_cs_shift_en : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_dclk_o : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
+    \out\ : in STD_LOGIC;
+    probe3 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \ila_0_ltlib_v1_0_0_match__parameterized1_1\ : entity is "ltlib_v1_0_0_match";
+end \ila_0_ltlib_v1_0_0_match__parameterized1_1\;
+
+architecture STRUCTURE of \ila_0_ltlib_v1_0_0_match__parameterized1_1\ is
+  signal match_dout : STD_LOGIC;
+  signal \yes_output_reg.dout_reg\ : STD_LOGIC;
+  attribute async_reg : string;
+  attribute async_reg of \yes_output_reg.dout_reg\ : signal is "true";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of \yes_output_reg.dout_reg_reg\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \yes_output_reg.dout_reg_reg\ : label is "yes";
+begin
+  D(0) <= \yes_output_reg.dout_reg\;
+\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.\ila_0_ltlib_v1_0_0_allx_typeA__parameterized1\
+     port map (
+      \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      Q(0) => Q(0),
+      mu_config_cs_serial_input(0) => mu_config_cs_serial_input(0),
+      mu_config_cs_serial_output(0) => mu_config_cs_serial_output(0),
+      mu_config_cs_shift_en(0) => mu_config_cs_shift_en(0),
+      \out\ => match_dout,
+      probe3(15 downto 0) => probe3(15 downto 0),
+      \probeDelay1_reg[0]_0\ => \out\,
       s_dclk_o => s_dclk_o
     );
 \yes_output_reg.dout_reg_reg\: unisim.vcomponents.FDRE
@@ -27412,7 +29184,7 @@ end ila_0_ltlib_v1_0_0_match_nodelay;
 
 architecture STRUCTURE of ila_0_ltlib_v1_0_0_match_nodelay is
 begin
-\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.ila_0_ltlib_v1_0_0_allx_typeA_nodelay_42
+\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.ila_0_ltlib_v1_0_0_allx_typeA_nodelay_40
      port map (
       E(0) => E(0),
       PROBES_I(19 downto 0) => PROBES_I(19 downto 0),
@@ -27426,7 +29198,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_match_nodelay_41 is
+entity ila_0_ltlib_v1_0_0_match_nodelay_39 is
   port (
     \probeDelay1_reg[9]\ : out STD_LOGIC_VECTOR ( 9 downto 0 );
     shift_en_reg : out STD_LOGIC;
@@ -27438,10 +29210,10 @@ entity ila_0_ltlib_v1_0_0_match_nodelay_41 is
     \probeDelay1_reg[0]\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_match_nodelay_41 : entity is "ltlib_v1_0_0_match_nodelay";
-end ila_0_ltlib_v1_0_0_match_nodelay_41;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_match_nodelay_39 : entity is "ltlib_v1_0_0_match_nodelay";
+end ila_0_ltlib_v1_0_0_match_nodelay_39;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_match_nodelay_41 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_match_nodelay_39 is
 begin
 \allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.ila_0_ltlib_v1_0_0_allx_typeA_nodelay
      port map (
@@ -27459,7 +29231,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ila_0_ltlib_v1_0_0_match_nodelay_49 is
+entity ila_0_ltlib_v1_0_0_match_nodelay_47 is
   port (
     DOUT_O : out STD_LOGIC;
     SRL_Q_O : out STD_LOGIC;
@@ -27470,12 +29242,12 @@ entity ila_0_ltlib_v1_0_0_match_nodelay_49 is
     \probeDelay1_reg[9]\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_match_nodelay_49 : entity is "ltlib_v1_0_0_match_nodelay";
-end ila_0_ltlib_v1_0_0_match_nodelay_49;
+  attribute ORIG_REF_NAME of ila_0_ltlib_v1_0_0_match_nodelay_47 : entity is "ltlib_v1_0_0_match_nodelay";
+end ila_0_ltlib_v1_0_0_match_nodelay_47;
 
-architecture STRUCTURE of ila_0_ltlib_v1_0_0_match_nodelay_49 is
+architecture STRUCTURE of ila_0_ltlib_v1_0_0_match_nodelay_47 is
 begin
-\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.ila_0_ltlib_v1_0_0_allx_typeA_nodelay_50
+\allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst\: entity work.ila_0_ltlib_v1_0_0_allx_typeA_nodelay_48
      port map (
       DOUT_O => DOUT_O,
       Q(9 downto 0) => Q(9 downto 0),
@@ -27492,14 +29264,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_blk_mem_gen_v8_4_3_synth is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : in STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
     s_dclk_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    DIADI : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    DIPADIP : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_blk_mem_gen_v8_4_3_synth : entity is "blk_mem_gen_v8_4_3_synth";
@@ -27509,11 +29282,12 @@ architecture STRUCTURE of ila_0_blk_mem_gen_v8_4_3_synth is
 begin
 \gnbram.gnativebmg.native_blk_mem_gen\: entity work.ila_0_blk_mem_gen_v8_4_3_blk_mem_gen_top
      port map (
-      D(5 downto 0) => D(5 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0),
-      DIADI(5 downto 0) => DIADI(5 downto 0),
+      D(35 downto 0) => D(35 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0),
+      DIADI(31 downto 0) => DIADI(31 downto 0),
+      DIPADIP(3 downto 0) => DIPADIP(3 downto 0),
       Q(9 downto 0) => Q(9 downto 0),
       \out\ => \out\,
       s_dclk_o => s_dclk_o
@@ -27577,7 +29351,7 @@ begin
   E(0) <= \^e\(0);
   \capture_qual_ctrl_reg[0]\(1 downto 0) <= \^capture_qual_ctrl_reg[0]\(1 downto 0);
   u_scnt_cmp_q_0(0) <= \^u_scnt_cmp_q_0\(0);
-U_SCE: entity work.ila_0_ltlib_v1_0_0_cfglut4_46
+U_SCE: entity work.ila_0_ltlib_v1_0_0_cfglut4_44
      port map (
       A(3 downto 2) => \^capture_qual_ctrl_reg[0]\(1 downto 0),
       A(1 downto 0) => A(1 downto 0),
@@ -27587,7 +29361,7 @@ U_SCE: entity work.ila_0_ltlib_v1_0_0_cfglut4_46
       \iscnt_reg[9]\(0) => u_scnt_cmp_q_1(0),
       s_dclk_o => s_dclk_o
     );
-U_SCMPCE: entity work.ila_0_ltlib_v1_0_0_cfglut5_47
+U_SCMPCE: entity work.ila_0_ltlib_v1_0_0_cfglut5_45
      port map (
       A(4) => \^u_scnt_cmp_q_0\(0),
       A(3 downto 2) => \^capture_qual_ctrl_reg[0]\(1 downto 0),
@@ -27598,7 +29372,7 @@ U_SCMPCE: entity work.ila_0_ltlib_v1_0_0_cfglut5_47
       scnt_cmp_ce => scnt_cmp_ce,
       u_scnt_cmp_q(0) => u_scnt_cmp_q_1(0)
     );
-U_SCRST: entity work.ila_0_ltlib_v1_0_0_cfglut6_48
+U_SCRST: entity work.ila_0_ltlib_v1_0_0_cfglut6_46
      port map (
       A(2 downto 0) => A(2 downto 0),
       SR(0) => U_SCRST_n_3,
@@ -27910,7 +29684,7 @@ U_SCRST: entity work.ila_0_ltlib_v1_0_0_cfglut6_48
       Q => scnt(9),
       R => U_SCRST_n_3
     );
-u_scnt_cmp: entity work.ila_0_ltlib_v1_0_0_match_nodelay_49
+u_scnt_cmp: entity work.ila_0_ltlib_v1_0_0_match_nodelay_47
      port map (
       DOUT_O => DOUT_O,
       Q(9 downto 0) => scnt(9 downto 0),
@@ -28010,7 +29784,7 @@ U_WHCMPCE: entity work.ila_0_ltlib_v1_0_0_cfglut5
       s_dclk_o => s_dclk_o,
       wcnt_hcmp_ce => wcnt_hcmp_ce
     );
-U_WLCMPCE: entity work.ila_0_ltlib_v1_0_0_cfglut5_40
+U_WLCMPCE: entity work.ila_0_ltlib_v1_0_0_cfglut5_38
      port map (
       A(4) => \^u_wcnt_lcmp_q_0\(0),
       A(3 downto 0) => A(3 downto 0),
@@ -28260,7 +30034,7 @@ u_wcnt_hcmp_q: unisim.vcomponents.FDRE
       Q => \^wcnt_hcmp\,
       R => cmp_reset
     );
-u_wcnt_lcmp: entity work.ila_0_ltlib_v1_0_0_match_nodelay_41
+u_wcnt_lcmp: entity work.ila_0_ltlib_v1_0_0_match_nodelay_39
      port map (
       E(0) => E(0),
       Q(9 downto 0) => \^q\(9 downto 0),
@@ -28299,7 +30073,12 @@ entity ila_0_ila_v6_2_9_ila_trig_match is
     s_dclk_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 4 downto 0 )
+    probe_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \out\ : in STD_LOGIC;
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_ila_v6_2_9_ila_trig_match : entity is "ila_v6_2_9_ila_trig_match";
@@ -28318,7 +30097,7 @@ begin
       probe_data(0) => probe_data(0),
       s_dclk_o => s_dclk_o
     );
-\N_DDR_MODE.G_NMU[1].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized0_0\
+\N_DDR_MODE.G_NMU[1].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized1\
      port map (
       D(0) => D(1),
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
@@ -28326,10 +30105,12 @@ begin
       mu_config_cs_serial_input(0) => mu_config_cs_serial_input(1),
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(1),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(1),
-      probe_data(0) => probe_data(1),
+      \out\ => \out\,
+      probe1(0) => probe1(0),
+      probe_data(14 downto 0) => probe_data(15 downto 1),
       s_dclk_o => s_dclk_o
     );
-\N_DDR_MODE.G_NMU[2].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized0_1\
+\N_DDR_MODE.G_NMU[2].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized0_0\
      port map (
       D(0) => D(2),
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
@@ -28337,10 +30118,11 @@ begin
       mu_config_cs_serial_input(0) => mu_config_cs_serial_input(2),
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(2),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(2),
-      probe_data(0) => probe_data(2),
+      \out\ => \out\,
+      probe2(0) => probe2(0),
       s_dclk_o => s_dclk_o
     );
-\N_DDR_MODE.G_NMU[3].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized0_2\
+\N_DDR_MODE.G_NMU[3].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized1_1\
      port map (
       D(0) => D(3),
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
@@ -28348,10 +30130,11 @@ begin
       mu_config_cs_serial_input(0) => mu_config_cs_serial_input(3),
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(3),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(3),
-      probe_data(0) => probe_data(3),
+      \out\ => \out\,
+      probe3(15 downto 0) => probe3(15 downto 0),
       s_dclk_o => s_dclk_o
     );
-\N_DDR_MODE.G_NMU[4].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized0_3\
+\N_DDR_MODE.G_NMU[4].U_M\: entity work.\ila_0_ltlib_v1_0_0_match__parameterized0_2\
      port map (
       D(0) => D(4),
       \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
@@ -28359,7 +30142,8 @@ begin
       mu_config_cs_serial_input(0) => mu_config_cs_serial_input(4),
       mu_config_cs_serial_output(0) => mu_config_cs_serial_output(4),
       mu_config_cs_shift_en(0) => mu_config_cs_shift_en(4),
-      probe_data(0) => probe_data(4),
+      \out\ => \out\,
+      probe4(0) => probe4(0),
       s_dclk_o => s_dclk_o
     );
 end STRUCTURE;
@@ -28369,14 +30153,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_blk_mem_gen_v8_4_3 is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : in STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
     s_dclk_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    DIADI : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    DIPADIP : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_blk_mem_gen_v8_4_3 : entity is "blk_mem_gen_v8_4_3";
@@ -28386,11 +30171,12 @@ architecture STRUCTURE of ila_0_blk_mem_gen_v8_4_3 is
 begin
 inst_blk_mem_gen: entity work.ila_0_blk_mem_gen_v8_4_3_synth
      port map (
-      D(5 downto 0) => D(5 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0),
-      DIADI(5 downto 0) => DIADI(5 downto 0),
+      D(35 downto 0) => D(35 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0),
+      DIADI(31 downto 0) => DIADI(31 downto 0),
+      DIPADIP(3 downto 0) => DIPADIP(3 downto 0),
       Q(9 downto 0) => Q(9 downto 0),
       \out\ => \out\,
       s_dclk_o => s_dclk_o
@@ -29822,7 +31608,12 @@ entity ila_0_ila_v6_2_9_ila_trigger is
     \parallel_dout_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
-    probe_data : in STD_LOGIC_VECTOR ( 4 downto 0 )
+    probe_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \out\ : in STD_LOGIC;
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_ila_v6_2_9_ila_trigger : entity is "ila_v6_2_9_ila_trigger";
@@ -29859,7 +31650,12 @@ U_TM: entity work.ila_0_ila_v6_2_9_ila_trig_match
       mu_config_cs_serial_input(4 downto 0) => mu_config_cs_serial_input(4 downto 0),
       mu_config_cs_serial_output(4 downto 0) => mu_config_cs_serial_output(4 downto 0),
       mu_config_cs_shift_en(4 downto 0) => mu_config_cs_shift_en(4 downto 0),
-      probe_data(4 downto 0) => probe_data(4 downto 0),
+      \out\ => \out\,
+      probe1(0) => probe1(0),
+      probe2(0) => probe2(0),
+      probe3(15 downto 0) => probe3(15 downto 0),
+      probe4(0) => probe4(0),
+      probe_data(15 downto 0) => probe_data(15 downto 0),
       s_dclk_o => s_dclk_o
     );
 end STRUCTURE;
@@ -29973,7 +31769,7 @@ U_NS0: entity work.ila_0_ltlib_v1_0_0_cfglut7
       s_dclk_o => s_dclk_o,
       wcnt_hcmp => wcnt_hcmp
     );
-U_NS1: entity work.ila_0_ltlib_v1_0_0_cfglut7_39
+U_NS1: entity work.ila_0_ltlib_v1_0_0_cfglut7_37
      port map (
       A(2) => scnt_cmp,
       A(1) => u_cap_addrgen_n_1,
@@ -30054,14 +31850,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ila_0_ila_v6_2_9_ila_trace_memory is
   port (
-    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : in STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
     s_dclk_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    DIADI : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    DIPADIP : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_ila_v6_2_9_ila_trace_memory : entity is "ila_v6_2_9_ila_trace_memory";
@@ -30071,11 +31868,12 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_trace_memory is
 begin
 \SUBCORE_RAM_BLK_MEM_1.trace_block_memory\: entity work.ila_0_blk_mem_gen_v8_4_3
      port map (
-      D(5 downto 0) => D(5 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0),
-      DIADI(5 downto 0) => DIADI(5 downto 0),
+      D(35 downto 0) => D(35 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0),
+      DIADI(31 downto 0) => DIADI(31 downto 0),
+      DIPADIP(3 downto 0) => DIPADIP(3 downto 0),
       Q(9 downto 0) => Q(9 downto 0),
       \out\ => \out\,
       s_dclk_o => s_dclk_o
@@ -30091,10 +31889,10 @@ entity ila_0_ila_v6_2_9_ila_core is
     \out\ : in STD_LOGIC_VECTOR ( 36 downto 0 );
     \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\ : in STD_LOGIC;
     dummy_temp1_reg : in STD_LOGIC;
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -30122,7 +31920,7 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_core is
   signal capture_qual_ctrl_2 : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute async_reg of capture_qual_ctrl_2 : signal is "true";
   signal data_out_en_1 : STD_LOGIC;
-  signal data_word_out : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal data_word_out : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal debug_data_in : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal debug_data_in_sync1 : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute async_reg of debug_data_in_sync1 : signal is "true";
@@ -30135,26 +31933,86 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_core is
   attribute async_reg of en_adv_trigger_2 : signal is "true";
   signal halt_ctrl : STD_LOGIC;
   signal halt_status : STD_LOGIC;
-  signal mem_data_out : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal mem_data_out : STD_LOGIC_VECTOR ( 35 downto 0 );
   signal mu_config_cs_serial_input : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal mu_config_cs_serial_output : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal mu_config_cs_shift_en : STD_LOGIC_VECTOR ( 4 downto 0 );
-  signal probe_data : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal probe_data : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal read_addr_reset : STD_LOGIC;
   signal read_data_en : STD_LOGIC;
   signal read_reset_addr : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal reset : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal s_dclk : STD_LOGIC;
   signal \shifted_data_in_reg[7][0]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][10]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][11]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][12]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][13]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][14]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][15]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][16]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][17]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][18]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][19]_srl8_n_0\ : STD_LOGIC;
   signal \shifted_data_in_reg[7][1]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][20]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][21]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][22]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][23]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][24]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][25]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][26]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][27]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][28]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][29]_srl8_n_0\ : STD_LOGIC;
   signal \shifted_data_in_reg[7][2]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][30]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][31]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][32]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][33]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][34]_srl8_n_0\ : STD_LOGIC;
   signal \shifted_data_in_reg[7][3]_srl8_n_0\ : STD_LOGIC;
   signal \shifted_data_in_reg[7][4]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][5]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][6]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][7]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][8]_srl8_n_0\ : STD_LOGIC;
+  signal \shifted_data_in_reg[7][9]_srl8_n_0\ : STD_LOGIC;
   signal \shifted_data_in_reg_n_0_[8][0]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][10]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][11]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][12]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][13]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][14]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][15]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][16]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][17]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][18]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][19]\ : STD_LOGIC;
   signal \shifted_data_in_reg_n_0_[8][1]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][20]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][21]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][22]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][23]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][24]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][25]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][26]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][27]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][28]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][29]\ : STD_LOGIC;
   signal \shifted_data_in_reg_n_0_[8][2]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][30]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][31]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][32]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][33]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][34]\ : STD_LOGIC;
   signal \shifted_data_in_reg_n_0_[8][3]\ : STD_LOGIC;
   signal \shifted_data_in_reg_n_0_[8][4]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][5]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][6]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][7]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][8]\ : STD_LOGIC;
+  signal \shifted_data_in_reg_n_0_[8][9]\ : STD_LOGIC;
   signal tc_config_cs_serial_input : STD_LOGIC;
   signal tc_config_cs_serial_output : STD_LOGIC;
   signal tc_config_cs_shift_en : STD_LOGIC;
@@ -30264,14 +32122,74 @@ architecture STRUCTURE of ila_0_ila_v6_2_9_ila_core is
   attribute srl_bus_name of \shifted_data_in_reg[7][0]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
   attribute srl_name : string;
   attribute srl_name of \shifted_data_in_reg[7][0]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][0]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][10]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][10]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][10]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][11]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][11]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][11]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][12]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][12]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][12]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][13]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][13]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][13]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][14]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][14]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][14]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][15]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][15]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][15]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][16]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][16]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][16]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][17]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][17]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][17]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][18]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][18]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][18]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][19]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][19]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][19]_srl8 ";
   attribute srl_bus_name of \shifted_data_in_reg[7][1]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
   attribute srl_name of \shifted_data_in_reg[7][1]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][1]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][20]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][20]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][20]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][21]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][21]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][21]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][22]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][22]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][22]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][23]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][23]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][23]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][24]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][24]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][24]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][25]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][25]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][25]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][26]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][26]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][26]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][27]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][27]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][27]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][28]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][28]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][28]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][29]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][29]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][29]_srl8 ";
   attribute srl_bus_name of \shifted_data_in_reg[7][2]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
   attribute srl_name of \shifted_data_in_reg[7][2]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][2]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][30]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][30]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][30]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][31]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][31]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][31]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][32]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][32]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][32]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][33]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][33]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][33]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][34]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][34]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][34]_srl8 ";
   attribute srl_bus_name of \shifted_data_in_reg[7][3]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
   attribute srl_name of \shifted_data_in_reg[7][3]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][3]_srl8 ";
   attribute srl_bus_name of \shifted_data_in_reg[7][4]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
   attribute srl_name of \shifted_data_in_reg[7][4]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][4]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][5]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][5]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][5]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][6]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][6]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][6]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][7]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][7]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][7]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][8]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][8]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][8]_srl8 ";
+  attribute srl_bus_name of \shifted_data_in_reg[7][9]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7] ";
+  attribute srl_name of \shifted_data_in_reg[7][9]_srl8\ : label is "inst/\ila_core_inst/shifted_data_in_reg[7][9]_srl8 ";
   attribute ASYNC_REG_boolean of use_probe_debug_circuit_2_reg : label is std.standard.true;
   attribute DONT_TOUCH of use_probe_debug_circuit_2_reg : label is std.standard.true;
   attribute KEEP of use_probe_debug_circuit_2_reg : label is "yes";
@@ -30593,69 +32511,209 @@ en_adv_trigger_reg: unisim.vcomponents.FDRE
     );
 ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
      port map (
-      D(5 downto 0) => mem_data_out(5 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\(0) => trace_read_en,
-      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\(9 downto 0) => cap_wr_addr(9 downto 0),
-      DIADI(5) => cap_trigger_out,
+      D(35 downto 0) => mem_data_out(35 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0) => trace_read_en,
+      \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(9 downto 0) => cap_wr_addr(9 downto 0),
+      DIADI(31) => \shifted_data_in_reg_n_0_[8][34]\,
+      DIADI(30) => \shifted_data_in_reg_n_0_[8][33]\,
+      DIADI(29) => \shifted_data_in_reg_n_0_[8][32]\,
+      DIADI(28) => \shifted_data_in_reg_n_0_[8][31]\,
+      DIADI(27) => \shifted_data_in_reg_n_0_[8][30]\,
+      DIADI(26) => \shifted_data_in_reg_n_0_[8][29]\,
+      DIADI(25) => \shifted_data_in_reg_n_0_[8][28]\,
+      DIADI(24) => \shifted_data_in_reg_n_0_[8][27]\,
+      DIADI(23) => \shifted_data_in_reg_n_0_[8][25]\,
+      DIADI(22) => \shifted_data_in_reg_n_0_[8][24]\,
+      DIADI(21) => \shifted_data_in_reg_n_0_[8][23]\,
+      DIADI(20) => \shifted_data_in_reg_n_0_[8][22]\,
+      DIADI(19) => \shifted_data_in_reg_n_0_[8][21]\,
+      DIADI(18) => \shifted_data_in_reg_n_0_[8][20]\,
+      DIADI(17) => \shifted_data_in_reg_n_0_[8][19]\,
+      DIADI(16) => \shifted_data_in_reg_n_0_[8][18]\,
+      DIADI(15) => \shifted_data_in_reg_n_0_[8][16]\,
+      DIADI(14) => \shifted_data_in_reg_n_0_[8][15]\,
+      DIADI(13) => \shifted_data_in_reg_n_0_[8][14]\,
+      DIADI(12) => \shifted_data_in_reg_n_0_[8][13]\,
+      DIADI(11) => \shifted_data_in_reg_n_0_[8][12]\,
+      DIADI(10) => \shifted_data_in_reg_n_0_[8][11]\,
+      DIADI(9) => \shifted_data_in_reg_n_0_[8][10]\,
+      DIADI(8) => \shifted_data_in_reg_n_0_[8][9]\,
+      DIADI(7) => \shifted_data_in_reg_n_0_[8][7]\,
+      DIADI(6) => \shifted_data_in_reg_n_0_[8][6]\,
+      DIADI(5) => \shifted_data_in_reg_n_0_[8][5]\,
       DIADI(4) => \shifted_data_in_reg_n_0_[8][4]\,
       DIADI(3) => \shifted_data_in_reg_n_0_[8][3]\,
       DIADI(2) => \shifted_data_in_reg_n_0_[8][2]\,
       DIADI(1) => \shifted_data_in_reg_n_0_[8][1]\,
       DIADI(0) => \shifted_data_in_reg_n_0_[8][0]\,
+      DIPADIP(3) => cap_trigger_out,
+      DIPADIP(2) => \shifted_data_in_reg_n_0_[8][26]\,
+      DIPADIP(1) => \shifted_data_in_reg_n_0_[8][17]\,
+      DIPADIP(0) => \shifted_data_in_reg_n_0_[8][8]\,
       Q(9 downto 0) => trace_read_addr(9 downto 0),
       \out\ => cap_wr_en,
       s_dclk_o => s_dclk
     );
 \probeDelay1[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => debug_data_in_sync2(0),
-      I1 => use_probe_debug_circuit,
-      I2 => probe0(0),
+      I1 => probe0(0),
+      I2 => use_probe_debug_circuit,
       O => probe_data(0)
     );
 \probeDelay1[0]_i_1__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => debug_data_in_sync2(1),
-      I1 => use_probe_debug_circuit,
-      I2 => probe1(0),
+      I1 => probe1(0),
+      I2 => use_probe_debug_circuit,
       O => probe_data(1)
     );
-\probeDelay1[0]_i_1__1\: unisim.vcomponents.LUT3
+\probeDelay1[10]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(11),
+      I1 => probe1(10),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(11)
+    );
+\probeDelay1[11]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(12),
+      I1 => probe1(11),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(12)
+    );
+\probeDelay1[12]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(13),
+      I1 => probe1(12),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(13)
+    );
+\probeDelay1[13]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(14),
+      I1 => probe1(13),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(14)
+    );
+\probeDelay1[14]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(15),
+      I1 => probe1(14),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(15)
+    );
+\probeDelay1[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
     )
         port map (
       I0 => debug_data_in_sync2(2),
-      I1 => use_probe_debug_circuit,
-      I2 => probe2(0),
+      I1 => probe1(1),
+      I2 => use_probe_debug_circuit,
       O => probe_data(2)
     );
-\probeDelay1[0]_i_1__2\: unisim.vcomponents.LUT3
+\probeDelay1[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => debug_data_in_sync2(3),
-      I1 => use_probe_debug_circuit,
-      I2 => probe3(0),
+      I1 => probe1(2),
+      I2 => use_probe_debug_circuit,
       O => probe_data(3)
     );
-\probeDelay1[0]_i_1__3\: unisim.vcomponents.LUT3
+\probeDelay1[3]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => debug_data_in_sync2(4),
-      I1 => use_probe_debug_circuit,
-      I2 => probe4(0),
+      I1 => probe1(3),
+      I2 => use_probe_debug_circuit,
       O => probe_data(4)
+    );
+\probeDelay1[4]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(5),
+      I1 => probe1(4),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(5)
+    );
+\probeDelay1[5]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(6),
+      I1 => probe1(5),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(6)
+    );
+\probeDelay1[6]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(7),
+      I1 => probe1(6),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(7)
+    );
+\probeDelay1[7]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(8),
+      I1 => probe1(7),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(8)
+    );
+\probeDelay1[8]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(9),
+      I1 => probe1(8),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(9)
+    );
+\probeDelay1[9]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"AC"
+    )
+        port map (
+      I0 => debug_data_in_sync2(10),
+      I1 => probe1(9),
+      I2 => use_probe_debug_circuit,
+      O => probe_data(10)
     );
 \shifted_data_in_reg[7][0]_srl8\: unisim.vcomponents.SRL16E
      port map (
@@ -30668,6 +32726,116 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       D => probe0(0),
       Q => \shifted_data_in_reg[7][0]_srl8_n_0\
     );
+\shifted_data_in_reg[7][10]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(9),
+      Q => \shifted_data_in_reg[7][10]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][11]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(10),
+      Q => \shifted_data_in_reg[7][11]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][12]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(11),
+      Q => \shifted_data_in_reg[7][12]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][13]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(12),
+      Q => \shifted_data_in_reg[7][13]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][14]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(13),
+      Q => \shifted_data_in_reg[7][14]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][15]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(14),
+      Q => \shifted_data_in_reg[7][15]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][16]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(15),
+      Q => \shifted_data_in_reg[7][16]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][17]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe2(0),
+      Q => \shifted_data_in_reg[7][17]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][18]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(0),
+      Q => \shifted_data_in_reg[7][18]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][19]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(1),
+      Q => \shifted_data_in_reg[7][19]_srl8_n_0\
+    );
 \shifted_data_in_reg[7][1]_srl8\: unisim.vcomponents.SRL16E
      port map (
       A0 => '1',
@@ -30679,6 +32847,116 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       D => probe1(0),
       Q => \shifted_data_in_reg[7][1]_srl8_n_0\
     );
+\shifted_data_in_reg[7][20]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(2),
+      Q => \shifted_data_in_reg[7][20]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][21]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(3),
+      Q => \shifted_data_in_reg[7][21]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][22]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(4),
+      Q => \shifted_data_in_reg[7][22]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][23]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(5),
+      Q => \shifted_data_in_reg[7][23]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][24]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(6),
+      Q => \shifted_data_in_reg[7][24]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][25]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(7),
+      Q => \shifted_data_in_reg[7][25]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][26]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(8),
+      Q => \shifted_data_in_reg[7][26]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][27]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(9),
+      Q => \shifted_data_in_reg[7][27]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][28]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(10),
+      Q => \shifted_data_in_reg[7][28]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][29]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(11),
+      Q => \shifted_data_in_reg[7][29]_srl8_n_0\
+    );
 \shifted_data_in_reg[7][2]_srl8\: unisim.vcomponents.SRL16E
      port map (
       A0 => '1',
@@ -30687,8 +32965,63 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       A3 => '0',
       CE => '1',
       CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      D => probe2(0),
+      D => probe1(1),
       Q => \shifted_data_in_reg[7][2]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][30]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(12),
+      Q => \shifted_data_in_reg[7][30]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][31]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(13),
+      Q => \shifted_data_in_reg[7][31]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][32]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(14),
+      Q => \shifted_data_in_reg[7][32]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][33]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe3(15),
+      Q => \shifted_data_in_reg[7][33]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][34]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe4(0),
+      Q => \shifted_data_in_reg[7][34]_srl8_n_0\
     );
 \shifted_data_in_reg[7][3]_srl8\: unisim.vcomponents.SRL16E
      port map (
@@ -30698,7 +33031,7 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       A3 => '0',
       CE => '1',
       CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      D => probe3(0),
+      D => probe1(2),
       Q => \shifted_data_in_reg[7][3]_srl8_n_0\
     );
 \shifted_data_in_reg[7][4]_srl8\: unisim.vcomponents.SRL16E
@@ -30709,8 +33042,63 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       A3 => '0',
       CE => '1',
       CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      D => probe4(0),
+      D => probe1(3),
       Q => \shifted_data_in_reg[7][4]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][5]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(4),
+      Q => \shifted_data_in_reg[7][5]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][6]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(5),
+      Q => \shifted_data_in_reg[7][6]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][7]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(6),
+      Q => \shifted_data_in_reg[7][7]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][8]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(7),
+      Q => \shifted_data_in_reg[7][8]_srl8_n_0\
+    );
+\shifted_data_in_reg[7][9]_srl8\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '1',
+      A1 => '1',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      D => probe1(8),
+      Q => \shifted_data_in_reg[7][9]_srl8_n_0\
     );
 \shifted_data_in_reg[8][0]\: unisim.vcomponents.FDRE
      port map (
@@ -30718,6 +33106,86 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       CE => '1',
       D => \shifted_data_in_reg[7][0]_srl8_n_0\,
       Q => \shifted_data_in_reg_n_0_[8][0]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][10]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][10]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][10]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][11]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][11]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][11]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][12]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][12]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][12]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][13]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][13]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][13]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][14]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][14]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][14]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][15]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][15]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][15]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][16]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][16]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][16]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][17]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][17]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][17]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][18]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][18]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][18]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][19]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][19]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][19]\,
       R => '0'
     );
 \shifted_data_in_reg[8][1]\: unisim.vcomponents.FDRE
@@ -30728,12 +33196,132 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       Q => \shifted_data_in_reg_n_0_[8][1]\,
       R => '0'
     );
+\shifted_data_in_reg[8][20]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][20]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][20]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][21]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][21]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][21]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][22]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][22]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][22]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][23]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][23]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][23]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][24]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][24]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][24]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][25]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][25]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][25]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][26]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][26]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][26]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][27]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][27]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][27]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][28]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][28]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][28]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][29]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][29]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][29]\,
+      R => '0'
+    );
 \shifted_data_in_reg[8][2]\: unisim.vcomponents.FDRE
      port map (
       C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
       CE => '1',
       D => \shifted_data_in_reg[7][2]_srl8_n_0\,
       Q => \shifted_data_in_reg_n_0_[8][2]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][30]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][30]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][30]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][31]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][31]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][31]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][32]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][32]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][32]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][33]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][33]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][33]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][34]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][34]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][34]\,
       R => '0'
     );
 \shifted_data_in_reg[8][3]\: unisim.vcomponents.FDRE
@@ -30750,6 +33338,46 @@ ila_trace_memory_inst: entity work.ila_0_ila_v6_2_9_ila_trace_memory
       CE => '1',
       D => \shifted_data_in_reg[7][4]_srl8_n_0\,
       Q => \shifted_data_in_reg_n_0_[8][4]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][5]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][5]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][5]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][6]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][6]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][6]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][7]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][7]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][7]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][8]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][8]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][8]\,
+      R => '0'
+    );
+\shifted_data_in_reg[8][9]\: unisim.vcomponents.FDRE
+     port map (
+      C => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
+      CE => '1',
+      D => \shifted_data_in_reg[7][9]_srl8_n_0\,
+      Q => \shifted_data_in_reg_n_0_[8][9]\,
       R => '0'
     );
 \trace_data_ack_reg[0]\: unisim.vcomponents.FDRE
@@ -30799,16 +33427,16 @@ u_ila_regs: entity work.ila_0_ila_v6_2_9_ila_register
       D(0) => capture_ctrl_config_cs_serial_input,
       DOUT_O => \u_cap_addrgen/u_cap_sample_counter/scnt_cmp_temp1\,
       E(0) => data_out_en_1,
-      Q(5 downto 0) => data_word_out(5 downto 0),
       SR(0) => read_addr_reset,
       arm_ctrl => arm_ctrl,
       capture_ctrl_config_serial_output => capture_ctrl_config_serial_output,
+      capture_qual_ctrl_1(1 downto 0) => capture_qual_ctrl_1(1 downto 0),
       debug_data_in(15 downto 0) => debug_data_in(15 downto 0),
       dummy_temp1_reg_0 => dummy_temp1_reg,
       en_adv_trigger_1 => en_adv_trigger_1,
       halt_ctrl => halt_ctrl,
       ila_clk_flag_reg_0 => \I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg\,
-      in0(1 downto 0) => capture_qual_ctrl_1(1 downto 0),
+      in0 => use_probe_debug_circuit_1,
       mu_config_cs_serial_input(4 downto 0) => mu_config_cs_serial_input(4 downto 0),
       mu_config_cs_serial_output(4 downto 0) => mu_config_cs_serial_output(4 downto 0),
       mu_config_cs_shift_en(4 downto 0) => mu_config_cs_shift_en(4 downto 0),
@@ -30824,9 +33452,9 @@ u_ila_regs: entity work.ila_0_ila_v6_2_9_ila_register
       tc_config_cs_serial_output => tc_config_cs_serial_output,
       u_wcnt_hcmp_q => \u_cap_addrgen/u_cap_window_counter/wcnt_hcmp_temp1\,
       u_wcnt_lcmp_q => \u_cap_addrgen/u_cap_window_counter/wcnt_lcmp_temp1\,
-      use_probe_debug_circuit_1 => use_probe_debug_circuit_1,
       wcnt_hcmp_temp => \u_cap_addrgen/u_cap_window_counter/wcnt_hcmp_temp\,
       wcnt_lcmp_temp => \u_cap_addrgen/u_cap_window_counter/wcnt_lcmp_temp\,
+      \xsdb_reg_reg[15]\(15 downto 0) => data_word_out(15 downto 0),
       \xsdb_reg_reg[1]\(1) => O_reg,
       \xsdb_reg_reg[1]\(0) => u_ila_cap_ctrl_n_1,
       \xsdb_reg_reg[3]\(3) => cap_done,
@@ -30859,8 +33487,13 @@ u_trig: entity work.ila_0_ila_v6_2_9_ila_trigger
       mu_config_cs_serial_input(4 downto 0) => mu_config_cs_serial_input(4 downto 0),
       mu_config_cs_serial_output(4 downto 0) => mu_config_cs_serial_output(4 downto 0),
       mu_config_cs_shift_en(4 downto 0) => mu_config_cs_shift_en(4 downto 0),
+      \out\ => use_probe_debug_circuit,
       \parallel_dout_reg[15]\(0) => tc_config_cs_shift_en,
-      probe_data(4 downto 0) => probe_data(4 downto 0),
+      probe1(0) => probe1(15),
+      probe2(0) => probe2(0),
+      probe3(15 downto 0) => probe3(15 downto 0),
+      probe4(0) => probe4(0),
+      probe_data(15 downto 0) => probe_data(15 downto 0),
       s_dclk_o => s_dclk,
       shift_en_reg(0) => tc_config_cs_serial_input,
       tc_config_cs_serial_output => tc_config_cs_serial_output
@@ -30888,8 +33521,8 @@ xsdb_memory_read_inst: entity work.ila_0_ltlib_v1_0_0_generic_memrd
       Q(9 downto 0) => trace_read_addr(9 downto 0),
       SR(0) => read_addr_reset,
       \current_state_reg[2]_0\(0) => trace_data_ack(1),
-      \input_data_reg[5]_0\(5 downto 0) => data_word_out(5 downto 0),
-      \input_data_reg[5]_1\(5 downto 0) => mem_data_out(5 downto 0),
+      \input_data_reg[31]_0\(15 downto 0) => data_word_out(15 downto 0),
+      \input_data_reg[35]_0\(35 downto 0) => mem_data_out(35 downto 0),
       read_data_en => read_data_en,
       read_reset_addr(9 downto 0) => read_reset_addr(9 downto 0),
       s_dclk_o => s_dclk
@@ -30911,9 +33544,9 @@ entity ila_0_ila_v6_2_9_ila is
     trig_out : out STD_LOGIC;
     trig_out_ack : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -32808,7 +35441,7 @@ entity ila_0_ila_v6_2_9_ila is
   attribute C_PROBE1_TYPE : integer;
   attribute C_PROBE1_TYPE of ila_0_ila_v6_2_9_ila : entity is 0;
   attribute C_PROBE1_WIDTH : integer;
-  attribute C_PROBE1_WIDTH of ila_0_ila_v6_2_9_ila : entity is 1;
+  attribute C_PROBE1_WIDTH of ila_0_ila_v6_2_9_ila : entity is 16;
   attribute C_PROBE200_MU_CNT : integer;
   attribute C_PROBE200_MU_CNT of ila_0_ila_v6_2_9_ila : entity is 1;
   attribute C_PROBE200_TYPE : integer;
@@ -34140,7 +36773,7 @@ entity ila_0_ila_v6_2_9_ila is
   attribute C_PROBE3_TYPE : integer;
   attribute C_PROBE3_TYPE of ila_0_ila_v6_2_9_ila : entity is 0;
   attribute C_PROBE3_WIDTH : integer;
-  attribute C_PROBE3_WIDTH of ila_0_ila_v6_2_9_ila : entity is 1;
+  attribute C_PROBE3_WIDTH of ila_0_ila_v6_2_9_ila : entity is 16;
   attribute C_PROBE400_MU_CNT : integer;
   attribute C_PROBE400_MU_CNT of ila_0_ila_v6_2_9_ila : entity is 1;
   attribute C_PROBE400_TYPE : integer;
@@ -38188,9 +40821,9 @@ entity ila_0_ila_v6_2_9_ila is
   attribute IS_DEBUG_CORE : string;
   attribute IS_DEBUG_CORE of ila_0_ila_v6_2_9_ila : entity is "TRUE";
   attribute LC_COMPUTED_DATA_WIDTH : integer;
-  attribute LC_COMPUTED_DATA_WIDTH of ila_0_ila_v6_2_9_ila : entity is 5;
+  attribute LC_COMPUTED_DATA_WIDTH of ila_0_ila_v6_2_9_ila : entity is 35;
   attribute LC_DATA_WIDTH : integer;
-  attribute LC_DATA_WIDTH of ila_0_ila_v6_2_9_ila : entity is 5;
+  attribute LC_DATA_WIDTH of ila_0_ila_v6_2_9_ila : entity is 35;
   attribute LC_MATCH_TPID_VEC : string;
   attribute LC_MATCH_TPID_VEC of ila_0_ila_v6_2_9_ila : entity is "1280'b00000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000001000000000000000011000000000000001000000000000000010000000000000000";
   attribute LC_MU_CNT_STRING : string;
@@ -39836,7 +42469,7 @@ entity ila_0_ila_v6_2_9_ila is
   attribute LC_PROBE1_TYPE : integer;
   attribute LC_PROBE1_TYPE of ila_0_ila_v6_2_9_ila : entity is 0;
   attribute LC_PROBE1_WIDTH : integer;
-  attribute LC_PROBE1_WIDTH of ila_0_ila_v6_2_9_ila : entity is 1;
+  attribute LC_PROBE1_WIDTH of ila_0_ila_v6_2_9_ila : entity is 16;
   attribute LC_PROBE200_IS_DATA : string;
   attribute LC_PROBE200_IS_DATA of ila_0_ila_v6_2_9_ila : entity is "1'b0";
   attribute LC_PROBE200_IS_TRIG : string;
@@ -42500,7 +45133,7 @@ entity ila_0_ila_v6_2_9_ila is
   attribute LC_PROBE3_TYPE : integer;
   attribute LC_PROBE3_TYPE of ila_0_ila_v6_2_9_ila : entity is 0;
   attribute LC_PROBE3_WIDTH : integer;
-  attribute LC_PROBE3_WIDTH of ila_0_ila_v6_2_9_ila : entity is 1;
+  attribute LC_PROBE3_WIDTH of ila_0_ila_v6_2_9_ila : entity is 16;
   attribute LC_PROBE400_IS_DATA : string;
   attribute LC_PROBE400_IS_DATA of ila_0_ila_v6_2_9_ila : entity is "1'b0";
   attribute LC_PROBE400_IS_TRIG : string;
@@ -50494,13 +53127,13 @@ entity ila_0_ila_v6_2_9_ila is
   attribute LC_PROBE9_WIDTH : integer;
   attribute LC_PROBE9_WIDTH of ila_0_ila_v6_2_9_ila : entity is 1;
   attribute LC_PROBES_WIDTH : integer;
-  attribute LC_PROBES_WIDTH of ila_0_ila_v6_2_9_ila : entity is 5;
+  attribute LC_PROBES_WIDTH of ila_0_ila_v6_2_9_ila : entity is 35;
   attribute LC_PROBE_IS_DATA_STRING : string;
   attribute LC_PROBE_IS_DATA_STRING of ila_0_ila_v6_2_9_ila : entity is "1024'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111";
   attribute LC_PROBE_IS_TRIG_STRING : string;
   attribute LC_PROBE_IS_TRIG_STRING of ila_0_ila_v6_2_9_ila : entity is "4096'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111";
   attribute LC_PROBE_WIDTH_STRING : string;
-  attribute LC_PROBE_WIDTH_STRING of ila_0_ila_v6_2_9_ila : entity is "16384'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute LC_PROBE_WIDTH_STRING of ila_0_ila_v6_2_9_ila : entity is "16384'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000011110000000000000000";
   attribute LC_TIME_TAG_MU_CNT : integer;
   attribute LC_TIME_TAG_MU_CNT of ila_0_ila_v6_2_9_ila : entity is 2;
   attribute LC_TIME_TAG_TYPE : integer;
@@ -50508,7 +53141,7 @@ entity ila_0_ila_v6_2_9_ila is
   attribute LC_TIME_TAG_WIDTH : integer;
   attribute LC_TIME_TAG_WIDTH of ila_0_ila_v6_2_9_ila : entity is 1;
   attribute LC_TRIG_WIDTH : integer;
-  attribute LC_TRIG_WIDTH of ila_0_ila_v6_2_9_ila : entity is 5;
+  attribute LC_TRIG_WIDTH of ila_0_ila_v6_2_9_ila : entity is 35;
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ila_0_ila_v6_2_9_ila : entity is "ila_v6_2_9_ila";
   attribute dont_touch : string;
@@ -50595,9 +53228,9 @@ ila_core_inst: entity work.ila_0_ila_v6_2_9_ila_core
       dummy_temp1_reg => dummy,
       \out\(36 downto 0) => sl_iport0(36 downto 0),
       probe0(0) => probe0(0),
-      probe1(0) => probe1(0),
+      probe1(15 downto 0) => probe1(15 downto 0),
       probe2(0) => probe2(0),
-      probe3(0) => probe3(0),
+      probe3(15 downto 0) => probe3(15 downto 0),
       probe4(0) => probe4(0),
       sl_oport_o(16 downto 0) => sl_oport0(16 downto 0)
     );
@@ -50648,9 +53281,9 @@ entity ila_0 is
   port (
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 15 downto 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute NotValidForBitStream : boolean;
@@ -51541,7 +54174,7 @@ architecture STRUCTURE of ila_0 is
   attribute C_PROBE1_TYPE : integer;
   attribute C_PROBE1_TYPE of inst : label is 0;
   attribute C_PROBE1_WIDTH : integer;
-  attribute C_PROBE1_WIDTH of inst : label is 1;
+  attribute C_PROBE1_WIDTH of inst : label is 16;
   attribute C_PROBE200_MU_CNT : integer;
   attribute C_PROBE200_MU_CNT of inst : label is 1;
   attribute C_PROBE200_TYPE : integer;
@@ -52873,7 +55506,7 @@ architecture STRUCTURE of ila_0 is
   attribute C_PROBE3_TYPE : integer;
   attribute C_PROBE3_TYPE of inst : label is 0;
   attribute C_PROBE3_WIDTH : integer;
-  attribute C_PROBE3_WIDTH of inst : label is 1;
+  attribute C_PROBE3_WIDTH of inst : label is 16;
   attribute C_PROBE400_MU_CNT : integer;
   attribute C_PROBE400_MU_CNT of inst : label is 1;
   attribute C_PROBE400_TYPE : integer;
@@ -56920,9 +59553,9 @@ architecture STRUCTURE of ila_0 is
   attribute IS_DEBUG_CORE : string;
   attribute IS_DEBUG_CORE of inst : label is "TRUE";
   attribute LC_COMPUTED_DATA_WIDTH : integer;
-  attribute LC_COMPUTED_DATA_WIDTH of inst : label is 5;
+  attribute LC_COMPUTED_DATA_WIDTH of inst : label is 35;
   attribute LC_DATA_WIDTH : integer;
-  attribute LC_DATA_WIDTH of inst : label is 5;
+  attribute LC_DATA_WIDTH of inst : label is 35;
   attribute LC_MATCH_TPID_VEC : string;
   attribute LC_MATCH_TPID_VEC of inst : label is "1280'b00000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000001000000000000000011000000000000001000000000000000010000000000000000";
   attribute LC_MU_CNT_STRING : string;
@@ -58568,7 +61201,7 @@ architecture STRUCTURE of ila_0 is
   attribute LC_PROBE1_TYPE : integer;
   attribute LC_PROBE1_TYPE of inst : label is 0;
   attribute LC_PROBE1_WIDTH : integer;
-  attribute LC_PROBE1_WIDTH of inst : label is 1;
+  attribute LC_PROBE1_WIDTH of inst : label is 16;
   attribute LC_PROBE200_IS_DATA : string;
   attribute LC_PROBE200_IS_DATA of inst : label is "1'b0";
   attribute LC_PROBE200_IS_TRIG : string;
@@ -61232,7 +63865,7 @@ architecture STRUCTURE of ila_0 is
   attribute LC_PROBE3_TYPE : integer;
   attribute LC_PROBE3_TYPE of inst : label is 0;
   attribute LC_PROBE3_WIDTH : integer;
-  attribute LC_PROBE3_WIDTH of inst : label is 1;
+  attribute LC_PROBE3_WIDTH of inst : label is 16;
   attribute LC_PROBE400_IS_DATA : string;
   attribute LC_PROBE400_IS_DATA of inst : label is "1'b0";
   attribute LC_PROBE400_IS_TRIG : string;
@@ -69226,13 +71859,13 @@ architecture STRUCTURE of ila_0 is
   attribute LC_PROBE9_WIDTH : integer;
   attribute LC_PROBE9_WIDTH of inst : label is 1;
   attribute LC_PROBES_WIDTH : integer;
-  attribute LC_PROBES_WIDTH of inst : label is 5;
+  attribute LC_PROBES_WIDTH of inst : label is 35;
   attribute LC_PROBE_IS_DATA_STRING : string;
   attribute LC_PROBE_IS_DATA_STRING of inst : label is "1024'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111";
   attribute LC_PROBE_IS_TRIG_STRING : string;
   attribute LC_PROBE_IS_TRIG_STRING of inst : label is "4096'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111";
   attribute LC_PROBE_WIDTH_STRING : string;
-  attribute LC_PROBE_WIDTH_STRING of inst : label is "16384'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute LC_PROBE_WIDTH_STRING of inst : label is "16384'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000011110000000000000000";
   attribute LC_TIME_TAG_MU_CNT : integer;
   attribute LC_TIME_TAG_MU_CNT of inst : label is 2;
   attribute LC_TIME_TAG_TYPE : integer;
@@ -69240,7 +71873,7 @@ architecture STRUCTURE of ila_0 is
   attribute LC_TIME_TAG_WIDTH : integer;
   attribute LC_TIME_TAG_WIDTH of inst : label is 1;
   attribute LC_TRIG_WIDTH : integer;
-  attribute LC_TRIG_WIDTH of inst : label is 5;
+  attribute LC_TRIG_WIDTH of inst : label is 35;
   attribute syn_noprune : string;
   attribute syn_noprune of inst : label is "1";
 begin
@@ -69250,7 +71883,7 @@ inst: entity work.ila_0_ila_v6_2_9_ila
       clk_nobuf => '0',
       clkdiv_out => NLW_inst_clkdiv_out_UNCONNECTED,
       probe0(0) => probe0(0),
-      probe1(0) => probe1(0),
+      probe1(15 downto 0) => probe1(15 downto 0),
       probe10(0) => '0',
       probe100(0) => '0',
       probe1000(0) => '0',
@@ -69496,7 +72129,7 @@ inst: entity work.ila_0_ila_v6_2_9_ila
       probe297(0) => '0',
       probe298(0) => '0',
       probe299(0) => '0',
-      probe3(0) => probe3(0),
+      probe3(15 downto 0) => probe3(15 downto 0),
       probe30(0) => '0',
       probe300(0) => '0',
       probe301(0) => '0',
