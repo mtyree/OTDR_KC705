@@ -18,7 +18,9 @@ module SI5324_Config_5_8_at_125MHz#(
 		input rst_n,
 		input RECONFIG,
 		output scl,
-		inout sda
+		output sda_o,
+		input sda_i,
+		output sda_t
     );
 
 	localparam IDLE = 3'd0; 
@@ -31,7 +33,10 @@ module SI5324_Config_5_8_at_125MHz#(
 	localparam DONE = 3'd7; 
 
 	wire reset = ~rst_n;
-
+	reg clr;
+	reg enc;
+	reg start;
+	wire done;
 	reg [23:0] SI_DATA;
 
 	reg [5:0] counter;
@@ -60,10 +65,7 @@ module SI5324_Config_5_8_at_125MHz#(
 			state <= nextstate;
 		end
 	end
-	reg clr;
-	reg enc;
-	reg start;
-	wire done;
+
 	always @ (*) begin
 		clr = 0;
 		enc = 0;
@@ -175,7 +177,9 @@ module SI5324_Config_5_8_at_125MHz#(
 			.start    (start),
 			.wr       (1),
 			.scl      (scl),
-			.sda      (sda),
+			.sda_o      (sda_o),
+			.sda_i		(sda_i),
+			.sda_t		(sda_t),
 			.busy     (),
 			.done     (done),
 			.error    (),

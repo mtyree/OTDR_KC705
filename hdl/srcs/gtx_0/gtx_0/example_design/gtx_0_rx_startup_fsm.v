@@ -186,7 +186,7 @@ module gtx_0_RX_STARTUP_FSM #
   localparam integer WAIT_TIMEOUT_500us = 500000 / STABLE_CLOCK_PERIOD;   //500 us time-out
   localparam integer WAIT_TIMEOUT_1us   = 1000 / STABLE_CLOCK_PERIOD;     //1 us time-out
   localparam integer WAIT_TIMEOUT_100us = 100000 / STABLE_CLOCK_PERIOD;   //100us time-out
-  localparam integer WAIT_TIME_ADAPT    = (37000000 /3.2)/STABLE_CLOCK_PERIOD;
+  localparam integer WAIT_TIME_ADAPT    = (37000000 /3.125)/STABLE_CLOCK_PERIOD;
   localparam integer WAIT_TIME_MAX   = EXAMPLE_SIMULATION? 100 : 10000 / STABLE_CLOCK_PERIOD;
   localparam integer PORT_WIDTH   = `CLOG2(WAIT_TIMEOUT_2ms);
     

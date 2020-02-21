@@ -27,7 +27,9 @@ module I2C_master(
 	input start,
 	input wr,
 	output scl,
-	inout sda,
+	output sda_o,
+	input sda_i,
+	output sda_t,
 	output reg busy,
 	output reg done,
 	output reg error,
@@ -48,7 +50,7 @@ module I2C_master(
 	
 	reg [10:0] CLK_DIV;
 	reg I2C_clk;
-	wire sda_o;
+//	wire sda_o;
 	reg [7:0]	Control_SM;
 	reg [7:0]	Control_SM_n;
 	reg Send_start;
@@ -67,25 +69,21 @@ module I2C_master(
 	wire lock;
 	reg [7:0] data_mover;
 	reg en_read;
-   
-	IOBUF #(
-      .DRIVE(12), // Specify the output drive strength
-      .IBUF_LOW_PWR("TRUE"),  // Low Power - "TRUE", High Performance = "FALSE" 
-      .IOSTANDARD("DEFAULT"), // Specify the I/O standard
-      .SLEW("SLOW") // Specify the output slew rate
-   ) IOBUF_inst (
-      .O(sda_o),     // Buffer output
-      .IO(sda),   // Buffer inout port (connect directly to top-level port)
-      .I(_sda),     // Buffer input
-      .T(en_r)      // 3-state enable input, high=input, low=output
-   );
-   
-   ila_1 i2c_debug (
-	.clk(clk), // input wire clk
 	
-	.probe0(scl), // input wire [0:0]  probe0  
-	.probe1(sda_o)  // input wire [0:0]  probe1
-   );
+	assign sda_i = _sda;
+	assign sda_t = en_r;
+   
+//	IOBUF #(
+//      .DRIVE(12), // Specify the output drive strength
+//      .IBUF_LOW_PWR("TRUE"),  // Low Power - "TRUE", High Performance = "FALSE" 
+//      .IOSTANDARD("DEFAULT"), // Specify the I/O standard
+//      .SLEW("SLOW") // Specify the output slew rate
+//   ) IOBUF_inst (
+//      .O(sda_o),     // Buffer output
+//      .IO(sda),   // Buffer inout port (connect directly to top-level port)
+//      .I(_sda),     // Buffer input
+//      .T(en_r)      // 3-state enable input, high=input, low=output
+//   );
    
 	always @ (posedge clk or posedge reset)
 	begin

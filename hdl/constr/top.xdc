@@ -14,7 +14,7 @@ set_property IOSTANDARD LVDS_25 [get_ports GT_SYSCLK_P]
 set_property IOSTANDARD LVDS_25 [get_ports GT_SYSCLK_N]
 
 # GT LOC
-set_property LOC GTXE2_CHANNEL_X0Y10 [get_cells gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i]
+#set_property LOC GTXE2_CHANNEL_X0Y10 [get_cells gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i]
 
 # Global IIC BUS
 set_property PACKAGE_PIN K21 [get_ports IIC_SCL_MAIN]
@@ -24,13 +24,17 @@ set_property IOSTANDARD LVCMOS25 [get_ports IIC_SDA_MAIN]
 set_property PACKAGE_PIN P23 [get_ports IIC_MUX_RESET_B]
 set_property IOSTANDARD LVCMOS25 [get_ports IIC_MUX_RESET_B]
 
+# SGMII CLOCK (debug only)
+set_property PACKAGE_PIN G8 [get_ports SGMII_TX_P]
+set_property PACKAGE_PIN G7 [get_ports SGMII_TX_N]
+create_clock -period 8.0 [get_ports SGMII_TX_P]
+
 # SI5324 Low Jitter Clock - GT REFCLK
 create_clock -period 5.0 [get_ports REC_CLOCK_C_P]
-
-set_property PACKAGE_PIN W28 [get_ports REC_CLOCK_C_N]
-set_property IOSTANDARD LVCMOS25 [get_ports REC_CLOCK_C_N]
+#set_property PACKAGE_PIN W28 [get_ports REC_CLOCK_C_N]
+set_property IOSTANDARD LVDS_25 [get_ports REC_CLOCK_C_N]
 set_property PACKAGE_PIN W27 [get_ports REC_CLOCK_C_P]
-set_property IOSTANDARD LVCMOS25 [get_ports REC_CLOCK_C_P]
+set_property IOSTANDARD LVDS_25 [get_ports REC_CLOCK_C_P]
 
 set_property PACKAGE_PIN AG24 [get_ports SI5326_INT_ALM_LS]
 set_property IOSTANDARD LVCMOS25 [get_ports SI5326_INT_ALM_LS]
@@ -71,7 +75,11 @@ set_property IOSTANDARD LVCMOS25 [get_ports GPIO_LED_5_LS]
 #set_property PACKAGE_PIN F16 [get_ports GPIO_LED_7_LS]
 #set_property IOSTANDARD LVCMOS25 [get_ports GPIO_LED_7_LS]
 
-set_property PULLUP true [get_ports IIC_SDA_MAIN]
-set_property PULLUP true [get_ports IIC_SCL_MAIN]
+# GPIO SMA
+set_property PACKAGE_PIN Y23 [get_ports GPIO_SMA_P]
+set_property PACKAGE_PIN Y24 [get_ports GPIO_SMA_N]
+set_property IOSTANDARD LVCMOS25 [get_ports GPIO_SMA_P]
+set_property IOSTANDARD LVCMOS25 [get_ports GPIO_SMA_N]
 
-set_false_path -from [get_pins config_done_reg/C] -to [get_pins gt_soft_reset_r_reg/D]
+#set_false_path -from [get_pins gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i/TXUSRCLK2] -to [get_pins gt_txresetdone_r2_reg_srl2/D]
+#set_false_path -from [get_pins gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i/RXUSRCLK2] -to [get_pins gt_rxresetdone_r2_reg_srl2/D]

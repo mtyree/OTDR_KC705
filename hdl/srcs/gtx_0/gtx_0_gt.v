@@ -291,8 +291,8 @@ wire            rxstartofseq_float_i;
             .TERM_RCAL_CFG                          (5'b10000),
             .TERM_RCAL_OVRD                         (1'b0),
             .TST_RSV                                (32'h00000000),
-            .RX_CLK25_DIV                           (8),
-            .TX_CLK25_DIV                           (8),
+            .RX_CLK25_DIV                           (5),
+            .TX_CLK25_DIV                           (5),
             .UCODEER_CLR                            (1'b0),
 
            //-------------------------PCI Express Attributes----------------------------
@@ -432,8 +432,8 @@ wire            rxstartofseq_float_i;
 
            //--------------------------CPLL Attributes----------------------------
             .CPLL_CFG                               (24'hBC07DC),
-            .CPLL_FBDIV                             (2),
-            .CPLL_FBDIV_45                          (4),
+            .CPLL_FBDIV                             (5),
+            .CPLL_FBDIV_45                          (5),
             .CPLL_INIT_CFG                          (24'h00001E),
             .CPLL_LOCK_CFG                          (16'h01E8),
             .CPLL_REFCLK_DIV                        (1),

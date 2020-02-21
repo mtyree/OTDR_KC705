@@ -79,7 +79,7 @@ create_clock -period 6.4 [get_ports sysclk_in]
 
  
 
-    create_clock -period 5.0 [get_ports q1_clk0_gtrefclk_pad_p_in]
+    create_clock -period 8.0 [get_ports q1_clk0_gtrefclk_pad_p_in]
 
 ################################################################################
 ############################# SYS/DRP Clock Constraints ########################
