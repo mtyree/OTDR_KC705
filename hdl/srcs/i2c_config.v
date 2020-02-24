@@ -82,7 +82,7 @@ always @ (*) begin
 			r_cfg_done_next	= 1'b0;
 		end
 		CFG_1: begin
-			if (r_cnt < 8'h02) begin
+			if (r_cnt < 8'h59) begin
 				r_state_next	= CFG_0;
 				r_cnt_next		= r_cnt + 1;
 			end else begin
@@ -116,41 +116,106 @@ end
 always @ (*) begin
 	case(r_cnt)
 		// Set prescale
-		8'h00: begin
-			r_adr_next	= 3'h6;
-			r_din_next	= PRESCALE;
-			r_sel_next	= 2'b11;
-		end
+		8'h00: {r_adr_next, r_din_next, r_sel_next} = {3'h6, PRESCALE, 2'b11};
 		// I2C MUX setup
-		8'h01: begin
-			// Write I2C data
-			r_adr_next	= 3'h4;
-			r_din_next	= 16'b1111_1101_1001_0000;
-			r_sel_next	= 2'b11;
-		end
-		8'h02: begin
-			// Inititate start, write, stop, and write I2C address
-			r_adr_next	= 3'h2;
-			r_din_next	= 16'b1111_0101_1111_0100;
-			r_sel_next	= 2'b11;
-		end
-		// SI5234 addr / data will follow
-		// 8'h02: begin
-			// r_adr_next	= 3'h4;
-			// r_din_next	= 16'b1111_1101_
-		// 8'hFF: begin
-			// Initiate block write
-			// r_adr_next	= 3'h2;
-			// r_din_next	= 16'b1111_1001_1110_1000;
-		default: begin
-			r_adr_next	= 3'h0;
-			r_din_next	= 16'b0000_0000_0000_0000;
-			r_sel_next	= 2'b00;
-		end
+		8'h01: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'b1111_1101_1001_0000, 2'b11};
+		8'h02: {r_adr_next, r_din_next, r_sel_next} = {3'h2, 16'b1111_0101_1111_0100, 2'b11};
+		// SI5324 setup
+		8'h03: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h04: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD14, 2'b11};
+		8'h05: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD01, 2'b11};
+		8'h06: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDE4, 2'b11};
+		8'h07: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD02, 2'b11};
+		8'h08: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDA2, 2'b11};
+		8'h09: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD03, 2'b11};
+		8'h0A: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD15, 2'b11};
+		8'h0B: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD04, 2'b11};
+		8'h0C: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD92, 2'b11};
+		8'h0D: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD05, 2'b11};
+		8'h0E: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDED, 2'b11};
+		8'h0F: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD06, 2'b11};
+		8'h10: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2D, 2'b11};
+		8'h11: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD07, 2'b11};
+		8'h12: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2A, 2'b11};
+		8'h13: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD08, 2'b11};
+		8'h14: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h15: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD09, 2'b11};
+		8'h16: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDC0, 2'b11};
+		8'h17: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD0A, 2'b11};
+		8'h18: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD08, 2'b11};
+		8'h19: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD0B, 2'b11};
+		8'h1A: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD42, 2'b11};
+		8'h1B: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD13, 2'b11};
+		8'h1C: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD29, 2'b11};
+		8'h1D: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD14, 2'b11};
+		8'h1E: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD3E, 2'b11};
+		8'h1F: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD15, 2'b11};
+		8'h20: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDFF, 2'b11};
+		8'h21: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD16, 2'b11};
+		8'h22: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDDF, 2'b11};
+		8'h23: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD17, 2'b11};
+		8'h24: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD1F, 2'b11};
+		8'h25: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD18, 2'b11};
+		8'h26: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD3F, 2'b11};
+		8'h27: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD19, 2'b11};
+		8'h28: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h29: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD1F, 2'b11};
+		8'h2A: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h2B: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD20, 2'b11};
+		8'h2C: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h2D: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD21, 2'b11};
+		8'h2E: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD09, 2'b11};
+		8'h2F: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD22, 2'b11};
+		8'h30: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h31: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD23, 2'b11};
+		8'h32: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h33: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD24, 2'b11};
+		8'h34: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD09, 2'b11};
+		8'h35: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD28, 2'b11};
+		8'h36: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDC0, 2'b11};
+		8'h37: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD29, 2'b11};
+		8'h38: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h39: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2A, 2'b11};
+		8'h3A: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDF9, 2'b11};
+		8'h3B: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2B, 2'b11};
+		8'h3C: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h3D: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2C, 2'b11};
+		8'h3E: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h3F: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2D, 2'b11};
+		8'h40: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD63, 2'b11};
+		8'h41: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2E, 2'b11};
+		8'h42: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h43: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD2F, 2'b11};
+		8'h44: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h45: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD30, 2'b11};
+		8'h46: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD63, 2'b11};
+		8'h47: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD37, 2'b11};
+		8'h48: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h49: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD83, 2'b11};
+		8'h4A: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD1F, 2'b11};
+		8'h4B: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD84, 2'b11};
+		8'h4C: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD02, 2'b11};
+		8'h4D: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD89, 2'b11};
+		8'h4E: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD01, 2'b11};
+		8'h4F: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD8A, 2'b11};
+		8'h50: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD0F, 2'b11};
+		8'h51: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD8B, 2'b11};
+		8'h52: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFDFF, 2'b11};
+		8'h53: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD8E, 2'b11};
+		8'h54: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h55: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD8F, 2'b11};
+		8'h56: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD00, 2'b11};
+		8'h57: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFD88, 2'b11};
+		8'h58: {r_adr_next, r_din_next, r_sel_next} = {3'h4, 16'hFF40, 2'b11};
+		// Initiate Block Write
+		8'h59: {r_adr_next, r_din_next, r_sel_next} = {3'h2, 16'b1111_1001_1110_1000, 2'b11};
+		default: {r_adr_next, r_din_next, r_sel_next} = {3'h0, 16'h0000, 2'b00};
 	endcase
 end
 
-i2c_master_wbs_16 i2c_master_inst (
+i2c_master_wbs_16 # (
+	.WRITE_FIFO_ADDR_WIDTH	(7)
+) i2c_master_inst (
 	.clk			(clk),
 	.rst			(rst),
 	// Wishbone interface signals
