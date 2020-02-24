@@ -36,6 +36,8 @@ reg				r_cfg_done, r_cfg_done_next;
 
 wire			w_ack;
 
+assign	o_cfg_done = r_cfg_done;
+
 always @ (posedge clk) begin
 	if (rst) begin
 		r_state		<= RESET;
@@ -63,7 +65,7 @@ end
 always @ (*) begin
 	case(r_state)
 		RESET: begin
-			if (i_cfg_start)
+			if (i_cfg_start == 1'b1)
 				r_state_next	= CFG_0;
 			else
 				r_state_next	= RESET;

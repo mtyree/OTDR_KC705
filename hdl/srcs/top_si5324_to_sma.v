@@ -54,12 +54,12 @@ wire	i2c_sda_t;
 wire	i2c_scl_probe;
 wire	i2c_sda_probe;
 
-assign	i2c_scl_probe = i2c_scl_i || i2c_scl_o;
-assign	i2c_sda_probe = i2c_sda_i || i2c_sda_o;
+assign	i2c_scl_probe = i2c_scl_t ? i2c_scl_i : i2c_scl_o;
+assign	i2c_sda_probe = i2c_sda_t ? i2c_sda_i : i2c_sda_o;
 
 assign	rst 				= GPIO_SW_E;
-assign	SI5326_RST_LS		= 1'b1;
-assign	IIC_MUX_RESET_B		= 1'b1;
+assign	SI5326_RST_LS		= hard_rst;
+assign	IIC_MUX_RESET_B		= hard_rst;
 assign	GPIO_LED_0_LS		= config_done;
 assign	GPIO_LED_1_LS		= hard_rst;
 assign	GPIO_LED_2_LS		= SI5326_INT_ALM_LS;
@@ -97,7 +97,7 @@ always @(posedge sysclk_bufg) begin
 						 hard_rst <= 1;
 					end else if (count == 32'd20_004_000) begin
 						 reconfig <= 1;
-					end else if (count == 32'd20_008_000) begin
+					end else if (count == 32'd20_004_001) begin
 						 reconfig <= 0;
 						 config_done <= 1;
 					end
@@ -114,7 +114,7 @@ end
 
 i2c_config # (
 	.CLK_FREQ		(200_000_000),
-	.I2C_FREQ		(100_000)
+	.I2C_FREQ		(19_200)
 ) i2c_config_inst (
 	.clk			(sysclk_bufg),
 	.rst			(rst),
@@ -205,25 +205,25 @@ OBUFDS OBUFDS_REC_CLOCK (
 
 IOBUF IOBUF_SDA (
 	.T	(i2c_sda_t),
-	.I	(i2c_sda_i),
-	.O	(i2c_sda_o),
+	.I	(i2c_sda_o),
+	.O	(i2c_sda_i),
 	.IO	(IIC_SDA_MAIN)
 );
 
 IOBUF IOBUF_SCL (
 	.T	(i2c_scl_t),
-	.I	(i2c_scl_i),
-	.O	(i2c_scl_o),
+	.I	(i2c_scl_o),
+	.O	(i2c_scl_i),
 	.IO	(IIC_SCL_MAIN)
 );
 
 OBUF OBUF_SDA_TO_SMA (
-	.I	(iic_sda_probe),
+	.I	(i2c_sda_probe),
 	.O	(GPIO_SMA_P)
 );
 
 OBUF OBUF_SCL_TO_SMA (
-	.I	(iic_scl_probe),
+	.I	(i2c_scl_probe),
 	.O	(GPIO_SMA_N)
 );
 
