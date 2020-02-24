@@ -20,7 +20,7 @@ module top_si5324_to_sma (
 	output GPIO_LED_5_LS,
 	output GPIO_SMA_P,
 	output GPIO_SMA_N,
-	output IIC_SCL_MAIN,
+	inout IIC_SCL_MAIN,
 	inout IIC_SDA_MAIN,
 	output IIC_MUX_RESET_B,
 	input SGMII_TX_P,
@@ -45,13 +45,17 @@ wire	si5324_out;
 wire	si5324_bufg;
 wire	si5324_ddr;
 wire	rst;
-wire	iic_scl_o;
-wire	iic_sda_o;
-wire	iic_sda_i;
-wire	iic_sda_t;
-wire	iic_sda_io;
+wire	i2c_scl_i;
+wire	i2c_scl_o;
+wire	i2c_scl_t;
+wire	i2c_sda_i;
+wire	i2c_sda_o;
+wire	i2c_sda_t;
+wire	i2c_scl_probe;
+wire	i2c_sda_probe;
 
-assign	iic_sda_io = iic_sda_i || iic_sda_o;
+assign	i2c_scl_probe = i2c_scl_i || i2c_scl_o;
+assign	i2c_sda_probe = i2c_sda_i || i2c_sda_o;
 
 assign	rst 				= GPIO_SW_E;
 assign	SI5326_RST_LS		= 1'b1;
@@ -108,18 +112,34 @@ always @(posedge sysclk_bufg) begin
 	end
 end
 
-SI5324_Config_5_8_at_125MHz #(
-	.clkFreq	(200_000_000),
-	.I2CFreq	(100_000)
-) inst_SI5324_AutoConfig (
-	.clk		(sysclk_bufg),
-	.rst_n		(~rst),
-	.RECONFIG	(reconfig),
-	.scl		(iic_scl_o),
-	.sda_o		(iic_sda_o),
-	.sda_i		(iic_sda_i),
-	.sda_t		(iic_sda_t)
+i2c_config # (
+	.CLK_FREQ		(200_000_000),
+	.I2C_FREQ		(100_000)
+) i2c_config_inst (
+	.clk			(sysclk_bufg),
+	.rst			(rst),
+	.i_cfg_start	(reconfig),
+	.o_cfg_done		(),
+	.i2c_scl_i		(i2c_scl_i),
+	.i2c_scl_o		(i2c_scl_o),
+	.i2c_scl_t		(i2c_scl_t),
+	.i2c_sda_i		(i2c_sda_i),
+	.i2c_sda_o		(i2c_sda_o),
+	.i2c_sda_t		(i2c_sda_t)
 );
+
+// SI5324_Config_5_8_at_125MHz #(
+	// .clkFreq	(200_000_000),
+	// .I2CFreq	(100_000)
+// ) inst_SI5324_AutoConfig (
+	// .clk		(sysclk_bufg),
+	// .rst_n		(~rst),
+	// .RECONFIG	(reconfig),
+	// .scl		(iic_scl_o),
+	// .sda_o		(iic_sda_o),
+	// .sda_i		(iic_sda_i),
+	// .sda_t		(iic_sda_t)
+// );
 
 IBUFDS IBUFDS_SYSCLK (
 	.O	(sysclk_out),
@@ -184,24 +204,26 @@ OBUFDS OBUFDS_REC_CLOCK (
 //);
 
 IOBUF IOBUF_SDA (
-	.T	(iic_sda_t),
-	.I	(iic_sda_i),
-	.O	(iic_sda_o),
+	.T	(i2c_sda_t),
+	.I	(i2c_sda_i),
+	.O	(i2c_sda_o),
 	.IO	(IIC_SDA_MAIN)
 );
 
-OBUF OBUF_SCL (
-	.I	(iic_scl_o),
-	.O	(IIC_SCL_MAIN)
+IOBUF IOBUF_SCL (
+	.T	(i2c_scl_t),
+	.I	(i2c_scl_i),
+	.O	(i2c_scl_o),
+	.IO	(IIC_SCL_MAIN)
 );
 
 OBUF OBUF_SDA_TO_SMA (
-	.I	(iic_sda_io),
+	.I	(iic_sda_probe),
 	.O	(GPIO_SMA_P)
 );
 
 OBUF OBUF_SCL_TO_SMA (
-	.I	(iic_scl_o),
+	.I	(iic_scl_probe),
 	.O	(GPIO_SMA_N)
 );
 

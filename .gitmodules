@@ -1,0 +1,3 @@
+[submodule "hdl/srcs/verilog-i2c"]
+	path = hdl/srcs/verilog-i2c
+	url = http://www.github.com/alexforencich/verilog-i2c
