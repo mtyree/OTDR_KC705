@@ -14,7 +14,7 @@ set_property IOSTANDARD LVDS_25 [get_ports GT_SYSCLK_P]
 set_property IOSTANDARD LVDS_25 [get_ports GT_SYSCLK_N]
 
 # GT LOC
-#set_property LOC GTXE2_CHANNEL_X0Y10 [get_cells gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i]
+set_property LOC GTXE2_CHANNEL_X0Y10 [get_cells gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i]
 
 # Global IIC BUS
 set_property PACKAGE_PIN K21 [get_ports IIC_SCL_MAIN]
@@ -76,10 +76,10 @@ set_property IOSTANDARD LVCMOS25 [get_ports GPIO_LED_5_LS]
 #set_property IOSTANDARD LVCMOS25 [get_ports GPIO_LED_7_LS]
 
 # GPIO SMA
-set_property PACKAGE_PIN Y23 [get_ports GPIO_SMA_P]
-set_property PACKAGE_PIN Y24 [get_ports GPIO_SMA_N]
-set_property IOSTANDARD LVCMOS25 [get_ports GPIO_SMA_P]
-set_property IOSTANDARD LVCMOS25 [get_ports GPIO_SMA_N]
+#set_property PACKAGE_PIN Y23 [get_ports GPIO_SMA_P]
+#set_property PACKAGE_PIN Y24 [get_ports GPIO_SMA_N]
+#set_property IOSTANDARD LVDS_25 [get_ports GPIO_SMA_P]
+#set_property IOSTANDARD LVDS_25 [get_ports GPIO_SMA_N]
 
-#set_false_path -from [get_pins gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i/TXUSRCLK2] -to [get_pins gt_txresetdone_r2_reg_srl2/D]
-#set_false_path -from [get_pins gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i/RXUSRCLK2] -to [get_pins gt_rxresetdone_r2_reg_srl2/D]
+set_false_path -from [get_pins gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i/TXUSRCLK2] -to [get_pins gt_txresetdone_r2_reg_srl2/D]
+set_false_path -from [get_pins gtx_0_i/inst/gtx_0_init_i/gtx_0_i/gt0_gtx_0_i/gtxe2_i/RXUSRCLK2] -to [get_pins gt_rxresetdone_r2_reg_srl2/D]

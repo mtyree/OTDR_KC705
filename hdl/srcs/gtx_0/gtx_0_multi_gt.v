@@ -145,7 +145,7 @@
 
 );
 //***************************** Parameter Declarations ************************
-    localparam QPLL_FBDIV_TOP =  100;
+    localparam QPLL_FBDIV_TOP =  32;
 
     localparam QPLL_FBDIV_IN  =  (QPLL_FBDIV_TOP == 16)  ? 10'b0000100000 : 
 				(QPLL_FBDIV_TOP == 20)  ? 10'b0000110000 :

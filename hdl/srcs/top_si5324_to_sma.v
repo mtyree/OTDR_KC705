@@ -51,11 +51,11 @@ wire	i2c_scl_t;
 wire	i2c_sda_i;
 wire	i2c_sda_o;
 wire	i2c_sda_t;
-wire	i2c_scl_probe;
-wire	i2c_sda_probe;
+//wire	i2c_scl_probe;
+//wire	i2c_sda_probe;
 
-assign	i2c_scl_probe = i2c_scl_t ? i2c_scl_i : i2c_scl_o;
-assign	i2c_sda_probe = i2c_sda_t ? i2c_sda_i : i2c_sda_o;
+//assign	i2c_scl_probe = i2c_scl_t ? i2c_scl_i : i2c_scl_o;
+//assign	i2c_sda_probe = i2c_sda_t ? i2c_sda_i : i2c_sda_o;
 
 assign	rst 				= GPIO_SW_E;
 assign	SI5326_RST_LS		= hard_rst;
@@ -114,7 +114,7 @@ end
 
 i2c_config # (
 	.CLK_FREQ		(200_000_000),
-	.I2C_FREQ		(19_200)
+	.I2C_FREQ		(100_000)
 ) i2c_config_inst (
 	.clk			(sysclk_bufg),
 	.rst			(rst),
@@ -172,36 +172,36 @@ OBUFDS OBUFDS_REC_CLOCK (
 	.I	(rec_clock_ddr)
 );
 
-//IBUFDS_GTE2 IBUFDS_GTE2_SI5324 (
-//	.O	(si5324_out),
-//	.I	(SI5326_OUT_C_P),
-//	.IB	(SI5326_OUT_C_N)
-//);
+IBUFDS_GTE2 IBUFDS_GTE2_SI5324 (
+	.O	(si5324_out),
+	.I	(SI5326_OUT_C_P),
+	.IB	(SI5326_OUT_C_N)
+);
 
-//BUFG BUFG_SI5324 (
-//	.O	(si5324_bufg),
-//	.I	(si5324_out)
-//);
+BUFG BUFG_SI5324 (
+	.O	(si5324_bufg),
+	.I	(si5324_out)
+);
 
-//ODDR #(
-//	.DDR_CLK_EDGE	("OPPOSITE_EDGE"),
-//	.INIT			(1'B0),
-//	.SRTYPE			("SYNC")
-//) ODDR_SI5324_TO_SMA (
-//	.Q	(si5324_ddr),
-//	.C	(si5324_bufg),
-//	.CE	(1'b1),
-//	.D1	(1'b1),
-//	.D2	(1'b0),
-//	.R	(),
-//	.S	()
-//);
+ODDR #(
+	.DDR_CLK_EDGE	("OPPOSITE_EDGE"),
+	.INIT			(1'B0),
+	.SRTYPE			("SYNC")
+) ODDR_SI5324_TO_SMA (
+	.Q	(si5324_ddr),
+	.C	(si5324_bufg),
+	.CE	(1'b1),
+	.D1	(1'b1),
+	.D2	(1'b0),
+	.R	(),
+	.S	()
+);
 
-//OBUFDS OBUFDS_SMA (
-//	.O	(GPIO_SMA_P),
-//	.OB	(GPIO_SMA_N),
-//	.I	(si5324_ddr)
-//);
+OBUFDS OBUFDS_SMA (
+	.O	(GPIO_SMA_P),
+	.OB	(GPIO_SMA_N),
+	.I	(si5324_ddr)
+);
 
 IOBUF IOBUF_SDA (
 	.T	(i2c_sda_t),
@@ -217,14 +217,14 @@ IOBUF IOBUF_SCL (
 	.IO	(IIC_SCL_MAIN)
 );
 
-OBUF OBUF_SDA_TO_SMA (
-	.I	(i2c_sda_probe),
-	.O	(GPIO_SMA_P)
-);
+//OBUF OBUF_SDA_TO_SMA (
+//	.I	(i2c_sda_probe),
+//	.O	(GPIO_SMA_P)
+//);
 
-OBUF OBUF_SCL_TO_SMA (
-	.I	(i2c_scl_probe),
-	.O	(GPIO_SMA_N)
-);
+//OBUF OBUF_SCL_TO_SMA (
+//	.I	(i2c_scl_probe),
+//	.O	(GPIO_SMA_N)
+//);
 
 endmodule

@@ -22,9 +22,9 @@ module top_gtx_loopback_test (
 	output GPIO_LED_3_LS,
 	output GPIO_LED_4_LS,
 	output GPIO_LED_5_LS,
-	output GPIO_SMA_P,
-	output GPIO_SMA_N,
-	output IIC_SCL_MAIN,
+//	output GPIO_SMA_P,
+//	output GPIO_SMA_N,
+	inout IIC_SCL_MAIN,
 	inout IIC_SDA_MAIN,
 	output IIC_MUX_RESET_B,
 	input RXP_IN,
@@ -34,17 +34,6 @@ module top_gtx_loopback_test (
 	input SGMII_TX_P,
 	input SGMII_TX_N
 );
-
-localparam	RESET	= 2'b00,
-			IDLE	= 2'b01,
-			ADD		= 2'b10,
-			CHECK	= 2'b11;
-			
-reg [1:0]	state;
-reg [31:0]	count;
-reg			hard_rst;
-reg			reconfig;
-reg			config_done;
 
 reg			rst_r;
 reg			rst_r_r;
@@ -63,6 +52,7 @@ wire		sysclk;
 wire		sysclk_in;
 wire		gt_sysclk;
 wire		gt_sysclk_in;
+wire		rec_clock_ddr;
 wire		usrclk_out;
 wire		gt_txresetdone_ila;
 wire		gt_txresetdone;
@@ -80,14 +70,15 @@ wire		gt_qpllrefclklost_ila;
 wire		gt_cplllock_ila;
 wire		gt_cpllfbclklost_ila;
 wire		gt_cpllreset_vio;
-
+wire		i2c_scl_i, i2c_scl_o, i2c_scl_t;
+wire		i2c_sda_i, i2c_sda_o, i2c_sda_t;
+wire		w_chip_rst_n;
 wire [15:0]	gt_rxdata_out;
 wire [15:0]	gt_txdata_in;
 
-assign	SI5326_RST_LS		= hard_rst;
-assign	IIC_MUX_RESET_B		= hard_rst;
-assign	GPIO_LED_0_LS		= config_done;
-assign	GPIO_LED_3_LS		= hard_rst;
+assign	SI5326_RST_LS		= w_chip_rst_n;
+assign	IIC_MUX_RESET_B		= w_chip_rst_n;
+assign	GPIO_LED_3_LS		= 1'b0;
 assign	GPIO_LED_4_LS		= SI5326_INT_ALM_LS;
 assign	GPIO_LED_5_LS		= rst;
 assign	gt_txdata_in		= 16'h1234;
@@ -102,10 +93,10 @@ always @(posedge sysclk) begin
 end
 
 // Synchronize config_done to gt soft reset
-always @(posedge gt_sysclk) begin
-	gt_soft_reset_r		<= config_done;
-	gt_soft_reset_r_r	<= gt_soft_reset_r;
-end
+//always @(posedge gt_sysclk) begin
+//	gt_soft_reset_r		<= config_done;
+//	gt_soft_reset_r_r	<= gt_soft_reset_r;
+//end
 
 // Synchronize resetdone signals to usrclk
 always @(posedge gt_sysclk) begin
@@ -122,50 +113,25 @@ end
 assign gt_txresetdone_ila	= gt_txresetdone_r3;
 assign gt_rxresetdone_ila	= gt_rxresetdone_r3;
 
-always @(posedge sysclk) begin
-	if (rst) begin
-		state <= RESET; // Initial state
-		config_done <= 0;
-		count <= 32'b0;
-		hard_rst <= 0;
-		reconfig <= 0;
-	end else begin
-		case (state)
-			RESET : begin
-				count <= 32'b0;
-				hard_rst <= 0;
-				reconfig <= 0;
-				state <= ADD;
-				config_done	<= 0;
-			end
-			IDLE : begin
-				state <= IDLE;
-			end
-			ADD : begin
-				count <= count + 32'b1;
-				state <= CHECK;
-			end
-			CHECK : begin
-				if (config_done == 0) begin
-					state <= ADD;
-					if (count == 32'd4_000) begin
-						 hard_rst <= 1;
-					end else if (count == 32'd10_004_000) begin
-						 reconfig <= 1;
-					end else if (count == 32'd10_008_000) begin
-						 reconfig <= 0;
-						 config_done <= 1;
-					end
-				end else begin
-					state <= IDLE;
-				end
-			end
-			default : begin
-				state <= RESET;
-			end
-		endcase
-	end
-end
+// RESET FSM
+
+reset_fsm # (
+	.CLK_FREQ		(200_000_000),
+	.I2C_FREQ		(100_000)
+) reset_fsm_inst (
+	.clk			(sysclk),
+	.rst			(rst),
+	.o_chip_rst_n	(w_chip_rst_n),
+	.o_done			(GPIO_LED_0_LS),
+	.i2c_scl_i		(i2c_scl_i),
+	.i2c_scl_o		(i2c_scl_o),
+	.i2c_scl_t		(i2c_scl_t),
+	.i2c_sda_i		(i2c_sda_i),
+	.i2c_sda_o		(i2c_sda_o),
+	.i2c_sda_t		(i2c_sda_t)
+);
+
+// SYSCLK BUFFERS
 
 IBUFGDS #(
 	.DIFF_TERM		("FALSE"),
@@ -182,13 +148,31 @@ BUFG SYSCLK_BUFG (
 	.I	(sysclk_in)
 );
 
+// REC CLOCK BUFFERS (TO SI5324)
+
+ODDR #(
+	.DDR_CLK_EDGE	("OPPOSITE_EDGE"),
+	.INIT			(1'B0),
+	.SRTYPE			("SYNC")
+) ODDR_SYSCLK_TO_REC_CLOCK (
+	.Q	(rec_clock_ddr),
+	.C	(sysclk),
+	.CE	(1'b1),
+	.D1	(1'b1),
+	.D2	(1'b0),
+	.R	(),
+	.S	()
+);
+
 OBUFDS #(
 	.IOSTANDARD		("LVDS_25")
 ) SI5324_OBUFDS (
 	.O	(REC_CLOCK_C_P),
 	.OB	(REC_CLOCK_C_N),
-	.I	(sysclk)
+	.I	(rec_clock_ddr)
 );
+
+// SI574 CLOCK BUFFERS
 
 IBUFGDS GT_SYSCLK_IBUFGDS (
 	.O	(gt_sysclk_in),
@@ -201,16 +185,23 @@ BUFG GT_SYSCLK_BUFG (
 	.I	(gt_sysclk_in)
 );
 
-SI5324_Config_5_8_at_125MHz #(
-	.clkFreq	(200_000_000),
-	.I2CFreq	(100_000)
-) inst_SI5324_AutoConfig (
-	.clk		(sysclk),
-	.rst_n		(~rst),
-	.RECONFIG	(reconfig),
-	.scl		(IIC_SCL_MAIN),
-	.sda		(IIC_SDA_MAIN)
+// I2C CLOCK IO BUFFERS
+
+IOBUF IOBUF_SDA (
+	.T	(i2c_sda_t),
+	.I	(i2c_sda_o),
+	.O	(i2c_sda_i),
+	.IO	(IIC_SDA_MAIN)
 );
+
+IOBUF IOBUF_SCL (
+	.T	(i2c_scl_t),
+	.I	(i2c_scl_o),
+	.O	(i2c_scl_i),
+	.IO	(IIC_SCL_MAIN)
+);
+
+// DEBUG DIVIDERS
 
 Divider #(
 	.PERIOD		(156_250_000)
@@ -227,6 +218,8 @@ Divider #(
 	.rst_n		(1'b1),
 	.square_out	(GPIO_LED_2_LS)
 );
+
+// GT CORE INSTANCE
 
 gtx_0 gtx_0_i (
 	.soft_reset_tx_in				(gt_soft_reset), // input wire soft_reset_tx_in
@@ -304,11 +297,13 @@ gtx_0 gtx_0_i (
 	.sysclk_in						(gt_sysclk) // input wire sysclk_in
 );
 
+// DEBUG CORES
+
 vio_0 gt_control_vio (
 	.clk		(gt_sysclk),
 	.probe_out0	(gt_loopback_vio),
 	.probe_out1	(gt_soft_reset_vio),
-	.probe_out2	(1'b0)
+	.probe_out2	()
 );
 
 ila_0 gt_sys_ila (
